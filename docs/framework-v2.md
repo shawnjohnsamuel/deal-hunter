@@ -1,6 +1,8 @@
-# Real Estate Investment Framework — v2.0
+# Real Estate Investment Framework — v2.1
 
 **Single source of truth.** Supersedes Framework v1.0 (both the ChatGPT and Claude variants) and incorporates the Personal Financial Profile (completed July 7, 2026) as the authoritative override wherever the two conflicted.
+
+> **v2.1 (July 10, 2026):** mountain markets promoted to explicit STR Tier 1 priority (+composite bonus); deal-flow source roster documented with per-sender behavior (agents send addresses, teaser newsletters don't); teaser-identification procedure added; every deal now carries provenance (source name + deep link to the original email).
 
 > **What changed from v1.0 → v2.0 (reconciliation record)**
 >
@@ -49,6 +51,18 @@ INTAKE → TIER CLASSIFICATION → FIRST-PASS KILL FILTER → ENRICHMENT (surviv
        → DEAL CARD → METRICS → BUY BOX SCORING → VERDICT (+ tax flags, red flags)
 ```
 
+### 3a′. Deal-flow source roster (who sends what)
+
+| Sender | Who | Kind | What to expect |
+|---|---|---|---|
+| victor@steffenrealtycorp.com | Victor Steffen, Steffen Realty (agent) | **Full addresses** | All deal types |
+| info@theshorttermshop.com | Avery Carl, The Short Term Shop (agent) | **Full addresses** | STR-focused |
+| theoffersheet@mail.beehiiv.com | The Offer Sheet | **Teaser / paywall** | Best deal fully detailed except the address; lesser deals alongside |
+| here@mail.beehiiv.com | Here (beehiiv) | **Teaser / paywall** | Same pattern |
+| team@bnbflow.co | BNB Flow | **Teaser / paywall** | Same pattern |
+
+**Teaser identification procedure** (`pipeline/identify.py`): for paywalled candidates missing an address, extraction captures every distinguishing detail (exact price, beds/baths/sqft, sleeps, features verbatim, nightly rate, revenue, list dates), then a web-search pass tries to pin the live listing. Match grading is strict — HIGH needs price within 1% + exact beds/baths + (sqft within 3% or a verbatim feature match); MEDIUM allows unverified sqft/features; LOW/NONE stays unidentified. High/medium matches adopt the address but are **permanently flagged "identified via research — verify before acting."** Unidentified teasers are scored on claimed numbers only and flagged.
+
 ### 3a. Tier classification (at intake)
 The three tiers are NOT handled uniformly — different buy boxes, financing, data sources, and disqualifiers. Classify first: STR candidate (destination market, or STR-sourced lead), House Hack (2–4 units, DFW, owner-occ eligible), or LTR (everything else that rents). A property may be evaluated under more than one tier if genuinely ambiguous.
 
@@ -84,7 +98,7 @@ Unknown market status is a **flag, not a kill** — "is this a destination marke
 | Break-Even Occupancy | <50% | — |
 | Loan-to-Value | — | **≤85%** |
 | HOA / STR Restrictions | None — verify explicitly | — |
-| Market Type | Destination (beach/mountain/lake) | Year-round demand |
+| Market Type | Destination (mountain/beach/lake) | **Mountain markets — Tier 1 priority** (+5 composite bonus so equivalent mountain deals outrank beach/lake) |
 | Price | — | $400K–$550K |
 
 ### House Hack Buy Box (Tier 2, Dallas)

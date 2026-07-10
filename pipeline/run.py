@@ -14,7 +14,7 @@ import sys
 
 from . import db as dbmod
 from .deal_card import render_deal_card, summary_line
-from .dedupe import deal_key
+from .dedupe import deal_key_for
 from .kill_filter import run_kill_filter
 from .profile import load_profile
 from .score import classify_tier, score_deal
@@ -22,9 +22,9 @@ from .score import classify_tier, score_deal
 
 def process_deal(deal: dict, profile: dict, conn, *, enrich_enabled: bool = True,
                  rescore: bool = False) -> dict:
-    """Run one deal through dedupe → kill filter → enrich → score → store."""
-    key = deal_key(deal.get("address") or deal.get("notes", "?"),
-                   deal.get("city", ""), deal.get("state", ""))
+    """Run one deal through dedupe → kill filter → identify (teasers) →
+    enrich → score → store."""
+    key = deal_key_for(deal)
     if dbmod.seen(conn, key) and not rescore:
         return {"key": key, "outcome": "duplicate", "deal": deal}
 
@@ -33,6 +33,20 @@ def process_deal(deal: dict, profile: dict, conn, *, enrich_enabled: bool = True
     if killed:
         dbmod.upsert(conn, key, deal, status="killed", verdict="KILLED", kill_reasons=reasons)
         return {"key": key, "outcome": "killed", "deal": deal, "kill_reasons": reasons}
+
+    # Paywalled teaser without an address: try to identify the listing by its
+    # teased attributes, then re-dedupe — the identified address may already be
+    # in the db from an agent email or a previous day.
+    if deal.get("teaser") and not deal.get("address") and enrich_enabled:
+        try:
+            from .identify import identify_property
+            if identify_property(deal):
+                addr_key = deal_key_for(deal)
+                if dbmod.seen(conn, addr_key) and not rescore:
+                    return {"key": addr_key, "outcome": "duplicate", "deal": deal}
+                key = addr_key
+        except Exception as e:
+            flags.append(f"identification error: {e}")
 
     if enrich_enabled:
         try:
@@ -124,7 +138,8 @@ def main():
             from .extract import extract_candidates
             for em in emails:
                 try:
-                    deals.extend(extract_candidates(em["text"], source=em["sender"]))
+                    deals.extend(extract_candidates(em["text"], source=em["sender"],
+                                                    email_meta=em))
                 except Exception as e:
                     print(f"WARNING: extraction failed for '{em['subject']}': {e}",
                           file=sys.stderr)

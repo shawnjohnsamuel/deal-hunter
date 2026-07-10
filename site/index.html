@@ -51,7 +51,8 @@
   .count { color: var(--muted); font-size: 13px; margin-left: auto; }
 
   .tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; }
-  table { border-collapse: collapse; width: 100%; min-width: 780px; }
+  table { border-collapse: collapse; width: 100%; min-width: 900px; }
+  td.src { font-size: 13px; color: var(--ink-2); max-width: 170px; }
   th, td { text-align: left; padding: 10px 14px; border-top: 1px solid var(--grid); font-size: 14px; }
   thead th {
     border-top: none; color: var(--muted); font-size: 12px; text-transform: uppercase;
@@ -132,6 +133,7 @@
         <th data-sort="score" class="num">Score</th>
         <th data-sort="address">Property</th>
         <th data-sort="tier">Tier</th>
+        <th data-sort="source">Source</th>
         <th data-sort="price" class="num">Price</th>
         <th data-sort="coc" class="num">CoC</th>
         <th data-sort="cf" class="num">Cash Flow/yr</th>
@@ -162,15 +164,45 @@ function badge(v) {
 
 function rowData(d) {
   return {
-    verdict: d.verdict || "—", score: d.score, address: d.address || "?",
+    verdict: d.verdict || "—", score: d.score,
+    address: d.address || "(unidentified teaser)",
     city: [d.city, d.state].filter(Boolean).join(", "),
     tier: TIER[d.tier] || d.tier || "—", price: d.price,
+    source: d.source_name || d.source || "—",
     coc: d.metrics?.coc ?? null, cf: d.metrics?.annual_cash_flow ?? null,
   };
 }
 
+function sourceCell(d) {
+  const name = d.source_name || d.source || "—";
+  if (d.email_link)
+    return `<a href="${d.email_link}" target="_blank" rel="noopener"
+              title="Open the source email in Gmail">${name} ✉︎</a>`;
+  return name;
+}
+
 function detailHTML(d) {
   let h = '<div class="detail">';
+  const prov = [];
+  prov.push(`<b>${d.source_name || d.source || "?"}</b>`);
+  if (d.email_subject) prov.push(`“${d.email_subject}”`);
+  if (d.email_date) prov.push(d.email_date);
+  if (d.email_link)
+    prov.push(`<a href="${d.email_link}" target="_blank" rel="noopener">open source email ↗</a>`);
+  (d.listing_urls || []).forEach(u =>
+    prov.push(`<a href="${u}" target="_blank" rel="noopener">listing ↗</a>`));
+  h += `<h3>Source</h3><p style="font-size:13.5px;color:var(--ink-2)">${prov.join(" · ")}</p>`;
+  if (d.identification) {
+    const id = d.identification;
+    h += `<h3>Address identification (research-derived — verify before acting)</h3>
+      <ul><li>Confidence: <b>${(id.confidence || "?").toUpperCase()}</b></li>` +
+      (id.candidate_address ? `<li>Candidate: ${id.candidate_address}</li>` : "") +
+      (id.evidence ? `<li>Evidence: ${id.evidence}</li>` : "") +
+      (id.listing_url ? `<li><a href="${id.listing_url}" target="_blank" rel="noopener">matched listing ↗</a></li>` : "") +
+      `</ul>`;
+  }
+  if (d.priority_note)
+    h += `<p style="font-size:13.5px">⛰️ ${d.priority_note}</p>`;
   if (d.kill_reasons?.length)
     h += "<h3>Killed by first-pass filter</h3><ul>" +
          d.kill_reasons.map(r => `<li class="hard">${r}</li>`).join("") + "</ul>";
@@ -185,7 +217,7 @@ function detailHTML(d) {
   if (d.red_flags?.length)
     h += "<h3>Red flags</h3><ul>" + d.red_flags.map(r => `<li>${r}</li>`).join("") + "</ul>";
   h += `<p style="color:var(--muted);font-size:12px;margin-top:10px">
-        Source: ${d.source || "?"} · first seen ${(d.first_seen||"").slice(0,10)}</p></div>`;
+        first seen ${(d.first_seen||"").slice(0,10)}</p></div>`;
   return h;
 }
 
@@ -210,15 +242,18 @@ function render() {
   tbody.innerHTML = list.map(d => {
     const r = rowData(d);
     const open = d.key === openKey;
+    const mountain = d.market_flavor === "mountain" && d.tier === "str"
+      ? ` <span title="Mountain market — Tier 1 priority">⛰️</span>` : "";
     return `<tr data-key="${d.key}">
       <td>${badge(r.verdict)}</td>
       <td class="num score">${r.score == null ? "—" : Math.round(r.score)}</td>
-      <td class="addr">${r.address}<br><span class="city">${r.city}</span></td>
+      <td class="addr">${r.address}${mountain}<br><span class="city">${r.city}</span></td>
       <td class="tier">${r.tier}</td>
+      <td class="src">${sourceCell(d)}</td>
       <td class="num">${fmtUSD(r.price)}</td>
       <td class="num">${fmtPct(r.coc)}</td>
       <td class="num">${fmtUSD(r.cf)}</td>
-    </tr>` + (open ? `<tr class="detail-row"><td colspan="7">${detailHTML(d)}</td></tr>` : "");
+    </tr>` + (open ? `<tr class="detail-row"><td colspan="8">${detailHTML(d)}</td></tr>` : "");
   }).join("");
 
   tbody.querySelectorAll("tr[data-key]").forEach(tr =>
@@ -226,6 +261,9 @@ function render() {
       openKey = openKey === tr.dataset.key ? null : tr.dataset.key;
       render();
     }));
+  // Source/email links shouldn't toggle the row they sit in.
+  tbody.querySelectorAll("a").forEach(a =>
+    a.addEventListener("click", e => e.stopPropagation()));
 }
 
 function tiles(stats) {
@@ -255,7 +293,7 @@ fetch("deals.json?t=" + Date.now())
 document.querySelectorAll("thead th").forEach(th =>
   th.addEventListener("click", () => {
     const k = th.dataset.sort;
-    sortDir = sortKey === k ? -sortDir : (k === "address" || k === "tier" || k === "verdict" ? 1 : -1);
+    sortDir = sortKey === k ? -sortDir : (["address", "tier", "verdict", "source"].includes(k) ? 1 : -1);
     sortKey = k; render();
   }));
 ["f-verdict", "f-tier", "f-search"].forEach(id =>

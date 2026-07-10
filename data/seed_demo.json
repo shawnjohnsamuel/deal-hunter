@@ -1,61 +1,184 @@
 [
-  {
-    "address": "123 Pine Ridge Trl", "city": "Broken Bow", "state": "OK",
-    "property_type": "cabin", "units": 1, "price": 475000, "furnished": false,
-    "claimed": {"adr": 350, "occupancy": 0.72},
-    "enriched": {"adr": 350, "occupancy": 0.70, "str_legality": "likely_ok",
-                 "str_legality_notes": "McCurtain County has no STR-restrictive ordinance as of seed date; verify HOA",
-                 "str_data_estimated": true},
-    "tier": "str", "source": "seed-demo"
+ {
+  "address": "123 Pine Ridge Trl",
+  "city": "Broken Bow",
+  "state": "OK",
+  "property_type": "cabin",
+  "units": 1,
+  "price": 475000,
+  "furnished": false,
+  "claimed": {
+   "adr": 350,
+   "occupancy": 0.72
   },
-  {
-    "address": "88 Lakeview Loop", "city": "Hochatown", "state": "OK",
-    "property_type": "cabin", "units": 1, "price": 540000, "furnished": false,
-    "claimed": {"adr": 375, "occupancy": 0.66},
-    "enriched": {"adr": 375, "occupancy": 0.66, "str_legality": "unverified", "str_data_estimated": true},
-    "tier": "str", "source": "seed-demo"
+  "enriched": {
+   "adr": 350,
+   "occupancy": 0.7,
+   "str_legality": "likely_ok",
+   "str_legality_notes": "McCurtain County has no STR-restrictive ordinance as of seed date; verify HOA",
+   "str_data_estimated": true
   },
-  {
-    "address": "42 Bear Den Way", "city": "Broken Bow", "state": "OK",
-    "property_type": "cabin", "units": 1, "price": 655000,
-    "claimed": {"adr": 425, "occupancy": 0.71},
-    "tier": "str", "source": "seed-demo"
+  "tier": "str",
+  "source": "seed-demo",
+  "source_name": "Seed Demo"
+ },
+ {
+  "address": "88 Lakeview Loop",
+  "city": "Hochatown",
+  "state": "OK",
+  "property_type": "cabin",
+  "units": 1,
+  "price": 540000,
+  "furnished": false,
+  "claimed": {
+   "adr": 375,
+   "occupancy": 0.66
   },
-  {
-    "address": "310 Shoreline Ct", "city": "Little Elm", "state": "TX",
-    "property_type": "SFR", "units": 1, "price": 415000,
-    "claimed": {"annual_str_revenue": 62000},
-    "tier": "str", "source": "seed-demo",
-    "notes": "lake-adjacent suburb pitched as STR"
+  "enriched": {
+   "adr": 375,
+   "occupancy": 0.66,
+   "str_legality": "unverified",
+   "str_data_estimated": true
   },
-  {
-    "address": "456 Suburbia Ln", "city": "Little Elm", "state": "TX",
-    "property_type": "SFR", "units": 1, "price": 385000,
-    "claimed": {"monthly_rent": 2600},
-    "tier": "ltr", "source": "seed-demo"
+  "tier": "str",
+  "source": "seed-demo",
+  "source_name": "Seed Demo"
+ },
+ {
+  "address": "42 Bear Den Way",
+  "city": "Broken Bow",
+  "state": "OK",
+  "property_type": "cabin",
+  "units": 1,
+  "price": 655000,
+  "claimed": {
+   "adr": 425,
+   "occupancy": 0.71
   },
-  {
-    "address": "1 Overpriced Way", "city": "Anna", "state": "TX",
-    "property_type": "SFR", "units": 1, "price": 385000,
-    "claimed": {"monthly_rent": 2200},
-    "tier": "ltr", "source": "seed-demo"
+  "tier": "str",
+  "source": "seed-demo",
+  "source_name": "Seed Demo"
+ },
+ {
+  "address": "310 Shoreline Ct",
+  "city": "Little Elm",
+  "state": "TX",
+  "property_type": "SFR",
+  "units": 1,
+  "price": 415000,
+  "claimed": {
+   "annual_str_revenue": 62000
   },
-  {
-    "address": "789 Duplex Dr", "city": "Dallas", "state": "TX",
-    "property_type": "duplex", "units": 2, "price": 420000,
-    "claimed": {"other_units_monthly_rent": 1800},
-    "tier": "house_hack", "source": "seed-demo"
+  "tier": "str",
+  "source": "seed-demo",
+  "notes": "lake-adjacent suburb pitched as STR",
+  "source_name": "Seed Demo"
+ },
+ {
+  "address": "456 Suburbia Ln",
+  "city": "Little Elm",
+  "state": "TX",
+  "property_type": "SFR",
+  "units": 1,
+  "price": 385000,
+  "claimed": {
+   "monthly_rent": 2600
   },
-  {
-    "address": "2200 Overreach Ave", "city": "Frisco", "state": "TX",
-    "property_type": "duplex", "units": 2, "price": 500000,
-    "claimed": {"other_units_monthly_rent": 2100},
-    "tier": "house_hack", "source": "seed-demo"
+  "tier": "ltr",
+  "source": "seed-demo",
+  "source_name": "Seed Demo"
+ },
+ {
+  "address": "1 Overpriced Way",
+  "city": "Anna",
+  "state": "TX",
+  "property_type": "SFR",
+  "units": 1,
+  "price": 385000,
+  "claimed": {
+   "monthly_rent": 2200
   },
-  {
-    "address": "614 Cedar St", "city": "Fort Smith", "state": "AR",
-    "property_type": "SFR", "units": 1, "price": 140000,
-    "claimed": {"monthly_rent": 1750},
-    "tier": "ltr", "source": "seed-demo"
+  "tier": "ltr",
+  "source": "seed-demo",
+  "source_name": "Seed Demo"
+ },
+ {
+  "address": "789 Duplex Dr",
+  "city": "Dallas",
+  "state": "TX",
+  "property_type": "duplex",
+  "units": 2,
+  "price": 420000,
+  "claimed": {
+   "other_units_monthly_rent": 1800
+  },
+  "tier": "house_hack",
+  "source": "seed-demo",
+  "source_name": "Seed Demo"
+ },
+ {
+  "address": "2200 Overreach Ave",
+  "city": "Frisco",
+  "state": "TX",
+  "property_type": "duplex",
+  "units": 2,
+  "price": 500000,
+  "claimed": {
+   "other_units_monthly_rent": 2100
+  },
+  "tier": "house_hack",
+  "source": "seed-demo",
+  "source_name": "Seed Demo"
+ },
+ {
+  "address": "614 Cedar St",
+  "city": "Fort Smith",
+  "state": "AR",
+  "property_type": "SFR",
+  "units": 1,
+  "price": 140000,
+  "claimed": {
+   "monthly_rent": 1750
+  },
+  "tier": "ltr",
+  "source": "seed-demo",
+  "source_name": "Seed Demo"
+ },
+ {
+  "address": "210 Chalet Village Way",
+  "city": "Gatlinburg",
+  "state": "TN",
+  "property_type": "cabin",
+  "units": 1,
+  "price": 585000,
+  "furnished": true,
+  "beds": 3,
+  "baths": 3,
+  "sqft": 1850,
+  "claimed": {
+   "adr": 320,
+   "occupancy": 0.68
+  },
+  "enriched": {
+   "adr": 320,
+   "occupancy": 0.68,
+   "str_legality": "likely_ok",
+   "str_data_estimated": true
+  },
+  "tier": "str",
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "teaser": true,
+  "email_subject": "(demo) A Smokies cabin with a game room \u2014 3/3 under $600k",
+  "email_date": "Thu, 09 Jul 2026 07:02:00 -0500",
+  "email_link": "https://mail.google.com/mail/u/0/#search/from%3Atheoffersheet%40mail.beehiiv.com",
+  "notes": "game room, mountain view, hot tub; teased without address (demo of identification flow)",
+  "identification": {
+   "confidence": "medium",
+   "candidate_address": "210 Chalet Village Way",
+   "evidence": "price $585,000 exact; 3 bed / 3 bath exact; 1,850 sqft within 2%; 'game room + mountain view' matched listing photos caption",
+   "listing_url": null
   }
+ }
 ]

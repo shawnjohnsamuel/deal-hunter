@@ -63,7 +63,8 @@
         550000
       ],
       "price_kill_ceiling": 600000,
-      "market_type_required": "destination"
+      "market_type_required": "destination",
+      "mountain_priority_bonus": 5
     },
     "house_hack": {
       "units": {

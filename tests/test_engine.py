@@ -174,3 +174,59 @@ def test_address_normalization():
 
 def test_deal_key_stable():
     assert deal_key("123 Main Street", "Dallas", "TX") == deal_key("123 Main St", "Dallas", "TX")
+
+
+# --- Iteration 2: teaser keys, mountain priority, email links ------------
+
+def test_deal_key_for_teaser_fallback():
+    from pipeline.dedupe import deal_key_for
+    teaser = {"city": "Gatlinburg", "state": "TN", "price": 585000,
+              "beds": 3, "baths": 3, "sqft": 1850}
+    assert deal_key_for(teaser) == deal_key_for(dict(teaser))
+    assert deal_key_for(teaser).startswith("t")
+    identified = dict(teaser, address="210 Chalet Village Way")
+    assert deal_key_for(identified) != deal_key_for(teaser)
+    assert not deal_key_for(identified).startswith("t")
+
+
+def test_market_flavor():
+    from pipeline.markets import market_flavor
+    assert market_flavor("Broken Bow") == "mountain"
+    assert market_flavor("Gatlinburg") == "mountain"
+    assert market_flavor("Galveston") == "beach"
+    assert market_flavor("Canyon Lake") == "lake_river"
+    assert market_flavor("Tulsa") is None
+
+
+def test_mountain_priority_bonus(profile):
+    mountain = score_deal(broken_bow_str(), profile)
+    beach = score_deal(broken_bow_str() | {"city": "Galveston", "state": "TX"}, profile)
+    bonus = profile["buy_boxes"]["str"]["mountain_priority_bonus"]
+    assert mountain["priority_note"] and "MOUNTAIN" in mountain["priority_note"]
+    assert beach["priority_note"] is None
+    assert mountain["score"] == pytest.approx(beach["score"] + bonus, abs=0.2)
+
+
+def test_gmail_link_builder():
+    from pipeline.ingest_gmail import gmail_link
+    assert gmail_link("<abc@mail.beehiiv.com>", None) == \
+        "https://mail.google.com/mail/u/0/#search/rfc822msgid:abc@mail.beehiiv.com"
+    assert gmail_link(None, "18f2a") == "https://mail.google.com/mail/u/0/#all/18f2a"
+    assert gmail_link(None, None) is None
+
+
+def test_identified_teaser_gets_verification_flag(profile):
+    deal = broken_bow_str() | {
+        "teaser": True,
+        "identification": {"confidence": "medium", "candidate_address": "123 Pine Ridge Trl",
+                           "evidence": "price+beds match"},
+    }
+    result = score_deal(deal, profile)
+    assert any("IDENTIFIED VIA RESEARCH" in f and "MEDIUM" in f for f in result["red_flags"])
+
+
+def test_unidentified_teaser_flag(profile):
+    deal = {"city": "Gatlinburg", "state": "TN", "price": 500000, "tier": "str",
+            "teaser": True, "claimed": {"adr": 300, "occupancy": 0.68}}
+    result = score_deal(deal, profile)
+    assert any("UNIDENTIFIED" in f for f in result["red_flags"])

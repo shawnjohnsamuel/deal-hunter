@@ -76,12 +76,13 @@ def export_site_json(conn: sqlite3.Connection, out_path: Path = SITE_JSON):
     rows = conn.execute(
         """SELECT key, address, city, state, tier, market_type, price, source,
                   status, verdict, score, kill_reasons, result_json, deal_card_md,
-                  first_seen, last_updated
+                  first_seen, last_updated, deal_json
            FROM deals ORDER BY score DESC NULLS LAST, last_updated DESC""").fetchall()
     deals = []
     for r in rows:
         result = json.loads(r[12] or "{}")
         uw = result.get("underwriting") or {}
+        deal = json.loads(r[16] or "{}")
         deals.append({
             "key": r[0], "address": r[1], "city": r[2], "state": r[3],
             "tier": r[4], "market_type": r[5], "price": r[6], "source": r[7],
@@ -94,6 +95,16 @@ def export_site_json(conn: sqlite3.Connection, out_path: Path = SITE_JSON):
             "hard_disqualifiers": result.get("hard_disqualifiers") or [],
             "deal_card_md": r[13],
             "first_seen": r[14], "last_updated": r[15],
+            # provenance + iteration-2 fields
+            "source_name": deal.get("source_name") or r[7],
+            "source_kind": deal.get("source_kind"),
+            "email_subject": deal.get("email_subject"),
+            "email_date": deal.get("email_date"),
+            "email_link": deal.get("email_link"),
+            "listing_urls": deal.get("listing_urls") or [],
+            "identification": deal.get("identification"),
+            "market_flavor": deal.get("market_flavor") or result.get("market_flavor"),
+            "priority_note": result.get("priority_note"),
         })
     stats = {
         "total": len(deals),

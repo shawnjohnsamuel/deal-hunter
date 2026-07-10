@@ -10,11 +10,16 @@ verdicts — with the judgment calls deliberately left human.
 Built with [Claude Code](https://claude.com/claude-code)
 
 ```
-Gmail (5 deal-flow senders) ─► GitHub Action (daily cron)
-   ─► Claude extracts candidates (seller numbers tagged, never trusted)
+Gmail (2 agents + 3 paywalled teaser newsletters) ─► GitHub Action (daily cron)
+   ─► Claude extracts candidates (seller numbers tagged, never trusted;
+       every deal carries a deep link back to its source email)
    ─► dedupe ─► deterministic kill filter (zero research spent on dead deals)
+   ─► teaser identification (paywalled deals arrive address-less — a strict
+       web-search match on price/beds/sqft/features recovers the listing,
+       graded HIGH/MEDIUM/LOW and always flagged for human verification)
    ─► enrichment (RentCast · county tax records · live rates · STR-ordinance search)
    ─► unit-tested scoring: metrics → buy box → hard disqualifiers → tax triggers
+       (mountain-market STRs get a Tier 1 priority bonus)
    ─► PASS / BORDERLINE / FAIL + 0–100 ─► digest issue + dashboard redeploy
 ```
 

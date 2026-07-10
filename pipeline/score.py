@@ -3,7 +3,7 @@ tax-flag triggers, composite 0-100 score, and the PASS/BORDERLINE/FAIL verdict.
 
 All thresholds come from the profile — nothing is hardcoded to generic benchmarks.
 """
-from .markets import classify_market, is_dfw
+from .markets import classify_market, is_dfw, market_flavor
 from .underwrite import underwrite
 
 # Composite weights per framework-v2 (CoC-heavy, per the bulk-ranking convention).
@@ -145,6 +145,14 @@ def _tax_flags(deal: dict, uw: dict, profile: dict) -> list[str]:
 def _red_flags(deal: dict, uw: dict, kill_flags: list[str]) -> list[str]:
     flags = list(kill_flags)
     enr = deal.get("enriched") or {}
+    ident = deal.get("identification")
+    if ident and deal.get("address") and ident.get("candidate_address"):
+        flags.append(
+            f"address IDENTIFIED VIA RESEARCH ({ident.get('confidence', '?').upper()} confidence) — "
+            f"verify against the listing before acting. Evidence: {ident.get('evidence', '')[:160]}")
+    elif deal.get("teaser") and not deal.get("address"):
+        flags.append("paywalled teaser — address UNIDENTIFIED; scored on claimed numbers only, "
+                     "no tax/CAD/legality enrichment possible")
     if uw["tier"] == "str":
         legality = enr.get("str_legality", "unverified")
         flags.append(f"STR legality: {legality.upper()} — human-verify HOA + city ordinance before any offer")
@@ -195,8 +203,19 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
     else:
         verdict = "FAIL"
 
+    # Mountain STRs are the Tier 1 priority: a composite bump so they outrank
+    # equivalent beach/lake deals, plus an explicit priority note.
+    flavor = deal["market_flavor"] = market_flavor(deal.get("city", ""))
+    priority_note = None
+    if tier == "str" and flavor == "mountain" and not disqualifiers:
+        bonus = profile["buy_boxes"]["str"].get("mountain_priority_bonus", 0)
+        if bonus:
+            composite = round(min(100.0, composite + bonus), 1)
+            priority_note = f"MOUNTAIN market — Tier 1 priority (+{bonus:g} composite)"
+
     return {
         "tier": tier, "verdict": verdict, "score": composite,
+        "market_flavor": flavor, "priority_note": priority_note,
         "criteria": criteria, "hard_disqualifiers": disqualifiers,
         "tax_flags": _tax_flags(deal, uw, profile),
         "red_flags": _red_flags(deal, uw, kill_flags or []),

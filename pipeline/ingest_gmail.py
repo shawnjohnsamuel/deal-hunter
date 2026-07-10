@@ -9,13 +9,26 @@ import os
 import re
 from html.parser import HTMLParser
 
-DEAL_SENDERS = [
-    "victor@steffenrealtycorp.com",
-    "theoffersheet@mail.beehiiv.com",
-    "here@mail.beehiiv.com",
-    "team@bnbflow.co",
-    "info@theshorttermshop.com",
-]
+# Sender roster. `kind` drives extraction behavior:
+#   agent_full_address — licensed agents; listings arrive with real addresses
+#   teaser_paywall     — free teaser newsletters; the best deal's address is held
+#                        behind the paywall, but every other detail is teased, so
+#                        address-less candidates are extracted and sent to the
+#                        identification step (pipeline/identify.py)
+SENDER_META = {
+    "victor@steffenrealtycorp.com": {
+        "name": "Victor Steffen (Steffen Realty)", "kind": "agent_full_address"},
+    "info@theshorttermshop.com": {
+        "name": "Avery Carl (The Short Term Shop)", "kind": "agent_full_address"},
+    "theoffersheet@mail.beehiiv.com": {
+        "name": "The Offer Sheet", "kind": "teaser_paywall"},
+    "here@mail.beehiiv.com": {
+        "name": "Here (beehiiv)", "kind": "teaser_paywall"},
+    "team@bnbflow.co": {
+        "name": "BNB Flow", "kind": "teaser_paywall"},
+}
+
+DEAL_SENDERS = list(SENDER_META)
 
 SCOPES = ["https://www.googleapis.com/auth/gmail.readonly"]
 
@@ -86,9 +99,23 @@ def _body_text(payload: dict) -> str:
     return html_to_text("\n".join(html))
 
 
+def gmail_link(rfc822_msgid: str | None, api_msg_id: str | None) -> str | None:
+    """Deep link back to the source email in the Gmail web UI.
+
+    rfc822msgid search is account-independent and survives label moves; the
+    API message id (#all/<id>) is the fallback.
+    """
+    if rfc822_msgid:
+        return ("https://mail.google.com/mail/u/0/#search/rfc822msgid:"
+                + rfc822_msgid.strip().strip("<>"))
+    if api_msg_id:
+        return f"https://mail.google.com/mail/u/0/#all/{api_msg_id}"
+    return None
+
+
 def fetch_recent_emails(newer_than: str = "2d") -> list[dict]:
     """Fetch recent messages from the deal senders. Returns
-    [{sender, subject, date, text}, ...]."""
+    [{sender, sender_name, sender_kind, subject, date, link, text}, ...]."""
     svc = _service()
     query = f"from:({' OR '.join(DEAL_SENDERS)}) newer_than:{newer_than}"
     resp = svc.users().messages().list(userId="me", q=query, maxResults=50).execute()
@@ -98,10 +125,14 @@ def fetch_recent_emails(newer_than: str = "2d") -> list[dict]:
         headers = {h["name"].lower(): h["value"] for h in msg["payload"].get("headers", [])}
         sender_raw = headers.get("from", "")
         sender = next((s for s in DEAL_SENDERS if s in sender_raw), sender_raw)
+        meta = SENDER_META.get(sender, {"name": sender, "kind": "unknown"})
         emails.append({
             "sender": sender,
+            "sender_name": meta["name"],
+            "sender_kind": meta["kind"],
             "subject": headers.get("subject", "(no subject)"),
             "date": headers.get("date", ""),
+            "link": gmail_link(headers.get("message-id"), ref.get("id")),
             "text": _body_text(msg["payload"]),
         })
     return emails

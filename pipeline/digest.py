@@ -26,19 +26,25 @@ def build_digest(outcomes: list[dict]) -> str:
 
     if scored:
         lines += ["## Scored deals (ranked by composite score)", "",
-                  "| # | Verdict | Score | Address | Tier | CoC | Cash Flow/yr | Top flag |",
-                  "|---|---------|-------|---------|------|-----|--------------|----------|"]
+                  "| # | Verdict | Score | Address | Tier | CoC | Cash Flow/yr | Source | Top flag |",
+                  "|---|---------|-------|---------|------|-----|--------------|--------|----------|"]
         for i, o in enumerate(scored, 1):
             r, d = o["result"], o["deal"]
             m = r["underwriting"]["metrics"]
             top_flag = (r["hard_disqualifiers"] or r["red_flags"] or ["—"])[0]
+            source = d.get("source_name") or d.get("source", "?")
+            if d.get("email_link"):
+                source = f"[{source}]({d['email_link']})"
+            addr = d.get("address") or "(unidentified teaser)"
+            if r.get("priority_note"):
+                addr += " ⛰️"
             lines.append(
                 f"| {i} | **{r['verdict']}** | {r['score']:.0f} "
-                f"| {d.get('address', '?')}, {d.get('city', '?')} | {r['tier'].upper()} "
+                f"| {addr}, {d.get('city', '?')} | {r['tier'].upper()} "
                 f"| {_fmt_metric('coc', m.get('coc'))} "
                 f"| {_fmt_metric('annual_cash_flow', m.get('annual_cash_flow'))} "
-                f"| {top_flag[:80]} |")
-        lines.append("")
+                f"| {source} | {top_flag[:80]} |")
+        lines += ["", "⛰️ = mountain market (Tier 1 priority)", ""]
 
         judgment = []
         for o in scored:
