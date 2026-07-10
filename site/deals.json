@@ -1,0 +1,319 @@
+{
+ "stats": {
+  "total": 9,
+  "killed": 4,
+  "pass": 2,
+  "borderline": 1,
+  "fail": 2,
+  "generated": "2026-07-10T00:27:27+00:00"
+ },
+ "deals": [
+  {
+   "key": "74912e8efcdbb2d7",
+   "address": "614 Cedar St",
+   "city": "Fort Smith",
+   "state": "AR",
+   "tier": "ltr",
+   "market_type": "unknown",
+   "price": 140000.0,
+   "source": "seed-demo",
+   "status": "scored",
+   "verdict": "PASS",
+   "score": 92.6,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 6.666666666666667,
+    "cap_rate": 0.0915,
+    "coc": 0.11309163962872065,
+    "one_pct_rule": 0.0125,
+    "gross_yield": 0.15,
+    "dscr": 1.3971828512147801,
+    "annual_cash_flow": 3641.550796044805,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "assumed: 1680 (1.2% of price fallback \u2014 pull CAD record)",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 614 Cedar St\nMarket / City:    Fort Smith, AR  (market type: unknown)\nProperty Type:    SFR   Units: 1\nStrategy Fit:     LTR\n\nPURCHASE\n  List Price: $140,000   Down: 20.0% ($28,000)\n  Loan: $112,000 @ 7.2% / 30yr   LTV: 80.0%\n  Closing (est): $4,200   Total Cash Needed: $32,200\n\nINCOME\n  Gross Monthly Rent: $1,750 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $6,510\n  NOI: $12,810   Debt Service: $9,168\n  Cash Flow: $303/mo ($3,642/yr)\n\nKEY METRICS\n  GRM: 6.7\n  Cap Rate: 9.2%\n  Cash-on-Cash: 11.3%\n  1% Rule: 1.2%\n  Gross Yield: 15.0%\n  DSCR: 1.40\n  Annual Cash Flow: $3,642\n  LTV: 80.0%\n\nVERDICT: PASS  (composite score 93/100)\n  \u2713 target  GRM: 6.7 (min 12.0, target 10.0)\n  \u2713 target  Cap Rate: 9.2% (min 6.0%, target 8.0%)\n  \u2713 target  Cash-on-Cash: 11.3% (min 6.0%, target 10.0%)\n  \u2713 target  1% Rule: 1.2% (min 0.8%, target 1.0%)\n  ~ min     Annual Cash Flow: $3,642 (min $3,600, target $6,000)\n  \u2713 target  DSCR: 1.40 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: assumed: 1680 (1.2% of price fallback \u2014 pull CAD record); hoa_monthly: assumed: 0\n\n**Tax angle:**\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+   "first_seen": "2026-07-10T00:27:27+00:00",
+   "last_updated": "2026-07-10T00:27:27+00:00"
+  },
+  {
+   "key": "2fc8a82506eabf5f",
+   "address": "123 Pine Ridge Trl",
+   "city": "Broken Bow",
+   "state": "OK",
+   "tier": "str",
+   "market_type": "destination",
+   "price": 475000.0,
+   "source": "seed-demo",
+   "status": "scored",
+   "verdict": "PASS",
+   "score": 82.8,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.18826315789473685,
+    "cap_rate": 0.08970526315789473,
+    "coc": 0.0965511033462383,
+    "dscr": 1.289202497953528,
+    "annual_cash_flow": 9558.559231277592,
+    "occupancy": 0.7,
+    "break_even_occupancy": 0.6251776185418585,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "annual_str_revenue": "derived: ADR $350 x 365 x 70% occupancy",
+    "property_tax_annual": "assumed: 5700 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed STR policy at 1.5x LTR rate",
+    "hoa_monthly": "assumed: 0",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$118,750-$142,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "STR legality: LIKELY_OK \u2014 human-verify HOA + city ordinance before any offer",
+    "STR revenue figures are estimates, not comp data"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 123 Pine Ridge Trl\nMarket / City:    Broken Bow, OK  (market type: destination)\nProperty Type:    cabin   Units: 1\nStrategy Fit:     STR\n\nPURCHASE\n  List Price: $475,000   Down: 15.0% ($71,250)\n  Loan: $403,750 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $14,250   Total Cash Needed: $99,000\n\nINCOME\n  Gross Annual STR Revenue: $89,425 (derived)\n  ADR: $350   Occupancy: 70.0%\n\nCASH FLOW\n  Operating Expenses (annual): $46,815\n  NOI: $42,610   Debt Service: $33,051\n  Cash Flow: $797/mo ($9,559/yr)\n\nKEY METRICS\n  Gross Yield: 18.8%\n  Cap Rate: 9.0%\n  Cash-on-Cash: 9.7%\n  DSCR: 1.29\n  Annual Cash Flow: $9,559\n  Occupancy: 70.0%\n  Break-Even Occupancy: 62.5%\n  LTV: 85.0%\n\nVERDICT: PASS  (composite score 83/100)\n  ~ min     Gross Yield: 18.8% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 70.0% (min 65.0%, target 75.0%)\n  \u2713 target  Cap Rate: 9.0% (min 6.0%, target 8.0%)\n  ~ min     Cash-on-Cash: 9.7% (min 8.0%, target 12.0%)\n  ~ min     Annual Cash Flow: $9,559 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 62.5% (min 50.0%, target 40.0%)\n  \u2713 target  DSCR: 1.29 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); annual_str_revenue: derived: ADR $350 x 365 x 70% occupancy; property_tax_annual: assumed: 5700 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed STR policy at 1.5x LTR rate; hoa_monthly: assumed: 0; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$118,750-$142,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- STR legality: LIKELY_OK \u2014 human-verify HOA + city ordinance before any offer\n- STR revenue figures are estimates, not comp data",
+   "first_seen": "2026-07-10T00:27:27+00:00",
+   "last_updated": "2026-07-10T00:27:27+00:00"
+  },
+  {
+   "key": "b1465ba306bf54dc",
+   "address": "88 Lakeview Loop",
+   "city": "Hochatown",
+   "state": "OK",
+   "tier": "str",
+   "market_type": "destination",
+   "price": 540000.0,
+   "source": "seed-demo",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 51.9,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.16729166666666667,
+    "cap_rate": 0.0759375,
+    "coc": 0.0310025338257006,
+    "dscr": 1.0913385819517571,
+    "annual_cash_flow": 3431.9804945050564,
+    "occupancy": 0.66,
+    "break_even_occupancy": 0.6349261699031594,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "annual_str_revenue": "derived: ADR $375 x 365 x 66% occupancy",
+    "property_tax_annual": "assumed: 6480 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed STR policy at 1.5x LTR rate",
+    "hoa_monthly": "assumed: 0",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$135,000-$162,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "STR revenue figures are estimates, not comp data"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 88 Lakeview Loop\nMarket / City:    Hochatown, OK  (market type: destination)\nProperty Type:    cabin   Units: 1\nStrategy Fit:     STR\n\nPURCHASE\n  List Price: $540,000   Down: 15.0% ($81,000)\n  Loan: $459,000 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $16,200   Total Cash Needed: $110,700\n\nINCOME\n  Gross Annual STR Revenue: $90,338 (derived)\n  ADR: $375   Occupancy: 66.0%\n\nCASH FLOW\n  Operating Expenses (annual): $49,331\n  NOI: $41,006   Debt Service: $37,574\n  Cash Flow: $286/mo ($3,432/yr)\n\nKEY METRICS\n  Gross Yield: 16.7%\n  Cap Rate: 7.6%\n  Cash-on-Cash: 3.1%\n  DSCR: 1.09\n  Annual Cash Flow: $3,432\n  Occupancy: 66.0%\n  Break-Even Occupancy: 63.5%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 52/100)\n  ~ min     Gross Yield: 16.7% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 66.0% (min 65.0%, target 75.0%)\n  ~ min     Cap Rate: 7.6% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 3.1% (min 8.0%, target 12.0%)\n  ~ min     Annual Cash Flow: $3,432 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 63.5% (min 50.0%, target 40.0%)\n  ~ min     DSCR: 1.09 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); annual_str_revenue: derived: ADR $375 x 365 x 66% occupancy; property_tax_annual: assumed: 6480 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed STR policy at 1.5x LTR rate; hoa_monthly: assumed: 0; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$135,000-$162,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- STR revenue figures are estimates, not comp data",
+   "first_seen": "2026-07-10T00:27:27+00:00",
+   "last_updated": "2026-07-10T00:27:27+00:00"
+  },
+  {
+   "key": "15d80a87ae2dc3c7",
+   "address": "789 Duplex Dr",
+   "city": "Dallas",
+   "state": "TX",
+   "tier": "house_hack",
+   "market_type": "non_destination",
+   "price": 420000.0,
+   "source": "seed-demo",
+   "status": "scored",
+   "verdict": "BORDERLINE",
+   "score": 48.5,
+   "kill_reasons": [],
+   "metrics": {
+    "rental_coverage": 0.485193450783201,
+    "net_housing_cost_monthly": 1909.8604630677387,
+    "units": 2,
+    "ltv": 0.965
+   },
+   "assumptions": {
+    "financing": "assumed FHA owner-occupant, 3.5% down",
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "other_units_monthly_rent": "seller-claimed (recompute before trusting)",
+    "property_tax_annual": "assumed: 5040 (1.2% of price fallback \u2014 pull CAD record)",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$105,000-$126,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 789 Duplex Dr\nMarket / City:    Dallas, TX  (market type: non_destination)\nProperty Type:    duplex   Units: 2\nStrategy Fit:     HOUSE_HACK\n\nPURCHASE\n  List Price: $420,000   Down: 3.5% ($14,700)\n  Loan: $405,300 @ 7.2% / 30yr   LTV: 96.5%\n  Closing (est): $12,600   Total Cash Needed: $27,300\n\nINCOME\n  Rent from non-owner units: $1,800/mo (claimed)\n\nPAYMENT\n  Total Monthly Payment (PITI+HOA): $3,710\n  Net Housing Cost: $1,910/mo\n\nKEY METRICS\n  Rental Coverage: 48.5%\n  Net Housing Cost/mo: $1,910\n  Units: 2\n  LTV: 96.5%\n\nVERDICT: BORDERLINE  (composite score 48/100)\n  \u2717 FAIL    Rental Coverage: 48.5% (min 50.0%, target 75.0%)\n```\n\n**Assumptions:** financing: assumed FHA owner-occupant, 3.5% down; interest_rate: assumed: 0.0725 (search live rate); other_units_monthly_rent: seller-claimed (recompute before trusting); property_tax_annual: assumed: 5040 (1.2% of price fallback \u2014 pull CAD record); hoa_monthly: assumed: 0\n\n**Tax angle:**\n- cost seg candidate: ~$105,000-$126,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+   "first_seen": "2026-07-10T00:27:27+00:00",
+   "last_updated": "2026-07-10T00:27:27+00:00"
+  },
+  {
+   "key": "d5e2255b174c630d",
+   "address": "456 Suburbia Ln",
+   "city": "Little Elm",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "non_destination",
+   "price": 385000.0,
+   "source": "seed-demo",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 19.0,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 12.33974358974359,
+    "cap_rate": 0.03702077922077922,
+    "coc": -0.12377453767223925,
+    "one_pct_rule": 0.006753246753246753,
+    "gross_yield": 0.08103896103896104,
+    "dscr": 0.5652983373320349,
+    "annual_cash_flow": -10960.235310876786,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "assumed: 4620 (1.2% of price fallback \u2014 pull CAD record)",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$96,250-$115,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.57 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 456 Suburbia Ln\nMarket / City:    Little Elm, TX  (market type: non_destination)\nProperty Type:    SFR   Units: 1\nStrategy Fit:     LTR\n\nPURCHASE\n  List Price: $385,000   Down: 20.0% ($77,000)\n  Loan: $308,000 @ 7.2% / 30yr   LTV: 80.0%\n  Closing (est): $11,550   Total Cash Needed: $88,550\n\nINCOME\n  Gross Monthly Rent: $2,600 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $14,451\n  NOI: $14,253   Debt Service: $25,213\n  Cash Flow: $-913/mo ($-10,960/yr)\n\nKEY METRICS\n  GRM: 12.3\n  Cap Rate: 3.7%\n  Cash-on-Cash: -12.4%\n  1% Rule: 0.7%\n  Gross Yield: 8.1%\n  DSCR: 0.57\n  Annual Cash Flow: $-10,960\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 19/100)\n  \u2717 FAIL    GRM: 12.3 (min 12.0, target 10.0)\n  \u2717 FAIL    Cap Rate: 3.7% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -12.4% (min 6.0%, target 10.0%)\n  \u2717 FAIL    1% Rule: 0.7% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $-10,960 (min $3,600, target $6,000)\n  \u2717 FAIL    DSCR: 0.57 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.57 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: assumed: 4620 (1.2% of price fallback \u2014 pull CAD record); hoa_monthly: assumed: 0\n\n**Tax angle:**\n- cost seg candidate: ~$96,250-$115,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+   "first_seen": "2026-07-10T00:27:27+00:00",
+   "last_updated": "2026-07-10T00:27:27+00:00"
+  },
+  {
+   "key": "87947fa5d17cad18",
+   "address": "42 Bear Den Way",
+   "city": "Broken Bow",
+   "state": "OK",
+   "tier": "str",
+   "market_type": "destination",
+   "price": 655000.0,
+   "source": "seed-demo",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "price $655,000 > $600,000 STR ceiling (capital can't reach it at 15% down)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-07-10T00:27:27+00:00",
+   "last_updated": "2026-07-10T00:27:27+00:00"
+  },
+  {
+   "key": "8901717d97a21098",
+   "address": "310 Shoreline Ct",
+   "city": "Little Elm",
+   "state": "TX",
+   "tier": "str",
+   "market_type": "non_destination",
+   "price": 415000.0,
+   "source": "seed-demo",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "confirmed non-destination market \u2014 STR tax strategy dead (hard disqualifier)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-07-10T00:27:27+00:00",
+   "last_updated": "2026-07-10T00:27:27+00:00"
+  },
+  {
+   "key": "2287323559314ee8",
+   "address": "1 Overpriced Way",
+   "city": "Anna",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "non_destination",
+   "price": 385000.0,
+   "source": "seed-demo",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "fails seller's own math: 1% rule 0.57% < 0.8% AND GRM 14.6 > 14"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-07-10T00:27:27+00:00",
+   "last_updated": "2026-07-10T00:27:27+00:00"
+  },
+  {
+   "key": "d43b142472196469",
+   "address": "2200 Overreach Ave",
+   "city": "Frisco",
+   "state": "TX",
+   "tier": "house_hack",
+   "market_type": "non_destination",
+   "price": 500000.0,
+   "source": "seed-demo",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "price $500,000 > $450,000 house-hack ceiling (hard disqualifier)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-07-10T00:27:27+00:00",
+   "last_updated": "2026-07-10T00:27:27+00:00"
+  }
+ ]
+}

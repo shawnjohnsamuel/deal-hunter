@@ -1,0 +1,4 @@
+anthropic>=0.40
+google-api-python-client>=2.100
+google-auth>=2.23
+pytest>=8.0

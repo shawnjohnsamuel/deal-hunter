@@ -1,0 +1,98 @@
+name: Daily Deal Hunt
+
+on:
+  schedule:
+    - cron: "0 12 * * *"   # ~7am Central, daily
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-hunt
+  cancel-in-progress: false
+
+jobs:
+  hunt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Sanity-check the scoring engine
+        run: python -m pytest tests/ -q
+
+      - name: Restore private profile from secret
+        env:
+          PROFILE_JSON: ${{ secrets.PROFILE_JSON }}
+        run: |
+          if [ -n "$PROFILE_JSON" ]; then
+            mkdir -p private
+            printf '%s' "$PROFILE_JSON" > private/profile.json
+            echo "personalized profile restored"
+          else
+            echo "WARNING: PROFILE_JSON secret not set — scoring with the sanitized example profile"
+          fi
+
+      - name: Run the pipeline
+        env:
+          GMAIL_CLIENT_ID: ${{ secrets.GMAIL_CLIENT_ID }}
+          GMAIL_CLIENT_SECRET: ${{ secrets.GMAIL_CLIENT_SECRET }}
+          GMAIL_REFRESH_TOKEN: ${{ secrets.GMAIL_REFRESH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RENTCAST_API_KEY: ${{ secrets.RENTCAST_API_KEY }}
+        run: python -m pipeline.run --daily > digest.md
+
+      - name: Commit updated database and dashboard data
+        run: |
+          git config user.name "deal-hunter-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ site/deals.json
+          if git diff --cached --quiet; then
+            echo "no changes to commit"
+          else
+            git commit -m "Daily hunt: $(date -u +%F)"
+            git push
+          fi
+
+      - name: Post digest as an issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if grep -q "No new candidate properties" digest.md; then
+            echo "quiet day — no issue"
+          else
+            gh issue create \
+              --title "Deal Digest — $(date -u +%F)" \
+              --body-file digest.md \
+              --label digest || \
+            gh issue create \
+              --title "Deal Digest — $(date -u +%F)" \
+              --body-file digest.md
+          fi
+
+  deploy-dashboard:
+    needs: hunt
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main   # pick up the commit the hunt job just pushed
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+      - id: deployment
+        uses: actions/deploy-pages@v4

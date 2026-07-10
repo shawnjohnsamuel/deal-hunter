@@ -1,0 +1,18 @@
+# Personal financial data — never committed
+private/
+
+# Secrets
+.env
+*.credentials.json
+token.json
+client_secret*.json
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# OS
+.DS_Store

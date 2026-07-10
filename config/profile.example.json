@@ -1,0 +1,135 @@
+{
+  "owner": "Example Investor",
+  "updated": "2026-07-09",
+  "financial": {
+    "w2_income_annual": 150000,
+    "marginal_tax_rate": 0.24,
+    "income_replacement_target_monthly": 5000,
+    "liquid_capital": 80000,
+    "risk_tolerance": "aggressive",
+    "act_on_borderline": true,
+    "year1_tax_offset_urgency": "urgent"
+  },
+  "capital_plan": {
+    "tier1_down_and_closing": [
+      55000,
+      65000
+    ],
+    "tier1_reserves": [
+      10000,
+      15000
+    ],
+    "tier2_house_hack": "deferred - funded from Year 1 tax savings + STR cash flow",
+    "tier3_ltr": "deferred - recycled equity once Tiers 1-2 cash-flowing"
+  },
+  "tax": {
+    "bonus_depreciation_pct": 1.0,
+    "bonus_depreciation_note": "OBBBA (July 4, 2025) - 100% permanent for property placed in service after Jan 19, 2025",
+    "cost_seg_price_trigger": 300000,
+    "cost_seg_acceleration_range": [
+      0.25,
+      0.3
+    ],
+    "str_loophole_avg_stay_days": 7,
+    "material_participation_hours": 100,
+    "rep_status_active": false
+  },
+  "buy_boxes": {
+    "str": {
+      "gross_yield": {
+        "min": 0.15,
+        "target": 0.2
+      },
+      "occupancy": {
+        "min": 0.65,
+        "target": 0.75
+      },
+      "cap_rate": {
+        "min": 0.06,
+        "target": 0.08
+      },
+      "coc": {
+        "min": 0.08,
+        "target": 0.12
+      },
+      "annual_cash_flow": {
+        "min": 0,
+        "target": 15000
+      },
+      "break_even_occupancy_max": 0.5,
+      "ltv_max": 0.85,
+      "price_target_range": [
+        400000,
+        550000
+      ],
+      "price_kill_ceiling": 600000,
+      "market_type_required": "destination"
+    },
+    "house_hack": {
+      "units": {
+        "min": 2,
+        "target": 4
+      },
+      "rental_coverage": {
+        "min": 0.5,
+        "target": 0.75
+      },
+      "price_max": 450000,
+      "market_vacancy_max": 0.07,
+      "neighborhood_min_class": "B",
+      "owner_occ_required": true
+    },
+    "ltr": {
+      "grm": {
+        "max": 12,
+        "target": 10
+      },
+      "cap_rate": {
+        "min": 0.06,
+        "target": 0.08
+      },
+      "coc": {
+        "min": 0.06,
+        "target": 0.1
+      },
+      "one_pct_rule": {
+        "min": 0.008,
+        "target": 0.01
+      },
+      "annual_cash_flow": {
+        "min": 3600,
+        "target": 6000
+      },
+      "market_population_min": 100000,
+      "rent_growth_min": 0.02
+    }
+  },
+  "assumptions": {
+    "ltr": {
+      "vacancy": 0.08,
+      "capex_pct_rent": 0.05,
+      "management_pct_rent": 0.08,
+      "insurance_monthly_per_100k": 125,
+      "property_tax_pct_price": 0.012,
+      "closing_costs_pct": 0.03
+    },
+    "str": {
+      "occupancy_default": 0.65,
+      "management_pct_revenue": 0.2,
+      "cleaning": "guest_paid_passthrough",
+      "utilities_monthly": 300,
+      "supplies_pct_revenue": 0.02,
+      "platform_fees_pct_revenue": 0.03,
+      "furnishing_capex": 13500,
+      "insurance_multiplier_vs_ltr": 1.5
+    },
+    "financing": {
+      "down_payment_pct_str": 0.15,
+      "down_payment_pct_ltr": 0.2,
+      "loan_term_years": 30,
+      "fallback_interest_rate": 0.0725
+    }
+  },
+  "dscr_min": 1.0,
+  "dscr_target": 1.25
+}

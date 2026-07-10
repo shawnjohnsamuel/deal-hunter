@@ -1,0 +1,61 @@
+[
+  {
+    "address": "123 Pine Ridge Trl", "city": "Broken Bow", "state": "OK",
+    "property_type": "cabin", "units": 1, "price": 475000, "furnished": false,
+    "claimed": {"adr": 350, "occupancy": 0.72},
+    "enriched": {"adr": 350, "occupancy": 0.70, "str_legality": "likely_ok",
+                 "str_legality_notes": "McCurtain County has no STR-restrictive ordinance as of seed date; verify HOA",
+                 "str_data_estimated": true},
+    "tier": "str", "source": "seed-demo"
+  },
+  {
+    "address": "88 Lakeview Loop", "city": "Hochatown", "state": "OK",
+    "property_type": "cabin", "units": 1, "price": 540000, "furnished": false,
+    "claimed": {"adr": 375, "occupancy": 0.66},
+    "enriched": {"adr": 375, "occupancy": 0.66, "str_legality": "unverified", "str_data_estimated": true},
+    "tier": "str", "source": "seed-demo"
+  },
+  {
+    "address": "42 Bear Den Way", "city": "Broken Bow", "state": "OK",
+    "property_type": "cabin", "units": 1, "price": 655000,
+    "claimed": {"adr": 425, "occupancy": 0.71},
+    "tier": "str", "source": "seed-demo"
+  },
+  {
+    "address": "310 Shoreline Ct", "city": "Little Elm", "state": "TX",
+    "property_type": "SFR", "units": 1, "price": 415000,
+    "claimed": {"annual_str_revenue": 62000},
+    "tier": "str", "source": "seed-demo",
+    "notes": "lake-adjacent suburb pitched as STR"
+  },
+  {
+    "address": "456 Suburbia Ln", "city": "Little Elm", "state": "TX",
+    "property_type": "SFR", "units": 1, "price": 385000,
+    "claimed": {"monthly_rent": 2600},
+    "tier": "ltr", "source": "seed-demo"
+  },
+  {
+    "address": "1 Overpriced Way", "city": "Anna", "state": "TX",
+    "property_type": "SFR", "units": 1, "price": 385000,
+    "claimed": {"monthly_rent": 2200},
+    "tier": "ltr", "source": "seed-demo"
+  },
+  {
+    "address": "789 Duplex Dr", "city": "Dallas", "state": "TX",
+    "property_type": "duplex", "units": 2, "price": 420000,
+    "claimed": {"other_units_monthly_rent": 1800},
+    "tier": "house_hack", "source": "seed-demo"
+  },
+  {
+    "address": "2200 Overreach Ave", "city": "Frisco", "state": "TX",
+    "property_type": "duplex", "units": 2, "price": 500000,
+    "claimed": {"other_units_monthly_rent": 2100},
+    "tier": "house_hack", "source": "seed-demo"
+  },
+  {
+    "address": "614 Cedar St", "city": "Fort Smith", "state": "AR",
+    "property_type": "SFR", "units": 1, "price": 140000,
+    "claimed": {"monthly_rent": 1750},
+    "tier": "ltr", "source": "seed-demo"
+  }
+]

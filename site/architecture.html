@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Deal Hunter Works</title>
+<style>
+  :root {
+    --page: #f9f9f7; --surface: #fcfcfb;
+    --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --ring: rgba(11,11,11,0.10); --accent: #2a78d6;
+    --good: #0ca30c; --warning: #fab219;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #0d0d0d; --surface: #1a1a19;
+      --ink: #ffffff; --ink-2: #c3c2b7;
+      --grid: #2c2c2a; --ring: rgba(255,255,255,0.10); --accent: #3987e5;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--page); color: var(--ink);
+         font: 15px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+         padding: 28px 20px 70px; }
+  .wrap { max-width: 860px; margin: 0 auto; }
+  h1 { font-size: 26px; letter-spacing: -0.02em; }
+  h2 { font-size: 19px; margin: 34px 0 10px; }
+  p { color: var(--ink-2); margin: 10px 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .stage {
+    background: var(--surface); border: 1px solid var(--ring); border-radius: 12px;
+    padding: 14px 18px; margin: 10px 0; display: flex; gap: 14px; align-items: baseline;
+  }
+  .stage .n {
+    font-weight: 700; color: var(--accent); font-variant-numeric: tabular-nums;
+    font-size: 13px; min-width: 20px;
+  }
+  .stage b { display: block; margin-bottom: 2px; }
+  .stage p { margin: 0; font-size: 14px; }
+  .arrow { text-align: center; color: var(--muted); margin: -4px 0; }
+  table { border-collapse: collapse; width: 100%; background: var(--surface);
+          border: 1px solid var(--ring); border-radius: 12px; overflow: hidden; font-size: 14px; }
+  th, td { text-align: left; padding: 9px 14px; border-top: 1px solid var(--grid); vertical-align: top; }
+  thead th { border-top: none; color: var(--muted); font-size: 12px; text-transform: uppercase;
+             letter-spacing: 0.05em; }
+  .tablewrap { overflow-x: auto; }
+  ul { color: var(--ink-2); padding-left: 22px; }
+  li { margin: 5px 0; }
+  .callout { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; margin: 14px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>How Deal Hunter works</h1>
+  <p><a href="index.html">← back to the dashboard</a> ·
+     <a href="https://github.com/shawnjohnsamuel/deal-hunter">source on GitHub ↗</a></p>
+
+  <p>Every morning a GitHub Action reads the day's deal-flow emails, extracts candidate
+  properties, enriches the survivors with public data, underwrites them against a
+  personalized buy box, and publishes the verdicts here. No servers, no paid data —
+  the whole system is a cron job, a Python package, and a static page.</p>
+
+  <h2>The pipeline</h2>
+  <div class="stage"><span class="n">1</span><div><b>Ingest</b>
+    <p>Gmail API with a read-only OAuth scope pulls the last 48 hours from five deal-flow
+    senders (an agent covering all deal types + four STR-focused newsletters).</p></div></div>
+  <div class="arrow">↓</div>
+  <div class="stage"><span class="n">2</span><div><b>Extract</b>
+    <p>Claude parses messy newsletter HTML into structured candidates: address, price,
+    and the seller's claimed numbers — which are tagged <i>seller-claimed</i> and never
+    trusted directly.</p></div></div>
+  <div class="arrow">↓</div>
+  <div class="stage"><span class="n">3</span><div><b>Dedupe</b>
+    <p>Normalized-address hashing against the SQLite database, so a property pitched by
+    three newsletters is analyzed once.</p></div></div>
+  <div class="arrow">↓</div>
+  <div class="stage"><span class="n">4</span><div><b>Kill filter</b>
+    <p>Deterministic first-pass checks that spend zero API calls: price ceilings the
+    capital can't reach, confirmed non-destination markets, deals that fail the seller's
+    own optimistic math. Most emailed deals die here, for free.</p></div></div>
+  <div class="arrow">↓ survivors only</div>
+  <div class="stage"><span class="n">5</span><div><b>Enrich</b>
+    <p>RentCast free tier (tax records, rent estimates, valuations), STR revenue estimates
+    via web search, county appraisal-district tax records, live investment mortgage rates,
+    and a short-term-rental ordinance check that is <i>never</i> auto-cleared.</p></div></div>
+  <div class="arrow">↓</div>
+  <div class="stage"><span class="n">6</span><div><b>Score</b>
+    <p>Pure, unit-tested Python: cap rate, cash-on-cash, DSCR, GRM, break-even occupancy →
+    three tier-specific buy boxes → hard disqualifiers → tax-strategy triggers →
+    PASS / BORDERLINE / FAIL plus a 0–100 composite score.</p></div></div>
+  <div class="arrow">↓</div>
+  <div class="stage"><span class="n">7</span><div><b>Publish</b>
+    <p>A ranked digest lands as a GitHub issue (full deal cards for the top 3), the
+    database is committed, and this dashboard redeploys.</p></div></div>
+
+  <h2>Design decisions</h2>
+  <ul>
+    <li><b>LLM only where language is messy; code everywhere math must be right.</b>
+      Claude does parsing and web-search synthesis. Every metric, threshold comparison,
+      and verdict is deterministic, unit-tested Python — a scoring engine you can't
+      reproduce is a vibe, not an underwriting tool.</li>
+    <li><b>Judgment calls are flagged, never automated.</b> Borderline destination-market
+      status, which BORDERLINE deals to act on, rehab estimates, and final STR-legality
+      verification are surfaced explicitly and left to the human. The pipeline makes the
+      judgment call cheap; it doesn't make it.</li>
+    <li><b>Personal financial data never enters the repo.</b> Scoring reads a gitignored
+      private profile; the repo ships a sanitized example so it runs for anyone. This page
+      shows verdicts and metrics — never income, capital, or tax numbers.</li>
+    <li><b>The strategy itself is versioned.</b> The investment framework is markdown in
+      the repo. When an assumption proves wrong, the fix is a commit with a diff history.</li>
+  </ul>
+
+  <div class="callout"><p><b>Why v2 exists:</b> the project started as parallel AI-partner
+  experiments that drifted into contradiction — different LTV ceilings, tax law that had
+  been superseded (the OBBBA made 100% bonus depreciation permanent), different capital
+  plans. An audit established precedence, filled the gaps neither version covered (a
+  first-pass kill stage, STR operating-expense defaults), and the reconciled framework
+  became the single source of truth the pipeline enforces.</p></div>
+
+  <h2>Stack</h2>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Layer</th><th>Choice</th><th>Why</th></tr></thead>
+    <tbody>
+      <tr><td>Orchestration</td><td>GitHub Actions cron</td>
+          <td>Free, runs without any laptop, and the automation is itself public and reviewable</td></tr>
+      <tr><td>Email</td><td>Gmail API, read-only OAuth</td>
+          <td>The token can read mail, never send or delete</td></tr>
+      <tr><td>Parsing &amp; research</td><td>Claude API + web search</td>
+          <td>Structured extraction from messy HTML; live data where no API exists</td></tr>
+      <tr><td>Property data</td><td>RentCast + Rabbu free tiers, county CAD</td>
+          <td>$0/month v1, with a documented upgrade path (AirDNA, paid tiers)</td></tr>
+      <tr><td>Storage</td><td>SQLite committed to the repo</td>
+          <td>Zero infrastructure; the database has a git history</td></tr>
+      <tr><td>Frontend</td><td>This page — vanilla HTML/JS on GitHub Pages</td>
+          <td>No build step; redeploys on every data commit</td></tr>
+      <tr><td>Manual intake</td><td>Claude Code skill (<code>/add-deal</code>)</td>
+          <td>Drop in any address or listing text; same pipeline, same database</td></tr>
+    </tbody>
+  </table></div>
+
+  <h2>Built with</h2>
+  <p>Designed and implemented with <a href="https://claude.com/claude-code">Claude Code</a>
+  — from reconciling the contradicting strategy documents through the scoring engine,
+  tests, this dashboard, and the daily automation. Part of
+  <a href="https://github.com/shawnjohnsamuel">Shawn Samuel's</a> AI-builds portfolio.</p>
+</div>
+</body>
+</html>

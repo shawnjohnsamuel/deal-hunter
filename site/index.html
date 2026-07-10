@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deal Hunter — Automated Real Estate Deal Pipeline</title>
+<style>
+  :root {
+    --page: #f9f9f7; --surface: #fcfcfb;
+    --ink: #0b0b0b; --ink-2: #52514e; --muted: #898781;
+    --grid: #e1e0d9; --baseline: #c3c2b7; --ring: rgba(11,11,11,0.10);
+    --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+    --good-text: #006300; --accent: #2a78d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page: #0d0d0d; --surface: #1a1a19;
+      --ink: #ffffff; --ink-2: #c3c2b7; --muted: #898781;
+      --grid: #2c2c2a; --baseline: #383835; --ring: rgba(255,255,255,0.10);
+      --good-text: #0ca30c; --accent: #3987e5;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--page); color: var(--ink);
+    font: 15px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 28px 20px 60px;
+  }
+  .wrap { max-width: 1060px; margin: 0 auto; }
+  header h1 { font-size: 26px; letter-spacing: -0.02em; }
+  header .sub { color: var(--ink-2); margin-top: 4px; max-width: 62ch; }
+  header .links { margin-top: 10px; font-size: 14px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; margin: 24px 0; }
+  .tile {
+    background: var(--surface); border: 1px solid var(--ring); border-radius: 10px;
+    padding: 14px 16px;
+  }
+  .tile .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; }
+  .tile .value { font-size: 30px; font-weight: 650; margin-top: 2px; }
+  .tile .note { color: var(--ink-2); font-size: 12px; margin-top: 2px; }
+
+  .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
+  .filters select, .filters input {
+    background: var(--surface); color: var(--ink); border: 1px solid var(--baseline);
+    border-radius: 8px; padding: 7px 10px; font: inherit; font-size: 14px;
+  }
+  .filters input { flex: 1; min-width: 180px; }
+  .count { color: var(--muted); font-size: 13px; margin-left: auto; }
+
+  .tablewrap { overflow-x: auto; background: var(--surface); border: 1px solid var(--ring); border-radius: 12px; }
+  table { border-collapse: collapse; width: 100%; min-width: 780px; }
+  th, td { text-align: left; padding: 10px 14px; border-top: 1px solid var(--grid); font-size: 14px; }
+  thead th {
+    border-top: none; color: var(--muted); font-size: 12px; text-transform: uppercase;
+    letter-spacing: 0.05em; font-weight: 600; cursor: pointer; user-select: none; white-space: nowrap;
+  }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
+  .addr { font-weight: 600; }
+  .addr .city { color: var(--ink-2); font-weight: 400; }
+
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px 2px 8px;
+    border-radius: 999px; font-size: 12.5px; font-weight: 650; white-space: nowrap;
+    border: 1px solid var(--ring);
+  }
+  .badge .dot { width: 9px; height: 9px; border-radius: 50%; }
+  .b-PASS       { background: color-mix(in srgb, var(--good) 14%, transparent); }
+  .b-PASS .dot  { background: var(--good); }
+  .b-BORDERLINE { background: color-mix(in srgb, var(--warning) 16%, transparent); }
+  .b-BORDERLINE .dot { background: var(--warning); }
+  .b-FAIL       { background: color-mix(in srgb, var(--serious) 15%, transparent); }
+  .b-FAIL .dot  { background: var(--serious); }
+  .b-KILLED     { background: color-mix(in srgb, var(--muted) 14%, transparent); color: var(--ink-2); }
+  .b-KILLED .dot{ background: var(--muted); }
+
+  .score { font-variant-numeric: tabular-nums; font-weight: 650; }
+  .tier { color: var(--ink-2); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.04em; }
+
+  tr.detail-row > td { background: var(--page); padding: 18px; cursor: default; }
+  .detail h3 { font-size: 15px; margin: 14px 0 6px; }
+  .detail h3:first-child { margin-top: 0; }
+  .detail pre {
+    background: var(--surface); border: 1px solid var(--ring); border-radius: 10px;
+    padding: 14px; overflow-x: auto; font-size: 12.5px; line-height: 1.45;
+  }
+  .detail ul { padding-left: 20px; color: var(--ink-2); font-size: 13.5px; }
+  .detail li { margin: 3px 0; }
+  .detail li.hard { color: var(--critical); font-weight: 600; }
+  .empty { padding: 40px; text-align: center; color: var(--muted); }
+  footer { color: var(--muted); font-size: 12.5px; margin-top: 22px; max-width: 80ch; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>🏠 Deal Hunter</h1>
+    <p class="sub">Automated daily pipeline: deal-flow emails → LLM extraction → deterministic
+      underwriting → personalized buy-box verdicts. Built with Claude Code.</p>
+    <p class="links">
+      <a href="architecture.html">How it works ↗</a> &nbsp;·&nbsp;
+      <a href="https://github.com/shawnjohnsamuel/deal-hunter">GitHub ↗</a>
+      &nbsp;·&nbsp; <span id="updated" style="color:var(--muted)"></span>
+    </p>
+  </header>
+
+  <div class="tiles" id="tiles"></div>
+
+  <div class="filters">
+    <select id="f-verdict">
+      <option value="">All verdicts</option>
+      <option>PASS</option><option>BORDERLINE</option><option>FAIL</option><option>KILLED</option>
+    </select>
+    <select id="f-tier">
+      <option value="">All tiers</option>
+      <option value="str">STR</option>
+      <option value="house_hack">House Hack</option>
+      <option value="ltr">LTR</option>
+    </select>
+    <input id="f-search" type="search" placeholder="Search address or city…">
+    <span class="count" id="count"></span>
+  </div>
+
+  <div class="tablewrap">
+    <table>
+      <thead><tr>
+        <th data-sort="verdict">Verdict</th>
+        <th data-sort="score" class="num">Score</th>
+        <th data-sort="address">Property</th>
+        <th data-sort="tier">Tier</th>
+        <th data-sort="price" class="num">Price</th>
+        <th data-sort="coc" class="num">CoC</th>
+        <th data-sort="cf" class="num">Cash Flow/yr</th>
+      </tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <div class="empty" id="empty" hidden>No deals match.</div>
+  </div>
+
+  <footer>
+    Verdicts are scored against a private investor profile (thresholds only — no personal
+    financials are published). Tax projections are planning estimates requiring CPA
+    confirmation; STR-legality flags are search-based and always require human verification.
+    Early entries are seeded demo data while the email pipeline accumulates live deals.
+  </footer>
+</div>
+
+<script>
+const fmtUSD = v => v == null ? "—" : "$" + Math.round(v).toLocaleString();
+const fmtPct = v => v == null ? "—" : (v * 100).toFixed(1) + "%";
+const TIER = { str: "STR", house_hack: "House Hack", ltr: "LTR" };
+let deals = [], sortKey = "score", sortDir = -1, openKey = null;
+
+function badge(v) {
+  const label = v || "—";
+  return `<span class="badge b-${label}"><span class="dot"></span>${label}</span>`;
+}
+
+function rowData(d) {
+  return {
+    verdict: d.verdict || "—", score: d.score, address: d.address || "?",
+    city: [d.city, d.state].filter(Boolean).join(", "),
+    tier: TIER[d.tier] || d.tier || "—", price: d.price,
+    coc: d.metrics?.coc ?? null, cf: d.metrics?.annual_cash_flow ?? null,
+  };
+}
+
+function detailHTML(d) {
+  let h = '<div class="detail">';
+  if (d.kill_reasons?.length)
+    h += "<h3>Killed by first-pass filter</h3><ul>" +
+         d.kill_reasons.map(r => `<li class="hard">${r}</li>`).join("") + "</ul>";
+  if (d.hard_disqualifiers?.length)
+    h += "<h3>Hard disqualifiers</h3><ul>" +
+         d.hard_disqualifiers.map(r => `<li class="hard">${r}</li>`).join("") + "</ul>";
+  if (d.deal_card_md)
+    h += "<h3>Deal card</h3><pre>" +
+         d.deal_card_md.replace(/```/g, "").replace(/&/g,"&amp;").replace(/</g,"&lt;") + "</pre>";
+  if (d.tax_flags?.length)
+    h += "<h3>Tax angle</h3><ul>" + d.tax_flags.map(r => `<li>${r}</li>`).join("") + "</ul>";
+  if (d.red_flags?.length)
+    h += "<h3>Red flags</h3><ul>" + d.red_flags.map(r => `<li>${r}</li>`).join("") + "</ul>";
+  h += `<p style="color:var(--muted);font-size:12px;margin-top:10px">
+        Source: ${d.source || "?"} · first seen ${(d.first_seen||"").slice(0,10)}</p></div>`;
+  return h;
+}
+
+function render() {
+  const fv = document.getElementById("f-verdict").value;
+  const ft = document.getElementById("f-tier").value;
+  const q = document.getElementById("f-search").value.toLowerCase();
+  let list = deals.filter(d =>
+    (!fv || (d.verdict || "") === fv) &&
+    (!ft || d.tier === ft) &&
+    (!q || `${d.address} ${d.city} ${d.state}`.toLowerCase().includes(q)));
+
+  list.sort((a, b) => {
+    const ra = rowData(a)[sortKey], rb = rowData(b)[sortKey];
+    if (ra == null) return 1; if (rb == null) return -1;
+    return (ra < rb ? -1 : ra > rb ? 1 : 0) * sortDir;
+  });
+
+  document.getElementById("count").textContent = `${list.length} of ${deals.length} deals`;
+  document.getElementById("empty").hidden = list.length > 0;
+  const tbody = document.getElementById("rows");
+  tbody.innerHTML = list.map(d => {
+    const r = rowData(d);
+    const open = d.key === openKey;
+    return `<tr data-key="${d.key}">
+      <td>${badge(r.verdict)}</td>
+      <td class="num score">${r.score == null ? "—" : Math.round(r.score)}</td>
+      <td class="addr">${r.address}<br><span class="city">${r.city}</span></td>
+      <td class="tier">${r.tier}</td>
+      <td class="num">${fmtUSD(r.price)}</td>
+      <td class="num">${fmtPct(r.coc)}</td>
+      <td class="num">${fmtUSD(r.cf)}</td>
+    </tr>` + (open ? `<tr class="detail-row"><td colspan="7">${detailHTML(d)}</td></tr>` : "");
+  }).join("");
+
+  tbody.querySelectorAll("tr[data-key]").forEach(tr =>
+    tr.addEventListener("click", () => {
+      openKey = openKey === tr.dataset.key ? null : tr.dataset.key;
+      render();
+    }));
+}
+
+function tiles(stats) {
+  const t = [
+    ["Screened", stats.total, "all-time candidates"],
+    ["Passed", stats.pass, "worth underwriting"],
+    ["Borderline", stats.borderline, "judgment calls"],
+    ["Failed", stats.fail, "ran the numbers, said no"],
+    ["Killed early", stats.killed, "zero research spent"],
+  ];
+  document.getElementById("tiles").innerHTML = t.map(([l, v, n]) =>
+    `<div class="tile"><div class="label">${l}</div><div class="value">${v ?? 0}</div>
+     <div class="note">${n}</div></div>`).join("");
+}
+
+fetch("deals.json?t=" + Date.now())
+  .then(r => r.json())
+  .then(data => {
+    deals = data.deals || [];
+    tiles(data.stats || {});
+    document.getElementById("updated").textContent =
+      "updated " + (data.stats?.generated || "").slice(0, 10);
+    render();
+  })
+  .catch(() => { document.getElementById("empty").hidden = false; });
+
+document.querySelectorAll("thead th").forEach(th =>
+  th.addEventListener("click", () => {
+    const k = th.dataset.sort;
+    sortDir = sortKey === k ? -sortDir : (k === "address" || k === "tier" || k === "verdict" ? 1 : -1);
+    sortKey = k; render();
+  }));
+["f-verdict", "f-tier", "f-search"].forEach(id =>
+  document.getElementById(id).addEventListener("input", render));
+</script>
+</body>
+</html>
