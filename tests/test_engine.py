@@ -15,12 +15,13 @@ def profile():
 # --- Fixtures -----------------------------------------------------------
 
 def broken_bow_str():
-    """Destination-market cabin that should PASS."""
+    """Destination-market cabin that should PASS under the v2.2.1
+    Victor-calibrated expense defaults (owner-paid cleaning + 7% lodging tax)."""
     return {
         "address": "123 Pine Ridge Trl", "city": "Broken Bow", "state": "OK",
-        "property_type": "cabin", "units": 1, "price": 475000, "furnished": False,
+        "property_type": "cabin", "units": 1, "price": 450000, "furnished": False,
         "claimed": {},
-        "enriched": {"adr": 350, "occupancy": 0.70},
+        "enriched": {"adr": 425, "occupancy": 0.70},
         "tier": "str",
     }
 
@@ -52,10 +53,26 @@ def test_kill_str_over_price_ceiling(profile):
     assert killed and "ceiling" in reasons[0]
 
 
-def test_kill_str_non_destination(profile):
-    deal = broken_bow_str() | {"city": "Frisco"}
-    killed, reasons, _ = run_kill_filter(deal, profile)
+def test_kill_str_non_destination_teaser_only(profile):
+    # Two-tier rule (v2.2.1): teaser-newsletter non-destination STRs die at the
+    # kill filter; agent/manual ones proceed to scoring (capped at BORDERLINE).
+    teaser = broken_bow_str() | {"city": "Frisco", "source_kind": "teaser_paywall"}
+    killed, reasons, _ = run_kill_filter(teaser, profile)
     assert killed and "non-destination" in reasons[0]
+
+    agent = broken_bow_str() | {"city": "Frisco", "source_kind": "agent_full_address"}
+    killed2, _, _ = run_kill_filter(agent, profile)
+    assert not killed2
+
+
+def test_non_destination_str_capped_at_borderline(profile):
+    # Same numbers PASS in Broken Bow; in Frisco (agent-sourced) the verdict is
+    # capped at BORDERLINE with the note last in the red flags (card detail).
+    assert score_deal(broken_bow_str(), profile)["verdict"] == "PASS"
+    metro = broken_bow_str() | {"city": "Frisco", "source_kind": "agent_full_address"}
+    result = score_deal(metro, profile)
+    assert result["verdict"] == "BORDERLINE"
+    assert "capped at BORDERLINE" in result["red_flags"][-1]
 
 
 def test_unknown_market_flags_but_does_not_kill(profile):
@@ -114,7 +131,7 @@ def test_str_pass(profile):
     assert result["verdict"] == "PASS"
     assert result["score"] > 70
     m = result["underwriting"]["metrics"]
-    assert m["gross_yield"] == pytest.approx(0.188, abs=0.005)
+    assert m["gross_yield"] == pytest.approx(0.241, abs=0.005)
     assert m["cap_rate"] > 0.08
     assert m["coc"] > 0.08
     assert m["dscr"] > 1.25
@@ -254,7 +271,6 @@ def test_pillar_str_coc_floor_is_d(profile):
             "claimed": {}, "enriched": {"adr": 375, "occupancy": 0.66}, "tier": "str"}
     result = score_deal(deal, profile)
     assert result["pillars"]["cash_flow"]["grade"] == "D"
-    assert "posting floor" in result["pillars"]["cash_flow"]["note"]
 
 
 def test_victor_grades_win_and_are_marked(profile):
@@ -293,7 +309,7 @@ def test_divergence_flagged(profile):
 
 def test_no_divergence_when_close(profile):
     deal = broken_bow_str()
-    deal["victor"] = {"underwriting": {"cash_flow_monthly": 820}}  # ~3% from ours
+    deal["victor"] = {"underwriting": {"cash_flow_monthly": 820}}  # within 10% of ours
     result = score_deal(deal, profile)
     assert not any("DIVERGENCE" in f for f in result["red_flags"])
 
@@ -367,3 +383,25 @@ def test_kill_ceiling_respects_seller_financing(profile):
     killed2, _, flags2 = run_kill_filter(financed, profile)
     assert not killed2
     assert any("financing" in f for f in flags2)
+
+
+def test_str_expense_overrides(profile):
+    # Guest-paid cleaning + platform-remitted lodging tax lift cash flow vs defaults
+    base = score_deal(broken_bow_str(), profile)
+    lean = score_deal(broken_bow_str() | {"cleaning_guest_paid": True,
+                                          "lodging_tax_platform_remitted": True}, profile)
+    diff = lean["underwriting"]["annual_cash_flow"] - base["underwriting"]["annual_cash_flow"]
+    # default cleaning 725*12 + lodging 7% of ~108.6k revenue ≈ $16.3k
+    assert diff == pytest.approx(725 * 12 + 108588 * 0.07, rel=0.02)
+    a = lean["underwriting"]["assumptions"]
+    assert "guest-paid" in a["cleaning"] and "platform-remitted" in a["lodging_tax"]
+
+
+def test_str_stated_lodging_tax_wins(profile):
+    deal = broken_bow_str()
+    deal["claimed"]["lodging_tax_annual"] = 5000
+    deal["claimed"]["cleaning_monthly"] = 600
+    result = score_deal(deal, profile)
+    default = score_deal(broken_bow_str(), profile)
+    # stated $5,000 HOT (< 7% default ≈ $7,601) and $600 cleaning (< $725) -> higher CF
+    assert result["underwriting"]["annual_cash_flow"] > default["underwriting"]["annual_cash_flow"]

@@ -1,7 +1,9 @@
-# Real Estate Investment Framework — v2.2
+# Real Estate Investment Framework — v2.2.1
 
 **Single source of truth.** Supersedes Framework v1.0 (both the ChatGPT and Claude variants) and incorporates the Personal Financial Profile (completed July 7, 2026) as the authoritative override wherever the two conflicted.
 
+> **v2.2.1 (July 11, 2026) — calibrated against Victor's actual P&Ls:** STR defaults now include owner-paid cleaning ($725/mo) and lodging/HOT tax (7% of revenue), both overridable by stated figures. Non-destination STR rule is two-tier: teaser-newsletter ones still die at the kill filter; **full-address agent deals get scored for the database but are capped at BORDERLINE** — the Tier-1 buy is a mountain STR, and Victor's pipeline (DFW/Austin/San Antonio) feeds Tiers 2–3 primarily.
+>
 > **v2.2 (July 10, 2026):** Deal Card rebuilt around the **four-pillar methodology** of Victor Steffen (the highest-priority, highest-trust source) — asset quality, neighborhood quality, vacancy risk, cash-flow margin — applied uniformly to deals from every source. Victor's own underwriting is captured and compared side-by-side with ours (divergence >10% flagged). D-grade neighborhoods are a new hard disqualifier. Exception factors (financing incentive, walk-in equity, unicorn location) are recorded explicitly.
 >
 > **v2.1 (July 10, 2026):** mountain markets promoted to explicit STR Tier 1 priority (+composite bonus); deal-flow source roster documented with per-sender behavior (agents send addresses, teaser newsletters don't); teaser-identification procedure added; every deal now carries provenance (source name + deep link to the original email).
@@ -213,7 +215,8 @@ BUY BOX VERDICT
 | Occupancy (no data) | 65% |
 | ADR (no data) | **Flag and ask — never assume** |
 | STR Management | 20% of revenue (15–25% range) |
-| Cleaning | Guest-paid pass-through (net $0); flag if owner-paid |
+| Cleaning | **Owner-paid $725/mo** (Victor-calibrated); $0 only when guest-paid is confirmed |
+| Lodging / HOT tax | **7% of revenue** (Victor-calibrated for TX; override with stated figure; $0 only if platform-remitted) |
 | Utilities (owner-paid) | $300/mo |
 | Supplies / consumables | 2% of revenue |
 | Platform fees | 3% of revenue |

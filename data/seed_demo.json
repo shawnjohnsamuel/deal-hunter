@@ -5,14 +5,14 @@
   "state": "OK",
   "property_type": "cabin",
   "units": 1,
-  "price": 475000,
+  "price": 450000,
   "furnished": false,
   "claimed": {
-   "adr": 350,
+   "adr": 425,
    "occupancy": 0.72
   },
   "enriched": {
-   "adr": 350,
+   "adr": 425,
    "occupancy": 0.7,
    "str_legality": "likely_ok",
    "str_legality_notes": "McCurtain County has no STR-restrictive ordinance as of seed date; verify HOA",

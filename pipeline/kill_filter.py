@@ -43,7 +43,15 @@ def run_kill_filter(deal: dict, profile: dict) -> tuple[bool, list[str], list[st
                 f"price ${price:,.0f} reachable only via the stated {down_pct:.0%}-down financing — "
                 "verify those terms before anything else")
         if market_type == "non_destination":
-            reasons.append("confirmed non-destination market — STR tax strategy dead (hard disqualifier)")
+            # Two-tier rule: anonymous teaser deals die here (no research spend);
+            # full-address agent deals and manual adds get scored for the
+            # database, capped at BORDERLINE in score.py. Flag goes LAST so it
+            # never becomes the digest's "top flag".
+            if deal.get("source_kind") == "teaser_paywall":
+                reasons.append("non-destination market STR from a teaser newsletter — "
+                               "not worth research spend (Tier-1 STRs are destination-market)")
+            # else: scored for the database; score.py caps the verdict at
+            # BORDERLINE and adds the note to the card's red flags.
         elif market_type == "unknown":
             flags.append("destination-market status UNKNOWN — judgment call for the human")
 

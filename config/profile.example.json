@@ -117,12 +117,13 @@
     "str": {
       "occupancy_default": 0.65,
       "management_pct_revenue": 0.2,
-      "cleaning": "guest_paid_passthrough",
       "utilities_monthly": 300,
       "supplies_pct_revenue": 0.02,
       "platform_fees_pct_revenue": 0.03,
       "furnishing_capex": 13500,
-      "insurance_multiplier_vs_ltr": 1.5
+      "insurance_multiplier_vs_ltr": 1.5,
+      "cleaning_monthly": 725,
+      "lodging_tax_pct_revenue": 0.07
     },
     "financing": {
       "down_payment_pct_str": 0.15,

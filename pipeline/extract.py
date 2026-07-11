@@ -76,7 +76,9 @@ Return ONLY a JSON array (no prose, no markdown fence). Each element:
     "property_tax_annual": <number or null>,
     "insurance_monthly": <number or null>,
     "management_pct": <decimal or null>,
-    "hoa_monthly": <number or null>
+    "hoa_monthly": <number or null>,
+    "cleaning_monthly": <number or null>,
+    "lodging_tax_annual": <number or null, hotel-occupancy/HOT tax if stated>
   },
   "occupancy_status": "occupied" | "vacant" | "partial" | "unknown",
   "occupied_pct": <decimal 0-1 or null, for multifamily e.g. 3 of 4 units = 0.75>,

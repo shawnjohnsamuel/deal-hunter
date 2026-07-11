@@ -103,11 +103,37 @@ def _underwrite_str(deal: dict, profile: dict) -> dict:
         deal, profile, assumptions, s["insurance_multiplier_vs_ltr"])
 
     mgmt_pct = _management_pct(deal, assumptions, s["management_pct_revenue"])
+
+    # Lodging/HOT tax — Victor-calibrated (his TX P&Ls all budget it). Stated
+    # figure wins; else % of revenue; $0 only when the platform remits it.
+    if deal.get("lodging_tax_platform_remitted"):
+        lodging_tax = 0.0
+        assumptions["lodging_tax"] = "platform-remitted per listing — verify"
+    else:
+        lodging_tax, _ = _pick(deal, "lodging_tax_annual", assumptions)
+        if lodging_tax is None:
+            lodging_tax = revenue * s["lodging_tax_pct_revenue"]
+            assumptions["lodging_tax"] = (
+                f"assumed {s['lodging_tax_pct_revenue']:.0%} of revenue (state/local HOT)")
+
+    # Cleaning — owner-paid by default (Victor-calibrated); guest-paid only
+    # when the deal confirms it.
+    if deal.get("cleaning_guest_paid"):
+        cleaning_monthly = 0.0
+        assumptions["cleaning"] = "guest-paid pass-through (confirmed)"
+    else:
+        cleaning_monthly, _ = _pick(deal, "cleaning_monthly", assumptions)
+        if cleaning_monthly is None:
+            cleaning_monthly = s["cleaning_monthly"]
+            assumptions["cleaning"] = f"assumed owner-paid ${s['cleaning_monthly']}/mo"
+
     opex_annual = (
         revenue * mgmt_pct
         + revenue * s["supplies_pct_revenue"]
         + revenue * s["platform_fees_pct_revenue"]
         + revenue * profile["assumptions"]["ltr"]["capex_pct_rent"]
+        + lodging_tax
+        + cleaning_monthly * 12
         + s["utilities_monthly"] * 12
         + ins_monthly * 12
         + hoa_monthly * 12

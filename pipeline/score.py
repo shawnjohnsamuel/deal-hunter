@@ -107,8 +107,6 @@ def _hard_disqualifiers(deal: dict, uw: dict, profile: dict) -> list[str]:
     m = uw["metrics"]
     if deal.get("str_restricted") is True and tier == "str":
         dq.append("HOA/ordinance STR restriction — strategy dead")
-    if tier == "str" and deal.get("market_type") == "non_destination":
-        dq.append("non-destination market — STR tax strategy not viable")
     if m.get("dscr") is not None and m["dscr"] < profile["dscr_min"] and tier != "house_hack":
         dq.append(f"DSCR {m['dscr']:.2f} < {profile['dscr_min']} — negative coverage")
     if tier == "house_hack":
@@ -212,6 +210,12 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
     else:
         verdict = "FAIL"
 
+    # Non-destination STRs are scored for the database (Victor's metro deals)
+    # but can never exceed BORDERLINE — the Tier-1 buy is a mountain STR.
+    nondest_cap = (tier == "str" and deal.get("market_type") == "non_destination")
+    if nondest_cap and verdict == "PASS":
+        verdict = "BORDERLINE"
+
     # Exception factors (Victor's overrides: financing incentive, walk-in
     # equity, unicorn location) raise ranking and are always surfaced —
     # they never flip a FAIL.
@@ -235,6 +239,10 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
 
     red_flags = _red_flags(deal, uw, kill_flags or [])
     red_flags += check_divergence(deal, uw, profile)
+    if nondest_cap:
+        # Card-detail note only (last in the list, never the digest's top flag).
+        red_flags.append("non-destination market — not a Tier-1 STR candidate; "
+                         "verdict capped at BORDERLINE")
 
     return {
         "tier": tier, "verdict": verdict, "score": composite,

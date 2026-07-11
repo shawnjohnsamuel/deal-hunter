@@ -1,400 +1,774 @@
 [
-  {
-    "address": "2203 Jennifer Dr", "city": "Killeen", "state": "TX", "zip": "76542",
-    "property_type": "multifamily", "units": 32, "price": 1400000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 19675, "property_tax_annual": 28000,
-                "insurance_monthly": 887, "management_pct": 0.07,
-                "interest_rate": 0.0675, "cap_rate": 0.117},
-    "occupancy_status": "partial", "occupied_pct": 0.8125,
-    "condition_notes": "Year built 1976; 6 vacant units left to lease",
-    "neighborhood_notes": "Killeen / Fort Hood, 40,000+ soldiers, largest armored post in US",
-    "notes": "In-place income $19,675/mo on 26 of 32 units at $46,875/door; Victor's numbers assume $23,000/mo at full occupancy (his utilities $1,000/mo owner-paid). Financing quoted via Capital Fund I, insurance via Goosehead. ~20% gross yield potential on an LTR.",
-    "listing_urls": ["https://www.crexi.com/properties/2605621/texas-quail-hollow-apartments"],
-    "victor": {
-      "grades": {"asset_quality": "B", "neighborhood": "C"},
-      "underwriting": {"cash_flow_monthly": 6835, "coc": 0.2253, "cap_rate": 0.117,
-                       "gross_annual_income": 276000}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "32 Units at $1.4M + 2 Turnkey STRs",
-    "email_date": "Tue, 07 Jul 2026 13:38:14 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:FJsUJ4g9TsuMwgDCgg06Kg@geopod-ismtpd-21"
+ {
+  "address": "2203 Jennifer Dr",
+  "city": "Killeen",
+  "state": "TX",
+  "zip": "76542",
+  "property_type": "multifamily",
+  "units": 32,
+  "price": 1400000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 19675,
+   "property_tax_annual": 28000,
+   "insurance_monthly": 887,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.117
   },
-  {
-    "address": "1613 E Spring Valley Rd", "city": "Richardson", "state": "TX", "zip": "75081",
-    "property_type": "SFR", "units": 1, "beds": 5, "price": 510000, "furnished": true,
-    "tier": "str",
-    "claimed": {"annual_str_revenue": 95000, "property_tax_annual": 10000,
-                "insurance_monthly": 323, "management_pct": 0.15,
-                "interest_rate": 0.0675, "cap_rate": 0.0785},
-    "occupancy_status": "occupied",
-    "condition_notes": "Year built 1982; remodeled interior, pool, furniture package included",
-    "notes": "Operating STR: $96K gross 2024, $81K 2025, ~$95K projected 2026. Professionally managed by Gold Nest; set up for large groups + medium-term corporate stays. Victor pitches the STR-loophole tax angle.",
-    "listing_urls": ["https://rabbu.com/airbnbs-for-sale/richardson-tx-75081/1613-e-spring-valley-rd-richardson-tx-75081-wst"],
-    "victor": {
-      "grades": {"asset_quality": "B", "neighborhood": "B"},
-      "underwriting": {"cash_flow_monthly": 854, "coc": 0.1165, "cap_rate": 0.0785,
-                       "gross_annual_income": 95000}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "32 Units at $1.4M + 2 Turnkey STRs",
-    "email_date": "Tue, 07 Jul 2026 13:38:14 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:FJsUJ4g9TsuMwgDCgg06Kg@geopod-ismtpd-21"
+  "occupancy_status": "partial",
+  "occupied_pct": 0.8125,
+  "condition_notes": "Year built 1976; 6 vacant units left to lease",
+  "neighborhood_notes": "Killeen / Fort Hood, 40,000+ soldiers, largest armored post in US",
+  "notes": "In-place income $19,675/mo on 26 of 32 units at $46,875/door; Victor's numbers assume $23,000/mo at full occupancy (his utilities $1,000/mo owner-paid). Financing quoted via Capital Fund I, insurance via Goosehead. ~20% gross yield potential on an LTR.",
+  "listing_urls": [
+   "https://www.crexi.com/properties/2605621/texas-quail-hollow-apartments"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "C"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 6835,
+    "coc": 0.2253,
+    "cap_rate": 0.117,
+    "gross_annual_income": 276000
+   }
   },
-  {
-    "address": "902 N Allen Heights Dr", "city": "Allen", "state": "TX", "zip": "75002",
-    "property_type": "SFR", "units": 1, "beds": 3, "baths": 2, "sqft": 1800, "price": 420000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 2600, "property_tax_annual": 8400,
-                "insurance_monthly": 266, "interest_rate": 0.0675},
-    "occupancy_status": "vacant",
-    "condition_notes": "Year built 1985; new roof 2025; pool; never before on market (original owner)",
-    "neighborhood_notes": "Highly rated schools, low crime; north Dallas / Plano corridor with aggressive appreciation projected",
-    "notes": "Dual-strategy: active Airbnb at $248/night, 75% occupancy (~$68K/yr gross per Victor's STR basis, self-managed) OR LTR at ~$2,600/mo comps. Entered as LTR because the STR play sits in a non-destination metro suburb under the framework's tax-compliance rule. Allen has favorable STR regulations per Victor. Suggested offer $420K including furniture; expects multiple offers.",
-    "listing_urls": ["https://redf.in/tbknXB"],
-    "victor": {
-      "grades": {"asset_quality": "A", "neighborhood": "A"},
-      "underwriting": {"cash_flow_monthly": 488, "coc": 0.0665, "cap_rate": 0.0723,
-                       "gross_annual_income": 68000},
-      "appreciation_note": "Very aggressive appreciation projected in the north Dallas / Plano corridor"
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "32 Units at $1.4M + 2 Turnkey STRs",
-    "email_date": "Tue, 07 Jul 2026 13:38:14 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:FJsUJ4g9TsuMwgDCgg06Kg@geopod-ismtpd-21"
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "32 Units at $1.4M + 2 Turnkey STRs",
+  "email_date": "Tue, 07 Jul 2026 13:38:14 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:FJsUJ4g9TsuMwgDCgg06Kg@geopod-ismtpd-21"
+ },
+ {
+  "address": "1613 E Spring Valley Rd",
+  "city": "Richardson",
+  "state": "TX",
+  "zip": "75081",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 5,
+  "price": 510000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "annual_str_revenue": 95000,
+   "property_tax_annual": 10000,
+   "insurance_monthly": 323,
+   "management_pct": 0.15,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0785,
+   "cleaning_monthly": 725,
+   "lodging_tax_annual": 6650
   },
-  {
-    "address": "3002 Pasadena Blvd", "city": "Pasadena", "state": "TX", "zip": "77503",
-    "property_type": "multifamily", "units": 14, "price": 1200000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 14000, "property_tax_annual": 21709,
-                "insurance_monthly": 221, "management_pct": 0.07,
-                "hoa_monthly": 2800, "interest_rate": 0.0675, "cap_rate": 0.0755},
-    "occupancy_status": "occupied",
-    "condition_notes": "Year built 1979",
-    "notes": "14-condo package (12x 2-bed + 2x 1-bed) inside a 21-unit complex — controlling HOA interest. Reposition play: conservative individual resales $145K/$165K point to ~$2.2M FMV vs $1.2M price. OM available; financing pre-underwritten (Capital Fund). 12+ investor inquiries.",
-    "exception_factors": [
-      {"type": "walk_in_equity", "note": "~$2.2M conservative FMV selling unit-by-unit vs $1.2M package price"}
-    ],
-    "listing_urls": ["https://drive.google.com/file/d/1HpLcWBp7nzOQPI_8oz_pwpqxomWQoNYE/view"],
-    "victor": {
-      "grades": {"asset_quality": "B", "neighborhood": "B"},
-      "underwriting": {"cash_flow_monthly": 1712, "coc": 0.0658, "cap_rate": 0.0755,
-                       "gross_annual_income": 168000}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "3 Deals With Strong Investor Interest, Still No Signed Offers",
-    "email_date": "Mon, 06 Jul 2026 10:44:02 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:J5GO0t_5SDCXtVQ6SrWnRw@geopod-ismtpd-90"
+  "occupancy_status": "occupied",
+  "condition_notes": "Year built 1982; remodeled interior, pool, furniture package included",
+  "notes": "Operating STR: $96K gross 2024, $81K 2025, ~$95K projected 2026. Professionally managed by Gold Nest; set up for large groups + medium-term corporate stays. Victor pitches the STR-loophole tax angle.",
+  "listing_urls": [
+   "https://rabbu.com/airbnbs-for-sale/richardson-tx-75081/1613-e-spring-valley-rd-richardson-tx-75081-wst"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 854,
+    "coc": 0.1165,
+    "cap_rate": 0.0785,
+    "gross_annual_income": 95000
+   }
   },
-  {
-    "address": "1907 S 17th St", "city": "Waco", "state": "TX", "zip": "76706",
-    "property_type": "duplex", "units": 2, "beds": 8, "baths": 8, "price": 520000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 4800, "property_tax_annual": 10400,
-                "insurance_monthly": 329, "management_pct": 0.07,
-                "interest_rate": 0.0675, "cap_rate": 0.0701},
-    "occupancy_status": "occupied",
-    "condition_notes": "Year built 2006; both sides large 4-bed/4-bath",
-    "neighborhood_notes": "Near Baylor University — student-rental demand",
-    "notes": "Fully occupied: one side $2,200 (through 7/30/27), other $2,600 (through 7/30/26). Market comps support up to $2,750/unit (~$5,500/mo). List $550K; Victor suggests offering $520K (his numbers use $520K and $4,950/mo).",
-    "listing_urls": ["https://redf.in/8aeyyR"],
-    "victor": {
-      "grades": {"asset_quality": "A", "neighborhood": "B"},
-      "underwriting": {"cash_flow_monthly": 506, "coc": 0.0449, "cap_rate": 0.0701,
-                       "gross_annual_income": 59400}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "3 Deals With Strong Investor Interest, Still No Signed Offers",
-    "email_date": "Mon, 06 Jul 2026 10:44:02 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:J5GO0t_5SDCXtVQ6SrWnRw@geopod-ismtpd-90"
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "32 Units at $1.4M + 2 Turnkey STRs",
+  "email_date": "Tue, 07 Jul 2026 13:38:14 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:FJsUJ4g9TsuMwgDCgg06Kg@geopod-ismtpd-21"
+ },
+ {
+  "address": "902 N Allen Heights Dr",
+  "city": "Allen",
+  "state": "TX",
+  "zip": "75002",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1800,
+  "price": 420000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 2600,
+   "property_tax_annual": 8400,
+   "insurance_monthly": 266,
+   "interest_rate": 0.0675
   },
-  {
-    "address": "4712 South Dr", "city": "Fort Worth", "state": "TX", "zip": "76109",
-    "property_type": "duplex", "units": 2, "price": 360000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 3200, "property_tax_annual": 7200,
-                "insurance_monthly": 228, "management_pct": 0.07,
-                "interest_rate": 0.0675, "cap_rate": 0.0719},
-    "occupancy_status": "occupied",
-    "condition_notes": "Year built 1977",
-    "notes": "Off-market. Unit A $1,000/mo through 5/31/27, Unit B $2,200/mo through 7/31/26. Multiple neighborhood duplex comps sold over $400K (comps in link). Victor's numbers use $3,400/mo.",
-    "exception_factors": [
-      {"type": "walk_in_equity", "note": "off-market at $360K; multiple neighborhood duplexes sold over $400K"}
-    ],
-    "listing_urls": ["https://drive.google.com/drive/folders/1Ocj54CYKAehmd9pF--64rAd3imWrmocw"],
-    "victor": {
-      "grades": {"asset_quality": "B", "neighborhood": "B"},
-      "underwriting": {"cash_flow_monthly": 406, "coc": 0.052, "cap_rate": 0.0719,
-                       "gross_annual_income": 40800}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "3 Deals With Strong Investor Interest, Still No Signed Offers",
-    "email_date": "Mon, 06 Jul 2026 10:44:02 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:J5GO0t_5SDCXtVQ6SrWnRw@geopod-ismtpd-90"
+  "occupancy_status": "vacant",
+  "condition_notes": "Year built 1985; new roof 2025; pool; never before on market (original owner)",
+  "neighborhood_notes": "Highly rated schools, low crime; north Dallas / Plano corridor with aggressive appreciation projected",
+  "notes": "Dual-strategy: active Airbnb at $248/night, 75% occupancy (~$68K/yr gross per Victor's STR basis, self-managed) OR LTR at ~$2,600/mo comps. Entered as LTR because the STR play sits in a non-destination metro suburb under the framework's tax-compliance rule. Allen has favorable STR regulations per Victor. Suggested offer $420K including furniture; expects multiple offers.",
+  "listing_urls": [
+   "https://redf.in/tbknXB"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "A",
+    "neighborhood": "A"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 488,
+    "coc": 0.0665,
+    "cap_rate": 0.0723,
+    "gross_annual_income": 68000
+   },
+   "appreciation_note": "Very aggressive appreciation projected in the north Dallas / Plano corridor"
   },
-  {
-    "address": "3802 Southway Dr", "city": "Austin", "state": "TX", "zip": "78704",
-    "property_type": "fourplex", "units": 4, "price": 1300000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 10040, "property_tax_annual": 26000,
-                "insurance_monthly": 429, "management_pct": 0.07,
-                "interest_rate": 0.0675, "cap_rate": 0.0617},
-    "occupancy_status": "occupied",
-    "condition_notes": "Year built 1971, fully renovated 2024 — four 2bd/1.5ba townhome-style units",
-    "neighborhood_notes": "Austin 78704 — A+ core location",
-    "notes": "In-place $10,040/mo; lease comps ~$2,600/door ($10,400). Ask $1.45M; Victor suggests starting at $1.3M (his numbers use $1.3M + $10,400 rents). Ideal 1031 / premium-location buyer; leases + financials available.",
-    "listing_urls": ["https://redf.in/1Ddp9Q"],
-    "victor": {
-      "grades": {"asset_quality": "A", "neighborhood": "A"},
-      "underwriting": {"cash_flow_monthly": 365, "coc": 0.013, "cap_rate": 0.0617,
-                       "gross_annual_income": 124800}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
-    "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45"
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "32 Units at $1.4M + 2 Turnkey STRs",
+  "email_date": "Tue, 07 Jul 2026 13:38:14 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:FJsUJ4g9TsuMwgDCgg06Kg@geopod-ismtpd-21"
+ },
+ {
+  "address": "3002 Pasadena Blvd",
+  "city": "Pasadena",
+  "state": "TX",
+  "zip": "77503",
+  "property_type": "multifamily",
+  "units": 14,
+  "price": 1200000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 14000,
+   "property_tax_annual": 21709,
+   "insurance_monthly": 221,
+   "management_pct": 0.07,
+   "hoa_monthly": 2800,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0755
   },
-  {
-    "address": "3732 Bonnie Dr", "city": "Fort Worth", "state": "TX", "zip": "76116",
-    "property_type": "fourplex", "units": 4, "price": 575000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 5200, "property_tax_annual": 11500,
-                "insurance_monthly": 364, "management_pct": 0.07,
-                "interest_rate": 0.0675, "cap_rate": 0.0725},
-    "occupancy_status": "partial", "occupied_pct": 0.75,
-    "condition_notes": "Year built 1982; one unit intentionally vacant for showings",
-    "notes": "Leases average $1,300/door (entered at 4 x $1,300 = $5,200 in-place terms); room toward $1,400/door on renewals (Victor's numbers use $5,600). Reduced from $650K to $575K. Neighboring quad also available for a potential 8-unit portfolio near downtown Fort Worth.",
-    "listing_urls": ["https://redf.in/DMytQb"],
-    "victor": {
-      "grades": {"asset_quality": "B", "neighborhood": "C"},
-      "underwriting": {"cash_flow_monthly": 677, "coc": 0.0544, "cap_rate": 0.0725,
-                       "gross_annual_income": 67200}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
-    "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45"
+  "occupancy_status": "occupied",
+  "condition_notes": "Year built 1979",
+  "notes": "14-condo package (12x 2-bed + 2x 1-bed) inside a 21-unit complex \u2014 controlling HOA interest. Reposition play: conservative individual resales $145K/$165K point to ~$2.2M FMV vs $1.2M price. OM available; financing pre-underwritten (Capital Fund). 12+ investor inquiries.",
+  "exception_factors": [
+   {
+    "type": "walk_in_equity",
+    "note": "~$2.2M conservative FMV selling unit-by-unit vs $1.2M package price"
+   }
+  ],
+  "listing_urls": [
+   "https://drive.google.com/file/d/1HpLcWBp7nzOQPI_8oz_pwpqxomWQoNYE/view"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 1712,
+    "coc": 0.0658,
+    "cap_rate": 0.0755,
+    "gross_annual_income": 168000
+   }
   },
-  {
-    "address": "15224 Beach Way Dr", "city": "Corpus Christi", "state": "TX", "zip": "78418",
-    "property_type": "SFR", "units": 1, "price": 380000, "furnished": true,
-    "tier": "str",
-    "claimed": {"annual_str_revenue": 67260, "property_tax_annual": 1800,
-                "insurance_monthly": 150, "management_pct": 0.15,
-                "interest_rate": 0.0675, "cap_rate": 0.0725},
-    "occupancy_status": "occupied",
-    "condition_notes": "Year built 2014; conveys fully furnished and turnkey; sleeps 10",
-    "neighborhood_notes": "North Padre Island beachside (Corpus Christi) — walking distance to beach, heated saltwater community pool",
-    "notes": "$67,265 trailing-12-month revenue (seller-reported). Ask $400K; seller has a financing balloon due this fall — Victor suggests starting ~$375K (his numbers use $380K). HOA is $300/mo and COVERS taxes + insurance; HOA is built for STRs with favorable bylaws (still verify).",
-    "listing_urls": ["https://rabbu.com/airbnbs-for-sale/corpus-christi-tx-78418/15224-beach-way-dr-corpus-christi-tx-78418-dhh"],
-    "victor": {
-      "grades": {"asset_quality": "A", "neighborhood": "B"},
-      "underwriting": {"cash_flow_monthly": 448, "coc": 0.061, "cap_rate": 0.0725,
-                       "gross_annual_income": 67260}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
-    "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45"
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "3 Deals With Strong Investor Interest, Still No Signed Offers",
+  "email_date": "Mon, 06 Jul 2026 10:44:02 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:J5GO0t_5SDCXtVQ6SrWnRw@geopod-ismtpd-90"
+ },
+ {
+  "address": "1907 S 17th St",
+  "city": "Waco",
+  "state": "TX",
+  "zip": "76706",
+  "property_type": "duplex",
+  "units": 2,
+  "beds": 8,
+  "baths": 8,
+  "price": 520000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 4800,
+   "property_tax_annual": 10400,
+   "insurance_monthly": 329,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0701
   },
-  {
-    "address": "412 Chicago Ave", "city": "Fort Worth", "state": "TX", "zip": "76103",
-    "property_type": "duplex", "units": 2, "price": 219000,
-    "tier": "house_hack",
-    "claimed": {"other_units_monthly_rent": 965, "interest_rate": 0.0675},
-    "occupancy_status": "partial", "occupied_pct": 0.5,
-    "condition_notes": "Year built 1920; turnkey per Victor",
-    "neighborhood_notes": "East Fort Worth near multiple major employers — constant tenant flow",
-    "notes": "Unit B leased $965/mo through Oct 2026; Unit A vacant (1-bed should lease ~$950; 2-bed comps $1,050-1,150). Victor: 'perfect first investment or house hack'; suggested offer $212K. No underwriting table provided in the email — engine assumptions fill the gaps.",
-    "listing_urls": ["https://redf.in/tJ0VV8"],
-    "victor": {
-      "grades": {"asset_quality": "B", "neighborhood": "B"}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
-    "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45"
+  "occupancy_status": "occupied",
+  "condition_notes": "Year built 2006; both sides large 4-bed/4-bath",
+  "neighborhood_notes": "Near Baylor University \u2014 student-rental demand",
+  "notes": "Fully occupied: one side $2,200 (through 7/30/27), other $2,600 (through 7/30/26). Market comps support up to $2,750/unit (~$5,500/mo). List $550K; Victor suggests offering $520K (his numbers use $520K and $4,950/mo).",
+  "listing_urls": [
+   "https://redf.in/8aeyyR"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "A",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 506,
+    "coc": 0.0449,
+    "cap_rate": 0.0701,
+    "gross_annual_income": 59400
+   }
   },
-  {
-    "address": "1509 F Ave", "city": "Plano", "state": "TX", "zip": "75074",
-    "property_type": "multifamily", "units": 12, "price": 1950000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 20775, "property_tax_annual": 39000,
-                "insurance_monthly": 1235, "management_pct": 0.07,
-                "interest_rate": 0.0675, "cap_rate": 0.0824},
-    "occupancy_status": "occupied",
-    "condition_notes": "Year built 1970, renovated 2020; due-diligence file documents repairs/upgrades/rent roll",
-    "neighborhood_notes": "Walkable Downtown Plano — A+ DFW location",
-    "notes": "Fully occupied 12-plex; current rents average $1,735/door (in-place $20,775/mo entered), upside $1,850-2,100/door (Victor's numbers assume $1,850 = $22,200/mo). Seller agreed to $1.95M, down from $2.2M ask.",
-    "exception_factors": [
-      {"type": "unicorn_location", "note": "Victor labels it UNICORN — stabilized income in walkable Downtown Plano, A+ market at scale"},
-      {"type": "walk_in_equity", "note": "agreed price $1.95M vs $2.2M current ask"}
-    ],
-    "listing_urls": ["https://redf.in/0hwT8E",
-                     "https://drive.google.com/drive/folders/1gGpx5zeA1nHBNaDKbqLTzAyMqHYPrdNc"],
-    "victor": {
-      "grades": {"asset_quality": "A", "neighborhood": "A"},
-      "underwriting": {"cash_flow_monthly": 3898, "coc": 0.0923, "cap_rate": 0.0824,
-                       "gross_annual_income": 266400}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
-    "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43"
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "3 Deals With Strong Investor Interest, Still No Signed Offers",
+  "email_date": "Mon, 06 Jul 2026 10:44:02 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:J5GO0t_5SDCXtVQ6SrWnRw@geopod-ismtpd-90"
+ },
+ {
+  "address": "4712 South Dr",
+  "city": "Fort Worth",
+  "state": "TX",
+  "zip": "76109",
+  "property_type": "duplex",
+  "units": 2,
+  "price": 360000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 3200,
+   "property_tax_annual": 7200,
+   "insurance_monthly": 228,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0719
   },
-  {
-    "address": "5407 Ariel St", "city": "Houston", "state": "TX", "zip": "77096",
-    "property_type": "SFR", "units": 1, "beds": 5, "price": 545000, "furnished": true,
-    "tier": "str",
-    "claimed": {"annual_str_revenue": 101532, "interest_rate": 0.0675},
-    "occupancy_status": "occupied",
-    "condition_notes": "Year built 1963, remodeled 2023; sleeps 14, hot tub",
-    "neighborhood_notes": "Sub-10-minute drive to Houston Medical Center and Astrodome",
-    "notes": "Real financials, not pro forma: $101,532 revenue in 2025 (live on Airbnb only since mid-Jan 2025), itemized $66,551 NOI after management — a walk-in 12-cap on actuals at $545K. Victor's own conservative rerun shows ~7 cap. P&L from the manager available.",
-    "listing_urls": ["https://rabbu.com/airbnbs-for-sale/houston-tx-77096/5407-ariel-st-houston-tx-77096-hwf"],
-    "victor": {
-      "grades": {"asset_quality": "B", "neighborhood": "B"},
-      "underwriting": {"cap_rate": 0.07, "gross_annual_income": 101532}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
-    "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43"
+  "occupancy_status": "occupied",
+  "condition_notes": "Year built 1977",
+  "notes": "Off-market. Unit A $1,000/mo through 5/31/27, Unit B $2,200/mo through 7/31/26. Multiple neighborhood duplex comps sold over $400K (comps in link). Victor's numbers use $3,400/mo.",
+  "exception_factors": [
+   {
+    "type": "walk_in_equity",
+    "note": "off-market at $360K; multiple neighborhood duplexes sold over $400K"
+   }
+  ],
+  "listing_urls": [
+   "https://drive.google.com/drive/folders/1Ocj54CYKAehmd9pF--64rAd3imWrmocw"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 406,
+    "coc": 0.052,
+    "cap_rate": 0.0719,
+    "gross_annual_income": 40800
+   }
   },
-  {
-    "address": "1233 W Hudgins St", "city": "Grapevine", "state": "TX", "zip": "76051",
-    "property_type": "duplex", "units": 2, "beds": 6, "baths": 4, "sqft": 3000, "price": 455000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 4600, "property_tax_annual": 9100,
-                "insurance_monthly": 288, "management_pct": 0.07,
-                "interest_rate": 0.0675, "cap_rate": 0.076},
-    "occupancy_status": "unknown",
-    "condition_notes": "Year built 1985; $8,000 foundation work needed (quote available); each side 3bd/2ba ~1,500 sqft",
-    "neighborhood_notes": "Grapevine — A-grade premier DFW market",
-    "notes": "Rents comps-supported at $2,300/side (right at the 1% rule for an A market). Ask $450K; Victor suggests offering $455K to win — 1222 W Hudgins sold $525K two months ago. Also a house-hack candidate, but sits above the $450K house-hack ceiling in the buy box, so entered as LTR.",
-    "exception_factors": [
-      {"type": "unicorn_location", "note": "Victor labels it UNICORN — 1%-rule duplex in A-grade Grapevine, where inventory never appears"},
-      {"type": "walk_in_equity", "note": "comparable at 1222 W Hudgins sold $525K two months ago vs $455K"}
-    ],
-    "listing_urls": ["https://redf.in/O5ztrU"],
-    "victor": {
-      "grades": {"asset_quality": "B", "neighborhood": "A"},
-      "underwriting": {"cash_flow_monthly": 667, "coc": 0.0677, "cap_rate": 0.076,
-                       "gross_annual_income": 55200}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
-    "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43"
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "3 Deals With Strong Investor Interest, Still No Signed Offers",
+  "email_date": "Mon, 06 Jul 2026 10:44:02 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:J5GO0t_5SDCXtVQ6SrWnRw@geopod-ismtpd-90"
+ },
+ {
+  "address": "3802 Southway Dr",
+  "city": "Austin",
+  "state": "TX",
+  "zip": "78704",
+  "property_type": "fourplex",
+  "units": 4,
+  "price": 1300000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 10040,
+   "property_tax_annual": 26000,
+   "insurance_monthly": 429,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0617
   },
-  {
-    "address": "403 Geyser St", "city": "Pflugerville", "state": "TX", "zip": "78660",
-    "property_type": "SFR", "units": 1, "price": 800000, "furnished": true,
-    "tier": "str", "down_payment_pct": 0.10,
-    "claimed": {"annual_str_revenue": 118000, "property_tax_annual": 16000,
-                "insurance_monthly": 507, "management_pct": 0.15,
-                "interest_rate": 0.07},
-    "occupancy_status": "occupied",
-    "condition_notes": "Year built 1997; heated pool, hot tub, large-group layout; management in place",
-    "neighborhood_notes": "Pflugerville, north of Austin (metro suburb — destination status is a judgment call)",
-    "notes": "Trailing-12 revenue $118,000 (entered); 2026 projected $140,000 (Victor's numbers use the projection — expect divergence flags). Seller financing: 10% down, 7% interest, 5-year balloon, low closing costs. Victor's utilities assumption $750/mo.",
-    "exception_factors": [
-      {"type": "financing_incentive", "note": "seller financing at 10% down / 7% / 5-yr balloon with low closing costs — ~$88K all-in on an $800K STR"}
-    ],
-    "listing_urls": ["https://www.airbnb.com/rooms/1626397748526268700"],
-    "victor": {
-      "grades": {"asset_quality": "B", "neighborhood": "B"},
-      "underwriting": {"cash_flow_monthly": 1127, "coc": 0.1536, "cap_rate": 0.0799,
-                       "gross_annual_income": 140000}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
-    "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105"
+  "occupancy_status": "occupied",
+  "condition_notes": "Year built 1971, fully renovated 2024 \u2014 four 2bd/1.5ba townhome-style units",
+  "neighborhood_notes": "Austin 78704 \u2014 A+ core location",
+  "notes": "In-place $10,040/mo; lease comps ~$2,600/door ($10,400). Ask $1.45M; Victor suggests starting at $1.3M (his numbers use $1.3M + $10,400 rents). Ideal 1031 / premium-location buyer; leases + financials available.",
+  "listing_urls": [
+   "https://redf.in/1Ddp9Q"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "A",
+    "neighborhood": "A"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 365,
+    "coc": 0.013,
+    "cap_rate": 0.0617,
+    "gross_annual_income": 124800
+   }
   },
-  {
-    "address": "202 Fir Dl", "city": "Converse", "state": "TX", "zip": "78109",
-    "property_type": "fourplex", "units": 4, "price": 475000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 4320, "property_tax_annual": 9500,
-                "insurance_monthly": 301, "management_pct": 0.07,
-                "interest_rate": 0.0675, "cap_rate": 0.0736},
-    "occupancy_status": "partial", "occupied_pct": 0.75,
-    "condition_notes": "Year built 1986; all units 2bd/2ba; tenants pay own electric and water",
-    "neighborhood_notes": "Converse, NE San Antonio on the I-35 Austin-San Antonio growth corridor; strong occupancy",
-    "notes": "$4,320/mo gross once the last unit leases (market supports up to $1,250/door = $5,000; Victor's numbers use $4,800). Ask $499K; Victor suggests starting at $470K (his numbers use $475K).",
-    "listing_urls": ["https://redf.in/lDQ7X0"],
-    "victor": {
-      "grades": {"asset_quality": "B", "neighborhood": "B"},
-      "underwriting": {"cash_flow_monthly": 602, "coc": 0.0585, "cap_rate": 0.0736,
-                       "gross_annual_income": 57600}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
-    "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105"
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
+  "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45"
+ },
+ {
+  "address": "3732 Bonnie Dr",
+  "city": "Fort Worth",
+  "state": "TX",
+  "zip": "76116",
+  "property_type": "fourplex",
+  "units": 4,
+  "price": 575000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 5200,
+   "property_tax_annual": 11500,
+   "insurance_monthly": 364,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0725
   },
-  {
-    "address": "6303 Sandra St", "city": "Houston", "state": "TX", "zip": "77028",
-    "property_type": "duplex", "units": 2, "beds": 6, "baths": 4, "price": 355000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 3550, "property_tax_annual": 7100,
-                "insurance_monthly": 175, "management_pct": 0.07,
-                "interest_rate": 0.0675, "cap_rate": 0.0795},
-    "occupancy_status": "occupied",
-    "condition_notes": "Year built 2024 — newer construction",
-    "notes": "Both 3bd/2ba sides leased at $1,775 each to market-rate tenants with security deposits; tenants pay utilities. Victor: low-risk first duplex or 1031 option with day-1 rent.",
-    "listing_urls": ["https://drive.google.com/drive/folders/1k1W2O3kfsCW9gbnWZvm997uvY5xSzf5a"],
-    "victor": {
-      "grades": {"asset_quality": "A", "neighborhood": "B"},
-      "underwriting": {"cash_flow_monthly": 626, "coc": 0.0814, "cap_rate": 0.0795,
-                       "gross_annual_income": 42600}
-    },
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
-    "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105"
+  "occupancy_status": "partial",
+  "occupied_pct": 0.75,
+  "condition_notes": "Year built 1982; one unit intentionally vacant for showings",
+  "notes": "Leases average $1,300/door (entered at 4 x $1,300 = $5,200 in-place terms); room toward $1,400/door on renewals (Victor's numbers use $5,600). Reduced from $650K to $575K. Neighboring quad also available for a potential 8-unit portfolio near downtown Fort Worth.",
+  "listing_urls": [
+   "https://redf.in/DMytQb"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "C"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 677,
+    "coc": 0.0544,
+    "cap_rate": 0.0725,
+    "gross_annual_income": 67200
+   }
   },
-  {
-    "address": "3002 Pasadena Blvd", "city": "Pasadena", "state": "TX", "zip": "77503",
-    "property_type": "multifamily", "units": 14, "price": 1300000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 14000},
-    "notes": "OLDER duplicate from the Jul 2 email at $1.3M — superseded by the Jul 6 email's $1.2M price. Kept in the batch to exercise dedupe.",
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
-    "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43"
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
+  "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45"
+ },
+ {
+  "address": "15224 Beach Way Dr",
+  "city": "Corpus Christi",
+  "state": "TX",
+  "zip": "78418",
+  "property_type": "SFR",
+  "units": 1,
+  "price": 380000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "annual_str_revenue": 67260,
+   "property_tax_annual": 1800,
+   "insurance_monthly": 150,
+   "management_pct": 0.15,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0725,
+   "cleaning_monthly": 725,
+   "lodging_tax_annual": 4708
   },
-  {
-    "address": "4712 South Dr", "city": "Fort Worth", "state": "TX", "zip": "76109",
-    "property_type": "duplex", "units": 2, "price": 365000,
-    "tier": "ltr",
-    "claimed": {"monthly_rent": 3200},
-    "notes": "OLDER duplicate from the Jul 1 email at $365K — superseded by the Jul 6 email's $360K price. Kept in the batch to exercise dedupe.",
-    "source": "victor@steffenrealtycorp.com",
-    "source_name": "Victor Steffen (Steffen Realty)", "source_kind": "agent_full_address",
-    "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
-    "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
-    "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105"
-  }
+  "occupancy_status": "occupied",
+  "condition_notes": "Year built 2014; conveys fully furnished and turnkey; sleeps 10",
+  "neighborhood_notes": "North Padre Island beachside (Corpus Christi) \u2014 walking distance to beach, heated saltwater community pool",
+  "notes": "$67,265 trailing-12-month revenue (seller-reported). Ask $400K; seller has a financing balloon due this fall \u2014 Victor suggests starting ~$375K (his numbers use $380K). HOA is $300/mo and COVERS taxes + insurance; HOA is built for STRs with favorable bylaws (still verify).",
+  "listing_urls": [
+   "https://rabbu.com/airbnbs-for-sale/corpus-christi-tx-78418/15224-beach-way-dr-corpus-christi-tx-78418-dhh"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "A",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 448,
+    "coc": 0.061,
+    "cap_rate": 0.0725,
+    "gross_annual_income": 67260
+   }
+  },
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
+  "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45"
+ },
+ {
+  "address": "412 Chicago Ave",
+  "city": "Fort Worth",
+  "state": "TX",
+  "zip": "76103",
+  "property_type": "duplex",
+  "units": 2,
+  "price": 219000,
+  "tier": "house_hack",
+  "claimed": {
+   "other_units_monthly_rent": 965,
+   "interest_rate": 0.0675
+  },
+  "occupancy_status": "partial",
+  "occupied_pct": 0.5,
+  "condition_notes": "Year built 1920; turnkey per Victor",
+  "neighborhood_notes": "East Fort Worth near multiple major employers \u2014 constant tenant flow",
+  "notes": "Unit B leased $965/mo through Oct 2026; Unit A vacant (1-bed should lease ~$950; 2-bed comps $1,050-1,150). Victor: 'perfect first investment or house hack'; suggested offer $212K. No underwriting table provided in the email \u2014 engine assumptions fill the gaps.",
+  "listing_urls": [
+   "https://redf.in/tJ0VV8"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   }
+  },
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
+  "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45"
+ },
+ {
+  "address": "1509 F Ave",
+  "city": "Plano",
+  "state": "TX",
+  "zip": "75074",
+  "property_type": "multifamily",
+  "units": 12,
+  "price": 1950000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 20775,
+   "property_tax_annual": 39000,
+   "insurance_monthly": 1235,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0824
+  },
+  "occupancy_status": "occupied",
+  "condition_notes": "Year built 1970, renovated 2020; due-diligence file documents repairs/upgrades/rent roll",
+  "neighborhood_notes": "Walkable Downtown Plano \u2014 A+ DFW location",
+  "notes": "Fully occupied 12-plex; current rents average $1,735/door (in-place $20,775/mo entered), upside $1,850-2,100/door (Victor's numbers assume $1,850 = $22,200/mo). Seller agreed to $1.95M, down from $2.2M ask.",
+  "exception_factors": [
+   {
+    "type": "unicorn_location",
+    "note": "Victor labels it UNICORN \u2014 stabilized income in walkable Downtown Plano, A+ market at scale"
+   },
+   {
+    "type": "walk_in_equity",
+    "note": "agreed price $1.95M vs $2.2M current ask"
+   }
+  ],
+  "listing_urls": [
+   "https://redf.in/0hwT8E",
+   "https://drive.google.com/drive/folders/1gGpx5zeA1nHBNaDKbqLTzAyMqHYPrdNc"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "A",
+    "neighborhood": "A"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 3898,
+    "coc": 0.0923,
+    "cap_rate": 0.0824,
+    "gross_annual_income": 266400
+   }
+  },
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
+  "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43"
+ },
+ {
+  "address": "5407 Ariel St",
+  "city": "Houston",
+  "state": "TX",
+  "zip": "77096",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 5,
+  "price": 545000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "annual_str_revenue": 101532,
+   "interest_rate": 0.0675
+  },
+  "occupancy_status": "occupied",
+  "condition_notes": "Year built 1963, remodeled 2023; sleeps 14, hot tub",
+  "neighborhood_notes": "Sub-10-minute drive to Houston Medical Center and Astrodome",
+  "notes": "Real financials, not pro forma: $101,532 revenue in 2025 (live on Airbnb only since mid-Jan 2025), itemized $66,551 NOI after management \u2014 a walk-in 12-cap on actuals at $545K. Victor's own conservative rerun shows ~7 cap. P&L from the manager available.",
+  "listing_urls": [
+   "https://rabbu.com/airbnbs-for-sale/houston-tx-77096/5407-ariel-st-houston-tx-77096-hwf"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cap_rate": 0.07,
+    "gross_annual_income": 101532
+   }
+  },
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
+  "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43"
+ },
+ {
+  "address": "1233 W Hudgins St",
+  "city": "Grapevine",
+  "state": "TX",
+  "zip": "76051",
+  "property_type": "duplex",
+  "units": 2,
+  "beds": 6,
+  "baths": 4,
+  "sqft": 3000,
+  "price": 455000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 4600,
+   "property_tax_annual": 9100,
+   "insurance_monthly": 288,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.076
+  },
+  "occupancy_status": "unknown",
+  "condition_notes": "Year built 1985; $8,000 foundation work needed (quote available); each side 3bd/2ba ~1,500 sqft",
+  "neighborhood_notes": "Grapevine \u2014 A-grade premier DFW market",
+  "notes": "Rents comps-supported at $2,300/side (right at the 1% rule for an A market). Ask $450K; Victor suggests offering $455K to win \u2014 1222 W Hudgins sold $525K two months ago. Also a house-hack candidate, but sits above the $450K house-hack ceiling in the buy box, so entered as LTR.",
+  "exception_factors": [
+   {
+    "type": "unicorn_location",
+    "note": "Victor labels it UNICORN \u2014 1%-rule duplex in A-grade Grapevine, where inventory never appears"
+   },
+   {
+    "type": "walk_in_equity",
+    "note": "comparable at 1222 W Hudgins sold $525K two months ago vs $455K"
+   }
+  ],
+  "listing_urls": [
+   "https://redf.in/O5ztrU"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "A"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 667,
+    "coc": 0.0677,
+    "cap_rate": 0.076,
+    "gross_annual_income": 55200
+   }
+  },
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
+  "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43"
+ },
+ {
+  "address": "403 Geyser St",
+  "city": "Pflugerville",
+  "state": "TX",
+  "zip": "78660",
+  "property_type": "SFR",
+  "units": 1,
+  "price": 800000,
+  "furnished": true,
+  "tier": "str",
+  "down_payment_pct": 0.1,
+  "claimed": {
+   "annual_str_revenue": 118000,
+   "property_tax_annual": 16000,
+   "insurance_monthly": 507,
+   "management_pct": 0.15,
+   "interest_rate": 0.07,
+   "cleaning_monthly": 725,
+   "lodging_tax_annual": 9800
+  },
+  "occupancy_status": "occupied",
+  "condition_notes": "Year built 1997; heated pool, hot tub, large-group layout; management in place",
+  "neighborhood_notes": "Pflugerville, north of Austin (metro suburb \u2014 destination status is a judgment call)",
+  "notes": "Trailing-12 revenue $118,000 (entered); 2026 projected $140,000 (Victor's numbers use the projection \u2014 expect divergence flags). Seller financing: 10% down, 7% interest, 5-year balloon, low closing costs. Victor's utilities assumption $750/mo.",
+  "exception_factors": [
+   {
+    "type": "financing_incentive",
+    "note": "seller financing at 10% down / 7% / 5-yr balloon with low closing costs \u2014 ~$88K all-in on an $800K STR"
+   }
+  ],
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1626397748526268700"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 1127,
+    "coc": 0.1536,
+    "cap_rate": 0.0799,
+    "gross_annual_income": 140000
+   }
+  },
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
+  "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105"
+ },
+ {
+  "address": "202 Fir Dl",
+  "city": "Converse",
+  "state": "TX",
+  "zip": "78109",
+  "property_type": "fourplex",
+  "units": 4,
+  "price": 475000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 4320,
+   "property_tax_annual": 9500,
+   "insurance_monthly": 301,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0736
+  },
+  "occupancy_status": "partial",
+  "occupied_pct": 0.75,
+  "condition_notes": "Year built 1986; all units 2bd/2ba; tenants pay own electric and water",
+  "neighborhood_notes": "Converse, NE San Antonio on the I-35 Austin-San Antonio growth corridor; strong occupancy",
+  "notes": "$4,320/mo gross once the last unit leases (market supports up to $1,250/door = $5,000; Victor's numbers use $4,800). Ask $499K; Victor suggests starting at $470K (his numbers use $475K).",
+  "listing_urls": [
+   "https://redf.in/lDQ7X0"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 602,
+    "coc": 0.0585,
+    "cap_rate": 0.0736,
+    "gross_annual_income": 57600
+   }
+  },
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
+  "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105"
+ },
+ {
+  "address": "6303 Sandra St",
+  "city": "Houston",
+  "state": "TX",
+  "zip": "77028",
+  "property_type": "duplex",
+  "units": 2,
+  "beds": 6,
+  "baths": 4,
+  "price": 355000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 3550,
+   "property_tax_annual": 7100,
+   "insurance_monthly": 175,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0795
+  },
+  "occupancy_status": "occupied",
+  "condition_notes": "Year built 2024 \u2014 newer construction",
+  "notes": "Both 3bd/2ba sides leased at $1,775 each to market-rate tenants with security deposits; tenants pay utilities. Victor: low-risk first duplex or 1031 option with day-1 rent.",
+  "listing_urls": [
+   "https://drive.google.com/drive/folders/1k1W2O3kfsCW9gbnWZvm997uvY5xSzf5a"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "A",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 626,
+    "coc": 0.0814,
+    "cap_rate": 0.0795,
+    "gross_annual_income": 42600
+   }
+  },
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
+  "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105"
+ },
+ {
+  "address": "3002 Pasadena Blvd",
+  "city": "Pasadena",
+  "state": "TX",
+  "zip": "77503",
+  "property_type": "multifamily",
+  "units": 14,
+  "price": 1300000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 14000
+  },
+  "notes": "OLDER duplicate from the Jul 2 email at $1.3M \u2014 superseded by the Jul 6 email's $1.2M price. Kept in the batch to exercise dedupe.",
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
+  "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43"
+ },
+ {
+  "address": "4712 South Dr",
+  "city": "Fort Worth",
+  "state": "TX",
+  "zip": "76109",
+  "property_type": "duplex",
+  "units": 2,
+  "price": 365000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 3200
+  },
+  "notes": "OLDER duplicate from the Jul 1 email at $365K \u2014 superseded by the Jul 6 email's $360K price. Kept in the batch to exercise dedupe.",
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
+  "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105"
+ }
 ]

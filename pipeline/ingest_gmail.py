@@ -103,13 +103,18 @@ def gmail_link(rfc822_msgid: str | None, api_msg_id: str | None) -> str | None:
     """Deep link back to the source email in the Gmail web UI.
 
     rfc822msgid search is account-independent and survives label moves; the
-    API message id (#all/<id>) is the fallback.
+    API message id (#all/<id>) is the fallback. GMAIL_ACCOUNT_INDEX selects
+    which signed-in Gmail profile (/u/N) the link opens — numeric only, since
+    these links are published in the public deals.json.
     """
+    account = os.environ.get("GMAIL_ACCOUNT_INDEX", "0")
+    if not account.isdigit():
+        account = "0"
+    base = f"https://mail.google.com/mail/u/{account}"
     if rfc822_msgid:
-        return ("https://mail.google.com/mail/u/0/#search/rfc822msgid:"
-                + rfc822_msgid.strip().strip("<>"))
+        return f"{base}/#search/rfc822msgid:" + rfc822_msgid.strip().strip("<>")
     if api_msg_id:
-        return f"https://mail.google.com/mail/u/0/#all/{api_msg_id}"
+        return f"{base}/#all/{api_msg_id}"
     return None
 
 
