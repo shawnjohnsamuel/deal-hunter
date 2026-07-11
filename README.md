@@ -18,10 +18,16 @@ Gmail (2 agents + 3 paywalled teaser newsletters) ─► GitHub Action (daily cr
        web-search match on price/beds/sqft/features recovers the listing,
        graded HIGH/MEDIUM/LOW and always flagged for human verification)
    ─► enrichment (RentCast · county tax records · live rates · STR-ordinance search)
-   ─► unit-tested scoring: metrics → buy box → hard disqualifiers → tax triggers
-       (mountain-market STRs get a Tier 1 priority bonus)
+   ─► unit-tested scoring: four-pillar grading (asset quality / neighborhood /
+       vacancy risk / cash-flow margin — the methodology of the highest-trust
+       source, applied to every deal) → buy box → hard disqualifiers → tax
+       triggers (mountain-market STRs get a Tier 1 priority bonus)
    ─► PASS / BORDERLINE / FAIL + 0–100 ─► digest issue + dashboard redeploy
 ```
+
+The trusted agent's own underwriting rides along and is compared against the
+engine's independent recompute — any line >10% apart is flagged with both numbers.
+Saved emails can be replayed with `python -m pipeline.run --eml <file-or-dir>`.
 
 ## Why it's built this way
 

@@ -1,7 +1,9 @@
-# Real Estate Investment Framework — v2.1
+# Real Estate Investment Framework — v2.2
 
 **Single source of truth.** Supersedes Framework v1.0 (both the ChatGPT and Claude variants) and incorporates the Personal Financial Profile (completed July 7, 2026) as the authoritative override wherever the two conflicted.
 
+> **v2.2 (July 10, 2026):** Deal Card rebuilt around the **four-pillar methodology** of Victor Steffen (the highest-priority, highest-trust source) — asset quality, neighborhood quality, vacancy risk, cash-flow margin — applied uniformly to deals from every source. Victor's own underwriting is captured and compared side-by-side with ours (divergence >10% flagged). D-grade neighborhoods are a new hard disqualifier. Exception factors (financing incentive, walk-in equity, unicorn location) are recorded explicitly.
+>
 > **v2.1 (July 10, 2026):** mountain markets promoted to explicit STR Tier 1 priority (+composite bonus); deal-flow source roster documented with per-sender behavior (agents send addresses, teaser newsletters don't); teaser-identification procedure added; every deal now carries provenance (source name + deep link to the original email).
 
 > **What changed from v1.0 → v2.0 (reconciliation record)**
@@ -55,7 +57,7 @@ INTAKE → TIER CLASSIFICATION → FIRST-PASS KILL FILTER → ENRICHMENT (surviv
 
 | Sender | Who | Kind | What to expect |
 |---|---|---|---|
-| victor@steffenrealtycorp.com | Victor Steffen, Steffen Realty (agent) | **Full addresses** | All deal types |
+| victor@steffenrealtycorp.com | Victor Steffen, Steffen Realty (agent) | **Full addresses** | **HIGHEST PRIORITY — trusted.** All deal types (STR + LTR), pre-vetted through his four-pillar filter, arrives with his grades and full underwriting |
 | info@theshorttermshop.com | Avery Carl, The Short Term Shop (agent) | **Full addresses** | STR-focused |
 | theoffersheet@mail.beehiiv.com | The Offer Sheet | **Teaser / paywall** | Best deal fully detailed except the address; lesser deals alongside |
 | here@mail.beehiiv.com | Here (beehiiv) | **Teaser / paywall** | Same pattern |
@@ -83,6 +85,29 @@ Unknown market status is a **flag, not a kill** — "is this a destination marke
 - Rates: search live 30-yr investment rates each run; never assume
 - STR legality: search "[city] short-term rental ordinance" → status `unverified / likely_ok / restricted`. **Never auto-cleared. Human-verify before any offer.**
 - Seller P&Ls and pro formas: **always recompute independently** with our vacancy/CapEx assumptions. Sellers omit CapEx and use fantasy vacancy.
+
+## 3½. The Four Pillars (Deal Card headline — Victor Steffen methodology)
+
+Every deal is graded A–D on four pillars before the buy-box math. The methodology comes from Victor Steffen's vetting filter (codified from his own description); his emails arrive with grades, other sources get estimated grades that are **always marked estimated**.
+
+| Pillar | What it measures | Grade guidance | Provenance ladder |
+|---|---|---|---|
+| **1. Asset quality** | Renovation need + ongoing-maintenance risk. The failure mode is the "nickel-and-dime" property that eats the owner alive in month-6 | A: turnkey/new; B: minor cosmetic; C: dated but functional; D: major systems/reno risk | Victor's grade → LLM estimate from listing condition/age/reno mentions → ungraded |
+| **2. Neighborhood quality** | Schools, crime, tenant/guest quality | A: top schools, low crime; B: solid in-between; C: sufficient safety, usually the cash-flow plays; **D: hard disqualifier — we don't do D** | Victor's grade → LLM estimate from schools/crime/market data → ungraded |
+| **3. Vacancy risk** | Occupied now? Lease-up speed if not. The failure mode is the 120-days-vacant call | A: occupied / pre-leased; B: fast lease-up market (<7% vacancy); C: average; D: slow market or chronic vacancy | Victor's occupancy statement → market vacancy data → ungraded |
+| **4. Cash-flow margin** | Margin, consistency, variability | **Always computed, never LLM.** A: at/above target CoC with DSCR ≥1.25; B: at/above buy-box min; C: below min but above the floor; D: below floor (STR floor = 6% CoC — "wouldn't even post it"), DSCR <1.0, or negative cash flow | Deterministic from the scoring engine |
+
+**The pillars interact on a spectrum** (Victor's rule): weakness in one bucket is acceptable only when dramatically offset in another — C-neighborhood is where the highest CoC lives; a barely-break-even deal in a unicorn location can still be a push.
+
+**Exception factors** — recorded explicitly on the card, never silently applied: exceptional financing terms; walk-in equity (price materially below comps/floor-plan sales); unicorn location (streets/neighborhoods where inventory never appears). They raise a deal's ranking and are flagged so the human sees *why* a thin deal is still surfaced — they never flip a FAIL.
+
+**Composite v3** = pillar-weighted blend (cash-flow pillar carries the metric composite inside it; weights: cash flow 45%, asset 20%, neighborhood 20%, vacancy 15%; ungraded pillars renormalize). Mountain-STR bonus applies after the blend.
+
+**Victor divergence check:** Victor's emails include his own underwriting ("real insurance, real taxes, actual income"). His inputs are extracted as high-trust claimed data; the engine still recomputes with our assumptions and shows both. Any line item or output diverging **>10%** is flagged with both numbers — trust, but make disagreement visible.
+
+**Two floors, kept distinct:** Victor's 6% STR CoC is his *posting* floor (pillar-4 D-grade). Shawn's 8% buy-box minimum is the *buying* floor (verdict). A 7% CoC STR grades C on pillar 4 and still shows a buy-box fail on CoC.
+
+**Appreciation context** (when stated): ~3–12% YoY in tertiary cash-flow markets; ~5.5–6% in premium A-grade markets — captured as a note, verified against MLS history when possible.
 
 ## 4. Buy Boxes
 

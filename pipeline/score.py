@@ -4,6 +4,7 @@ tax-flag triggers, composite 0-100 score, and the PASS/BORDERLINE/FAIL verdict.
 All thresholds come from the profile — nothing is hardcoded to generic benchmarks.
 """
 from .markets import classify_market, is_dfw, market_flavor
+from .pillars import check_divergence, grade_pillars, pillar_composite
 from .underwrite import underwrite
 
 # Composite weights per framework-v2 (CoC-heavy, per the bulk-ranking convention).
@@ -184,14 +185,22 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
                                   profile["dscr_min"], profile["dscr_target"])
     disqualifiers = _hard_disqualifiers(deal, uw, profile)
 
-    composite = 0.0
+    pillars = grade_pillars(deal, uw, profile)
+    if (pillars["neighborhood"]["grade"] == "D"
+            and profile["pillars"]["neighborhood_d_disqualifies"]):
+        disqualifiers.append("D-grade neighborhood — \"we don't do D\" (hard disqualifier)")
+
+    metric_composite = 0.0
     weights = WEIGHTS[tier]
     total_w = 0.0
     for row in criteria:
         w = weights.get(row["criterion"], 0.0)
-        composite += row["points"] * w
+        metric_composite += row["points"] * w
         total_w += w
-    composite = round(composite / total_w, 1) if total_w else 0.0
+    metric_composite = round(metric_composite / total_w, 1) if total_w else 0.0
+    # Composite v3: pillar-weighted blend; the cash-flow pillar carries the
+    # metric composite inside it (framework-v2 §3½).
+    composite = pillar_composite(pillars, metric_composite, profile)
 
     fails = [r for r in criteria if r["status"] == "fail" and not r["advisory"]]
     if disqualifiers:
@@ -203,6 +212,17 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
     else:
         verdict = "FAIL"
 
+    # Exception factors (Victor's overrides: financing incentive, walk-in
+    # equity, unicorn location) raise ranking and are always surfaced —
+    # they never flip a FAIL.
+    exceptions = []
+    for ef in deal.get("exception_factors") or []:
+        label = ef.get("type", "exception") if isinstance(ef, dict) else str(ef)
+        note = ef.get("note", "") if isinstance(ef, dict) else ""
+        exceptions.append(f"{label.replace('_', ' ')}: {note}".strip(": "))
+    if exceptions and not disqualifiers:
+        composite = round(min(100.0, composite + profile["pillars"]["exception_factor_bonus"]), 1)
+
     # Mountain STRs are the Tier 1 priority: a composite bump so they outrank
     # equivalent beach/lake deals, plus an explicit priority note.
     flavor = deal["market_flavor"] = market_flavor(deal.get("city", ""))
@@ -213,12 +233,17 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
             composite = round(min(100.0, composite + bonus), 1)
             priority_note = f"MOUNTAIN market — Tier 1 priority (+{bonus:g} composite)"
 
+    red_flags = _red_flags(deal, uw, kill_flags or [])
+    red_flags += check_divergence(deal, uw, profile)
+
     return {
         "tier": tier, "verdict": verdict, "score": composite,
+        "metric_composite": metric_composite,
+        "pillars": pillars, "exception_factors": exceptions,
         "market_flavor": flavor, "priority_note": priority_note,
         "criteria": criteria, "hard_disqualifiers": disqualifiers,
         "tax_flags": _tax_flags(deal, uw, profile),
-        "red_flags": _red_flags(deal, uw, kill_flags or []),
+        "red_flags": red_flags,
         "underwriting": uw,
     }
 

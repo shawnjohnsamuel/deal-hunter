@@ -180,5 +180,48 @@
    "evidence": "price $585,000 exact; 3 bed / 3 bath exact; 1,850 sqft within 2%; 'game room + mountain view' matched listing photos caption",
    "listing_url": null
   }
+ },
+ {
+  "address": "902 Crockett St",
+  "city": "Sherman",
+  "state": "TX",
+  "property_type": "SFR",
+  "units": 1,
+  "price": 225000,
+  "claimed": {
+   "monthly_rent": 2550,
+   "insurance_monthly": 140,
+   "property_tax_annual": 3700,
+   "management_pct": 0.08
+  },
+  "occupancy_status": "occupied",
+  "condition_notes": "2021 roof, updated HVAC, tenant in place through May 2027",
+  "tier": "ltr",
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "(demo) Occupied Sherman SFR - B/B/A, $2,550 rent, walk-in equity",
+  "email_date": "Fri, 10 Jul 2026 08:00:00 -0500",
+  "email_link": "https://mail.google.com/mail/u/0/#search/from%3Avictor%40steffenrealtycorp.com",
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B",
+    "vacancy": "A",
+    "cash_flow": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 420,
+    "coc": 0.095,
+    "cap_rate": 0.085
+   },
+   "appreciation_note": "Sherman appreciating ~4%/yr on semiconductor plant growth"
+  },
+  "exception_factors": [
+   {
+    "type": "walk_in_equity",
+    "note": "recent comps $245-250k; listed at $225k"
+   }
+  ]
  }
 ]

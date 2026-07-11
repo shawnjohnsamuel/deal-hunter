@@ -55,11 +55,26 @@ def _tax_and_insurance(deal: dict, profile: dict, assumptions: dict, insurance_m
     tax_annual, _ = _pick(deal, "property_tax_annual", assumptions,
                           default=round(price * a["property_tax_pct_price"]),
                           note="1.2% of price fallback — pull CAD record")
-    ins_monthly = (price / 100000) * a["insurance_monthly_per_100k"] * insurance_multiplier
-    if insurance_multiplier > 1.0:
-        assumptions["insurance"] = f"assumed STR policy at {insurance_multiplier}x LTR rate"
+    # Stated insurance (e.g. Victor's "real insurance" underwriting) beats the
+    # $/100k formula default.
+    ins_monthly, ins_src = _pick(deal, "insurance_monthly", assumptions)
+    if ins_monthly is None:
+        ins_monthly = (price / 100000) * a["insurance_monthly_per_100k"] * insurance_multiplier
+        assumptions["insurance"] = (
+            f"assumed STR policy at {insurance_multiplier}x LTR rate"
+            if insurance_multiplier > 1.0
+            else f"assumed ${a['insurance_monthly_per_100k']}/mo per $100k")
     hoa_monthly, _ = _pick(deal, "hoa_monthly", assumptions, default=0)
     return tax_annual, ins_monthly, hoa_monthly
+
+
+def _management_pct(deal: dict, assumptions: dict, default: float) -> float:
+    pct, _ = _pick(deal, "management_pct", assumptions)
+    if pct is None:
+        return default
+    if pct > 1:  # tolerate "20" meaning 20%
+        pct /= 100
+    return pct
 
 
 def _underwrite_str(deal: dict, profile: dict) -> dict:
@@ -87,8 +102,9 @@ def _underwrite_str(deal: dict, profile: dict) -> dict:
     tax_annual, ins_monthly, hoa_monthly = _tax_and_insurance(
         deal, profile, assumptions, s["insurance_multiplier_vs_ltr"])
 
+    mgmt_pct = _management_pct(deal, assumptions, s["management_pct_revenue"])
     opex_annual = (
-        revenue * s["management_pct_revenue"]
+        revenue * mgmt_pct
         + revenue * s["supplies_pct_revenue"]
         + revenue * s["platform_fees_pct_revenue"]
         + revenue * profile["assumptions"]["ltr"]["capex_pct_rent"]
@@ -142,9 +158,10 @@ def _underwrite_ltr(deal: dict, profile: dict) -> dict:
     assumptions.setdefault("vacancy", f"assumed: {vacancy:.0%}")
 
     tax_annual, ins_monthly, hoa_monthly = _tax_and_insurance(deal, profile, assumptions)
+    mgmt_pct = _management_pct(deal, assumptions, a["management_pct_rent"])
     opex_annual = (
         gross_annual * a["capex_pct_rent"]
-        + gross_annual * a["management_pct_rent"]
+        + gross_annual * mgmt_pct
         + ins_monthly * 12
         + hoa_monthly * 12
         + tax_annual

@@ -100,12 +100,22 @@ Return ONLY JSON:
   "annual_str_revenue": <number or null>,
   "str_legality": "unverified" | "likely_ok" | "restricted",
   "str_legality_notes": "<what you found about ordinances/HOA>",
+  "market_vacancy": <metro/submarket rental vacancy as decimal, or null>,
+  "pillar_estimates": {{
+    "asset_quality": {{"grade": "<A-D or null>", "why": "<age/condition/reno evidence found>"}},
+    "neighborhood": {{"grade": "<A-D or null>", "why": "<school ratings, crime data found>"}},
+    "vacancy": {{"grade": "<A-D or null>", "why": "<occupancy/lease-up evidence found>"}}
+  }},
   "data_notes": "<sources + anything material>"
 }}
 Rules: numbers only when actually found — null over guesses. STR revenue figures
 from Rabbu/AirDNA-style estimates are fine but note them in data_notes.
 "str_legality" is "restricted" only with a found ordinance/HOA restriction;
 "likely_ok" needs found evidence STRs operate legally there; else "unverified".
+Pillar grade scale — A: excellent, B: solid, C: sufficient/lower-tier, D: poor.
+Grade a pillar ONLY when you found real evidence (school ratings, crime stats,
+listing condition/photos captions, occupancy data); otherwise null. These are
+estimates and will be labeled as such downstream.
 """
 
 STR_SPECIFIC = """3. STR data: Rabbu/AirDNA revenue estimates, market ADR and occupancy for {city}
@@ -138,9 +148,14 @@ def _web_search(deal: dict, enriched: dict):
         return
 
     for k in ("property_tax_annual", "hoa_monthly", "monthly_rent", "adr",
-              "occupancy", "annual_str_revenue"):
+              "occupancy", "annual_str_revenue", "market_vacancy"):
         if found.get(k) is not None:
             enriched.setdefault(k, found[k])
+    estimates = found.get("pillar_estimates") or {}
+    cleaned = {p: e for p, e in estimates.items()
+               if isinstance(e, dict) and e.get("grade")}
+    if cleaned:
+        enriched.setdefault("pillar_estimates", {}).update(cleaned)
     rate = found.get("interest_rate")
     if rate and 0.03 < rate < 0.12:
         _rate_cache["rate"] = rate

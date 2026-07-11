@@ -35,15 +35,62 @@ TOP3 = {
     "house_hack": ["rental_coverage", "net_housing_cost_monthly", "units"],
 }
 
+PILLAR_LABELS = {
+    "asset_quality": "Asset Quality", "neighborhood": "Neighborhood",
+    "vacancy": "Vacancy Risk", "cash_flow": "Cash-Flow Margin",
+}
+PILLAR_ORDER = ("asset_quality", "neighborhood", "vacancy", "cash_flow")
+PROVENANCE_TAGS = {"victor": "Victor", "estimated": "ESTIMATED",
+                   "computed": "computed", "ungraded": "no data"}
+
+
+def pillar_string(pillars: dict | None) -> str:
+    """Compact 'A/B/—/B' in asset/neighborhood/vacancy/cash-flow order."""
+    if not pillars:
+        return "—/—/—/—"
+    return "/".join((pillars.get(p) or {}).get("grade") or "—" for p in PILLAR_ORDER)
+
 
 def summary_line(deal: dict, result: dict) -> str:
-    """Verdict + top-3 metrics — the default output contract."""
+    """Verdict + pillars + top-3 metrics — the default output contract."""
     m = result["underwriting"]["metrics"]
     top = ", ".join(
         f"{METRIC_LABELS[k]} {_fmt_metric(k, m.get(k))}" for k in TOP3[result["tier"]])
     return (f"**{result['verdict']}** ({result['score']:.0f}/100) — "
             f"{deal.get('address', 'unknown address')}, {deal.get('city', '?')} "
-            f"[{result['tier'].upper()}] · {top}")
+            f"[{result['tier'].upper()}] · Pillars {pillar_string(result.get('pillars'))} · {top}")
+
+
+def _pillar_lines(pillars: dict | None) -> list[str]:
+    if not pillars:
+        return ["  (not graded)"]
+    lines = []
+    for p in PILLAR_ORDER:
+        entry = pillars.get(p) or {}
+        grade = entry.get("grade") or "—"
+        tag = PROVENANCE_TAGS.get(entry.get("provenance", "ungraded"), "")
+        note = entry.get("note", "")
+        lines.append(f"  {PILLAR_LABELS[p]:16s} {grade}  [{tag}]" + (f"  {note}" if note else ""))
+    return lines
+
+
+def _victor_vs_ours(deal: dict, uw: dict) -> list[str]:
+    victor_uw = ((deal.get("victor") or {}).get("underwriting")) or {}
+    if not victor_uw:
+        return []
+    m = uw["metrics"]
+    rows = [
+        ("Monthly Cash Flow", victor_uw.get("cash_flow_monthly"), uw.get("monthly_cash_flow"), _usd),
+        ("Cash-on-Cash", victor_uw.get("coc"), m.get("coc"), _pct),
+        ("Cap Rate", victor_uw.get("cap_rate"), m.get("cap_rate"), _pct),
+        ("Gross Annual Income", victor_uw.get("gross_annual_income"), uw.get("gross_annual_income"), _usd),
+    ]
+    lines = ["", "VICTOR'S UNDERWRITING vs OURS"]
+    for label, his, ours, f in rows:
+        if his is None:
+            continue
+        lines.append(f"  {label:20s} Victor: {f(his)}   Ours: {f(ours)}")
+    return lines if len(lines) > 2 else []
 
 
 def render_deal_card(deal: dict, result: dict) -> str:
@@ -59,6 +106,9 @@ def render_deal_card(deal: dict, result: dict) -> str:
         f"  (market type: {deal.get('market_type', 'unknown')})",
         f"Property Type:    {deal.get('property_type', '—')}   Units: {deal.get('units', 1)}",
         f"Strategy Fit:     {result['tier'].upper()}",
+        "",
+        "PILLARS (Victor Steffen methodology)",
+        *_pillar_lines(result.get("pillars")),
         "",
         "PURCHASE",
         f"  List Price: {_usd(fin['price'])}   Down: {_pct(fin['down_payment_pct'])} ({_usd(fin['down_payment'])})",
@@ -109,6 +159,10 @@ def render_deal_card(deal: dict, result: dict) -> str:
     if result["hard_disqualifiers"]:
         lines.append("  HARD DISQUALIFIERS:")
         lines += [f"    ✗ {d}" for d in result["hard_disqualifiers"]]
+    lines += _victor_vs_ours(deal, uw)
+    if result.get("exception_factors"):
+        lines += ["", "EXCEPTION FACTORS (Victor-style offsets — raise ranking, never flip a FAIL)"]
+        lines += [f"  ★ {e}" for e in result["exception_factors"]]
     lines.append("```")
 
     if uw["assumptions"]:

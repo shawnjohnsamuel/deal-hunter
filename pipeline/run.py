@@ -98,6 +98,7 @@ def main():
     mode.add_argument("--daily", action="store_true", help="Gmail ingest + full pipeline")
     mode.add_argument("--manual", metavar="TEXT", help="address / link / pasted listing text")
     mode.add_argument("--json", metavar="PATH", help="structured deal list (no LLM needed)")
+    mode.add_argument("--eml", metavar="PATH", help=".eml file or directory of saved emails")
     ap.add_argument("--no-enrich", action="store_true")
     ap.add_argument("--rescore", action="store_true", help="re-run deals already in the db")
     ap.add_argument("--full-card", action="store_true", help="print full Deal Cards")
@@ -106,6 +107,24 @@ def main():
     if args.json:
         with open(args.json) as f:
             deals = json.load(f)
+        outcomes = run_batch(deals, enrich_enabled=not args.no_enrich, rescore=args.rescore)
+        print_outcomes(outcomes, full_cards=args.full_card)
+        return
+
+    if args.eml:
+        from .eml import load_eml_inputs
+        from .extract import extract_candidates
+        emails = load_eml_inputs(args.eml)
+        print(f"eml: loaded {len(emails)} email(s)", file=sys.stderr)
+        deals = []
+        for em in emails:
+            try:
+                extracted = extract_candidates(em["text"], source=em["sender"], email_meta=em)
+                print(f"  '{em['subject'][:60]}' [{em['sender_name']}] → "
+                      f"{len(extracted)} candidate(s)", file=sys.stderr)
+                deals.extend(extracted)
+            except Exception as e:
+                print(f"WARNING: extraction failed for '{em['subject']}': {e}", file=sys.stderr)
         outcomes = run_batch(deals, enrich_enabled=not args.no_enrich, rescore=args.rescore)
         print_outcomes(outcomes, full_cards=args.full_card)
         return

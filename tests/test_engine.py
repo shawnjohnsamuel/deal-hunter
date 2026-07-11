@@ -230,3 +230,129 @@ def test_unidentified_teaser_flag(profile):
             "teaser": True, "claimed": {"adr": 300, "occupancy": 0.68}}
     result = score_deal(deal, profile)
     assert any("UNIDENTIFIED" in f for f in result["red_flags"])
+
+
+# --- v3: four pillars, divergence, exception factors ----------------------
+
+def test_pillar_cash_flow_bands(profile):
+    # Broken Bow: CoC 9.7% (>=8% min, <12% target) -> B
+    result = score_deal(broken_bow_str(), profile)
+    p = result["pillars"]
+    assert p["cash_flow"]["grade"] == "B"
+    assert p["cash_flow"]["provenance"] == "computed"
+    # Vacancy graded from enriched occupancy (70% >= 65% min) -> B
+    assert p["vacancy"]["grade"] == "B"
+    # No asset/neighborhood data -> ungraded, never guessed
+    assert p["asset_quality"]["grade"] is None
+    assert p["asset_quality"]["provenance"] == "ungraded"
+
+
+def test_pillar_str_coc_floor_is_d(profile):
+    # Hochatown fixture: CoC ~3.1% < 6% floor -> D even though DSCR > 1
+    deal = {"address": "88 Lakeview Loop", "city": "Hochatown", "state": "OK",
+            "property_type": "cabin", "units": 1, "price": 540000, "furnished": False,
+            "claimed": {}, "enriched": {"adr": 375, "occupancy": 0.66}, "tier": "str"}
+    result = score_deal(deal, profile)
+    assert result["pillars"]["cash_flow"]["grade"] == "D"
+    assert "posting floor" in result["pillars"]["cash_flow"]["note"]
+
+
+def test_victor_grades_win_and_are_marked(profile):
+    deal = broken_bow_str() | {"victor": {"grades": {
+        "asset_quality": "A", "neighborhood": "B+", "vacancy": "a"}}}
+    result = score_deal(deal, profile)
+    p = result["pillars"]
+    assert p["asset_quality"] == {"grade": "A", "provenance": "victor", "note": ""}
+    assert p["neighborhood"]["grade"] == "B"      # B+ normalizes
+    assert p["vacancy"]["grade"] == "A"           # lowercase normalizes; beats computed
+
+
+def test_estimated_grades_marked_estimated(profile):
+    deal = broken_bow_str()
+    deal["enriched"]["pillar_estimates"] = {
+        "asset_quality": {"grade": "B", "why": "2019 build, turnkey per listing"}}
+    result = score_deal(deal, profile)
+    p = result["pillars"]["asset_quality"]
+    assert p["grade"] == "B" and p["provenance"] == "estimated"
+
+
+def test_neighborhood_d_hard_disqualifies(profile):
+    deal = broken_bow_str() | {"victor": {"grades": {"neighborhood": "D"}}}
+    result = score_deal(deal, profile)
+    assert result["verdict"] == "FAIL"
+    assert any("we don't do D" in d for d in result["hard_disqualifiers"])
+
+
+def test_divergence_flagged(profile):
+    deal = broken_bow_str()
+    # Our computed monthly CF is ~$797; Victor claiming $1,500 is >10% apart
+    deal["victor"] = {"underwriting": {"cash_flow_monthly": 1500}}
+    result = score_deal(deal, profile)
+    assert any("DIVERGENCE on monthly cash flow" in f for f in result["red_flags"])
+
+
+def test_no_divergence_when_close(profile):
+    deal = broken_bow_str()
+    deal["victor"] = {"underwriting": {"cash_flow_monthly": 820}}  # ~3% from ours
+    result = score_deal(deal, profile)
+    assert not any("DIVERGENCE" in f for f in result["red_flags"])
+
+
+def test_exception_factors_bonus_and_surfaced(profile):
+    plain = score_deal(broken_bow_str(), profile)
+    deal = broken_bow_str() | {"exception_factors": [
+        {"type": "walk_in_equity", "note": "comps at $520k, listed $475k"}]}
+    boosted = score_deal(deal, profile)
+    assert boosted["score"] == pytest.approx(
+        plain["score"] + profile["pillars"]["exception_factor_bonus"], abs=0.2)
+    assert any("walk in equity" in e for e in boosted["exception_factors"])
+
+
+def test_exception_factors_never_flip_fail(profile):
+    deal = broken_bow_str() | {"str_restricted": True,
+                               "exception_factors": [{"type": "financing_incentive", "note": "2% seller buydown"}]}
+    result = score_deal(deal, profile)
+    assert result["verdict"] == "FAIL" and result["score"] <= 25
+
+
+def test_victor_stated_insurance_and_management_used(profile):
+    deal = broken_bow_str()
+    deal["claimed"] = {"insurance_monthly": 280, "management_pct": 18}
+    result = score_deal(deal, profile)
+    # Cheaper real insurance + mgmt than defaults -> better CoC than baseline
+    baseline = score_deal(broken_bow_str(), profile)
+    assert result["underwriting"]["metrics"]["coc"] > baseline["underwriting"]["metrics"]["coc"]
+
+
+# --- v3: .eml ingestion ---------------------------------------------------
+
+def test_load_eml(tmp_path):
+    from email.message import EmailMessage
+    from pipeline.eml import load_eml_inputs
+
+    msg = EmailMessage()
+    msg["From"] = "Victor Steffen <victor@steffenrealtycorp.com>"
+    msg["Subject"] = "Occupied Sherman SFR - strong B/B/A"
+    msg["Date"] = "Fri, 10 Jul 2026 08:00:00 -0500"
+    msg["Message-ID"] = "<abc123@steffenrealtycorp.com>"
+    msg.set_content("Plain text: 902 Crockett St, Sherman TX. $225,000. Rent $2,550.")
+    msg.add_alternative(
+        "<html><body><p>902 Crockett St, Sherman TX — <b>$225,000</b>, rent $2,550/mo.</p>"
+        "<a href='https://example.com/listing'>View</a></body></html>",
+        subtype="html")
+    p = tmp_path / "victor.eml"
+    with open(p, "wb") as f:
+        f.write(bytes(msg))
+
+    emails = load_eml_inputs(str(p))
+    assert len(emails) == 1
+    em = emails[0]
+    assert em["sender"] == "victor@steffenrealtycorp.com"
+    assert em["sender_name"].startswith("Victor Steffen")
+    assert em["sender_kind"] == "agent_full_address"
+    assert "902 Crockett St" in em["text"]
+    assert em["link"] == "https://mail.google.com/mail/u/0/#search/rfc822msgid:abc123@steffenrealtycorp.com"
+
+    # Directory form
+    emails2 = load_eml_inputs(str(tmp_path))
+    assert len(emails2) == 1

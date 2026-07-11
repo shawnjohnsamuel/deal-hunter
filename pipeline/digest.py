@@ -3,7 +3,7 @@ the top 3 (framework-v2 output contract), judgment calls surfaced explicitly."""
 from datetime import date
 from pathlib import Path
 
-from .deal_card import METRIC_LABELS, TOP3, _fmt_metric
+from .deal_card import METRIC_LABELS, TOP3, _fmt_metric, pillar_string
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DIGEST_DIR = REPO_ROOT / "data" / "digests"
@@ -26,8 +26,8 @@ def build_digest(outcomes: list[dict]) -> str:
 
     if scored:
         lines += ["## Scored deals (ranked by composite score)", "",
-                  "| # | Verdict | Score | Address | Tier | CoC | Cash Flow/yr | Source | Top flag |",
-                  "|---|---------|-------|---------|------|-----|--------------|--------|----------|"]
+                  "| # | Verdict | Score | Pillars | Address | Tier | CoC | Cash Flow/yr | Source | Top flag |",
+                  "|---|---------|-------|---------|---------|------|-----|--------------|--------|----------|"]
         for i, o in enumerate(scored, 1):
             r, d = o["result"], o["deal"]
             m = r["underwriting"]["metrics"]
@@ -40,11 +40,13 @@ def build_digest(outcomes: list[dict]) -> str:
                 addr += " ⛰️"
             lines.append(
                 f"| {i} | **{r['verdict']}** | {r['score']:.0f} "
+                f"| `{pillar_string(r.get('pillars'))}` "
                 f"| {addr}, {d.get('city', '?')} | {r['tier'].upper()} "
                 f"| {_fmt_metric('coc', m.get('coc'))} "
                 f"| {_fmt_metric('annual_cash_flow', m.get('annual_cash_flow'))} "
                 f"| {source} | {top_flag[:80]} |")
-        lines += ["", "⛰️ = mountain market (Tier 1 priority)", ""]
+        lines += ["", "⛰️ = mountain market (Tier 1 priority) · Pillars = "
+                  "Asset/Neighborhood/Vacancy/Cash-Flow (Victor methodology)", ""]
 
         judgment = []
         for o in scored:

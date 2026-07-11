@@ -18,6 +18,31 @@ SENDER_TIER_HINTS = {
     "info@theshorttermshop.com": "str",
 }
 
+VICTOR_GUIDANCE = """
+IMPORTANT — this email is from Victor Steffen, the highest-trust source. His deals
+arrive pre-vetted through a four-filter methodology (asset quality, neighborhood
+quality, vacancy risk, cash-flow margin) and usually include his own grades and
+full underwriting. For each property, ALSO include a "victor" object:
+{
+  "grades": {
+    "asset_quality": "<A-D or null>", "neighborhood": "<A-D or null>",
+    "vacancy": "<A-D or null>", "cash_flow": "<A-D or null>"
+  },
+  "underwriting": {
+    "cash_flow_monthly": <his stated monthly cash flow, number or null>,
+    "coc": <his stated cash-on-cash, decimal or null>,
+    "cap_rate": <decimal or null>,
+    "gross_annual_income": <number or null>
+  },
+  "appreciation_note": "<his appreciation/equity commentary or null>"
+}
+Grades may appear as letters (A/B/C), scores, or phrases ("solid B neighborhood",
+"turnkey", "fully occupied") — map phrases to letter grades only when clearly
+implied, else null. Map his stated INPUT numbers (taxes, insurance, management %,
+rent) into "claimed" as usual — his OUTPUT numbers (cash flow, CoC) go in
+"victor.underwriting" so the pipeline can compare his math against ours.
+"""
+
 TEASER_GUIDANCE = """
 IMPORTANT — this sender is a free teaser newsletter whose best deal's street address
 is held behind a paywall. Extract those deals anyway with "address": null. Capture
@@ -47,10 +72,22 @@ Return ONLY a JSON array (no prose, no markdown fence). Each element:
     "adr": <number or null>,
     "occupancy": <decimal 0-1 or null>,
     "cap_rate": <decimal or null>,
-    "cash_flow_annual": <number or null>
+    "cash_flow_annual": <number or null>,
+    "property_tax_annual": <number or null>,
+    "insurance_monthly": <number or null>,
+    "management_pct": <decimal or null>,
+    "hoa_monthly": <number or null>
   },
+  "occupancy_status": "occupied" | "vacant" | "partial" | "unknown",
+  "occupied_pct": <decimal 0-1 or null, for multifamily e.g. 3 of 4 units = 0.75>,
+  "condition_notes": "<age, renovations, systems, deferred maintenance — verbatim phrases>",
+  "neighborhood_notes": "<schools, crime, neighborhood class/grade mentions>",
+  "exception_factors": [
+    {"type": "financing_incentive" | "walk_in_equity" | "unicorn_location",
+     "note": "<the specific claim, e.g. 'seller-paid 2-1 buydown', 'comps at $400k listed $325k'>"}
+  ],
   "listing_urls": ["..."],
-  "notes": "anything material: condition, HOA mentions, STR permit claims, seller financing"
+  "notes": "anything else material: HOA mentions, STR permit claims, seller financing"
 }
 
 Rules:
@@ -83,6 +120,8 @@ def extract_candidates(text: str, source: str = "manual",
     prompt = EXTRACTION_PROMPT
     if is_teaser_source:
         prompt = TEASER_GUIDANCE + prompt
+    elif source == "victor@steffenrealtycorp.com":
+        prompt = VICTOR_GUIDANCE + prompt
     resp = _client().messages.create(
         model=MODEL,
         max_tokens=8000,

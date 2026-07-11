@@ -132,5 +132,23 @@
     }
   },
   "dscr_min": 1.0,
-  "dscr_target": 1.25
+  "dscr_target": 1.25,
+  "pillars": {
+    "weights": {
+      "cash_flow": 0.45,
+      "asset_quality": 0.2,
+      "neighborhood": 0.2,
+      "vacancy": 0.15
+    },
+    "grade_points": {
+      "A": 100,
+      "B": 75,
+      "C": 50,
+      "D": 15
+    },
+    "str_coc_floor": 0.06,
+    "neighborhood_d_disqualifies": true,
+    "divergence_threshold": 0.1,
+    "exception_factor_bonus": 5
+  }
 }
