@@ -1,13 +1,109 @@
 {
  "stats": {
-  "total": 11,
-  "killed": 4,
-  "pass": 3,
-  "borderline": 1,
-  "fail": 3,
-  "generated": "2026-07-11T19:55:24+00:00"
+  "total": 27,
+  "killed": 5,
+  "pass": 7,
+  "borderline": 2,
+  "fail": 13,
+  "generated": "2026-07-11T20:11:40+00:00"
  },
  "deals": [
+  {
+   "key": "302844548f7214de",
+   "address": "1509 F Ave",
+   "city": "Plano",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "non_destination",
+   "price": 1950000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "BORDERLINE",
+   "score": 95.0,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 7.821901323706378,
+    "cap_rate": 0.07467692307692307,
+    "coc": 0.05396306872336685,
+    "one_pct_rule": 0.010653846153846154,
+    "gross_yield": 0.12784615384615386,
+    "dscr": 1.199332251359455,
+    "annual_cash_flow": 24202.436322430032,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$487,500-$585,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $3,898 vs ours $2,017 (48% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 9.2% vs ours 5.4% (42% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 1509 F Ave\nMarket / City:    Plano, TX  (market type: non_destination)\nProperty Type:    multifamily   Units: 12\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    A  [Victor]\n  Neighborhood     A  [Victor]\n  Vacancy Risk     A  [computed]  occupied at listing\n  Cash-Flow Margin C  [computed]  CoC 5.4% below buy-box min, above the floor\n\nPURCHASE\n  List Price: $1,950,000   Down: 20.0% ($390,000)\n  Loan: $1,560,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $58,500   Total Cash Needed: $448,500\n\nINCOME\n  Gross Monthly Rent: $20,775 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $83,736\n  NOI: $145,620   Debt Service: $121,418\n  Cash Flow: $2,017/mo ($24,202/yr)\n\nKEY METRICS\n  GRM: 7.8\n  Cap Rate: 7.5%\n  Cash-on-Cash: 5.4%\n  1% Rule: 1.1%\n  Gross Yield: 12.8%\n  DSCR: 1.20\n  Annual Cash Flow: $24,202\n  LTV: 80.0%\n\nVERDICT: BORDERLINE  (composite score 95/100)\n  \u2713 target  GRM: 7.8 (min 12.0, target 10.0)\n  ~ min     Cap Rate: 7.5% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 5.4% (min 6.0%, target 10.0%)\n  \u2713 target  1% Rule: 1.1% (min 0.8%, target 1.0%)\n  \u2713 target  Annual Cash Flow: $24,202 (min $3,600, target $6,000)\n  ~ min     DSCR: 1.20 (min 1.00, target 1.25)\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $3,898   Ours: $2,017\n  Cash-on-Cash         Victor: 9.2%   Ours: 5.4%\n  Cap Rate             Victor: 8.2%   Ours: 7.5%\n  Gross Annual Income  Victor: $266,400   Ours: $249,300\n\nEXCEPTION FACTORS (Victor-style offsets \u2014 raise ranking, never flip a FAIL)\n  \u2605 unicorn location: Victor labels it UNICORN \u2014 stabilized income in walkable Downtown Plano, A+ market at scale\n  \u2605 walk in equity: agreed price $1.95M vs $2.2M current ask\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- cost seg candidate: ~$487,500-$585,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $3,898 vs ours $2,017 (48% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 9.2% vs ours 5.4% (42% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
+   "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43",
+   "listing_urls": [
+    "https://redf.in/0hwT8E",
+    "https://drive.google.com/drive/folders/1gGpx5zeA1nHBNaDKbqLTzAyMqHYPrdNc"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "A",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "A",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "occupied at listing"
+    },
+    "cash_flow": {
+     "grade": "C",
+     "provenance": "computed",
+     "note": "CoC 5.4% below buy-box min, above the floor"
+    }
+   },
+   "exception_factors": [
+    "unicorn location: Victor labels it UNICORN \u2014 stabilized income in walkable Downtown Plano, A+ market at scale",
+    "walk in equity: agreed price $1.95M vs $2.2M current ask"
+   ],
+   "victor": {
+    "grades": {
+     "asset_quality": "A",
+     "neighborhood": "A"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 3898,
+     "coc": 0.0923,
+     "cap_rate": 0.0824,
+     "gross_annual_income": 266400
+    }
+   }
+  },
   {
    "key": "74912e8efcdbb2d7",
    "address": "614 Cedar St",
@@ -47,8 +143,8 @@
    ],
    "hard_disqualifiers": [],
    "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 614 Cedar St\nMarket / City:    Fort Smith, AR  (market type: unknown)\nProperty Type:    SFR   Units: 1\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     \u2014  [no data]  no vacancy data\n  Cash-Flow Margin A  [computed]  CoC 11.3% at/above target with DSCR 1.40\n\nPURCHASE\n  List Price: $140,000   Down: 20.0% ($28,000)\n  Loan: $112,000 @ 7.2% / 30yr   LTV: 80.0%\n  Closing (est): $4,200   Total Cash Needed: $32,200\n\nINCOME\n  Gross Monthly Rent: $1,750 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $6,510\n  NOI: $12,810   Debt Service: $9,168\n  Cash Flow: $303/mo ($3,642/yr)\n\nKEY METRICS\n  GRM: 6.7\n  Cap Rate: 9.2%\n  Cash-on-Cash: 11.3%\n  1% Rule: 1.2%\n  Gross Yield: 15.0%\n  DSCR: 1.40\n  Annual Cash Flow: $3,642\n  LTV: 80.0%\n\nVERDICT: PASS  (composite score 93/100)\n  \u2713 target  GRM: 6.7 (min 12.0, target 10.0)\n  \u2713 target  Cap Rate: 9.2% (min 6.0%, target 8.0%)\n  \u2713 target  Cash-on-Cash: 11.3% (min 6.0%, target 10.0%)\n  \u2713 target  1% Rule: 1.2% (min 0.8%, target 1.0%)\n  ~ min     Annual Cash Flow: $3,642 (min $3,600, target $6,000)\n  \u2713 target  DSCR: 1.40 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: assumed: 1680 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed $125/mo per $100k; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "Seed Demo",
    "source_kind": null,
    "email_subject": null,
@@ -82,6 +178,103 @@
    },
    "exception_factors": [],
    "victor": null
+  },
+  {
+   "key": "a989127c021a5883",
+   "address": "15224 Beach Way Dr",
+   "city": "Corpus Christi",
+   "state": "TX",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 380000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "PASS",
+   "score": 91.2,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.177,
+    "cap_rate": 0.11380263157894736,
+    "coc": 0.2646979207166076,
+    "dscr": 1.7201901766390115,
+    "annual_cash_flow": 18105.33777701596,
+    "occupancy": 0.65,
+    "break_even_occupancy": 0.4750301880008865,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "occupancy": "assumed: 0.65",
+    "annual_str_revenue": "seller-claimed (recompute before trusting)",
+    "adr": "derived from revenue: $283",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$95,000-$114,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "no ADR data \u2014 framework says flag and ask, do not assume",
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $448 vs ours $1,509 (70% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 6.1% vs ours 26.5% (77% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cap rate: Victor 7.2% vs ours 11.4% (36% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 15224 Beach Way Dr\nMarket / City:    Corpus Christi, TX  (market type: unknown)\nProperty Type:    SFR   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    A  [Victor]\n  Neighborhood     B  [Victor]\n  Vacancy Risk     A  [computed]  occupied at listing\n  Cash-Flow Margin A  [computed]  CoC 26.5% at/above target with DSCR 1.72\n\nPURCHASE\n  List Price: $380,000   Down: 15.0% ($57,000)\n  Loan: $323,000 @ 6.8% / 30yr   LTV: 85.0%\n  Closing (est): $11,400   Total Cash Needed: $68,400\n\nINCOME\n  Gross Annual STR Revenue: $67,260 (claimed)\n  ADR: $283   Occupancy: 65.0%\n\nCASH FLOW\n  Operating Expenses (annual): $24,015\n  NOI: $43,245   Debt Service: $25,140\n  Cash Flow: $1,509/mo ($18,105/yr)\n\nKEY METRICS\n  Gross Yield: 17.7%\n  Cap Rate: 11.4%\n  Cash-on-Cash: 26.5%\n  DSCR: 1.72\n  Annual Cash Flow: $18,105\n  Occupancy: 65.0%\n  Break-Even Occupancy: 47.5%\n  LTV: 85.0%\n\nVERDICT: PASS  (composite score 91/100)\n  ~ min     Gross Yield: 17.7% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 65.0% (min 65.0%, target 75.0%)\n  \u2713 target  Cap Rate: 11.4% (min 6.0%, target 8.0%)\n  \u2713 target  Cash-on-Cash: 26.5% (min 8.0%, target 12.0%)\n  \u2713 target  Annual Cash Flow: $18,105 (min $0, target $15,000)\n  ~ min     Break-Even Occupancy: 47.5% (min 50.0%, target 40.0%)\n  \u2713 target  DSCR: 1.72 (min 1.00, target 1.25)\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $448   Ours: $1,509\n  Cash-on-Cash         Victor: 6.1%   Ours: 26.5%\n  Cap Rate             Victor: 7.2%   Ours: 11.4%\n  Gross Annual Income  Victor: $67,260   Ours: $67,260\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); occupancy: assumed: 0.65; annual_str_revenue: seller-claimed (recompute before trusting); adr: derived from revenue: $283; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$95,000-$114,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- no ADR data \u2014 framework says flag and ask, do not assume\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $448 vs ours $1,509 (70% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 6.1% vs ours 26.5% (77% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cap rate: Victor 7.2% vs ours 11.4% (36% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
+   "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45",
+   "listing_urls": [
+    "https://rabbu.com/airbnbs-for-sale/corpus-christi-tx-78418/15224-beach-way-dr-corpus-christi-tx-78418-dhh"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "A",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "occupied at listing"
+    },
+    "cash_flow": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "CoC 26.5% at/above target with DSCR 1.72"
+    }
+   },
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "A",
+     "neighborhood": "B"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 448,
+     "coc": 0.061,
+     "cap_rate": 0.0725,
+     "gross_annual_income": 67260
+    }
+   }
   },
   {
    "key": "71f4bec1f2e3d6d6",
@@ -125,8 +318,8 @@
    ],
    "hard_disqualifiers": [],
    "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 902 Crockett St\nMarket / City:    Sherman, TX  (market type: non_destination)\nProperty Type:    SFR   Units: 1\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    B  [Victor]\n  Neighborhood     B  [Victor]\n  Vacancy Risk     A  [Victor]\n  Cash-Flow Margin B  [computed]  CoC 7.8% at/above buy-box min\n\nPURCHASE\n  List Price: $225,000   Down: 20.0% ($45,000)\n  Loan: $180,000 @ 7.2% / 30yr   LTV: 80.0%\n  Closing (est): $6,750   Total Cash Needed: $51,750\n\nINCOME\n  Gross Monthly Rent: $2,550 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $9,358\n  NOI: $18,794   Debt Service: $14,735\n  Cash Flow: $338/mo ($4,059/yr)\n\nKEY METRICS\n  GRM: 7.4\n  Cap Rate: 8.4%\n  Cash-on-Cash: 7.8%\n  1% Rule: 1.1%\n  Gross Yield: 13.6%\n  DSCR: 1.28\n  Annual Cash Flow: $4,059\n  LTV: 80.0%\n\nVERDICT: PASS  (composite score 88/100)\n  \u2713 target  GRM: 7.4 (min 12.0, target 10.0)\n  \u2713 target  Cap Rate: 8.4% (min 6.0%, target 8.0%)\n  ~ min     Cash-on-Cash: 7.8% (min 6.0%, target 10.0%)\n  \u2713 target  1% Rule: 1.1% (min 0.8%, target 1.0%)\n  ~ min     Annual Cash Flow: $4,059 (min $3,600, target $6,000)\n  \u2713 target  DSCR: 1.28 (min 1.00, target 1.25)\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $420   Ours: $338\n  Cash-on-Cash         Victor: 9.5%   Ours: 7.8%\n  Cap Rate             Victor: 8.5%   Ours: 8.4%\n\nEXCEPTION FACTORS (Victor-style offsets \u2014 raise ranking, never flip a FAIL)\n  \u2605 walk in equity: recent comps $245-250k; listed at $225k\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $420 vs ours $338 (19% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 9.5% vs ours 7.8% (17% apart) \u2014 reconcile before trusting either",
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "Victor Steffen (Steffen Realty)",
    "source_kind": "agent_full_address",
    "email_subject": "(demo) Occupied Sherman SFR - B/B/A, $2,550 rent, walk-in equity",
@@ -177,6 +370,98 @@
    }
   },
   {
+   "key": "98051286d3ed3963",
+   "address": "5407 Ariel St",
+   "city": "Houston",
+   "state": "TX",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 545000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "PASS",
+   "score": 86.3,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.18629724770642203,
+    "cap_rate": 0.08930256880733946,
+    "coc": 0.12858646087434142,
+    "dscr": 1.349858078672346,
+    "annual_cash_flow": 12614.331811772892,
+    "occupancy": 0.65,
+    "break_even_occupancy": 0.5692440247640904,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "occupancy": "assumed: 0.65",
+    "annual_str_revenue": "seller-claimed (recompute before trusting)",
+    "adr": "derived from revenue: $428",
+    "property_tax_annual": "assumed: 6540 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed STR policy at 1.5x LTR rate",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$136,250-$163,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "no ADR data \u2014 framework says flag and ask, do not assume",
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on cap rate: Victor 7.0% vs ours 8.9% (22% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 5407 Ariel St\nMarket / City:    Houston, TX  (market type: unknown)\nProperty Type:    SFR   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    B  [Victor]\n  Neighborhood     B  [Victor]\n  Vacancy Risk     A  [computed]  occupied at listing\n  Cash-Flow Margin A  [computed]  CoC 12.9% at/above target with DSCR 1.35\n\nPURCHASE\n  List Price: $545,000   Down: 15.0% ($81,750)\n  Loan: $463,250 @ 6.8% / 30yr   LTV: 85.0%\n  Closing (est): $16,350   Total Cash Needed: $98,100\n\nINCOME\n  Gross Annual STR Revenue: $101,532 (claimed)\n  ADR: $428   Occupancy: 65.0%\n\nCASH FLOW\n  Operating Expenses (annual): $52,862\n  NOI: $48,670   Debt Service: $36,056\n  Cash Flow: $1,051/mo ($12,614/yr)\n\nKEY METRICS\n  Gross Yield: 18.6%\n  Cap Rate: 8.9%\n  Cash-on-Cash: 12.9%\n  DSCR: 1.35\n  Annual Cash Flow: $12,614\n  Occupancy: 65.0%\n  Break-Even Occupancy: 56.9%\n  LTV: 85.0%\n\nVERDICT: PASS  (composite score 86/100)\n  ~ min     Gross Yield: 18.6% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 65.0% (min 65.0%, target 75.0%)\n  \u2713 target  Cap Rate: 8.9% (min 6.0%, target 8.0%)\n  \u2713 target  Cash-on-Cash: 12.9% (min 8.0%, target 12.0%)\n  ~ min     Annual Cash Flow: $12,614 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 56.9% (min 50.0%, target 40.0%)\n  \u2713 target  DSCR: 1.35 (min 1.00, target 1.25)\n\nVICTOR'S UNDERWRITING vs OURS\n  Cap Rate             Victor: 7.0%   Ours: 8.9%\n  Gross Annual Income  Victor: $101,532   Ours: $101,532\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); occupancy: assumed: 0.65; annual_str_revenue: seller-claimed (recompute before trusting); adr: derived from revenue: $428; property_tax_annual: assumed: 6540 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed STR policy at 1.5x LTR rate; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$136,250-$163,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- no ADR data \u2014 framework says flag and ask, do not assume\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on cap rate: Victor 7.0% vs ours 8.9% (22% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
+   "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43",
+   "listing_urls": [
+    "https://rabbu.com/airbnbs-for-sale/houston-tx-77096/5407-ariel-st-houston-tx-77096-hwf"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "occupied at listing"
+    },
+    "cash_flow": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "CoC 12.9% at/above target with DSCR 1.35"
+    }
+   },
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "B",
+     "neighborhood": "B"
+    },
+    "underwriting": {
+     "cap_rate": 0.07,
+     "gross_annual_income": 101532
+    }
+   }
+  },
+  {
    "key": "2fc8a82506eabf5f",
    "address": "123 Pine Ridge Trl",
    "city": "Broken Bow",
@@ -217,8 +502,8 @@
    ],
    "hard_disqualifiers": [],
    "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 123 Pine Ridge Trl\nMarket / City:    Broken Bow, OK  (market type: destination)\nProperty Type:    cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     B  [computed]  market occupancy 70%\n  Cash-Flow Margin B  [computed]  CoC 9.7% at/above buy-box min\n\nPURCHASE\n  List Price: $475,000   Down: 15.0% ($71,250)\n  Loan: $403,750 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $14,250   Total Cash Needed: $99,000\n\nINCOME\n  Gross Annual STR Revenue: $89,425 (derived)\n  ADR: $350   Occupancy: 70.0%\n\nCASH FLOW\n  Operating Expenses (annual): $46,815\n  NOI: $42,610   Debt Service: $33,051\n  Cash Flow: $797/mo ($9,559/yr)\n\nKEY METRICS\n  Gross Yield: 18.8%\n  Cap Rate: 9.0%\n  Cash-on-Cash: 9.7%\n  DSCR: 1.29\n  Annual Cash Flow: $9,559\n  Occupancy: 70.0%\n  Break-Even Occupancy: 62.5%\n  LTV: 85.0%\n\nVERDICT: PASS  (composite score 86/100)\n  ~ min     Gross Yield: 18.8% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 70.0% (min 65.0%, target 75.0%)\n  \u2713 target  Cap Rate: 9.0% (min 6.0%, target 8.0%)\n  ~ min     Cash-on-Cash: 9.7% (min 8.0%, target 12.0%)\n  ~ min     Annual Cash Flow: $9,559 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 62.5% (min 50.0%, target 40.0%)\n  \u2713 target  DSCR: 1.29 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); annual_str_revenue: derived: ADR $350 x 365 x 70% occupancy; property_tax_annual: assumed: 5700 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed STR policy at 1.5x LTR rate; hoa_monthly: assumed: 0; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$118,750-$142,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- STR legality: LIKELY_OK \u2014 human-verify HOA + city ordinance before any offer\n- STR revenue figures are estimates, not comp data",
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "Seed Demo",
    "source_kind": null,
    "email_subject": null,
@@ -252,6 +537,384 @@
    },
    "exception_factors": [],
    "victor": null
+  },
+  {
+   "key": "cc88ee6c503b7ed4",
+   "address": "2203 Jennifer Dr",
+   "city": "Killeen",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "unknown",
+   "price": 1400000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "PASS",
+   "score": 81.2,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 5.929690808979246,
+    "cap_rate": 0.10731142857142857,
+    "coc": 0.19585222304730382,
+    "one_pct_rule": 0.01405357142857143,
+    "gross_yield": 0.16864285714285715,
+    "dscr": 1.7234515285612078,
+    "annual_cash_flow": 63064.41582123183,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$350,000-$420,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $6,835 vs ours $5,255 (23% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 22.5% vs ours 19.6% (13% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on gross income (annual): Victor $276,000 vs ours $236,100 (14% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 2203 Jennifer Dr\nMarket / City:    Killeen, TX  (market type: unknown)\nProperty Type:    multifamily   Units: 32\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    B  [Victor]\n  Neighborhood     C  [Victor]\n  Vacancy Risk     B  [computed]  partially occupied (81%)\n  Cash-Flow Margin A  [computed]  CoC 19.6% at/above target with DSCR 1.72\n\nPURCHASE\n  List Price: $1,400,000   Down: 20.0% ($280,000)\n  Loan: $1,120,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $42,000   Total Cash Needed: $322,000\n\nINCOME\n  Gross Monthly Rent: $19,675 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $66,976\n  NOI: $150,236   Debt Service: $87,172\n  Cash Flow: $5,255/mo ($63,064/yr)\n\nKEY METRICS\n  GRM: 5.9\n  Cap Rate: 10.7%\n  Cash-on-Cash: 19.6%\n  1% Rule: 1.4%\n  Gross Yield: 16.9%\n  DSCR: 1.72\n  Annual Cash Flow: $63,064\n  LTV: 80.0%\n\nVERDICT: PASS  (composite score 81/100)\n  \u2713 target  GRM: 5.9 (min 12.0, target 10.0)\n  \u2713 target  Cap Rate: 10.7% (min 6.0%, target 8.0%)\n  \u2713 target  Cash-on-Cash: 19.6% (min 6.0%, target 10.0%)\n  \u2713 target  1% Rule: 1.4% (min 0.8%, target 1.0%)\n  \u2713 target  Annual Cash Flow: $63,064 (min $3,600, target $6,000)\n  \u2713 target  DSCR: 1.72 (min 1.00, target 1.25)\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $6,835   Ours: $5,255\n  Cash-on-Cash         Victor: 22.5%   Ours: 19.6%\n  Cap Rate             Victor: 11.7%   Ours: 10.7%\n  Gross Annual Income  Victor: $276,000   Ours: $236,100\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- cost seg candidate: ~$350,000-$420,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $6,835 vs ours $5,255 (23% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 22.5% vs ours 19.6% (13% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on gross income (annual): Victor $276,000 vs ours $236,100 (14% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "32 Units at $1.4M + 2 Turnkey STRs",
+   "email_date": "Tue, 07 Jul 2026 13:38:14 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:FJsUJ4g9TsuMwgDCgg06Kg@geopod-ismtpd-21",
+   "listing_urls": [
+    "https://www.crexi.com/properties/2605621/texas-quail-hollow-apartments"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "C",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "B",
+     "provenance": "computed",
+     "note": "partially occupied (81%)"
+    },
+    "cash_flow": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "CoC 19.6% at/above target with DSCR 1.72"
+    }
+   },
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "B",
+     "neighborhood": "C"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 6835,
+     "coc": 0.2253,
+     "cap_rate": 0.117,
+     "gross_annual_income": 276000
+    }
+   }
+  },
+  {
+   "key": "247275520f4a7f23",
+   "address": "1233 W Hudgins St",
+   "city": "Grapevine",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "non_destination",
+   "price": 455000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 77.6,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 8.242753623188406,
+    "cap_rate": 0.06945934065934066,
+    "coc": 0.03127792777735639,
+    "one_pct_rule": 0.01010989010989011,
+    "gross_yield": 0.12131868131868132,
+    "dscr": 1.1155364197999948,
+    "annual_cash_flow": 3273.235141900346,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$113,750-$136,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $667 vs ours $273 (59% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 6.8% vs ours 3.1% (54% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 1233 W Hudgins St\nMarket / City:    Grapevine, TX  (market type: non_destination)\nProperty Type:    duplex   Units: 2\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    B  [Victor]\n  Neighborhood     A  [Victor]\n  Vacancy Risk     \u2014  [no data]  no vacancy data\n  Cash-Flow Margin C  [computed]  CoC 3.1% below buy-box min, above the floor\n\nPURCHASE\n  List Price: $455,000   Down: 20.0% ($91,000)\n  Loan: $364,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $13,650   Total Cash Needed: $104,650\n\nINCOME\n  Gross Monthly Rent: $4,600 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $19,180\n  NOI: $31,604   Debt Service: $28,331\n  Cash Flow: $273/mo ($3,273/yr)\n\nKEY METRICS\n  GRM: 8.2\n  Cap Rate: 6.9%\n  Cash-on-Cash: 3.1%\n  1% Rule: 1.0%\n  Gross Yield: 12.1%\n  DSCR: 1.12\n  Annual Cash Flow: $3,273\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 78/100)\n  \u2713 target  GRM: 8.2 (min 12.0, target 10.0)\n  ~ min     Cap Rate: 6.9% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 3.1% (min 6.0%, target 10.0%)\n  \u2713 target  1% Rule: 1.0% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $3,273 (min $3,600, target $6,000)\n  ~ min     DSCR: 1.12 (min 1.00, target 1.25)\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $667   Ours: $273\n  Cash-on-Cash         Victor: 6.8%   Ours: 3.1%\n  Cap Rate             Victor: 7.6%   Ours: 6.9%\n  Gross Annual Income  Victor: $55,200   Ours: $55,200\n\nEXCEPTION FACTORS (Victor-style offsets \u2014 raise ranking, never flip a FAIL)\n  \u2605 unicorn location: Victor labels it UNICORN \u2014 1%-rule duplex in A-grade Grapevine, where inventory never appears\n  \u2605 walk in equity: comparable at 1222 W Hudgins sold $525K two months ago vs $455K\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- cost seg candidate: ~$113,750-$136,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $667 vs ours $273 (59% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 6.8% vs ours 3.1% (54% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "Unicorn Grapevine and Plano Deals + 2 more cash flow producers",
+   "email_date": "Thu, 02 Jul 2026 14:30:33 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:2Ms6gyUzQnqdaiqTdGFInw@geopod-ismtpd-43",
+   "listing_urls": [
+    "https://redf.in/O5ztrU"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "A",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no vacancy data"
+    },
+    "cash_flow": {
+     "grade": "C",
+     "provenance": "computed",
+     "note": "CoC 3.1% below buy-box min, above the floor"
+    }
+   },
+   "exception_factors": [
+    "unicorn location: Victor labels it UNICORN \u2014 1%-rule duplex in A-grade Grapevine, where inventory never appears",
+    "walk in equity: comparable at 1222 W Hudgins sold $525K two months ago vs $455K"
+   ],
+   "victor": {
+    "grades": {
+     "asset_quality": "B",
+     "neighborhood": "A"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 667,
+     "coc": 0.0677,
+     "cap_rate": 0.076,
+     "gross_annual_income": 55200
+    }
+   }
+  },
+  {
+   "key": "aac612e8e28fc6d7",
+   "address": "6303 Sandra St",
+   "city": "Houston",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "unknown",
+   "price": 355000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 76.8,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 8.333333333333334,
+    "cap_rate": 0.07008450704225352,
+    "coc": 0.033996042485673124,
+    "one_pct_rule": 0.01,
+    "gross_yield": 0.12,
+    "dscr": 1.1255767665979044,
+    "annual_cash_flow": 2775.7768689552104,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$88,750-$106,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "thin margins: barely cash-flows; one surprise CapEx wipes the year",
+    "DIVERGENCE on monthly cash flow: Victor $626 vs ours $231 (63% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 8.1% vs ours 3.4% (58% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cap rate: Victor 8.0% vs ours 7.0% (12% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 6303 Sandra St\nMarket / City:    Houston, TX  (market type: unknown)\nProperty Type:    duplex   Units: 2\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    A  [Victor]\n  Neighborhood     B  [Victor]\n  Vacancy Risk     A  [computed]  occupied at listing\n  Cash-Flow Margin C  [computed]  CoC 3.4% below buy-box min, above the floor\n\nPURCHASE\n  List Price: $355,000   Down: 20.0% ($71,000)\n  Loan: $284,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $10,650   Total Cash Needed: $81,650\n\nINCOME\n  Gross Monthly Rent: $3,550 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $14,312\n  NOI: $24,880   Debt Service: $22,104\n  Cash Flow: $231/mo ($2,776/yr)\n\nKEY METRICS\n  GRM: 8.3\n  Cap Rate: 7.0%\n  Cash-on-Cash: 3.4%\n  1% Rule: 1.0%\n  Gross Yield: 12.0%\n  DSCR: 1.13\n  Annual Cash Flow: $2,776\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 77/100)\n  \u2713 target  GRM: 8.3 (min 12.0, target 10.0)\n  ~ min     Cap Rate: 7.0% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 3.4% (min 6.0%, target 10.0%)\n  \u2713 target  1% Rule: 1.0% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $2,776 (min $3,600, target $6,000)\n  ~ min     DSCR: 1.13 (min 1.00, target 1.25)\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $626   Ours: $231\n  Cash-on-Cash         Victor: 8.1%   Ours: 3.4%\n  Cap Rate             Victor: 8.0%   Ours: 7.0%\n  Gross Annual Income  Victor: $42,600   Ours: $42,600\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- cost seg candidate: ~$88,750-$106,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- thin margins: barely cash-flows; one surprise CapEx wipes the year\n- DIVERGENCE on monthly cash flow: Victor $626 vs ours $231 (63% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 8.1% vs ours 3.4% (58% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cap rate: Victor 8.0% vs ours 7.0% (12% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
+   "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105",
+   "listing_urls": [
+    "https://drive.google.com/drive/folders/1k1W2O3kfsCW9gbnWZvm997uvY5xSzf5a"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "A",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "occupied at listing"
+    },
+    "cash_flow": {
+     "grade": "C",
+     "provenance": "computed",
+     "note": "CoC 3.4% below buy-box min, above the floor"
+    }
+   },
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "A",
+     "neighborhood": "B"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 626,
+     "coc": 0.0814,
+     "cap_rate": 0.0795,
+     "gross_annual_income": 42600
+    }
+   }
+  },
+  {
+   "key": "ad0e903c3df99812",
+   "address": "3002 Pasadena Blvd",
+   "city": "Pasadena",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "unknown",
+   "price": 1200000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 70.2,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 7.142857142857143,
+    "cap_rate": 0.06369916666666667,
+    "coc": 0.006233693026599898,
+    "one_pct_rule": 0.011666666666666667,
+    "gross_yield": 0.14,
+    "dscr": 1.0230264159298605,
+    "annual_cash_flow": 1720.4992753415718,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "seller-claimed (recompute before trusting)",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$300,000-$360,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "thin margins: barely cash-flows; one surprise CapEx wipes the year",
+    "DIVERGENCE on monthly cash flow: Victor $1,712 vs ours $143 (92% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 6.6% vs ours 0.6% (91% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cap rate: Victor 7.5% vs ours 6.4% (16% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 3002 Pasadena Blvd\nMarket / City:    Pasadena, TX  (market type: unknown)\nProperty Type:    multifamily   Units: 14\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    B  [Victor]\n  Neighborhood     B  [Victor]\n  Vacancy Risk     A  [computed]  occupied at listing\n  Cash-Flow Margin C  [computed]  CoC 0.6% below buy-box min, above the floor\n\nPURCHASE\n  List Price: $1,200,000   Down: 20.0% ($240,000)\n  Loan: $960,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $36,000   Total Cash Needed: $276,000\n\nINCOME\n  Gross Monthly Rent: $14,000 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $78,121\n  NOI: $76,439   Debt Service: $74,719\n  Cash Flow: $143/mo ($1,720/yr)\n\nKEY METRICS\n  GRM: 7.1\n  Cap Rate: 6.4%\n  Cash-on-Cash: 0.6%\n  1% Rule: 1.2%\n  Gross Yield: 14.0%\n  DSCR: 1.02\n  Annual Cash Flow: $1,720\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 70/100)\n  \u2713 target  GRM: 7.1 (min 12.0, target 10.0)\n  ~ min     Cap Rate: 6.4% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 0.6% (min 6.0%, target 10.0%)\n  \u2713 target  1% Rule: 1.2% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $1,720 (min $3,600, target $6,000)\n  ~ min     DSCR: 1.02 (min 1.00, target 1.25)\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $1,712   Ours: $143\n  Cash-on-Cash         Victor: 6.6%   Ours: 0.6%\n  Cap Rate             Victor: 7.5%   Ours: 6.4%\n  Gross Annual Income  Victor: $168,000   Ours: $168,000\n\nEXCEPTION FACTORS (Victor-style offsets \u2014 raise ranking, never flip a FAIL)\n  \u2605 walk in equity: ~$2.2M conservative FMV selling unit-by-unit vs $1.2M package price\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: seller-claimed (recompute before trusting); management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- cost seg candidate: ~$300,000-$360,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- thin margins: barely cash-flows; one surprise CapEx wipes the year\n- DIVERGENCE on monthly cash flow: Victor $1,712 vs ours $143 (92% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 6.6% vs ours 0.6% (91% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cap rate: Victor 7.5% vs ours 6.4% (16% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "3 Deals With Strong Investor Interest, Still No Signed Offers",
+   "email_date": "Mon, 06 Jul 2026 10:44:02 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:J5GO0t_5SDCXtVQ6SrWnRw@geopod-ismtpd-90",
+   "listing_urls": [
+    "https://drive.google.com/file/d/1HpLcWBp7nzOQPI_8oz_pwpqxomWQoNYE/view"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "occupied at listing"
+    },
+    "cash_flow": {
+     "grade": "C",
+     "provenance": "computed",
+     "note": "CoC 0.6% below buy-box min, above the floor"
+    }
+   },
+   "exception_factors": [
+    "walk in equity: ~$2.2M conservative FMV selling unit-by-unit vs $1.2M package price"
+   ],
+   "victor": {
+    "grades": {
+     "asset_quality": "B",
+     "neighborhood": "B"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 1712,
+     "coc": 0.0658,
+     "cap_rate": 0.0755,
+     "gross_annual_income": 168000
+    }
+   }
   },
   {
    "key": "b1465ba306bf54dc",
@@ -294,8 +957,8 @@
    ],
    "hard_disqualifiers": [],
    "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 88 Lakeview Loop\nMarket / City:    Hochatown, OK  (market type: destination)\nProperty Type:    cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     B  [computed]  market occupancy 66%\n  Cash-Flow Margin D  [computed]  CoC 3.1%, DSCR 1.09, cash flow $3,432/yr \u2014 below the 6% STR posting floor\n\nPURCHASE\n  List Price: $540,000   Down: 15.0% ($81,000)\n  Loan: $459,000 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $16,200   Total Cash Needed: $110,700\n\nINCOME\n  Gross Annual STR Revenue: $90,338 (derived)\n  ADR: $375   Occupancy: 66.0%\n\nCASH FLOW\n  Operating Expenses (annual): $49,331\n  NOI: $41,006   Debt Service: $37,574\n  Cash Flow: $286/mo ($3,432/yr)\n\nKEY METRICS\n  Gross Yield: 16.7%\n  Cap Rate: 7.6%\n  Cash-on-Cash: 3.1%\n  DSCR: 1.09\n  Annual Cash Flow: $3,432\n  Occupancy: 66.0%\n  Break-Even Occupancy: 63.5%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 63/100)\n  ~ min     Gross Yield: 16.7% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 66.0% (min 65.0%, target 75.0%)\n  ~ min     Cap Rate: 7.6% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 3.1% (min 8.0%, target 12.0%)\n  ~ min     Annual Cash Flow: $3,432 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 63.5% (min 50.0%, target 40.0%)\n  ~ min     DSCR: 1.09 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); annual_str_revenue: derived: ADR $375 x 365 x 66% occupancy; property_tax_annual: assumed: 6480 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed STR policy at 1.5x LTR rate; hoa_monthly: assumed: 0; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$135,000-$162,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- STR revenue figures are estimates, not comp data",
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "Seed Demo",
    "source_kind": null,
    "email_subject": null,
@@ -329,6 +992,84 @@
    },
    "exception_factors": [],
    "victor": null
+  },
+  {
+   "key": "7447bfd8603fcf8f",
+   "address": "412 Chicago Ave",
+   "city": "Fort Worth",
+   "state": "TX",
+   "tier": "house_hack",
+   "market_type": "non_destination",
+   "price": 219000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "PASS",
+   "score": 61.6,
+   "kill_reasons": [],
+   "metrics": {
+    "rental_coverage": 0.517852554303165,
+    "net_housing_cost_monthly": 898.4647873824383,
+    "units": 2,
+    "ltv": 0.965
+   },
+   "assumptions": {
+    "financing": "assumed FHA owner-occupant, 3.5% down",
+    "interest_rate": "seller-claimed (search live rate)",
+    "other_units_monthly_rent": "seller-claimed (recompute before trusting)",
+    "property_tax_annual": "assumed: 2628 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed $125/mo per $100k",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 412 Chicago Ave\nMarket / City:    Fort Worth, TX  (market type: non_destination)\nProperty Type:    duplex   Units: 2\nStrategy Fit:     HOUSE_HACK\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    B  [Victor]\n  Neighborhood     B  [Victor]\n  Vacancy Risk     C  [computed]  partially occupied (50%)\n  Cash-Flow Margin B  [computed]  rental coverage 52%\n\nPURCHASE\n  List Price: $219,000   Down: 3.5% ($7,665)\n  Loan: $211,335 @ 6.8% / 30yr   LTV: 96.5%\n  Closing (est): $6,570   Total Cash Needed: $14,235\n\nINCOME\n  Rent from non-owner units: $965/mo (claimed)\n\nPAYMENT\n  Total Monthly Payment (PITI+HOA): $1,863\n  Net Housing Cost: $898/mo\n\nKEY METRICS\n  Rental Coverage: 51.8%\n  Net Housing Cost/mo: $898\n  Units: 2\n  LTV: 96.5%\n\nVERDICT: PASS  (composite score 62/100)\n  ~ min     Rental Coverage: 51.8% (min 50.0%, target 75.0%)\n```\n\n**Assumptions:** financing: assumed FHA owner-occupant, 3.5% down; interest_rate: seller-claimed (search live rate); other_units_monthly_rent: seller-claimed (recompute before trusting); property_tax_annual: assumed: 2628 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed $125/mo per $100k; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
+   "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45",
+   "listing_urls": [
+    "https://redf.in/tJ0VV8"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "C",
+     "provenance": "computed",
+     "note": "partially occupied (50%)"
+    },
+    "cash_flow": {
+     "grade": "B",
+     "provenance": "computed",
+     "note": "rental coverage 52%"
+    }
+   },
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "B",
+     "neighborhood": "B"
+    }
+   }
   },
   {
    "key": "15d80a87ae2dc3c7",
@@ -366,8 +1107,8 @@
    ],
    "hard_disqualifiers": [],
    "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 789 Duplex Dr\nMarket / City:    Dallas, TX  (market type: non_destination)\nProperty Type:    duplex   Units: 2\nStrategy Fit:     HOUSE_HACK\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     \u2014  [no data]  no vacancy data\n  Cash-Flow Margin C  [computed]  rental coverage 49%\n\nPURCHASE\n  List Price: $420,000   Down: 3.5% ($14,700)\n  Loan: $405,300 @ 7.2% / 30yr   LTV: 96.5%\n  Closing (est): $12,600   Total Cash Needed: $27,300\n\nINCOME\n  Rent from non-owner units: $1,800/mo (claimed)\n\nPAYMENT\n  Total Monthly Payment (PITI+HOA): $3,710\n  Net Housing Cost: $1,910/mo\n\nKEY METRICS\n  Rental Coverage: 48.5%\n  Net Housing Cost/mo: $1,910\n  Units: 2\n  LTV: 96.5%\n\nVERDICT: BORDERLINE  (composite score 48/100)\n  \u2717 FAIL    Rental Coverage: 48.5% (min 50.0%, target 75.0%)\n```\n\n**Assumptions:** financing: assumed FHA owner-occupant, 3.5% down; interest_rate: assumed: 0.0725 (search live rate); other_units_monthly_rent: seller-claimed (recompute before trusting); property_tax_annual: assumed: 5040 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed $125/mo per $100k; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- cost seg candidate: ~$105,000-$126,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "Seed Demo",
    "source_kind": null,
    "email_subject": null,
@@ -446,8 +1187,8 @@
     "DSCR 0.78 < 1.0 \u2014 negative coverage"
    ],
    "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 210 Chalet Village Way\nMarket / City:    Gatlinburg, TN  (market type: destination)\nProperty Type:    cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     B  [computed]  market occupancy 68%\n  Cash-Flow Margin D  [computed]  CoC -8.4%, DSCR 0.78, cash flow $-8,891/yr\n\nPURCHASE\n  List Price: $585,000   Down: 15.0% ($87,750)\n  Loan: $497,250 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $17,550   Total Cash Needed: $105,300\n\nINCOME\n  Gross Annual STR Revenue: $79,424 (derived)\n  ADR: $320   Occupancy: 68.0%\n\nCASH FLOW\n  Operating Expenses (annual): $47,610\n  NOI: $31,814   Debt Service: $40,705\n  Cash Flow: $-741/mo ($-8,891/yr)\n\nKEY METRICS\n  Gross Yield: 13.6%\n  Cap Rate: 5.4%\n  Cash-on-Cash: -8.4%\n  DSCR: 0.78\n  Annual Cash Flow: $-8,891\n  Occupancy: 68.0%\n  Break-Even Occupancy: 75.6%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  \u2717 FAIL    Gross Yield: 13.6% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 68.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 5.4% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -8.4% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-8,891 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 75.6% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.78 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.78 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); annual_str_revenue: derived: ADR $320 x 365 x 68% occupancy; property_tax_annual: assumed: 7020 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed STR policy at 1.5x LTR rate; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$146,250-$175,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- address IDENTIFIED VIA RESEARCH (MEDIUM confidence) \u2014 verify against the listing before acting. Evidence: price $585,000 exact; 3 bed / 3 bath exact; 1,850 sqft within 2%; 'game room + mountain view' matched listing photos caption\n- STR legality: LIKELY_OK \u2014 human-verify HOA + city ordinance before any offer\n- STR revenue figures are estimates, not comp data\n- break-even occupancy 76% EXCEEDS expected occupancy 68% \u2014 betting on outperforming the market",
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "The Offer Sheet",
    "source_kind": "teaser_paywall",
    "email_subject": "(demo) A Smokies cabin with a game room \u2014 3/3 under $600k",
@@ -486,6 +1227,681 @@
    },
    "exception_factors": [],
    "victor": null
+  },
+  {
+   "key": "73257856e1a3b904",
+   "address": "902 N Allen Heights Dr",
+   "city": "Allen",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "non_destination",
+   "price": 420000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 13.461538461538462,
+    "cap_rate": 0.031085714285714286,
+    "coc": -0.13556392602101916,
+    "one_pct_rule": 0.006190476190476191,
+    "gross_yield": 0.07428571428571429,
+    "dscr": 0.49924525761457816,
+    "annual_cash_flow": -13095.475253630451,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$105,000-$126,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $488 vs ours $-1,091 (145% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 6.7% vs ours -13.6% (149% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cap rate: Victor 7.2% vs ours 3.1% (57% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on gross income (annual): Victor $68,000 vs ours $31,200 (54% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.50 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 902 N Allen Heights Dr\nMarket / City:    Allen, TX  (market type: non_destination)\nProperty Type:    SFR   Units: 1\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    A  [Victor]\n  Neighborhood     A  [Victor]\n  Vacancy Risk     C  [computed]  vacant \u2014 lease-up risk\n  Cash-Flow Margin D  [computed]  CoC -13.6%, DSCR 0.50, cash flow $-13,095/yr\n\nPURCHASE\n  List Price: $420,000   Down: 20.0% ($84,000)\n  Loan: $336,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $12,600   Total Cash Needed: $96,600\n\nINCOME\n  Gross Monthly Rent: $2,600 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $15,648\n  NOI: $13,056   Debt Service: $26,151\n  Cash Flow: $-1,091/mo ($-13,095/yr)\n\nKEY METRICS\n  GRM: 13.5\n  Cap Rate: 3.1%\n  Cash-on-Cash: -13.6%\n  1% Rule: 0.6%\n  Gross Yield: 7.4%\n  DSCR: 0.50\n  Annual Cash Flow: $-13,095\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  \u2717 FAIL    GRM: 13.5 (min 12.0, target 10.0)\n  \u2717 FAIL    Cap Rate: 3.1% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -13.6% (min 6.0%, target 10.0%)\n  \u2717 FAIL    1% Rule: 0.6% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $-13,095 (min $3,600, target $6,000)\n  \u2717 FAIL    DSCR: 0.50 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.50 < 1.0 \u2014 negative coverage\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $488   Ours: $-1,091\n  Cash-on-Cash         Victor: 6.7%   Ours: -13.6%\n  Cap Rate             Victor: 7.2%   Ours: 3.1%\n  Gross Annual Income  Victor: $68,000   Ours: $31,200\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0\n\n**Tax angle:**\n- cost seg candidate: ~$105,000-$126,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $488 vs ours $-1,091 (145% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 6.7% vs ours -13.6% (149% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cap rate: Victor 7.2% vs ours 3.1% (57% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on gross income (annual): Victor $68,000 vs ours $31,200 (54% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "32 Units at $1.4M + 2 Turnkey STRs",
+   "email_date": "Tue, 07 Jul 2026 13:38:14 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:FJsUJ4g9TsuMwgDCgg06Kg@geopod-ismtpd-21",
+   "listing_urls": [
+    "https://redf.in/tbknXB"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "A",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "A",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "C",
+     "provenance": "computed",
+     "note": "vacant \u2014 lease-up risk"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -13.6%, DSCR 0.50, cash flow $-13,095/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "A",
+     "neighborhood": "A"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 488,
+     "coc": 0.0665,
+     "cap_rate": 0.0723,
+     "gross_annual_income": 68000
+    },
+    "appreciation_note": "Very aggressive appreciation projected in the north Dallas / Plano corridor"
+   }
+  },
+  {
+   "key": "3162d0ae62497f02",
+   "address": "1907 S 17th St",
+   "city": "Waco",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "unknown",
+   "price": 520000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 9.027777777777779,
+    "cap_rate": 0.06102307692307692,
+    "coc": -0.005401479771616411,
+    "one_pct_rule": 0.009230769230769232,
+    "gross_yield": 0.11076923076923077,
+    "dscr": 0.9800476668762421,
+    "annual_cash_flow": -646.0169806853228,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$130,000-$156,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $506 vs ours $-54 (111% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 4.5% vs ours -0.5% (112% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cap rate: Victor 7.0% vs ours 6.1% (13% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.98 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 1907 S 17th St\nMarket / City:    Waco, TX  (market type: unknown)\nProperty Type:    duplex   Units: 2\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    A  [Victor]\n  Neighborhood     B  [Victor]\n  Vacancy Risk     A  [computed]  occupied at listing\n  Cash-Flow Margin D  [computed]  CoC -0.5%, DSCR 0.98, cash flow $-646/yr\n\nPURCHASE\n  List Price: $520,000   Down: 20.0% ($104,000)\n  Loan: $416,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $15,600   Total Cash Needed: $119,600\n\nINCOME\n  Gross Monthly Rent: $4,800 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $21,260\n  NOI: $31,732   Debt Service: $32,378\n  Cash Flow: $-54/mo ($-646/yr)\n\nKEY METRICS\n  GRM: 9.0\n  Cap Rate: 6.1%\n  Cash-on-Cash: -0.5%\n  1% Rule: 0.9%\n  Gross Yield: 11.1%\n  DSCR: 0.98\n  Annual Cash Flow: $-646\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  \u2713 target  GRM: 9.0 (min 12.0, target 10.0)\n  ~ min     Cap Rate: 6.1% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -0.5% (min 6.0%, target 10.0%)\n  ~ min     1% Rule: 0.9% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $-646 (min $3,600, target $6,000)\n  \u2717 FAIL    DSCR: 0.98 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.98 < 1.0 \u2014 negative coverage\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $506   Ours: $-54\n  Cash-on-Cash         Victor: 4.5%   Ours: -0.5%\n  Cap Rate             Victor: 7.0%   Ours: 6.1%\n  Gross Annual Income  Victor: $59,400   Ours: $57,600\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- cost seg candidate: ~$130,000-$156,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $506 vs ours $-54 (111% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 4.5% vs ours -0.5% (112% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cap rate: Victor 7.0% vs ours 6.1% (13% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "3 Deals With Strong Investor Interest, Still No Signed Offers",
+   "email_date": "Mon, 06 Jul 2026 10:44:02 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:J5GO0t_5SDCXtVQ6SrWnRw@geopod-ismtpd-90",
+   "listing_urls": [
+    "https://redf.in/8aeyyR"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "A",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "occupied at listing"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -0.5%, DSCR 0.98, cash flow $-646/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "A",
+     "neighborhood": "B"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 506,
+     "coc": 0.0449,
+     "cap_rate": 0.0701,
+     "gross_annual_income": 59400
+    }
+   }
+  },
+  {
+   "key": "2b9e3681f657a419",
+   "address": "4712 South Dr",
+   "city": "Fort Worth",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "non_destination",
+   "price": 360000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 9.375,
+    "cap_rate": 0.05773333333333333,
+    "coc": -0.01970471277050156,
+    "one_pct_rule": 0.008888888888888889,
+    "gross_yield": 0.10666666666666667,
+    "dscr": 0.9272134655819769,
+    "annual_cash_flow": -1631.5502173975292,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$90,000-$108,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $406 vs ours $-136 (133% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 5.2% vs ours -2.0% (138% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cap rate: Victor 7.2% vs ours 5.8% (20% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.93 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 4712 South Dr\nMarket / City:    Fort Worth, TX  (market type: non_destination)\nProperty Type:    duplex   Units: 2\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    B  [Victor]\n  Neighborhood     B  [Victor]\n  Vacancy Risk     A  [computed]  occupied at listing\n  Cash-Flow Margin D  [computed]  CoC -2.0%, DSCR 0.93, cash flow $-1,632/yr\n\nPURCHASE\n  List Price: $360,000   Down: 20.0% ($72,000)\n  Loan: $288,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $10,800   Total Cash Needed: $82,800\n\nINCOME\n  Gross Monthly Rent: $3,200 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $14,544\n  NOI: $20,784   Debt Service: $22,416\n  Cash Flow: $-136/mo ($-1,632/yr)\n\nKEY METRICS\n  GRM: 9.4\n  Cap Rate: 5.8%\n  Cash-on-Cash: -2.0%\n  1% Rule: 0.9%\n  Gross Yield: 10.7%\n  DSCR: 0.93\n  Annual Cash Flow: $-1,632\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  \u2713 target  GRM: 9.4 (min 12.0, target 10.0)\n  \u2717 FAIL    Cap Rate: 5.8% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -2.0% (min 6.0%, target 10.0%)\n  ~ min     1% Rule: 0.9% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $-1,632 (min $3,600, target $6,000)\n  \u2717 FAIL    DSCR: 0.93 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.93 < 1.0 \u2014 negative coverage\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $406   Ours: $-136\n  Cash-on-Cash         Victor: 5.2%   Ours: -2.0%\n  Cap Rate             Victor: 7.2%   Ours: 5.8%\n  Gross Annual Income  Victor: $40,800   Ours: $38,400\n\nEXCEPTION FACTORS (Victor-style offsets \u2014 raise ranking, never flip a FAIL)\n  \u2605 walk in equity: off-market at $360K; multiple neighborhood duplexes sold over $400K\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- cost seg candidate: ~$90,000-$108,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $406 vs ours $-136 (133% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 5.2% vs ours -2.0% (138% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cap rate: Victor 7.2% vs ours 5.8% (20% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "3 Deals With Strong Investor Interest, Still No Signed Offers",
+   "email_date": "Mon, 06 Jul 2026 10:44:02 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:J5GO0t_5SDCXtVQ6SrWnRw@geopod-ismtpd-90",
+   "listing_urls": [
+    "https://drive.google.com/drive/folders/1Ocj54CYKAehmd9pF--64rAd3imWrmocw"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "occupied at listing"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -2.0%, DSCR 0.93, cash flow $-1,632/yr"
+    }
+   },
+   "exception_factors": [
+    "walk in equity: off-market at $360K; multiple neighborhood duplexes sold over $400K"
+   ],
+   "victor": {
+    "grades": {
+     "asset_quality": "B",
+     "neighborhood": "B"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 406,
+     "coc": 0.052,
+     "cap_rate": 0.0719,
+     "gross_annual_income": 40800
+    }
+   }
+  },
+  {
+   "key": "c7166378e95a3913",
+   "address": "3802 Southway Dr",
+   "city": "Austin",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "unknown",
+   "price": 1300000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 10.790172642762284,
+    "cap_rate": 0.050181538461538465,
+    "coc": -0.05253860351743583,
+    "one_pct_rule": 0.007723076923076923,
+    "gross_yield": 0.09267692307692307,
+    "dscr": 0.8059295297660221,
+    "annual_cash_flow": -15709.042451713314,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$325,000-$390,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $365 vs ours $-1,309 (128% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 1.3% vs ours -5.3% (125% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cap rate: Victor 6.2% vs ours 5.0% (19% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.81 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 3802 Southway Dr\nMarket / City:    Austin, TX  (market type: unknown)\nProperty Type:    fourplex   Units: 4\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    A  [Victor]\n  Neighborhood     A  [Victor]\n  Vacancy Risk     A  [computed]  occupied at listing\n  Cash-Flow Margin D  [computed]  CoC -5.3%, DSCR 0.81, cash flow $-15,709/yr\n\nPURCHASE\n  List Price: $1,300,000   Down: 20.0% ($260,000)\n  Loan: $1,040,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $39,000   Total Cash Needed: $299,000\n\nINCOME\n  Gross Monthly Rent: $10,040 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $45,606\n  NOI: $65,236   Debt Service: $80,945\n  Cash Flow: $-1,309/mo ($-15,709/yr)\n\nKEY METRICS\n  GRM: 10.8\n  Cap Rate: 5.0%\n  Cash-on-Cash: -5.3%\n  1% Rule: 0.8%\n  Gross Yield: 9.3%\n  DSCR: 0.81\n  Annual Cash Flow: $-15,709\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  ~ min     GRM: 10.8 (min 12.0, target 10.0)\n  \u2717 FAIL    Cap Rate: 5.0% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -5.3% (min 6.0%, target 10.0%)\n  \u2717 FAIL    1% Rule: 0.8% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $-15,709 (min $3,600, target $6,000)\n  \u2717 FAIL    DSCR: 0.81 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.81 < 1.0 \u2014 negative coverage\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $365   Ours: $-1,309\n  Cash-on-Cash         Victor: 1.3%   Ours: -5.3%\n  Cap Rate             Victor: 6.2%   Ours: 5.0%\n  Gross Annual Income  Victor: $124,800   Ours: $120,480\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- cost seg candidate: ~$325,000-$390,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $365 vs ours $-1,309 (128% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 1.3% vs ours -5.3% (125% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cap rate: Victor 6.2% vs ours 5.0% (19% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
+   "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45",
+   "listing_urls": [
+    "https://redf.in/1Ddp9Q"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "A",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "A",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "occupied at listing"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -5.3%, DSCR 0.81, cash flow $-15,709/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "A",
+     "neighborhood": "A"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 365,
+     "coc": 0.013,
+     "cap_rate": 0.0617,
+     "gross_annual_income": 124800
+    }
+   }
+  },
+  {
+   "key": "6b0a15b3db792624",
+   "address": "3732 Bonnie Dr",
+   "city": "Fort Worth",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "non_destination",
+   "price": 575000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 9.21474358974359,
+    "cap_rate": 0.05922086956521739,
+    "coc": -0.013237163936223048,
+    "one_pct_rule": 0.009043478260869564,
+    "gross_yield": 0.10852173913043478,
+    "dscr": 0.9511037131237317,
+    "annual_cash_flow": -1750.614930565498,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$143,750-$172,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $677 vs ours $-146 (122% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 5.4% vs ours -1.3% (124% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cap rate: Victor 7.2% vs ours 5.9% (18% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.95 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 3732 Bonnie Dr\nMarket / City:    Fort Worth, TX  (market type: non_destination)\nProperty Type:    fourplex   Units: 4\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    B  [Victor]\n  Neighborhood     C  [Victor]\n  Vacancy Risk     B  [computed]  partially occupied (75%)\n  Cash-Flow Margin D  [computed]  CoC -1.3%, DSCR 0.95, cash flow $-1,751/yr\n\nPURCHASE\n  List Price: $575,000   Down: 20.0% ($115,000)\n  Loan: $460,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $17,250   Total Cash Needed: $132,250\n\nINCOME\n  Gross Monthly Rent: $5,200 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $23,356\n  NOI: $34,052   Debt Service: $35,803\n  Cash Flow: $-146/mo ($-1,751/yr)\n\nKEY METRICS\n  GRM: 9.2\n  Cap Rate: 5.9%\n  Cash-on-Cash: -1.3%\n  1% Rule: 0.9%\n  Gross Yield: 10.9%\n  DSCR: 0.95\n  Annual Cash Flow: $-1,751\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  \u2713 target  GRM: 9.2 (min 12.0, target 10.0)\n  \u2717 FAIL    Cap Rate: 5.9% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -1.3% (min 6.0%, target 10.0%)\n  ~ min     1% Rule: 0.9% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $-1,751 (min $3,600, target $6,000)\n  \u2717 FAIL    DSCR: 0.95 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.95 < 1.0 \u2014 negative coverage\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $677   Ours: $-146\n  Cash-on-Cash         Victor: 5.4%   Ours: -1.3%\n  Cap Rate             Victor: 7.2%   Ours: 5.9%\n  Gross Annual Income  Victor: $67,200   Ours: $62,400\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- cost seg candidate: ~$143,750-$172,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $677 vs ours $-146 (122% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 5.4% vs ours -1.3% (124% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cap rate: Victor 7.2% vs ours 5.9% (18% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "Austin Quad Leased for $10k/mo | Padre Island Beach AirBnb | Cash-Flowing Multis",
+   "email_date": "Fri, 03 Jul 2026 11:13:32 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:fzo5e5eoQVmOKlLAbKW2yQ@geopod-ismtpd-45",
+   "listing_urls": [
+    "https://redf.in/DMytQb"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "C",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "B",
+     "provenance": "computed",
+     "note": "partially occupied (75%)"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -1.3%, DSCR 0.95, cash flow $-1,751/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "B",
+     "neighborhood": "C"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 677,
+     "coc": 0.0544,
+     "cap_rate": 0.0725,
+     "gross_annual_income": 67200
+    }
+   }
+  },
+  {
+   "key": "7cf304793312f9dd",
+   "address": "403 Geyser St",
+   "city": "Pflugerville",
+   "state": "TX",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 800000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.1475,
+    "cap_rate": 0.07852,
+    "coc": 0.05128715785114078,
+    "dscr": 1.092791688450271,
+    "annual_cash_flow": 5333.8644165186415,
+    "occupancy": 0.65,
+    "break_even_occupancy": 0.6206185434683295,
+    "ltv": 0.9
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "occupancy": "assumed: 0.65",
+    "annual_str_revenue": "seller-claimed (recompute before trusting)",
+    "adr": "derived from revenue: $497",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$200,000-$240,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "price $800,000 reachable only via the stated 10%-down financing \u2014 verify those terms before anything else",
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "no ADR data \u2014 framework says flag and ask, do not assume",
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $1,127 vs ours $444 (61% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 15.4% vs ours 5.1% (67% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on gross income (annual): Victor $140,000 vs ours $118,000 (16% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [
+    "LTV 90% above 85% ceiling"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 403 Geyser St\nMarket / City:    Pflugerville, TX  (market type: unknown)\nProperty Type:    SFR   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    B  [Victor]\n  Neighborhood     B  [Victor]\n  Vacancy Risk     A  [computed]  occupied at listing\n  Cash-Flow Margin D  [computed]  CoC 5.1%, DSCR 1.09, cash flow $5,334/yr \u2014 below the 6% STR posting floor\n\nPURCHASE\n  List Price: $800,000   Down: 10.0% ($80,000)\n  Loan: $720,000 @ 7.0% / 30yr   LTV: 90.0%\n  Closing (est): $24,000   Total Cash Needed: $104,000\n\nINCOME\n  Gross Annual STR Revenue: $118,000 (claimed)\n  ADR: $497   Occupancy: 65.0%\n\nCASH FLOW\n  Operating Expenses (annual): $55,184\n  NOI: $62,816   Debt Service: $57,482\n  Cash Flow: $444/mo ($5,334/yr)\n\nKEY METRICS\n  Gross Yield: 14.8%\n  Cap Rate: 7.9%\n  Cash-on-Cash: 5.1%\n  DSCR: 1.09\n  Annual Cash Flow: $5,334\n  Occupancy: 65.0%\n  Break-Even Occupancy: 62.1%\n  LTV: 90.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  \u2717 FAIL    Gross Yield: 14.8% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 65.0% (min 65.0%, target 75.0%)\n  ~ min     Cap Rate: 7.9% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 5.1% (min 8.0%, target 12.0%)\n  ~ min     Annual Cash Flow: $5,334 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 62.1% (min 50.0%, target 40.0%)\n  ~ min     DSCR: 1.09 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 LTV 90% above 85% ceiling\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $1,127   Ours: $444\n  Cash-on-Cash         Victor: 15.4%   Ours: 5.1%\n  Cap Rate             Victor: 8.0%   Ours: 7.9%\n  Gross Annual Income  Victor: $140,000   Ours: $118,000\n\nEXCEPTION FACTORS (Victor-style offsets \u2014 raise ranking, never flip a FAIL)\n  \u2605 financing incentive: seller financing at 10% down / 7% / 5-yr balloon with low closing costs \u2014 ~$88K all-in on an $800K STR\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); occupancy: assumed: 0.65; annual_str_revenue: seller-claimed (recompute before trusting); adr: derived from revenue: $497; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$200,000-$240,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- price $800,000 reachable only via the stated 10%-down financing \u2014 verify those terms before anything else\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- no ADR data \u2014 framework says flag and ask, do not assume\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $1,127 vs ours $444 (61% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 15.4% vs ours 5.1% (67% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on gross income (annual): Victor $140,000 vs ours $118,000 (16% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
+   "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105",
+   "listing_urls": [
+    "https://www.airbnb.com/rooms/1626397748526268700"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "occupied at listing"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC 5.1%, DSCR 1.09, cash flow $5,334/yr \u2014 below the 6% STR posting floor"
+    }
+   },
+   "exception_factors": [
+    "financing incentive: seller financing at 10% down / 7% / 5-yr balloon with low closing costs \u2014 ~$88K all-in on an $800K STR"
+   ],
+   "victor": {
+    "grades": {
+     "asset_quality": "B",
+     "neighborhood": "B"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 1127,
+     "coc": 0.1536,
+     "cap_rate": 0.0799,
+     "gross_annual_income": 140000
+    }
+   }
+  },
+  {
+   "key": "9ad03d4e902a085e",
+   "address": "202 Fir Dl",
+   "city": "Converse",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "unknown",
+   "price": 475000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 9.162808641975309,
+    "cap_rate": 0.05970526315789475,
+    "coc": -0.011131104837625872,
+    "one_pct_rule": 0.009094736842105263,
+    "gross_yield": 0.10913684210526316,
+    "dscr": 0.958883209574749,
+    "annual_cash_flow": -1216.0732035106266,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "seller-claimed (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "seller-claimed (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance_monthly": "seller-claimed (recompute before trusting)",
+    "hoa_monthly": "assumed: 0",
+    "management_pct": "seller-claimed (recompute before trusting)"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$118,750-$142,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "DIVERGENCE on monthly cash flow: Victor $602 vs ours $-101 (117% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cash-on-cash: Victor 5.9% vs ours -1.1% (119% apart) \u2014 reconcile before trusting either",
+    "DIVERGENCE on cap rate: Victor 7.4% vs ours 6.0% (19% apart) \u2014 reconcile before trusting either"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.96 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 202 Fir Dl\nMarket / City:    Converse, TX  (market type: unknown)\nProperty Type:    fourplex   Units: 4\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    B  [Victor]\n  Neighborhood     B  [Victor]\n  Vacancy Risk     B  [computed]  partially occupied (75%)\n  Cash-Flow Margin D  [computed]  CoC -1.1%, DSCR 0.96, cash flow $-1,216/yr\n\nPURCHASE\n  List Price: $475,000   Down: 20.0% ($95,000)\n  Loan: $380,000 @ 6.8% / 30yr   LTV: 80.0%\n  Closing (est): $14,250   Total Cash Needed: $109,250\n\nINCOME\n  Gross Monthly Rent: $4,320 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $19,333\n  NOI: $28,360   Debt Service: $29,576\n  Cash Flow: $-101/mo ($-1,216/yr)\n\nKEY METRICS\n  GRM: 9.2\n  Cap Rate: 6.0%\n  Cash-on-Cash: -1.1%\n  1% Rule: 0.9%\n  Gross Yield: 10.9%\n  DSCR: 0.96\n  Annual Cash Flow: $-1,216\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  \u2713 target  GRM: 9.2 (min 12.0, target 10.0)\n  \u2717 FAIL    Cap Rate: 6.0% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -1.1% (min 6.0%, target 10.0%)\n  ~ min     1% Rule: 0.9% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $-1,216 (min $3,600, target $6,000)\n  \u2717 FAIL    DSCR: 0.96 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.96 < 1.0 \u2014 negative coverage\n\nVICTOR'S UNDERWRITING vs OURS\n  Monthly Cash Flow    Victor: $602   Ours: $-101\n  Cash-on-Cash         Victor: 5.9%   Ours: -1.1%\n  Cap Rate             Victor: 7.4%   Ours: 6.0%\n  Gross Annual Income  Victor: $57,600   Ours: $51,840\n```\n\n**Assumptions:** interest_rate: seller-claimed (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: seller-claimed (1.2% of price fallback \u2014 pull CAD record); insurance_monthly: seller-claimed (recompute before trusting); hoa_monthly: assumed: 0; management_pct: seller-claimed (recompute before trusting)\n\n**Tax angle:**\n- cost seg candidate: ~$118,750-$142,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- DIVERGENCE on monthly cash flow: Victor $602 vs ours $-101 (117% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cash-on-cash: Victor 5.9% vs ours -1.1% (119% apart) \u2014 reconcile before trusting either\n- DIVERGENCE on cap rate: Victor 7.4% vs ours 6.0% (19% apart) \u2014 reconcile before trusting either",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "Seller Financing, Off-Market Deals, and Day 1 Income",
+   "email_date": "Wed, 01 Jul 2026 13:25:28 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:GEWauy7VTgieCm0XNmLfJg@geopod-ismtpd-105",
+   "listing_urls": [
+    "https://redf.in/lDQ7X0"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "neighborhood": {
+     "grade": "B",
+     "provenance": "victor",
+     "note": ""
+    },
+    "vacancy": {
+     "grade": "B",
+     "provenance": "computed",
+     "note": "partially occupied (75%)"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -1.1%, DSCR 0.96, cash flow $-1,216/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "B",
+     "neighborhood": "B"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 602,
+     "coc": 0.0585,
+     "cap_rate": 0.0736,
+     "gross_annual_income": 57600
+    }
+   }
   },
   {
    "key": "d5e2255b174c630d",
@@ -529,8 +1945,8 @@
     "DSCR 0.57 < 1.0 \u2014 negative coverage"
    ],
    "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 456 Suburbia Ln\nMarket / City:    Little Elm, TX  (market type: non_destination)\nProperty Type:    SFR   Units: 1\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     \u2014  [no data]  no vacancy data\n  Cash-Flow Margin D  [computed]  CoC -12.4%, DSCR 0.57, cash flow $-10,960/yr\n\nPURCHASE\n  List Price: $385,000   Down: 20.0% ($77,000)\n  Loan: $308,000 @ 7.2% / 30yr   LTV: 80.0%\n  Closing (est): $11,550   Total Cash Needed: $88,550\n\nINCOME\n  Gross Monthly Rent: $2,600 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $14,451\n  NOI: $14,253   Debt Service: $25,213\n  Cash Flow: $-913/mo ($-10,960/yr)\n\nKEY METRICS\n  GRM: 12.3\n  Cap Rate: 3.7%\n  Cash-on-Cash: -12.4%\n  1% Rule: 0.7%\n  Gross Yield: 8.1%\n  DSCR: 0.57\n  Annual Cash Flow: $-10,960\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 19/100)\n  \u2717 FAIL    GRM: 12.3 (min 12.0, target 10.0)\n  \u2717 FAIL    Cap Rate: 3.7% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -12.4% (min 6.0%, target 10.0%)\n  \u2717 FAIL    1% Rule: 0.7% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $-10,960 (min $3,600, target $6,000)\n  \u2717 FAIL    DSCR: 0.57 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.57 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: assumed: 4620 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed $125/mo per $100k; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- cost seg candidate: ~$96,250-$115,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "Seed Demo",
    "source_kind": null,
    "email_subject": null,
@@ -578,7 +1994,7 @@
    "verdict": "KILLED",
    "score": null,
    "kill_reasons": [
-    "price $655,000 > $600,000 STR ceiling (capital can't reach it at 15% down)"
+    "price $655,000 needs $98,250 down at 15% \u2014 beyond the ~$90,000 down-payment budget ($600,000 ceiling at 15% down)"
    ],
    "metrics": {},
    "assumptions": {},
@@ -586,8 +2002,8 @@
    "red_flags": [],
    "hard_disqualifiers": [],
    "deal_card_md": null,
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "Seed Demo",
    "source_kind": null,
    "email_subject": null,
@@ -622,8 +2038,8 @@
    "red_flags": [],
    "hard_disqualifiers": [],
    "deal_card_md": null,
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "Seed Demo",
    "source_kind": null,
    "email_subject": null,
@@ -658,8 +2074,8 @@
    "red_flags": [],
    "hard_disqualifiers": [],
    "deal_card_md": null,
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "Seed Demo",
    "source_kind": null,
    "email_subject": null,
@@ -694,8 +2110,8 @@
    "red_flags": [],
    "hard_disqualifiers": [],
    "deal_card_md": null,
-   "first_seen": "2026-07-11T19:50:59+00:00",
-   "last_updated": "2026-07-11T19:50:59+00:00",
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
    "source_name": "Seed Demo",
    "source_kind": null,
    "email_subject": null,
@@ -708,6 +2124,55 @@
    "pillars": null,
    "exception_factors": [],
    "victor": null
+  },
+  {
+   "key": "ac5113295213bccb",
+   "address": "1613 E Spring Valley Rd",
+   "city": "Richardson",
+   "state": "TX",
+   "tier": "str",
+   "market_type": "non_destination",
+   "price": 510000.0,
+   "source": "victor@steffenrealtycorp.com",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "confirmed non-destination market \u2014 STR tax strategy dead (hard disqualifier)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-07-11T20:11:40+00:00",
+   "last_updated": "2026-07-11T20:11:40+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent_full_address",
+   "email_subject": "32 Units at $1.4M + 2 Turnkey STRs",
+   "email_date": "Tue, 07 Jul 2026 13:38:14 +0000",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:FJsUJ4g9TsuMwgDCgg06Kg@geopod-ismtpd-21",
+   "listing_urls": [
+    "https://rabbu.com/airbnbs-for-sale/richardson-tx-75081/1613-e-spring-valley-rd-richardson-tx-75081-wst"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "pillars": null,
+   "exception_factors": [],
+   "victor": {
+    "grades": {
+     "asset_quality": "B",
+     "neighborhood": "B"
+    },
+    "underwriting": {
+     "cash_flow_monthly": 854,
+     "coc": 0.1165,
+     "cap_rate": 0.0785,
+     "gross_annual_income": 95000
+    }
+   }
   }
  ]
 }

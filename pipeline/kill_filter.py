@@ -27,11 +27,21 @@ def run_kill_filter(deal: dict, profile: dict) -> tuple[bool, list[str], list[st
     deal["market_type"] = market_type
 
     if tier == "str":
+        # The ceiling is really a down-payment-reach limit, so special financing
+        # (e.g. 10% seller financing) legitimately extends it.
+        default_down = profile["assumptions"]["financing"]["down_payment_pct_str"]
+        down_pct = deal.get("down_payment_pct") or default_down
         ceiling = boxes["str"]["price_kill_ceiling"]
-        if price > ceiling:
+        down_budget = ceiling * default_down
+        if price * down_pct > down_budget:
             reasons.append(
-                f"price ${price:,.0f} > ${ceiling:,.0f} STR ceiling (capital can't reach it at "
-                f"{profile['assumptions']['financing']['down_payment_pct_str']:.0%} down)")
+                f"price ${price:,.0f} needs ${price * down_pct:,.0f} down at {down_pct:.0%} — "
+                f"beyond the ~${down_budget:,.0f} down-payment budget "
+                f"(${ceiling:,.0f} ceiling at {default_down:.0%} down)")
+        elif down_pct < default_down:
+            flags.append(
+                f"price ${price:,.0f} reachable only via the stated {down_pct:.0%}-down financing — "
+                "verify those terms before anything else")
         if market_type == "non_destination":
             reasons.append("confirmed non-destination market — STR tax strategy dead (hard disqualifier)")
         elif market_type == "unknown":

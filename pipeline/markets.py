@@ -32,16 +32,6 @@ LAKE_RIVER_MARKETS = {
 
 DESTINATION_MARKETS = MOUNTAIN_MARKETS | BEACH_MARKETS | LAKE_RIVER_MARKETS
 
-# Bedroom communities and lake-adjacent suburbs that do NOT count as destination
-# markets for the STR tax strategy, regardless of a lake being nearby.
-NON_DESTINATION_MARKETS = {
-    "little elm", "frisco", "plano", "mckinney", "allen", "prosper", "celina",
-    "the colony", "lewisville", "denton", "anna", "melissa", "princeton",
-    "royse city", "forney", "rockwall", "wylie", "sherman", "garland",
-    "arlington", "grand prairie", "irving", "mesquite", "carrollton",
-    "fort worth", "dallas",
-}
-
 DFW_METRO = {
     "dallas", "fort worth", "plano", "frisco", "mckinney", "allen", "richardson",
     "garland", "irving", "arlington", "grand prairie", "carrollton", "lewisville",
@@ -49,6 +39,17 @@ DFW_METRO = {
     "prosper", "celina", "anna", "melissa", "princeton", "forney", "royse city",
     "duncanville", "desoto", "cedar hill", "lancaster", "grapevine", "euless",
     "bedford", "hurst", "keller", "southlake", "coppell", "flower mound",
+    "richardson", "addison", "farmers branch", "sachse", "rowlett",
+    "north richland hills", "haltom city", "burleson", "mansfield", "grapevine",
+}
+
+# Bedroom communities and lake-adjacent suburbs that do NOT count as destination
+# markets for the STR tax strategy, regardless of a lake being nearby. Every
+# DFW-metro city is non-destination by definition; the extras are non-DFW
+# examples from the framework. Metro cores like Houston/Austin/San Antonio are
+# deliberately NOT listed — they stay "unknown", a human judgment call.
+NON_DESTINATION_MARKETS = DFW_METRO | {
+    "sherman", "anna", "melissa", "princeton", "royse city", "forney",
 }
 
 

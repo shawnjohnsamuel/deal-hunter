@@ -356,3 +356,14 @@ def test_load_eml(tmp_path):
     # Directory form
     emails2 = load_eml_inputs(str(tmp_path))
     assert len(emails2) == 1
+
+
+def test_kill_ceiling_respects_seller_financing(profile):
+    # $800k at default 15% down -> dead; at stated 10% seller financing -> survives with flag
+    deal = broken_bow_str() | {"price": 800000}
+    killed, reasons, _ = run_kill_filter(deal, profile)
+    assert killed and "down-payment budget" in reasons[0]
+    financed = broken_bow_str() | {"price": 800000, "down_payment_pct": 0.10}
+    killed2, _, flags2 = run_kill_filter(financed, profile)
+    assert not killed2
+    assert any("financing" in f for f in flags2)
