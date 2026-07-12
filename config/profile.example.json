@@ -110,9 +110,9 @@
       "vacancy": 0.08,
       "capex_pct_rent": 0.05,
       "management_pct_rent": 0.08,
-      "insurance_monthly_per_100k": 125,
       "property_tax_pct_price": 0.012,
-      "closing_costs_pct": 0.03
+      "closing_costs_pct": 0.03,
+      "insurance_pct_value_annual": 0.005
     },
     "str": {
       "occupancy_default": 0.65,

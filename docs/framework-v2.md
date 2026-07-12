@@ -204,7 +204,7 @@ BUY BOX VERDICT
 | Vacancy (LTR) | 8% |
 | CapEx Reserve | 5% of gross rent |
 | Property Management (LTR) | 8% of gross rent |
-| Insurance | $100–150/mo per $100K value |
+| Insurance | **0.5% of value/yr** (×1.5 for STR policies = 0.75%) — market-calibrated Jul 2026; the v1 "$100–150/mo per $100K" default was 2–4× market and silently failed even target-yield deals. Stated figures always override. |
 | Interest Rate | Live 30-yr investment rate (search) |
 | Property Tax | CAD record, else 1.2% of price |
 | Closing Costs | 3% of price |

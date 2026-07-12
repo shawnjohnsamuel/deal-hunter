@@ -1,0 +1,234 @@
+[
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 11: 13 Potential STRs",
+  "email_date": "Fri, 11 Jul 2026 21:55:58 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f540a11ff2fb89",
+  "address": "416 Sherwood Forest Lane",
+  "city": "Cullowhee",
+  "state": "NC",
+  "zip": "28723",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 599000,
+  "tier": "str",
+  "claimed": {
+   "adr": 310,
+   "occupancy": 0.55,
+   "annual_str_revenue": 62232,
+   "cash_flow_annual": 9900
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Secluded retreat on 8+ unrestricted acres; high elevation, private-road access, expansion potential",
+  "neighborhood_notes": "Cullowhee, Western NC mountains (near WCU / Sylva / Cashiers)",
+  "notes": "Newsletter-projected CoC 6.6% (their expense line includes mortgage).",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/416-sherwood-forest-lane-cullowhee-nc-28723"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 11: 13 Potential STRs",
+  "email_date": "Fri, 11 Jul 2026 21:55:58 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f540a11ff2fb89",
+  "address": "385 Sundown Road",
+  "city": "Grahamsville",
+  "state": "NY",
+  "zip": "12740",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 799000,
+  "tier": "str",
+  "claimed": {
+   "adr": 349,
+   "occupancy": 0.69,
+   "annual_str_revenue": 87900,
+   "cash_flow_annual": 19476
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Post-and-beam chalet on 200+ acres: paddocks, ponds, streams, stable, workshop; operating STR",
+  "neighborhood_notes": "Grahamsville NY, Catskills",
+  "notes": "Newsletter-projected CoC 9.7%.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/385-sundown-road-grahamsville-ny-12740"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 11: 13 Potential STRs",
+  "email_date": "Fri, 11 Jul 2026 21:55:58 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f540a11ff2fb89",
+  "address": "106 Bartleson Deer Trl",
+  "city": "Greentown",
+  "state": "PA",
+  "zip": "18426",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 3,
+  "baths": 2,
+  "price": 420000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 400,
+   "occupancy": 0.6,
+   "annual_str_revenue": 87600,
+   "cash_flow_annual": 41736
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Fully renovated lake retreat; transferable marina boat slip, 1+ acre woodland, no mandatory HOA, vaulted ceilings, sunroom, extensive mechanical upgrades \u2014 turnkey",
+  "neighborhood_notes": "Greentown PA, Poconos (Lake Wallenpaupack area) \u2014 NYC drive-to market",
+  "notes": "Newsletter-projected CoC 39.7% (their expense line includes mortgage). Marina slip transfers.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/106-bartleson-deer-trl-greentown-pa-18426"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 11: 13 Potential STRs",
+  "email_date": "Fri, 11 Jul 2026 21:55:58 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f540a11ff2fb89",
+  "address": "804 E Colonel Wright Road",
+  "city": "Shelton",
+  "state": "WA",
+  "zip": "98584",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 899900,
+  "tier": "str",
+  "claimed": {
+   "adr": 430,
+   "occupancy": 0.56,
+   "annual_str_revenue": 87888,
+   "cash_flow_annual": 12000
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Completely remodeled waterfront on 2.5 gated acres; water + mountain views, low-tide island access",
+  "notes": "Newsletter-projected CoC 5.3%.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/804-e-colonel-wright-road-shelton-wa-98584"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 11: 13 Potential STRs",
+  "email_date": "Fri, 11 Jul 2026 21:55:58 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f540a11ff2fb89",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 1,
+  "price": 249000,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 222,
+   "occupancy": 0.68,
+   "annual_str_revenue": 55104,
+   "cash_flow_annual": 25860
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "Offer Sheet Pro teaser \u2014 no location anchor; features (remodeled lake-view cabin, sleeping loft, three decks, fiber, natural spring) insufficient for a confident match"
+  },
+  "condition_notes": "Completely remodeled lake-view cabin: sleeping loft, three decks, new major systems, fiber internet, optional lake access, natural spring",
+  "notes": "Headline teaser. Newsletter-projected CoC 41.5% (their expenses include mortgage). Cheapest deal of the issue."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 11: 13 Potential STRs",
+  "email_date": "Fri, 11 Jul 2026 21:55:58 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f540a11ff2fb89",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 2,
+  "baths": 1,
+  "price": 445000,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 248,
+   "occupancy": 0.65,
+   "annual_str_revenue": 58836,
+   "cash_flow_annual": 16284
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "Offer Sheet Pro teaser \u2014 no location anchor"
+  },
+  "condition_notes": "Cottage on 2+ private acres; two bedrooms + dedicated office; remote-work appeal",
+  "notes": "Newsletter-projected CoC 14.6%."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 11: 13 Potential STRs",
+  "email_date": "Fri, 11 Jul 2026 21:55:58 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f540a11ff2fb89",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 2,
+  "baths": 1,
+  "price": 215000,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 212,
+   "occupancy": 0.59,
+   "annual_str_revenue": 45660,
+   "cash_flow_annual": 18924
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "Offer Sheet Pro teaser \u2014 no location anchor"
+  },
+  "condition_notes": "Scandinavian-style on fenced acre: greenhouse, workshop, RV-ready site w/ water/septic/50A \u2014 dual guest experience",
+  "notes": "Newsletter-projected CoC 35.2%. Lowest acquisition cost seen so far."
+ }
+]

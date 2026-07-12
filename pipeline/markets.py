@@ -14,7 +14,9 @@ MOUNTAIN_MARKETS = {
     # Smokies / Blue Ridge / Appalachians
     "gatlinburg", "pigeon forge", "sevierville", "wears valley", "townsend",
     "blue ridge", "ellijay", "helen", "bryson city", "maggie valley", "asheville",
-    "boone", "banner elk", "blowing rock", "murphy",
+    "boone", "banner elk", "blowing rock", "murphy", "cullowhee",
+    # Poconos / Catskills (NYC drive-to)
+    "greentown", "grahamsville",
     # Mountain west / Cascades
     "pagosa springs", "red river", "angel fire", "cloudcroft", "ruidoso",
     "cle elum",

@@ -56,14 +56,16 @@ def _tax_and_insurance(deal: dict, profile: dict, assumptions: dict, insurance_m
                           default=round(price * a["property_tax_pct_price"]),
                           note="1.2% of price fallback — pull CAD record")
     # Stated insurance (e.g. Victor's "real insurance" underwriting) beats the
-    # $/100k formula default.
+    # formula default: % of value annually (market-calibrated Jul 2026 —
+    # national landlord policies ~0.4-0.5% of value; Victor's TX actuals
+    # ~0.76%; STR endorsement multiplier on top).
     ins_monthly, ins_src = _pick(deal, "insurance_monthly", assumptions)
     if ins_monthly is None:
-        ins_monthly = (price / 100000) * a["insurance_monthly_per_100k"] * insurance_multiplier
+        pct = a["insurance_pct_value_annual"]
+        ins_monthly = price * pct * insurance_multiplier / 12
         assumptions["insurance"] = (
-            f"assumed STR policy at {insurance_multiplier}x LTR rate"
-            if insurance_multiplier > 1.0
-            else f"assumed ${a['insurance_monthly_per_100k']}/mo per $100k")
+            f"assumed {pct * insurance_multiplier:.2%} of value/yr"
+            + (" (STR policy)" if insurance_multiplier > 1.0 else ""))
     hoa_monthly, _ = _pick(deal, "hoa_monthly", assumptions, default=0)
     return tax_annual, ins_monthly, hoa_monthly
 

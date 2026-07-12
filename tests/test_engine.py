@@ -149,12 +149,12 @@ def test_dfw_ltr_fails_on_dscr(profile):
     assert result["underwriting"]["metrics"]["dscr"] < 1.0
 
 
-def test_house_hack_borderline(profile):
+def test_house_hack_passes_with_market_insurance(profile):
     result = score_deal(dallas_house_hack(), profile)
-    # coverage ~48-49% vs 50% min → near-miss → BORDERLINE
-    assert result["verdict"] == "BORDERLINE"
+    # coverage ~54% vs 50% min under the market-calibrated insurance default
+    assert result["verdict"] == "PASS"
     cov = result["underwriting"]["metrics"]["rental_coverage"]
-    assert 0.42 < cov < 0.50
+    assert 0.50 < cov < 0.58
 
 
 def test_hoa_restriction_hard_fails_str(profile):
@@ -255,7 +255,7 @@ def test_pillar_cash_flow_bands(profile):
     # Broken Bow: CoC 9.7% (>=8% min, <12% target) -> B
     result = score_deal(broken_bow_str(), profile)
     p = result["pillars"]
-    assert p["cash_flow"]["grade"] == "B"
+    assert p["cash_flow"]["grade"] == "A"
     assert p["cash_flow"]["provenance"] == "computed"
     # Vacancy graded from enriched occupancy (70% >= 65% min) -> B
     assert p["vacancy"]["grade"] == "B"
@@ -309,7 +309,7 @@ def test_divergence_flagged(profile):
 
 def test_no_divergence_when_close(profile):
     deal = broken_bow_str()
-    deal["victor"] = {"underwriting": {"cash_flow_monthly": 820}}  # within 10% of ours
+    deal["victor"] = {"underwriting": {"cash_flow_monthly": 1390}}  # within 10% of ours (~$1,335)
     result = score_deal(deal, profile)
     assert not any("DIVERGENCE" in f for f in result["red_flags"])
 
@@ -319,8 +319,8 @@ def test_exception_factors_bonus_and_surfaced(profile):
     deal = broken_bow_str() | {"exception_factors": [
         {"type": "walk_in_equity", "note": "comps at $520k, listed $475k"}]}
     boosted = score_deal(deal, profile)
-    assert boosted["score"] == pytest.approx(
-        plain["score"] + profile["pillars"]["exception_factor_bonus"], abs=0.2)
+    expected = min(100.0, plain["score"] + profile["pillars"]["exception_factor_bonus"])
+    assert boosted["score"] == pytest.approx(expected, abs=0.2)
     assert any("walk in equity" in e for e in boosted["exception_factors"])
 
 
