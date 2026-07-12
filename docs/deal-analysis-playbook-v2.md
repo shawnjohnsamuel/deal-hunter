@@ -14,7 +14,16 @@ A messy email, link, or address goes in; within seconds a verdict comes out — 
 | 2 — Analysis Engine, stress-tested | 🔄 **IN PROGRESS — now automated** | v1 planned "manually submit 5–10 deals." v2 replaces that with the daily pipeline: every deal email is parsed, scored, and logged automatically, so deal volume accrues daily. Market-specific assumption sets get locked in once patterns emerge from the accumulated database. |
 | 3 — Portable App | 🔄 **IN SCOPE NOW (was deferred)** | The GitHub Pages dashboard + the `/add-deal` skill together are the portable app: any device can view scored deals; any address can be dropped into the pipeline. |
 
-## The Daily Loop (automated)
+## The Loop (currently interactive; automation ready when API secrets land)
+
+> **Interactive mode (current):** Shawn runs `/hunt-deals` in a Claude Code
+> session. Claude reads every unscraped email from the dedicated inbox via the
+> Gmail connector, does the extraction/identification itself (no API key), and
+> feeds the same deterministic engine. The processed-email registry makes runs
+> idempotent. The automated loop below is paused (cron commented out) and takes
+> over unchanged once `ANTHROPIC_API_KEY` + Gmail OAuth secrets are set.
+
+## The Daily Loop (automated — paused)
 
 1. **07:00 CT** — GitHub Action wakes, pulls the last 48h of email from the five deal sources:
    - `victor@steffenrealtycorp.com` — all deal types

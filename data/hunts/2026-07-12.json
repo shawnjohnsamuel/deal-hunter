@@ -1,0 +1,495 @@
+[
+ {
+  "source": "info@theshorttermshop.com",
+  "source_name": "Avery Carl (The Short Term Shop)",
+  "source_kind": "agent_full_address",
+  "email_subject": "[NEW] \ud83e\udd20 Tennessee deals that won't break the bank",
+  "email_date": "Fri, 19 Jun 2026 07:45:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f52f8cb5f8f1b9",
+  "address": "1188 Sugar Loaf Rd",
+  "city": "Sevierville",
+  "state": "TN",
+  "zip": "37876",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 1,
+  "baths": 1,
+  "sqft": 672,
+  "price": 369000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {},
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used; ADR/occ estimated from Sevierville market data (AirDNA mkt avg 55% occ; 1BR honeymoon comps ~$139-200/night) \u2014 no revenue data in the email",
+   "adr": 165,
+   "occupancy": 0.55,
+   "str_data_estimated": true
+  },
+  "condition_notes": "Turnkey honeymoon cabin on 1.5 private acres; electric fireplace, king suite, covered hot tub",
+  "notes": "Featured deal. No revenue/ADR provided by the email \u2014 scored on market-estimate ADR $165 @ 55% occ. Rabbu warns Sevierville listing growth 149% YoY with market-wide occupancy pressure.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/1188-Sugar-Loaf-Rd-Sevierville-TN-37876/103847414_zpid/"
+  ]
+ },
+ {
+  "source": "info@theshorttermshop.com",
+  "source_name": "Avery Carl (The Short Term Shop)",
+  "source_kind": "agent_full_address",
+  "email_subject": "[NEW] \ud83e\udd20 Tennessee deals that won't break the bank",
+  "email_date": "Fri, 19 Jun 2026 07:45:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f52f8cb5f8f1b9",
+  "address": "4421 Stackstone Rd",
+  "city": "Sevierville",
+  "state": "TN",
+  "zip": "37862",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 4,
+  "baths": 5,
+  "sqft": 3815,
+  "price": 1799000,
+  "furnished": false,
+  "tier": "str",
+  "claimed": {},
+  "condition_notes": "New construction; 360\u00b0 views, sauna, steam bath, custom stone fire pit",
+  "notes": "Luxury bonus listing; recent $26K price drop.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/4421-Stackstone-Rd-Sevierville-TN-37862/463116754_zpid/"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 10: 13 Potential STRs",
+  "email_date": "Fri, 10 Jul 2026 15:48:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f8dd31a8504",
+  "address": "687 Sunshine Road",
+  "city": "Deer Isle",
+  "state": "ME",
+  "zip": "04627",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 697500,
+  "tier": "str",
+  "claimed": {
+   "adr": 310,
+   "occupancy": 0.71,
+   "annual_str_revenue": 80340,
+   "cash_flow_annual": 18000
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Two renovated waterfront cottages; main residence + loft + separate private suite; ~2 acres, 269 ft cove frontage",
+  "notes": "Newsletter-projected CoC 10.3%."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 10: 13 Potential STRs",
+  "email_date": "Fri, 10 Jul 2026 15:48:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f8dd31a8504",
+  "address": "5725 Stid Hill Rd",
+  "city": "Naples",
+  "state": "NY",
+  "zip": "14512",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 3,
+  "baths": 3,
+  "price": 875000,
+  "tier": "str",
+  "claimed": {
+   "adr": 336,
+   "occupancy": 0.7,
+   "annual_str_revenue": 85848,
+   "cash_flow_annual": 12036
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "34-acre Finger Lakes retreat: stocked pond, vineyard, log home, stone fireplace, pole barn",
+  "notes": "Newsletter-projected CoC 5.5%."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 10: 13 Potential STRs",
+  "email_date": "Fri, 10 Jul 2026 15:48:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f8dd31a8504",
+  "address": "97 Pemaquid Trail",
+  "city": "Bristol",
+  "state": "ME",
+  "zip": "04554",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 3,
+  "baths": 3,
+  "price": 1450000,
+  "tier": "str",
+  "claimed": {
+   "adr": 598,
+   "occupancy": 0.66,
+   "annual_str_revenue": 144060,
+   "cash_flow_annual": 23892
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Turnkey coastal home, private footpath to sandy beach",
+  "notes": "Newsletter-projected CoC 6.6%."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 10: 13 Potential STRs",
+  "email_date": "Fri, 10 Jul 2026 15:48:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f8dd31a8504",
+  "address": "2370 E State Route 3",
+  "city": "Shelton",
+  "state": "WA",
+  "zip": "98584",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 4,
+  "baths": 2,
+  "price": 799000,
+  "tier": "str",
+  "claimed": {
+   "adr": 396,
+   "occupancy": 0.59,
+   "annual_str_revenue": 85284,
+   "cash_flow_annual": 13704
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "$525K+ in upgrades; waterfront, hot tub, 100 ft low-bank shoreline, no HOA",
+  "notes": "Newsletter-projected CoC 6.9%."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 10: 13 Potential STRs",
+  "email_date": "Fri, 10 Jul 2026 15:48:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f8dd31a8504",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 1,
+  "price": 440000,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 299,
+   "occupancy": 0.7,
+   "annual_str_revenue": 76392,
+   "cash_flow_annual": 27696
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "web search on price + '17 wooded acres' + features found no listing matching price/beds; Offer Sheet Pro teasers include no market/location anchor"
+  },
+  "condition_notes": "17+ wooded acres, cathedral ceilings, stone fireplace, loft bedroom, oversized garage, nearby trails",
+  "notes": "Paywalled teaser \u2014 newsletter-projected CoC 25.2% (highest in the issue). Address behind Offer Sheet Pro."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 10: 13 Potential STRs",
+  "email_date": "Fri, 10 Jul 2026 15:48:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f8dd31a8504",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 428000,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 257,
+   "occupancy": 0.63,
+   "annual_str_revenue": 59100,
+   "cash_flow_annual": 17676
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "headline deal; search on exact price + 'authentic log cabin, ensuite bedrooms on separate levels, stone fireplace' found no confident match \u2014 no market stated"
+  },
+  "condition_notes": "Authentic log home; exposed beams, stone fireplace, two ensuite bedroom suites on separate levels; near skiing/mountain biking/hiking",
+  "notes": "Paywalled teaser (the issue's headline). Newsletter-projected CoC 16.5%. Likely a mountain market per features."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 10: 13 Potential STRs",
+  "email_date": "Fri, 10 Jul 2026 15:48:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f8dd31a8504",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 580000,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 317,
+   "occupancy": 0.56,
+   "annual_str_revenue": 64800,
+   "cash_flow_annual": 12696
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "not individually searched \u2014 no location anchor in the teaser"
+  },
+  "condition_notes": "Custom mountain home: vaulted ceilings, floor-to-ceiling stone fireplace, ensuite bedrooms, screened porch with 2nd fireplace + hot tub, fire pit",
+  "notes": "Paywalled teaser. Newsletter-projected CoC 8.8%."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 10: 13 Potential STRs",
+  "email_date": "Fri, 10 Jul 2026 15:48:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f8dd31a8504",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 440000,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 304,
+   "occupancy": 0.55,
+   "annual_str_revenue": 61032,
+   "cash_flow_annual": 18432
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "not individually searched \u2014 no location anchor in the teaser"
+  },
+  "condition_notes": "Whitewashed interiors, granite, sleeping loft, front porch + secluded rear deck with hot tub, wooded setting",
+  "notes": "Paywalled teaser. Newsletter-projected CoC 16.8%."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 10: 13 Potential STRs",
+  "email_date": "Fri, 10 Jul 2026 15:48:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f8dd31a8504",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 479000,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 325,
+   "occupancy": 0.57,
+   "annual_str_revenue": 67620,
+   "cash_flow_annual": 21108
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "not individually searched \u2014 no location anchor in the teaser"
+  },
+  "condition_notes": "Beautifully furnished turnkey cabin, wooded surroundings, 'proven leisure market'",
+  "furnished": true,
+  "notes": "Paywalled teaser. Newsletter-projected CoC 17.6%."
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1049",
+  "email_date": "Thu, 02 Jul 2026 18:19:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53fa0d05b2f79",
+  "address": "21565 Highland Terrace",
+  "city": "Monte Rio",
+  "state": "CA",
+  "zip": "95462",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 2,
+  "baths": 1,
+  "sqft": 708,
+  "price": 510000,
+  "tier": "str",
+  "claimed": {
+   "adr": 492,
+   "occupancy": 0.5,
+   "annual_str_revenue": 89600
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Mid-century architectural home above the Russian River; glass walls, concrete + warm wood",
+  "neighborhood_notes": "Monte Rio / Russian River (Sonoma County) \u2014 river-resort area, market status a judgment call",
+  "notes": "Newsletter-projected gross yield 17.57%. Seasonal split: summer river + winter woodstove."
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1049",
+  "email_date": "Thu, 02 Jul 2026 18:19:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53fa0d05b2f79",
+  "address": "225 Skyland Trl",
+  "city": "Murphy",
+  "state": "NC",
+  "zip": "28906",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 3,
+  "sqft": 2800,
+  "price": 525000,
+  "tier": "str",
+  "claimed": {
+   "adr": 427,
+   "occupancy": 0.53,
+   "annual_str_revenue": 81900
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Three floors + detached heated office; finished walkout with game room; fenced yard",
+  "notes": "Newsletter-projected gross yield 15.60%. Remote-work angle."
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1049",
+  "email_date": "Thu, 02 Jul 2026 18:19:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53fa0d05b2f79",
+  "address": "990 Fawn Road",
+  "city": "Cle Elum",
+  "state": "WA",
+  "zip": "98922",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 1,
+  "baths": 1,
+  "sqft": 573,
+  "price": 364950,
+  "tier": "str",
+  "claimed": {
+   "adr": 240,
+   "occupancy": 0.66,
+   "annual_str_revenue": 57900
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Sky Meadows Ranch cul-de-sac; fir tongue-and-groove, vaulted ceilings, quartz",
+  "notes": "Newsletter-projected gross yield 15.87%. Four-season: Lake Cle Elum, Roslyn, Cascades snow parks."
+ },
+ {
+  "source": "team@bnbflow.co",
+  "source_name": "BNB Flow",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Southeast Investment Spotlight: Uncover the Best STRs | July 7, 2026",
+  "email_date": "Tue, 07 Jul 2026 15:31:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f992b6b3400",
+  "address": "165 Timberwalk Dr",
+  "city": "Ellijay",
+  "state": "GA",
+  "zip": "30540",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 2016,
+  "price": 449000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 314,
+   "occupancy": 0.65,
+   "annual_str_revenue": 74700
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Turnkey waterfront cabin on 1.15 acres, finished basement, movie theater room; 5 mi from downtown Ellijay",
+  "notes": "Newsletter-projected gross yield 16.64%. Peak: Jul, Oct-Dec; low: Jan-Feb."
+ },
+ {
+  "source": "team@bnbflow.co",
+  "source_name": "BNB Flow",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Southeast Investment Spotlight: Uncover the Best STRs | July 7, 2026",
+  "email_date": "Tue, 07 Jul 2026 15:31:00 -0400",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f53f992b6b3400",
+  "address": "328 Nile Park Drive",
+  "city": "Blowing Rock",
+  "state": "NC",
+  "zip": "28605",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 5,
+  "baths": 4,
+  "sqft": 3159,
+  "price": 899000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 554,
+   "occupancy": 0.48,
+   "annual_str_revenue": 97500
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Bankrate/NerdWallet, Jul 11 2026); midpoint used"
+  },
+  "condition_notes": "Turnkey on 1.9 acres; attached garage, game room, finished basement; near Boone/App Ski Mountain",
+  "notes": "Newsletter-projected gross yield 10.85%."
+ }
+]

@@ -83,8 +83,14 @@ python -m pipeline.run --json data/seed_demo.json --no-enrich   # offline demo
 
 ## Current status & roadmap
 
-- ✅ Framework v2 reconciled (OBBBA tax law, personalized thresholds, STR expense defaults)
-- ✅ Scoring engine + kill filter + tests · ✅ daily automation · ✅ dashboard · ✅ `/add-deal`
+- ✅ Framework v2 reconciled (OBBBA tax law, personalized thresholds, Victor-calibrated STR expenses)
+- ✅ Scoring engine + kill filter + tests · ✅ dashboard · ✅ `/add-deal` + `/hunt-deals`
+- **Current mode: interactive.** The daily cron is paused; a Claude Code session
+  (`/hunt-deals`) reads the dedicated inbox via the Gmail connector, extracts
+  deals, and runs the same deterministic engine — zero per-token API cost. The
+  automated workflow re-enables by uncommenting the cron and setting
+  `ANTHROPIC_API_KEY` + Gmail OAuth secrets; the processed-email registry
+  (`data/processed_emails.json`) keeps both modes idempotent.
 - 🔜 Vet community Redfin/Zillow MCP servers (no official public MCP exists yet)
 - 🔜 AirDNA comps instead of estimates · price-drop re-scoring · MTR buy box ·
   market-specific assumption sets once deal volume accumulates

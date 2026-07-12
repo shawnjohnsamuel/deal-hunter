@@ -14,9 +14,10 @@ MOUNTAIN_MARKETS = {
     # Smokies / Blue Ridge / Appalachians
     "gatlinburg", "pigeon forge", "sevierville", "wears valley", "townsend",
     "blue ridge", "ellijay", "helen", "bryson city", "maggie valley", "asheville",
-    "boone", "banner elk",
-    # Mountain west
+    "boone", "banner elk", "blowing rock", "murphy",
+    # Mountain west / Cascades
     "pagosa springs", "red river", "angel fire", "cloudcroft", "ruidoso",
+    "cle elum",
 }
 
 BEACH_MARKETS = {

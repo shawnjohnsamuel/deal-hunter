@@ -137,6 +137,7 @@ def fetch_recent_emails(newer_than: str = "2d") -> list[dict]:
             "sender_kind": meta["kind"],
             "subject": headers.get("subject", "(no subject)"),
             "date": headers.get("date", ""),
+            "message_id": (headers.get("message-id") or ref.get("id") or "").strip().strip("<>"),
             "link": gmail_link(headers.get("message-id"), ref.get("id")),
             "text": _body_text(msg["payload"]),
         })

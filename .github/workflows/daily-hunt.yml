@@ -1,9 +1,14 @@
 name: Daily Deal Hunt
 
 on:
-  schedule:
-    - cron: "0 12 * * *"   # ~7am Central, daily
+  # Automated daily hunts are paused while the project runs in interactive
+  # mode (Claude session + Gmail connector, no API key). Re-enable the cron
+  # once ANTHROPIC_API_KEY + Gmail OAuth secrets are set:
+  #   schedule:
+  #     - cron: "0 12 * * *"   # ~7am Central, daily
   workflow_dispatch:
+  push:
+    branches: [main]   # interactive-mode pushes redeploy the dashboard
 
 permissions:
   contents: write
@@ -17,6 +22,8 @@ concurrency:
 
 jobs:
   hunt:
+    # Pushes only redeploy the dashboard; the hunt runs on dispatch/schedule.
+    if: github.event_name != 'push'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -83,6 +90,7 @@ jobs:
 
   deploy-dashboard:
     needs: hunt
+    if: ${{ !cancelled() && (needs.hunt.result == 'success' || needs.hunt.result == 'skipped') }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages

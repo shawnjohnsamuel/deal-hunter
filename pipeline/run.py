@@ -143,12 +143,14 @@ def main():
     if args.daily:
         from .digest import build_digest, write_digest
         from .ingest_gmail import fetch_recent_emails
+        from .processed import filter_new, mark_processed
 
         emails = []
         if all(os.environ.get(k) for k in
                ("GMAIL_CLIENT_ID", "GMAIL_CLIENT_SECRET", "GMAIL_REFRESH_TOKEN")):
-            emails = fetch_recent_emails()
-            print(f"ingest: {len(emails)} email(s) from deal senders", file=sys.stderr)
+            emails = filter_new(fetch_recent_emails())
+            print(f"ingest: {len(emails)} unprocessed email(s) from deal senders",
+                  file=sys.stderr)
         else:
             print("WARNING: Gmail secrets not set — skipping ingest", file=sys.stderr)
 
@@ -159,6 +161,8 @@ def main():
                 try:
                     deals.extend(extract_candidates(em["text"], source=em["sender"],
                                                     email_meta=em))
+                    mark_processed(em.get("message_id") or em["subject"],
+                                   note=f"daily: {em['subject'][:60]}")
                 except Exception as e:
                     print(f"WARNING: extraction failed for '{em['subject']}': {e}",
                           file=sys.stderr)
