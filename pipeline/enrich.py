@@ -71,6 +71,10 @@ def _redfin(deal: dict, enriched: dict):
         enriched["hoa_monthly"] = hoa
     if details.get("redfin_estimate"):
         enriched["avm"] = details["redfin_estimate"]
+    # Hotlinked (never copied) — MLS photos are the listing side's copyright;
+    # the dashboard hides the image gracefully if the listing closes and it 404s.
+    if details.get("primary_photo_url"):
+        enriched["photo_url"] = details["primary_photo_url"]
 
     for k in ("beds", "baths", "sqft"):
         if deal.get(k) in (None, 0) and rec.get(k):

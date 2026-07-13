@@ -69,6 +69,7 @@ def test_enrich_mapping(monkeypatch, search_results, bartleson_details):
     assert enriched["property_tax_annual"] == pytest.approx(1941.74)
     assert enriched["listing_status"] == "Active"
     assert enriched["avm"] == 421385
+    assert enriched["photo_url"].startswith("https://ssl.cdn-redfin.com/")
     assert deal["sqft"] == 1128          # backfilled from the listing
     assert any("redfin.com" in u for u in deal["listing_urls"])
 

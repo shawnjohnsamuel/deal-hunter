@@ -41,7 +41,9 @@ def _call(path: str, params: dict) -> dict | None:
 
 
 def search(location: str) -> list[dict]:
-    """Active for-sale listings for a zip / 'City, ST' / region. One request."""
+    """Active for-sale listings for a zip / 'City, ST' / region. One request.
+    NOTE: 5-digit zips only for address matching (full street addresses 400);
+    returns page 1 (~40 results), so large markets may miss a specific listing."""
     data = _call("search", {"location": location})
     return (data or {}).get("results") or []
 

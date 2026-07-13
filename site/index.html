@@ -63,6 +63,11 @@
   tbody tr:hover { background: color-mix(in srgb, var(--accent) 6%, transparent); }
   .addr { font-weight: 600; }
   .addr .city { color: var(--ink-2); font-weight: 400; }
+  .prop-cell { display: flex; align-items: center; gap: 10px; }
+  .thumb { width: 58px; height: 44px; object-fit: cover; border-radius: 7px;
+           border: 1px solid var(--ring); flex: none; }
+  .detail-photo { max-width: 340px; width: 100%; border-radius: 10px;
+                  border: 1px solid var(--ring); display: block; margin: 4px 0 2px; }
 
   .badge {
     display: inline-flex; align-items: center; gap: 6px; padding: 2px 10px 2px 8px;
@@ -237,6 +242,9 @@ function sourceCell(d) {
 
 function detailHTML(d) {
   let h = '<div class="detail">';
+  if (d.photo_url)
+    h += `<img class="detail-photo" src="${d.photo_url}" alt="Listing photo of ${d.address || "property"}"
+               loading="lazy" onerror="this.remove()">`;
   const prov = [];
   prov.push(`<b>${d.source_name || d.source || "?"}</b>`);
   if (d.email_subject) prov.push(`“${d.email_subject}”`);
@@ -327,10 +335,13 @@ function render() {
     const open = d.key === openKey;
     const mountain = d.market_flavor === "mountain" && d.tier === "str"
       ? ` <span title="Mountain market — Tier 1 priority">⛰️</span>` : "";
+    const thumb = d.photo_url
+      ? `<img class="thumb" src="${d.photo_url}" alt="" loading="lazy"
+              onerror="this.remove()">` : "";
     return `<tr data-key="${d.key}">
       <td>${badge(r.verdict)}</td>
       <td class="num score">${r.score == null ? "—" : Math.round(r.score)}</td>
-      <td class="addr">${r.address}${mountain}<br><span class="city">${r.city}</span></td>
+      <td><div class="prop-cell">${thumb}<span class="addr">${r.address}${mountain}<br><span class="city">${r.city}</span></span></div></td>
       <td class="tier">${r.tier}</td>
       <td class="pillars-cell">${pillarsCell(d)}</td>
       <td class="src">${sourceCell(d)}</td>

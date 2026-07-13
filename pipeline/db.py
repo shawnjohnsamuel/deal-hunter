@@ -105,6 +105,7 @@ def export_site_json(conn: sqlite3.Connection, out_path: Path = SITE_JSON):
             "identification": deal.get("identification"),
             "market_flavor": deal.get("market_flavor") or result.get("market_flavor"),
             "priority_note": result.get("priority_note"),
+            "photo_url": (deal.get("enriched") or {}).get("photo_url"),
             # v3: four pillars + Victor comparison
             "pillars": result.get("pillars"),
             "exception_factors": result.get("exception_factors") or [],
