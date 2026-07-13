@@ -91,3 +91,13 @@ def test_identify_via_redfin_no_match(monkeypatch, search_results):
     teaser = {"city": "Greentown", "state": "PA", "price": 123456, "beds": 9}
     assert _identify_via_redfin(teaser) is False
     assert "address" not in teaser
+
+
+def test_fixtures_contain_no_embedded_secrets():
+    """Raw API responses can embed third-party keys (e.g. Redfin's Google Maps
+    key in static_map_url — GitHub alert #1). Fixtures must be scrubbed."""
+    import re
+    patterns = re.compile(r"AIza[0-9A-Za-z_\-]{20,}|sk-[A-Za-z0-9]{20,}|api[_-]?key=[A-Za-z0-9]")
+    for f in FIXTURES.rglob("*.json"):
+        text = f.read_text()
+        assert not patterns.search(text), f"embedded credential-like string in {f.name}"
