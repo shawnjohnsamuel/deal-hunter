@@ -1,0 +1,40 @@
+<!-- @dsCard group="Components" name="Pillar chips" subtitle="A–D grades × provenance (Victor / estimated / computed)" -->
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><title>Deal Hunter — Pillar chips</title>
+<style>
+  :root {
+    --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
+    --grid:#e1e0d9; --baseline:#c3c2b7; --ring:rgba(11,11,11,.10);
+    --good:#0ca30c; --warning:#fab219; --serious:#ec835a; --critical:#d03b3b;
+    --good-text:#006300; --accent:#2a78d6;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink-2:#c3c2b7;
+      --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
+      --good-text:#0ca30c; --accent:#3987e5;
+    }
+  }
+  * { box-sizing:border-box; margin:0; }
+  body { background:var(--page); color:var(--ink);
+         font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; padding:20px; }
+
+  .pchip { display:inline-flex; align-items:center; justify-content:center;
+    width:21px; height:21px; border-radius:6px; margin-right:3px; font-size:11.5px;
+    font-weight:750; border:1px solid var(--ring); color:var(--ink); }
+  .pg-A { background:color-mix(in srgb, var(--good) 18%, transparent); }
+  .pg-B { background:color-mix(in srgb, var(--accent) 16%, transparent); }
+  .pg-C { background:color-mix(in srgb, var(--warning) 20%, transparent); }
+  .pg-D { background:color-mix(in srgb, var(--critical) 18%, transparent); }
+  .pg-none { color:var(--muted); background:transparent; }
+  .prov-estimated { border-style:dashed; }
+  .prov-victor { border-width:2px; border-color:color-mix(in srgb, var(--ink) 45%, transparent); }
+svg{width:17px;height:17px;display:block}</style></head><body>
+ <div style="margin-bottom:14px"><span class="pchip pg-A ">A</span><span class="pchip pg-B ">B</span><span class="pchip pg-C ">C</span><span class="pchip pg-D ">D</span><span class="pchip pg-none ">—</span>
+   &nbsp; <span class="pchip pg-B prov-victor">B</span><span style="font-size:12px;color:var(--muted)"> Victor-graded (bold ring) &nbsp;</span>
+   <span class="pchip pg-B prov-estimated">B</span><span style="font-size:12px;color:var(--muted)"> estimated (dashed)</span></div>
+ <div style="display:flex;align-items:center;gap:10px;margin:8px 0"><span style="width:17px;height:17px;color:var(--ink-2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 21V5a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v16"/><path d="M15 9h4a1 1 0 0 1 1 1v11"/><path d="M2 21h20"/><path d="M8 8h2M8 12h2M8 16h2"/></svg></span><span style="min-width:130px;font-weight:600">Asset Quality</span><span class="pchip pg-B prov-victor">B</span><span style="color:var(--muted);font-size:12px">Victor's grade</span></div>
+ <div style="display:flex;align-items:center;gap:10px;margin:8px 0"><span style="width:17px;height:17px;color:var(--ink-2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 21s-7-5.5-7-11a7 7 0 0 1 14 0c0 5.5-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span style="min-width:130px;font-weight:600">Neighborhood</span><span class="pchip pg-B prov-victor">B</span><span style="color:var(--muted);font-size:12px">Victor's grade</span></div>
+ <div style="display:flex;align-items:center;gap:10px;margin:8px 0"><span style="width:17px;height:17px;color:var(--ink-2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="15" r="4"/><path d="m11 12 9-9M17 4l3 3M14 7l2 2"/></svg></span><span style="min-width:130px;font-weight:600">Vacancy Risk</span><span class="pchip pg-A prov-victor">A</span><span style="color:var(--muted);font-size:12px">Victor's grade</span></div>
+ <div style="display:flex;align-items:center;gap:10px;margin:8px 0"><span style="width:17px;height:17px;color:var(--ink-2)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v6c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12v6c0 1.7 3.1 3 7 3s7-1.3 7-3v-6"/></svg></span><span style="min-width:130px;font-weight:600">Cash-Flow Margin</span><span class="pchip pg-B ">B</span><span style="color:var(--muted);font-size:12px">computed: CoC 7.8% at/above buy-box min</span></div>
+ </body></html>
