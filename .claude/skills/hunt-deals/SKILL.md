@@ -54,12 +54,19 @@ never math you do in your head.
    = high; fill the `identification` block with confidence + evidence; adopt
    the address only at high/medium. No credible match → leave address null.
 
-5. **Score through the engine.** Write the extracted deals to a scratch JSON
-   file and run from the repo root:
+5. **Score through the engine.** Write the extracted deals to
+   `data/hunts/<date>.json` and run from the repo root. Source the shell
+   profile first — `REDFIN_API_KEY` lives in ~/.zshrc and enables structured
+   enrichment (real taxes, HOA, listing status, Redfin estimate; 2 API calls
+   per addressed survivor from a 100/month free tier) plus deterministic
+   teaser identification for market-stated teasers:
 
    ```bash
-   python3 -m pipeline.run --json <scratch-file>.json --no-enrich
+   source ~/.zshrc && python3 -m pipeline.run --json data/hunts/<date>.json
    ```
+
+   Add `--no-enrich` only when the key is absent or quota is tight; report
+   `pipeline.redfin.calls_made` awareness (survivors only, never killed deals).
 
 6. **Mark emails processed** (only after a successful scoring run):
 

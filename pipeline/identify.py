@@ -16,6 +16,59 @@ import re
 
 MODEL = os.environ.get("DEAL_HUNTER_MODEL", "claude-sonnet-5")
 
+def _identify_via_redfin(deal: dict) -> bool:
+    """Deterministic identification: search the stated market's active
+    listings, match price within 1.5% + exact beds (+baths when stated).
+    Exactly one survivor = high confidence; two = ambiguous (low, recorded);
+    otherwise fall through. Costs one API request."""
+    from . import redfin
+    if not redfin.available():
+        return False
+    location = deal.get("zip") or (
+        f"{deal.get('city')}, {deal.get('state')}" if deal.get("city") else "")
+    price = deal.get("price")
+    if not location or not price:
+        return False
+
+    results = redfin.search(location)
+    matches = []
+    for rec in results:
+        if not rec.get("price") or abs(rec["price"] - price) / price > 0.015:
+            continue
+        if deal.get("beds") and rec.get("beds") != deal["beds"]:
+            continue
+        if deal.get("baths") and rec.get("baths") and rec["baths"] != deal["baths"]:
+            continue
+        matches.append(rec)
+
+    if len(matches) == 1:
+        rec = matches[0]
+        deal["identification"] = {
+            "confidence": "high",
+            "candidate_address": rec.get("street_address"),
+            "evidence": (f"Redfin structured match in {location}: price ${rec['price']:,} "
+                         f"within 1.5%, beds/baths exact; sole active-listing match"),
+            "listing_url": rec.get("listing_url"),
+        }
+        deal["address"] = rec.get("street_address")
+        deal["city"] = rec.get("city") or deal.get("city")
+        deal["state"] = rec.get("state") or deal.get("state")
+        deal["zip"] = rec.get("zip_code") or deal.get("zip")
+        if rec.get("listing_url"):
+            deal.setdefault("listing_urls", []).append(rec["listing_url"])
+        return True
+    if len(matches) == 2:
+        deal["identification"] = {
+            "confidence": "low",
+            "candidate_address": matches[0].get("street_address"),
+            "evidence": (f"Redfin search in {location}: two active listings match "
+                         f"price/beds — ambiguous: "
+                         + " vs ".join(m.get("street_address", "?") for m in matches)),
+            "listing_url": None,
+        }
+    return False
+
+
 IDENTIFY_PROMPT = """A paywalled real estate newsletter teased a property without its street
 address. Identify the exact listing by searching live listing sites.
 
@@ -63,7 +116,13 @@ def _details_block(deal: dict) -> str:
 
 def identify_property(deal: dict) -> bool:
     """Attempt to identify a teaser deal's address. Mutates the deal; returns
-    True when a high/medium-confidence address was found."""
+    True when a high/medium-confidence address was found.
+
+    Two passes: a structured Redfin search when the teaser states a market
+    (price/beds/baths matched locally — deterministic and API-key-cheap),
+    then the LLM web-search pass as fallback."""
+    if _identify_via_redfin(deal):
+        return True
     if not os.environ.get("ANTHROPIC_API_KEY"):
         return False
     import anthropic

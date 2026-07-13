@@ -68,9 +68,12 @@ Saved emails can be replayed with `python -m pipeline.run --eml <file-or-dir>`.
    enable Gmail API, desktop OAuth client, run the script once locally. Store
    `GMAIL_CLIENT_ID`, `GMAIL_CLIENT_SECRET`, `GMAIL_REFRESH_TOKEN` as repo secrets.
    Edit `DEAL_SENDERS` in [pipeline/ingest_gmail.py](pipeline/ingest_gmail.py) to your senders.
-4. **API keys:** `ANTHROPIC_API_KEY` (extraction + web-search enrichment), optional
-   `RENTCAST_API_KEY` (free tier: 50 calls/mo). The pipeline degrades gracefully —
-   anything missing is skipped with a warning, never a crash.
+4. **API keys:** `ANTHROPIC_API_KEY` (extraction + web-search enrichment),
+   `REDFIN_API_KEY` ([OpenWebNinja Real-Time Redfin Data](https://www.openwebninja.com/api/real-time-redfin-data),
+   free tier: 100 calls/mo — real taxes, HOA, listing status, Redfin estimate,
+   structured teaser identification), optional `RENTCAST_API_KEY` (free tier:
+   50 calls/mo — rent estimates). The pipeline degrades gracefully — anything
+   missing is skipped with a warning, never a crash.
 5. **Pages:** repo Settings → Pages → Source: GitHub Actions. The daily workflow deploys
    `site/` after each run. Trigger a first run from the Actions tab (`workflow_dispatch`).
 

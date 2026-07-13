@@ -24,6 +24,13 @@ _rate_cache: dict = {}
 
 def enrich_deal(deal: dict, profile: dict) -> dict:
     enriched = deal.setdefault("enriched", {})
+    from . import redfin
+    if redfin.available() and deal.get("address"):
+        try:
+            _redfin(deal, enriched)
+        except Exception as e:
+            print(f"WARNING: Redfin enrichment failed for {deal.get('address')}: {e}",
+                  file=sys.stderr)
     if os.environ.get("RENTCAST_API_KEY"):
         try:
             _rentcast(deal, enriched)
@@ -37,6 +44,60 @@ def enrich_deal(deal: dict, profile: dict) -> dict:
             print(f"WARNING: web-search enrichment failed for {deal.get('address')}: {e}",
                   file=sys.stderr)
     return enriched
+
+
+# --- Redfin (OpenWebNinja) — primary listing-data source ------------------
+
+def _redfin(deal: dict, enriched: dict):
+    """Two requests per deal (search + details): real taxes, HOA, listing
+    status, price history, Redfin estimate, beds/baths/sqft backfill."""
+    from . import redfin
+
+    rec = redfin.find_property(deal["address"], deal.get("city", ""),
+                               deal.get("state", ""), deal.get("zip", ""))
+    if not rec:
+        enriched.setdefault("data_notes", "")
+        enriched["data_notes"] = (enriched["data_notes"] +
+            " | Redfin: no active-listing match at this address").strip(" |")
+        return
+
+    details = redfin.property_details(rec["property_id"]) or {}
+
+    tax = redfin.latest_tax(details)
+    if tax:
+        enriched["property_tax_annual"] = tax
+    hoa = redfin.hoa_monthly_from(details, rec)
+    if hoa is not None:
+        enriched["hoa_monthly"] = hoa
+    if details.get("redfin_estimate"):
+        enriched["avm"] = details["redfin_estimate"]
+
+    for k in ("beds", "baths", "sqft"):
+        if deal.get(k) in (None, 0) and rec.get(k):
+            deal[k] = rec[k]
+
+    enriched["days_on_market"] = rec.get("days_on_market")
+    enriched["listing_status"] = rec.get("mls_status") or details.get("status")
+    enriched["redfin_property_id"] = rec.get("property_id")
+    if rec.get("listing_url"):
+        deal.setdefault("listing_urls", [])
+        if rec["listing_url"] not in deal["listing_urls"]:
+            deal["listing_urls"].append(rec["listing_url"])
+
+    year_built = details.get("year_built") or rec.get("year_built")
+    bits = []
+    if year_built:
+        bits.append(f"built {year_built}")
+    ph = redfin.price_history_note(details)
+    if ph:
+        bits.append(f"price history: {ph}")
+    if details.get("redfin_estimate"):
+        bits.append(f"Redfin estimate ${details['redfin_estimate']:,}")
+    note = "Redfin: " + "; ".join(bits) if bits else ""
+    if note:
+        enriched["data_notes"] = (enriched.get("data_notes", "") + " | " + note).strip(" |")
+    if not deal.get("condition_notes") and details.get("public_description"):
+        deal["condition_notes"] = details["public_description"][:280]
 
 
 # --- RentCast -----------------------------------------------------------

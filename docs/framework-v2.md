@@ -80,10 +80,11 @@ Kill immediately, with no enrichment spend, if any of:
 Unknown market status is a **flag, not a kill** — "is this a destination market" is a human judgment call (Broken Bow yes, Little Elm no; the edge cases are Shawn's).
 
 ### 3c. Enrichment (survivors only)
+- **Listing data (primary): Redfin via OpenWebNinja API** — real tax history, HOA, listing status, days on market, price history, Redfin estimate, beds/baths/sqft backfill (2 requests/deal from a 100/month free tier; survivors only). Also powers deterministic teaser identification: search the stated market, match price ±1.5% + exact beds/baths, sole match = high confidence.
 - Property record, tax assessment, rent estimate, AVM: RentCast (ration free-tier calls; STR candidates first)
 - STR revenue: Rabbu/AirDNA estimates via web search; flag `str_data_estimated` when not from real comp data
 - Property tax: **county appraisal district (CAD) records** (Collin CAD, etc.) — never listing estimates; fallback 1.2% of price
-- Redfin/Zillow data: direct fetches 403 — **search "full address + Redfin Zillow"** then confirm with a second search
+- Redfin/Zillow data fallback (no API key/quota): direct fetches 403 — **search "full address + Redfin Zillow"** then confirm with a second search
 - Rates: search live 30-yr investment rates each run; never assume
 - STR legality: search "[city] short-term rental ordinance" → status `unverified / likely_ok / restricted`. **Never auto-cleared. Human-verify before any offer.**
 - Seller P&Ls and pro formas: **always recompute independently** with our vacancy/CapEx assumptions. Sellers omit CapEx and use fantasy vacancy.

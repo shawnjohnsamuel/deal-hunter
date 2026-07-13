@@ -1,0 +1,877 @@
+{
+ "status": "OK",
+ "request_id": "3dba434e-54e7-4f48-9e74-19610c150332",
+ "parameters": {
+  "property_id": "138181597",
+  "url": null,
+  "country_code": "US"
+ },
+ "data": {
+  "property_id": "138181597",
+  "listing_id": "220684070",
+  "url": "/PA/Greentown/106-Bartleson-Deer-Trl-18426/home/138181597",
+  "status": "Active",
+  "property_type": 6,
+  "latitude": 41.3622616,
+  "longitude": -75.2786857,
+  "country_code": "US",
+  "street_address": "106 Bartleson Deer Trl",
+  "unit_number": null,
+  "city": "Greentown",
+  "state": "PA",
+  "zip_code": "18426",
+  "beds": 3,
+  "baths": 2,
+  "full_baths": 2,
+  "half_baths": null,
+  "sqft": 1128,
+  "lot_size_sqft": 43560,
+  "year_built": 1955,
+  "property_subtype": null,
+  "days_on_market": null,
+  "price": 420000,
+  "price_per_sqft": 372,
+  "list_date": null,
+  "sold_date": "2025-06-11T07:00:00.000Z",
+  "sold_price": null,
+  "hoa_dues": null,
+  "hoa_frequency": null,
+  "mls_number": "PW262298",
+  "mls_name": null,
+  "last_updated": "2026-07-11T07:06:55.000Z",
+  "listing_agent": {
+   "name": "Eric Ehrhardt",
+   "is_redfin": false
+  },
+  "listing_broker": {
+   "name": "Davis R. Chant - Lake Wallenpaupack"
+  },
+  "co_listing_agent": null,
+  "co_listing_broker": null,
+  "public_description": "Lake Wallenpaupack living without the HOA--complete with a transferable boat slip at Lighthouse Harbor Marina. Thoughtfully redesigned and beautifully renovated, this exceptional retreat is nestled on over an acre of private wooded property, offering the perfect blend of privacy, style, and convenience. This turnkey property is ideally suited as a weekend getaway, vacation home, or short-term rental property. Blending modern design with warm natural finishes, the open-concept living area showcases soaring vaulted ceilings, exposed beams, wide-plank white oak flooring, a beautifully limewashed stone fireplace, and expansive windows that fill the home with natural light. The stunning kitchen features custom walnut cabinetry, premium Brazilian quartzite countertops, brand-new black stainless-steel appliances, and flows seamlessly into the dining area and inviting three-season room. Offering 3 bedrooms and 2 beautifully renovated bathrooms with custom quartzite vanities, glass shower enclosures, and designer fixtures, the thoughtfully designed layout is perfectly sized for relaxing weekends at the lake or extended stays throughout the year. Step outside to the expansive deck, professionally landscaped grounds, rebuilt stone walls, custom walkways, and a private fire pit gathering area, creating the perfect setting to entertain or unwind after a day on the water. Extensive improvements--including a new 1,500-gallon septic system, new HVAC system, freshly painted interior and exterior, renovated sunroom, and countless interior and exterior upgrades--provide exceptional peace of mind and make this home truly move-in ready. Combining exceptional craftsmanship, a private wooded setting, a transferable boat slip, and the freedom of no HOA restrictions, this one-of-a-kind property offers the ideal balance of modern comfort, lake recreation, and outstanding vacation rental potential. Ask listing agent for full list of renovations.  ",
+  "amenity_groups": [
+   {
+    "title": "Interior",
+    "groups": [
+     {
+      "title": "Virtual Tour",
+      "entries": [
+       {
+        "name": null,
+        "values": [
+         "<a href='https://www.zillow.com/view-imx/7979ba82-d5c7-46f5-9821-ca544ed3094a?setAttribution=mls&wl=true&initialViewType=pano&utm_source=dashboard' target='_blank' rel='nofollow noopener'>Branded Virtual Tour</a>"
+        ]
+       },
+       {
+        "name": null,
+        "values": [
+         "<a href='https://www.zillow.com/view-imx/7979ba82-d5c7-46f5-9821-ca544ed3094a?setAttribution=mls&wl=true&initialViewType=pano&utm_source=dashboard' target='_blank' rel='nofollow noopener'>UnBranded Virtual Tour (External Link)</a>"
+        ]
+       }
+      ]
+     },
+     {
+      "title": "Bathroom Information",
+      "entries": [
+       {
+        "name": "# of Full Bathrooms",
+        "values": [
+         "2"
+        ]
+       }
+      ]
+     },
+     {
+      "title": "Heating & Cooling",
+      "entries": [
+       {
+        "name": null,
+        "values": [
+         "Has Cooling"
+        ]
+       },
+       {
+        "name": "Cooling",
+        "values": [
+         "Central Air"
+        ]
+       },
+       {
+        "name": null,
+        "values": [
+         "Has Heating"
+        ]
+       },
+       {
+        "name": "Heating",
+        "values": [
+         "Forced Air"
+        ]
+       }
+      ]
+     },
+     {
+      "title": "Interior Features",
+      "entries": [
+       {
+        "name": "Interior Features",
+        "values": [
+         "High Ceilings",
+         "Storage"
+        ]
+       },
+       {
+        "name": "Appliances",
+        "values": [
+         "Dishwasher",
+         "Washer",
+         "Stainless Steel Appliance(s)",
+         "Refrigerator",
+         "Oven",
+         "Microwave",
+         "Dryer"
+        ]
+       },
+       {
+        "name": "Flooring",
+        "values": [
+         "Wood"
+        ]
+       },
+       {
+        "name": null,
+        "values": [
+         "Has Fireplace"
+        ]
+       },
+       {
+        "name": "Fireplace Features",
+        "values": [
+         "Living Room"
+        ]
+       }
+      ]
+     },
+     {
+      "title": "Room Information",
+      "entries": [
+       {
+        "name": "# of Rooms Total",
+        "values": [
+         "6"
+        ]
+       },
+       {
+        "name": "Laundry Features",
+        "values": [
+         "Main Level"
+        ]
+       },
+       {
+        "name": null,
+        "values": [
+         "Has Basement"
+        ]
+       },
+       {
+        "name": "Basement Details",
+        "values": [
+         "Unfinished",
+         "Walk-Out Access"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Exterior",
+    "groups": [
+     {
+      "title": "Exterior Features",
+      "entries": [
+       {
+        "name": "Exterior Features",
+        "values": [
+         "Boat Slip",
+         "Fire Pit"
+        ]
+       },
+       {
+        "name": "Patio And Porch Features",
+        "values": [
+         "Deck"
+        ]
+       },
+       {
+        "name": "Roof",
+        "values": [
+         "Asphalt",
+         "Shingle"
+        ]
+       }
+      ]
+     },
+     {
+      "title": "Building Information",
+      "entries": [
+       {
+        "name": "Sq. Ft.",
+        "values": [
+         "2083"
+        ]
+       },
+       {
+        "name": "Above Grade Finished Area",
+        "values": [
+         "1,128"
+        ]
+       },
+       {
+        "name": "Levels",
+        "values": [
+         "Two"
+        ]
+       },
+       {
+        "name": "Construction Materials",
+        "values": [
+         "Wood Siding"
+        ]
+       }
+      ]
+     },
+     {
+      "title": "Property Features",
+      "entries": [
+       {
+        "name": null,
+        "values": [
+         "Has View"
+        ]
+       }
+      ]
+     },
+     {
+      "title": "Property Information",
+      "entries": [
+       {
+        "name": "Property Type",
+        "values": [
+         "Residential"
+        ]
+       },
+       {
+        "name": "Property Sub Type",
+        "values": [
+         "Single Family Residence"
+        ]
+       },
+       {
+        "name": "Raw Mls Property Sub Type",
+        "values": [
+         "Single Family Residence"
+        ]
+       },
+       {
+        "name": "Property Condition",
+        "values": [
+         "Updated/Remodeled"
+        ]
+       }
+      ]
+     },
+     {
+      "title": "Lot Information",
+      "entries": [
+       {
+        "name": "Lot Features",
+        "values": [
+         "Wooded",
+         "Many Trees",
+         "Views"
+        ]
+       },
+       {
+        "name": "Water Body Name",
+        "values": [
+         "Lake Wallenpaupack"
+        ]
+       },
+       {
+        "name": "Road Responsibility",
+        "values": [
+         "Private Maintained Road",
+         "Road Maintenance Agreement"
+        ]
+       },
+       {
+        "name": "Road Frontage Type",
+        "values": [
+         "Private Road"
+        ]
+       },
+       {
+        "name": "Lot Size Acres",
+        "values": [
+         "1"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Financial",
+    "groups": [
+     {
+      "title": "Tax Information",
+      "entries": [
+       {
+        "name": "Tax Annual Amount",
+        "values": [
+         "$1,941.74"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Utilities",
+    "groups": [
+     {
+      "title": "Utility Information",
+      "entries": [
+       {
+        "name": "Utilities",
+        "values": [
+         "Cable Available",
+         "Water Connected",
+         "Sewer Connected",
+         "Phone Available",
+         "Electricity Connected"
+        ]
+       },
+       {
+        "name": "Sewer",
+        "values": [
+         "Septic Tank"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Location",
+    "groups": [
+     {
+      "title": "Schools Information",
+      "entries": [
+       {
+        "name": "High School District",
+        "values": [
+         "Wallenpaupack School District"
+        ]
+       }
+      ]
+     },
+     {
+      "title": "Location Information",
+      "entries": [
+       {
+        "name": "Directions",
+        "values": [
+         "Turn onto Bartleson Deer Trl, house is on the left hand side"
+        ]
+       },
+       {
+        "name": "Subdivision Name",
+        "values": [
+         "None"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Public facts",
+    "groups": [
+     {
+      "title": null,
+      "entries": [
+       {
+        "name": "Beds",
+        "values": [
+         "3"
+        ]
+       },
+       {
+        "name": "Baths",
+        "values": [
+         "1.0"
+        ]
+       },
+       {
+        "name": "Finished Sq. Ft.",
+        "values": [
+         "1,128"
+        ]
+       },
+       {
+        "name": "Unfinished Sq. Ft.",
+        "values": [
+         "\u2014"
+        ]
+       },
+       {
+        "name": "Total Sq. Ft.",
+        "values": [
+         "1,128"
+        ]
+       },
+       {
+        "name": "Stories",
+        "values": [
+         "\u2014"
+        ]
+       },
+       {
+        "name": "Lot Size",
+        "values": [
+         "0.42 acres"
+        ]
+       },
+       {
+        "name": "Style",
+        "values": [
+         "Single Family Residential"
+        ]
+       },
+       {
+        "name": "Year Built",
+        "values": [
+         "1955"
+        ]
+       },
+       {
+        "name": "Year Renovated",
+        "values": [
+         "1955"
+        ]
+       },
+       {
+        "name": "County",
+        "values": [
+         "Pike County"
+        ]
+       },
+       {
+        "name": "APN",
+        "values": [
+         "012197"
+        ]
+       }
+      ]
+     }
+    ]
+   },
+   {
+    "title": "Other",
+    "groups": [
+     {
+      "title": "Listing Information",
+      "entries": [
+       {
+        "name": "List AOR",
+        "values": [
+         "pikewayne"
+        ]
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "photos_url_pattern": null,
+  "photo_count": 51,
+  "price_history": [
+   {
+    "date": "2026-07-10T18:42:34.482Z",
+    "event": "Listed",
+    "price": 420000,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2025-06-16T07:00:00.000Z",
+    "event": "Sold (Public Records)",
+    "price": 250000,
+    "source": "Public Records"
+   },
+   {
+    "date": "2025-06-11T07:00:00.000Z",
+    "event": "Sold (MLS)",
+    "price": 250000,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2025-04-27T23:27:29.701Z",
+    "event": "Pending",
+    "price": null,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2025-03-20T16:44:10.823Z",
+    "event": "Relisted",
+    "price": null,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2025-03-20T16:41:10.000Z",
+    "event": "Price Changed",
+    "price": 299000,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2024-10-17T20:50:50.000Z",
+    "event": "Price Changed",
+    "price": 319900,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2024-04-25T07:00:00.000Z",
+    "event": "Listed",
+    "price": 359000,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2021-03-11T08:00:00.000Z",
+    "event": "Sold (Public Records)",
+    "price": 200000,
+    "source": "Public Records"
+   },
+   {
+    "date": "2021-03-09T08:00:00.000Z",
+    "event": "Sold (MLS)",
+    "price": 200000,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2021-03-09T08:00:00.000Z",
+    "event": "Sold (MLS)",
+    "price": null,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2021-01-07T08:00:00.000Z",
+    "event": "Listed",
+    "price": 169900,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2021-01-07T08:00:00.000Z",
+    "event": "Listed",
+    "price": 169900,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2020-06-19T07:00:00.000Z",
+    "event": "Sold (Public Records)",
+    "price": 133900,
+    "source": "Public Records"
+   },
+   {
+    "date": "2020-06-17T07:00:00.000Z",
+    "event": "Sold (MLS)",
+    "price": null,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2020-06-17T07:00:00.000Z",
+    "event": "Sold (MLS)",
+    "price": 133900,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2019-08-08T07:00:00.000Z",
+    "event": "Listed",
+    "price": 139900,
+    "source": "PWMLS"
+   },
+   {
+    "date": "2019-08-08T07:00:00.000Z",
+    "event": "Listed",
+    "price": 139900,
+    "source": "PWMLS"
+   }
+  ],
+  "tax_history": [
+   {
+    "year": 2026,
+    "taxes": 1941.74,
+    "assessed_value": 15740
+   },
+   {
+    "year": 2025,
+    "taxes": 1876.68,
+    "assessed_value": 15740
+   },
+   {
+    "year": 2024,
+    "taxes": 1757.85,
+    "assessed_value": 15740
+   },
+   {
+    "year": 2023,
+    "taxes": 1691.11,
+    "assessed_value": 15740
+   },
+   {
+    "year": 2022,
+    "taxes": 1651.76,
+    "assessed_value": 15740
+   },
+   {
+    "year": 2021,
+    "taxes": 1604.54,
+    "assessed_value": 15740
+   },
+   {
+    "year": 2020,
+    "taxes": 1604.54,
+    "assessed_value": 15740
+   },
+   {
+    "year": 2019,
+    "taxes": 1552.71,
+    "assessed_value": 15740
+   },
+   {
+    "year": 2018,
+    "taxes": 1510.92,
+    "assessed_value": 15740
+   },
+   {
+    "year": 2017,
+    "taxes": 1454,
+    "assessed_value": 15740
+   },
+   {
+    "year": 2015,
+    "taxes": 1408,
+    "assessed_value": 15740
+   }
+  ],
+  "schools": [
+   {
+    "name": "Wallenpaupack South El School",
+    "rating": 6,
+    "grades": "K-5",
+    "level": "Public",
+    "distance_miles": 4.3
+   },
+   {
+    "name": "Wallenpaupack Area Middle School",
+    "rating": 6,
+    "grades": "6-8",
+    "level": "Public",
+    "distance_miles": 8.5
+   },
+   {
+    "name": "Wallenpaupack Area High School",
+    "rating": 7,
+    "grades": "9-12",
+    "level": "Public",
+    "distance_miles": 8.1
+   }
+  ],
+  "redfin_estimate": 421385,
+  "redfin_estimate_low": null,
+  "redfin_estimate_high": null,
+  "redfin_estimate_time_series": [
+   266979,
+   256575,
+   247200,
+   224628,
+   205782,
+   247644,
+   254470,
+   257622,
+   251604,
+   249250,
+   247886,
+   249972,
+   256144,
+   256417,
+   240984,
+   238895,
+   238879,
+   238324,
+   247909,
+   255351,
+   249076,
+   259307,
+   258646,
+   263884,
+   347915,
+   310522,
+   310730,
+   308720,
+   238962,
+   240608,
+   286533,
+   285427,
+   285260,
+   284266,
+   294597,
+   314259,
+   320974,
+   320377,
+   313899,
+   306467,
+   308122,
+   309220,
+   302853,
+   328141,
+   360205,
+   377580,
+   421385
+  ],
+  "is_redfin": false,
+  "is_hot": false,
+  "primary_photo_url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_2.jpg",
+  "fips": "42103",
+  "apn": "012197",
+  "photos": [
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_1_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_2_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_3_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_4_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_5_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_6_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_7_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_8_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_9_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_10_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_11_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_12_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_13_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_14_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_15_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_16_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_17_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_18_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_19_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_20_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_21_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_22_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_23_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_24_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_25_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_26_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_27_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_28_2.jpg",
+    "caption": null
+   },
+   {
+    "url": "https://ssl.cdn-redfin.com/photo/405/bigphoto/298/PW262298_29_2.jpg",
+    "caption": null
+   }
+  ],
+  "sale_history": [
+   {
+    "date": "2025-06-11T07:00:00.000Z",
+    "price": 250000
+   }
+  ],
+  "open_houses": []
+ }
+}
