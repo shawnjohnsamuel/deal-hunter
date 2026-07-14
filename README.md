@@ -81,7 +81,7 @@ Manual intake anytime:
 
 ```bash
 python -m pipeline.run --manual "123 Pine Ridge Trl, Broken Bow OK — $475k cabin, ADR $350"
-python -m pipeline.run --json data/seed_demo.json --no-enrich   # offline demo
+python -m pipeline.run --json data/victor_2026-07.json --no-enrich   # offline: re-score a saved batch
 ```
 
 ## Current status & roadmap
@@ -98,8 +98,8 @@ python -m pipeline.run --json data/seed_demo.json --no-enrich   # offline demo
 - 🔜 AirDNA comps instead of estimates · price-drop re-scoring · MTR buy box ·
   market-specific assumption sets once deal volume accumulates
 
-*Early dashboard entries are seeded demo deals so the pipeline's behavior is visible
-while live email volume accumulates.*
+*Every property on the dashboard is a real deal pulled from the tracked deal-flow inboxes
+(Victor Steffen, The Short Term Shop, The Offer Sheet, Here, BnB Flow).*
 
 ---
 

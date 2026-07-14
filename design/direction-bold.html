@@ -1,66 +1,17 @@
 <!-- @dsCard group="Explorations" name="Direction: Bold" subtitle="A starting point to react against — hero stats, verdict edges, mountain spotlight" -->
-<!doctype html><html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"><title>Deal Hunter — Bold direction</title>
-<style>
-  :root {
-    --page:#f9f9f7; --surface:#fcfcfb; --ink:#0b0b0b; --ink-2:#52514e; --muted:#898781;
-    --grid:#e1e0d9; --baseline:#c3c2b7; --ring:rgba(11,11,11,.10);
-    --good:#0ca30c; --warning:#fab219; --serious:#ec835a; --critical:#d03b3b;
-    --good-text:#006300; --accent:#2a78d6;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --page:#0d0d0d; --surface:#1a1a19; --ink:#ffffff; --ink-2:#c3c2b7;
-      --grid:#2c2c2a; --baseline:#383835; --ring:rgba(255,255,255,.10);
-      --good-text:#0ca30c; --accent:#3987e5;
-    }
-  }
-  * { box-sizing:border-box; margin:0; }
-  body { background:var(--page); color:var(--ink);
-         font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif; padding:20px; }
-
-  .badge { display:inline-flex; align-items:center; gap:6px; padding:2px 10px 2px 8px;
-    border-radius:999px; font-size:12.5px; font-weight:650; border:1px solid var(--ring); }
-  .badge .dot { width:9px; height:9px; border-radius:50%; }
-  .b-PASS { background:color-mix(in srgb, var(--good) 14%, transparent); } .b-PASS .dot { background:var(--good); }
-  .b-BORDERLINE { background:color-mix(in srgb, var(--warning) 16%, transparent); } .b-BORDERLINE .dot { background:var(--warning); }
-  .b-FAIL { background:color-mix(in srgb, var(--serious) 15%, transparent); } .b-FAIL .dot { background:var(--serious); }
-  .b-KILLED { background:color-mix(in srgb, var(--muted) 14%, transparent); color:var(--ink-2); } .b-KILLED .dot { background:var(--muted); }
-
-  .pchip { display:inline-flex; align-items:center; justify-content:center;
-    width:21px; height:21px; border-radius:6px; margin-right:3px; font-size:11.5px;
-    font-weight:750; border:1px solid var(--ring); color:var(--ink); }
-  .pg-A { background:color-mix(in srgb, var(--good) 18%, transparent); }
-  .pg-B { background:color-mix(in srgb, var(--accent) 16%, transparent); }
-  .pg-C { background:color-mix(in srgb, var(--warning) 20%, transparent); }
-  .pg-D { background:color-mix(in srgb, var(--critical) 18%, transparent); }
-  .pg-none { color:var(--muted); background:transparent; }
-  .prov-estimated { border-style:dashed; }
-  .prov-victor { border-width:2px; border-color:color-mix(in srgb, var(--ink) 45%, transparent); }
-
- .hero{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,var(--surface)),var(--surface) 60%);border:1px solid var(--ring);border-radius:16px;padding:26px}
- .bignum{font-size:44px;font-weight:750;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
- .vrow{border-left:4px solid var(--good);background:var(--surface);border-radius:12px;padding:14px 18px;margin:10px 0;display:flex;gap:16px;align-items:center;border-top:1px solid var(--ring);border-right:1px solid var(--ring);border-bottom:1px solid var(--ring)}
- .vrow.warn{border-left-color:var(--warning)}
- .spot{background:linear-gradient(160deg,color-mix(in srgb,var(--good) 10%,var(--surface)),var(--surface) 55%);border:1px solid var(--ring);border-radius:16px;padding:20px;margin-top:14px}
- </style></head><body>
- <div class="hero" style="max-width:900px">
-   <div style="color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Deal Hunter · live pipeline</div>
-   <div style="display:flex;gap:40px;margin-top:10px;flex-wrap:wrap">
-     <div><div class="bignum">50</div><div style="color:var(--ink-2)">screened</div></div>
-     <div><div class="bignum" style="color:var(--good-text)">6</div><div style="color:var(--ink-2)">worth underwriting</div></div>
-     <div><div class="bignum">$8.3k</div><div style="color:var(--ink-2)">best cash flow/yr</div></div>
-     <div><div class="bignum">⛰️ 11</div><div style="color:var(--ink-2)">mountain candidates</div></div>
-   </div>
- </div>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Deal Hunter — Bold direction</title><style>
+  :root{--page:#f9f9f7;--surface:#fcfcfb;--ink:#0b0b0b;--ink-2:#52514e;--muted:#898781;--grid:#e1e0d9;--baseline:#c3c2b7;--ring:rgba(11,11,11,.10);--good:#0ca30c;--warning:#fab219;--serious:#ec835a;--critical:#d03b3b;--good-text:#006300;--accent:#2a78d6;}
+  @media (prefers-color-scheme:dark){:root{--page:#0d0d0d;--surface:#1a1a19;--ink:#fff;--ink-2:#c3c2b7;--grid:#2c2c2a;--baseline:#383835;--ring:rgba(255,255,255,.10);--good-text:#0ca30c;--accent:#3987e5;}}
+  *{box-sizing:border-box;margin:0}body{background:var(--page);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;padding:20px}
+.badge{display:inline-flex;align-items:center;gap:6px;padding:2px 10px 2px 8px;border-radius:999px;font-size:12.5px;font-weight:650;border:1px solid var(--ring)}.badge .dot{width:9px;height:9px;border-radius:50%}.b-PASS{background:color-mix(in srgb,var(--good) 14%,transparent)}.b-PASS .dot{background:var(--good)}.b-BORDERLINE{background:color-mix(in srgb,var(--warning) 16%,transparent)}.b-BORDERLINE .dot{background:var(--warning)}.b-FAIL{background:color-mix(in srgb,var(--serious) 15%,transparent)}.b-FAIL .dot{background:var(--serious)}.b-KILLED{background:color-mix(in srgb,var(--muted) 14%,transparent);color:var(--ink-2)}.b-KILLED .dot{background:var(--muted)}.pchip{display:inline-flex;align-items:center;justify-content:center;width:21px;height:21px;border-radius:6px;margin-right:3px;font-size:11.5px;font-weight:750;border:1px solid var(--ring);color:var(--ink)}.pg-A{background:color-mix(in srgb,var(--good) 18%,transparent)}.pg-B{background:color-mix(in srgb,var(--accent) 16%,transparent)}.pg-C{background:color-mix(in srgb,var(--warning) 20%,transparent)}.pg-D{background:color-mix(in srgb,var(--critical) 18%,transparent)}.pg-none{color:var(--muted);background:transparent}.prov-victor{border-width:2px;border-color:color-mix(in srgb,var(--ink) 45%,transparent)}.hero{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 14%,var(--surface)),var(--surface) 60%);border:1px solid var(--ring);border-radius:16px;padding:26px}.bignum{font-size:44px;font-weight:750;letter-spacing:-.03em;font-variant-numeric:tabular-nums}.vrow{border-left:4px solid var(--good);background:var(--surface);border:1px solid var(--ring);border-radius:12px;padding:14px 18px;margin:10px 0;display:flex;gap:16px;align-items:center}.vrow.warn{border-left-color:var(--warning)}.spot{background:linear-gradient(160deg,color-mix(in srgb,var(--warning) 10%,var(--surface)),var(--surface) 55%);border:1px solid var(--ring);border-radius:16px;padding:20px;margin-top:14px}</style></head><body><div class="hero" style="max-width:900px"><div style="color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em">Deal Hunter · live pipeline</div>
+ <div style="display:flex;gap:40px;margin-top:10px;flex-wrap:wrap">
+   <div><div class="bignum">39</div><div style="color:var(--ink-2)">screened</div></div>
+   <div><div class="bignum" style="color:var(--good-text)">5</div><div style="color:var(--ink-2)">worth a look</div></div>
+   <div><div class="bignum">$63k</div><div style="color:var(--ink-2)">best cash flow/yr</div></div>
+   <div><div class="bignum">⛰️ 6</div><div style="color:var(--ink-2)">mountain candidates</div></div></div></div>
  <div style="max-width:900px">
- <div class="vrow"><b style="font-size:16px">123 Pine Ridge Trl</b><span style="color:var(--ink-2)">Broken Bow ⛰️ STR</span><span class="badge b-PASS"><span class="dot"></span>PASS</span><span style="margin-left:auto;font-weight:750;font-size:22px">97</span></div>
+ <div class="vrow"><b style="font-size:16px">2203 Jennifer Dr</b><span style="color:var(--ink-2)">Killeen, TX · LTR · 32 units</span><span class="badge b-PASS"><span class="dot"></span>PASS</span><span style="margin-left:auto;font-weight:750;font-size:22px">81</span></div>
  <div class="vrow warn"><b style="font-size:16px">106 Bartleson Deer Trl</b><span style="color:var(--ink-2)">Greentown, PA ⛰️ STR</span><span class="badge b-BORDERLINE"><span class="dot"></span>BORDERLINE</span><span style="margin-left:auto;font-weight:750;font-size:22px">74</span></div>
- <div class="spot">
-   <div style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--good-text);font-weight:700">⛰️ Tier-1 spotlight</div>
-   <div style="display:flex;gap:24px;align-items:baseline;margin-top:6px;flex-wrap:wrap">
-     <b style="font-size:19px">Greentown Poconos lake cabin</b>
-     <span style="font-variant-numeric:tabular-nums;color:var(--ink-2)">$420,000 · CoC 11.0% · yield 20.9% · 2 days on market</span>
-   </div>
-   <p style="color:var(--ink-2);margin-top:6px;font-size:13.5px">Marina slip transfers · no HOA · real taxes $1,942 (Redfin-verified) · held from PASS only by 60% vs 65% occupancy</p>
- </div></div></body></html>
+ <div class="spot"><div style="font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--warning);font-weight:700">⛰️ Tier-1 spotlight</div>
+   <div style="display:flex;gap:24px;align-items:baseline;margin-top:6px;flex-wrap:wrap"><b style="font-size:19px">Greentown Poconos lake cabin</b><span style="font-variant-numeric:tabular-nums;color:var(--ink-2)">$420,000 · CoC 11.0% · yield 20.9% · 2 days on market</span></div>
+   <p style="color:var(--ink-2);margin-top:6px;font-size:13.5px">Marina slip transfers · no HOA · real taxes $1,942 (Redfin-verified) · held from PASS only by 60% vs 65% occupancy</p></div></div></body></html>
