@@ -16,16 +16,16 @@ MOUNTAIN_MARKETS = {
     "blue ridge", "ellijay", "helen", "bryson city", "maggie valley", "asheville",
     "boone", "banner elk", "blowing rock", "murphy", "cullowhee",
     # Poconos / Catskills (NYC drive-to)
-    "greentown", "grahamsville",
+    "greentown", "grahamsville", "freeland",
     # Mountain west / Cascades
     "pagosa springs", "red river", "angel fire", "cloudcroft", "ruidoso",
-    "cle elum",
+    "cle elum", "wolf creek", "candler", "tijeras", "kila", "great cacapon",
 }
 
 BEACH_MARKETS = {
     "galveston", "port aransas", "south padre island", "rockport",
     "gulf shores", "orange beach", "destin", "panama city beach",
-    "30a", "santa rosa beach", "navarre",
+    "30a", "santa rosa beach", "navarre", "buxton", "port orford", "crystal beach",
 }
 
 LAKE_RIVER_MARKETS = {

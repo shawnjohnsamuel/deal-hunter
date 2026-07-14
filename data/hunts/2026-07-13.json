@@ -1,0 +1,649 @@
+[
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 13: 10 Potential STRs",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5c502bb2b6eb2",
+  "address": "3727 Coyote Creek Rd",
+  "city": "Wolf Creek",
+  "state": "OR",
+  "zip": "97497",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 1,
+  "baths": 1,
+  "price": 250000,
+  "furnished": false,
+  "tier": "str",
+  "claimed": {
+   "adr": 222,
+   "occupancy": 0.67,
+   "annual_str_revenue": 54288
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Character cabin on 13.55 wooded acres; vaulted ceilings, loft, daylight basement, spring-fed water",
+  "notes": "Newsletter-projected CoC 40.6% (their expenses include mortgage). SW Oregon mountains.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/3727-coyote-creek-rd-wolf-creek-or-97497"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 13: 10 Potential STRs",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5c502bb2b6eb2",
+  "address": "55 Overlook Dr",
+  "city": "Candler",
+  "state": "NC",
+  "zip": "28715",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 3,
+  "baths": 2,
+  "price": 500000,
+  "furnished": false,
+  "tier": "str",
+  "claimed": {
+   "adr": 247,
+   "occupancy": 0.62,
+   "annual_str_revenue": 55896
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "A-frame on flat 1-acre end-of-cul-de-sac lot",
+  "neighborhood_notes": "Candler, west of Asheville NC (Blue Ridge)",
+  "notes": "Newsletter-projected CoC 7.8%.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/55-overlook-dr-candler-nc-28715"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 13: 10 Potential STRs",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5c502bb2b6eb2",
+  "address": "590 Hunters Camp Rd",
+  "city": "Great Cacapon",
+  "state": "WV",
+  "zip": "25422",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 5,
+  "baths": 2,
+  "price": 699000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 388,
+   "occupancy": 0.72,
+   "annual_str_revenue": 101964
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "~900ft river frontage on 5+ acres; hot tub, screened porch",
+  "notes": "Newsletter-projected CoC 20.8% \u2014 but list price exceeds the down-payment budget.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/590-hunters-camp-rd-great-cacapon-wv-25422"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 13: 10 Potential STRs",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5c502bb2b6eb2",
+  "address": "488 Dower Draw",
+  "city": "Kila",
+  "state": "MT",
+  "zip": "59920",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 4,
+  "baths": 2,
+  "sqft": 2000,
+  "price": 649000,
+  "tier": "str",
+  "claimed": {
+   "adr": 393,
+   "occupancy": 0.58,
+   "annual_str_revenue": 83202
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Log home on 2.61 acres bordering timberland; access to 120 acres",
+  "notes": "Newsletter-projected CoC 14.9% \u2014 over the down-payment budget.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/488-dower-draw-kila-mt-59920"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 13: 10 Potential STRs",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5c502bb2b6eb2",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 3,
+  "baths": 3,
+  "price": 379000,
+  "furnished": true,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 318,
+   "occupancy": 0.65,
+   "annual_str_revenue": 75438
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "Offer Sheet Pro teaser \u2014 no location anchor; operating cabin, cathedral ceilings, game room, 3 ensuite bedrooms"
+  },
+  "condition_notes": "Furnished operating STR: cathedral ceilings, wood-burning fireplace, game room, hot tub",
+  "notes": "Headline teaser. Newsletter-projected CoC 36.1%."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 13: 10 Potential STRs",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5c502bb2b6eb2",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 6,
+  "baths": 4,
+  "price": 595000,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 460,
+   "occupancy": 0.56,
+   "annual_str_revenue": 94020
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "Offer Sheet Pro teaser \u2014 6BR Gulf beachfront, three decks, no location anchor"
+  },
+  "condition_notes": "6BR beachfront, three expansive decks, direct Gulf views",
+  "notes": "Newsletter-projected CoC 12.5%. Coastal (Gulf) \u2014 likely destination."
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 13: 10 Potential STRs",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5c502bb2b6eb2",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 459000,
+  "furnished": true,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "adr": 315,
+   "occupancy": 0.77,
+   "annual_str_revenue": 88490
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "Offer Sheet Pro teaser \u2014 turnkey cabin, cedar siding, new metal roof/solar, no location anchor"
+  },
+  "condition_notes": "Turnkey mountain basecamp: cedar siding, new metal roof, solar, generator; 77% occupancy",
+  "notes": "Newsletter-projected CoC 33.7% (highest-occupancy teaser of the issue)."
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udf0a Investing in Waves: The Top Coastal Airbnb Opportunities Revealed \u2014 #1060",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5d5695157a1f6",
+  "address": "48177 Caskey Ln LOT 18",
+  "city": "Buxton",
+  "state": "NC",
+  "zip": "27920",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1520,
+  "price": 365000,
+  "tier": "str",
+  "claimed": {
+   "adr": 278,
+   "occupancy": 0.68,
+   "annual_str_revenue": 69000
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Reverse floor plan, sound views, detached garage, outdoor shower",
+  "neighborhood_notes": "Buxton, Outer Banks NC (Cape Hatteras)",
+  "notes": "Newsletter gross yield 18.9%.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/48177-Caskey-Ln-LOT-18-Buxton-NC-27920/349420007_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udf0a Investing in Waves: The Top Coastal Airbnb Opportunities Revealed \u2014 #1060",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5d5695157a1f6",
+  "address": "28 Hamlet St",
+  "city": "Port Orford",
+  "state": "OR",
+  "zip": "97465",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1024,
+  "price": 499000,
+  "tier": "str",
+  "claimed": {
+   "adr": 337,
+   "occupancy": 0.58,
+   "annual_str_revenue": 71343
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Original woodwork cottage, new well, new roof; walk to Garrison Lake and Pacific",
+  "neighborhood_notes": "Port Orford, southern Oregon coast",
+  "notes": "Newsletter gross yield 14.3%.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/28-Hamlet-St-Port-Orford-OR-97465/86314014_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udf0a Investing in Waves: The Top Coastal Airbnb Opportunities Revealed \u2014 #1060",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5d5695157a1f6",
+  "address": "2599 Breaker Dr",
+  "city": "Crystal Beach",
+  "state": "TX",
+  "zip": "77650",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 5,
+  "baths": 3,
+  "sqft": 2994,
+  "price": 895000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 521,
+   "occupancy": 0.65,
+   "annual_str_revenue": 123607
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Fully-booked operating Airbnb; 3 wraparound decks, cargo lift, 10-car parking",
+  "notes": "Newsletter gross yield 13.8% \u2014 over the down-payment budget.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/2599-Breaker-Dr-Crystal-Beach-TX-77650/27666665_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udf35 Desert Gold: The Top Airbnb Investment Properties Revealed \u2014 #1059",
+  "email_date": "2026-07-12",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5809ec0766ec3",
+  "address": "47 Puntilla Dr",
+  "city": "Tijeras",
+  "state": "NM",
+  "zip": "87059",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1229,
+  "price": 375000,
+  "tier": "str",
+  "claimed": {
+   "adr": 274,
+   "occupancy": 0.6,
+   "annual_str_revenue": 60000
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Contemporary, vaulted ceilings, wall of glass on 1+ acre in the Sandias",
+  "neighborhood_notes": "Tijeras, Sandia Mountains east of Albuquerque",
+  "notes": "Newsletter gross yield 16.3%.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/47-Puntilla-Dr-Tijeras-NM-87059/6818724_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udf35 Desert Gold: The Top Airbnb Investment Properties Revealed \u2014 #1059",
+  "email_date": "2026-07-12",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5809ec0766ec3",
+  "address": "32 Overlook Rd",
+  "city": "Santa Fe",
+  "state": "NM",
+  "zip": "87505",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 5,
+  "baths": 4,
+  "sqft": 6202,
+  "price": 1475000,
+  "tier": "str",
+  "claimed": {
+   "adr": 808,
+   "occupancy": 0.6,
+   "annual_str_revenue": 177000
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "6,200sqft passive-solar adobe on ~5 acres; 5 fireplaces, putting green, gated",
+  "notes": "Newsletter gross yield 12.1% \u2014 far over the down-payment budget.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/32-Overlook-Rd-Santa-Fe-NM-87505/6842067_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udf35 Desert Gold: The Top Airbnb Investment Properties Revealed \u2014 #1059",
+  "email_date": "2026-07-12",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5809ec0766ec3",
+  "address": "1490 83rd Hwy",
+  "city": "Elgin",
+  "state": "AZ",
+  "zip": "85611",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 5,
+  "baths": 4,
+  "sqft": 3181,
+  "price": 544000,
+  "tier": "str",
+  "claimed": {
+   "adr": 411,
+   "occupancy": 0.58,
+   "annual_str_revenue": 87000
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Log home at 5,000ft bordering Coronado NF; lower level ran as a B&B w/ commercial kitchen",
+  "neighborhood_notes": "Elgin AZ wine country / Coronado National Forest \u2014 destination status a judgment call",
+  "notes": "Newsletter gross yield 16.4%.",
+  "listing_urls": [
+   "https://www.realtor.com/realestateandhomes-detail/1490-Highway-83_Elgin_AZ_85611_M97190-09216"
+  ]
+ },
+ {
+  "source": "team@bnbflow.co",
+  "source_name": "BNB Flow",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Northeast STR Gold: Top Deals to Kickstart Your Week | July 13, 2026",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5d0f3c64dc730",
+  "address": "1195 Broome Center Rd",
+  "city": "Preston Hollow",
+  "state": "NY",
+  "zip": "12469",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 4,
+  "baths": 3,
+  "sqft": 3200,
+  "price": 749000,
+  "tier": "str",
+  "claimed": {
+   "adr": 413,
+   "occupancy": 0.51,
+   "annual_str_revenue": 77200
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Catskills retreat on 15.85 acres; mountain views, finished basement",
+  "notes": "BnB gross yield 10.31% \u2014 over the down-payment budget.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/1195-Broome-Center-Rd-Preston-Hollow-NY-12469/219734693_zpid/"
+  ]
+ },
+ {
+  "source": "team@bnbflow.co",
+  "source_name": "BNB Flow",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Northeast STR Gold: Top Deals to Kickstart Your Week | July 13, 2026",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5d0f3c64dc730",
+  "address": "255 Hillary Dr W",
+  "city": "Freeland",
+  "state": "PA",
+  "zip": "18224",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 6,
+  "baths": 3,
+  "sqft": 2800,
+  "price": 529000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 398,
+   "occupancy": 0.51,
+   "annual_str_revenue": 74400
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Fully permitted turnkey STR on 1 acre; bi-level, game room, finished basement; comps to $100K/yr",
+  "neighborhood_notes": "Freeland PA, Poconos (Lehigh Gorge)",
+  "notes": "BnB gross yield 14.06%. Fully STR-permitted.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/255-Hillary-Dr-W-Freeland-PA-18224/110646812_zpid/"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfb8 Nashville's Most Unique Themed STR Next to River North's Billion-Dollar Transformation",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6053f0d10c604",
+  "city": "Nashville",
+  "state": "TN",
+  "property_type": "SFR",
+  "units": 1,
+  "price": 925000,
+  "furnished": true,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {},
+  "notes": "Spotlight email: British rock-themed STR, rooftop skyline views, sleeps 10, near Broadway/Oracle campus. Over budget.",
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "single-property spotlight; Nashville stated but no address in preview"
+  }
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83d\udcb0 $100K+ Annual Revenue Smoky Mountain STR With a Rare Management Performance Guarantee",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5d68ae08c6a34",
+  "city": "Gatlinburg",
+  "state": "TN",
+  "property_type": "cabin",
+  "units": 1,
+  "price": 760000,
+  "furnished": true,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "annual_str_revenue": 100000
+  },
+  "notes": "Spotlight: turnkey Smoky Mtn cabin, $100K+ rev 3yrs, sleeps 12, theater/game room, 10% performance guarantee. Over budget. City assumed Gatlinburg (Smokies).",
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "spotlight; Smoky Mountains stated, no address"
+  }
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83d\udcb0 $180K+ Revenue Potential Nashville Luxury STR Just Steps From The Gulch",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f5b2cbeeae5909",
+  "city": "Nashville",
+  "state": "TN",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 4,
+  "price": 1275000,
+  "furnished": true,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "annual_str_revenue": 180000
+  },
+  "notes": "Spotlight: luxury 4BR, existing Nashville STR permit, rooftop hot tub, sleeps 12. Over budget.",
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "spotlight; Nashville Gulch, no address"
+  }
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udf32 Cult-Favorite Catskills Airbnb With Proven Income & Iconic Design",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f58770338324d7",
+  "city": "Grahamsville",
+  "state": "NY",
+  "property_type": "cabin",
+  "units": 1,
+  "price": 750000,
+  "furnished": true,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {},
+  "notes": "Spotlight: modern A-frame near Kaaterskill Falls, proven income, magazine design. Over budget. City approximated (Catskills).",
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "spotlight; Catskills stated, no address"
+  }
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd4\ufe0f $90K+ Revenue Smoky Mountain STR With Some of the Best Views We've Featured",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f578636373bd7f",
+  "city": "Sevierville",
+  "state": "TN",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 4,
+  "price": 940000,
+  "furnished": true,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "annual_str_revenue": 90929
+  },
+  "notes": "Spotlight: 4BR cabin, $90,929 2025 revenue, long-range mountain views, theater/game room. Over budget. City assumed (Smokies).",
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "spotlight; Smoky Mountains, no address"
+  }
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83d\udcb0 $200K+ Annual Revenue Luxury Broken Bow STR With One-of-a-Kind Creekfront Hot Tub Pavilion",
+  "email_date": "2026-07-13",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f55c40367b7f40",
+  "city": "Broken Bow",
+  "state": "OK",
+  "property_type": "cabin",
+  "units": 1,
+  "price": 1400000,
+  "furnished": true,
+  "tier": "str",
+  "teaser": true,
+  "claimed": {
+   "annual_str_revenue": 200000
+  },
+  "notes": "Spotlight: luxury Broken Bow cabin, year-round creek, hot tub pavilion, $200K+ rev. Mountain (Tier-1 market) but far over budget.",
+  "identification": {
+   "confidence": "none",
+   "candidate_address": null,
+   "evidence": "spotlight; Broken Bow stated, no address"
+  }
+ }
+]
