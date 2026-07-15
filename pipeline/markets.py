@@ -20,17 +20,19 @@ MOUNTAIN_MARKETS = {
     # Mountain west / Cascades
     "pagosa springs", "red river", "angel fire", "cloudcroft", "ruidoso",
     "cle elum", "wolf creek", "candler", "tijeras", "kila", "great cacapon",
+    "suches", "seven devils", "stanton", "rockbridge", "travelers rest",
 }
 
 BEACH_MARKETS = {
     "galveston", "port aransas", "south padre island", "rockport",
     "gulf shores", "orange beach", "destin", "panama city beach",
-    "30a", "santa rosa beach", "navarre", "buxton", "port orford", "crystal beach",
+    "30a", "santa rosa beach", "navarre", "buxton", "port orford", "crystal beach", "fort bragg", "ocean springs",
+    "orange beach",
 }
 
 LAKE_RIVER_MARKETS = {
     "fredericksburg", "new braunfels", "canyon lake", "wimberley", "granbury",
-    "possum kingdom lake", "concan",
+    "possum kingdom lake", "concan", "mammoth spring", "sulphur",
 }
 
 DESTINATION_MARKETS = MOUNTAIN_MARKETS | BEACH_MARKETS | LAKE_RIVER_MARKETS

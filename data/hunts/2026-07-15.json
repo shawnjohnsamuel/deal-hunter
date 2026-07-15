@@ -1,0 +1,507 @@
+[
+ {
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "4 Turnkey Rentals From $299K With Cash Flow in Place",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f664850eeaf0fa",
+  "address": "12308 Abney Dr",
+  "city": "Austin",
+  "state": "TX",
+  "zip": "78729",
+  "property_type": "fourplex",
+  "units": 4,
+  "price": 600000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 5200,
+   "property_tax_annual": 12000,
+   "insurance_monthly": 380,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.066
+  },
+  "occupancy_status": "occupied",
+  "condition_notes": "YB1985; HVAC all <5yrs; single tenant leases all 4 units (STR-arbitrage)",
+  "neighborhood_notes": "North Austin tech corridor near Apple + hospitals",
+  "notes": "In-place $4,800/mo; Victor's numbers use $5,200 FMV. His CoC 2.93%.",
+  "listing_urls": [
+   "https://redf.in/3G8b0P"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 381,
+    "coc": 0.0293,
+    "cap_rate": 0.066,
+    "gross_annual_income": 62400
+   }
+  }
+ },
+ {
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "4 Turnkey Rentals From $299K With Cash Flow in Place",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f664850eeaf0fa",
+  "address": "5105 Oak Ave",
+  "city": "Pasadena",
+  "state": "TX",
+  "zip": "77503",
+  "property_type": "triplex",
+  "units": 3,
+  "price": 475000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 4400,
+   "property_tax_annual": 9500,
+   "insurance_monthly": 301,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.065
+  },
+  "occupancy_status": "partial",
+  "condition_notes": "YB1957; all 3 units renovated 2023, roof 2020; SFH + duplex; tenants pay all utilities",
+  "neighborhood_notes": "Pasadena TX; schools rated 6-7; ~5%/yr appreciation last decade",
+  "notes": "Victor's CoC 2.54%. Vacant SFH leased at prior $1,900.",
+  "listing_urls": [
+   "https://redf.in/HWCYfp"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 262,
+    "coc": 0.0254,
+    "cap_rate": 0.065,
+    "gross_annual_income": 52800
+   }
+  }
+ },
+ {
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "4 Turnkey Rentals From $299K With Cash Flow in Place",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f664850eeaf0fa",
+  "address": "2633 Ventura Ct",
+  "city": "Glenn Heights",
+  "state": "TX",
+  "zip": "75154",
+  "property_type": "duplex",
+  "units": 2,
+  "price": 430000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 3900,
+   "property_tax_annual": 8600,
+   "insurance_monthly": 272,
+   "management_pct": 0.07,
+   "interest_rate": 0.0675,
+   "cap_rate": 0.0683
+  },
+  "occupancy_status": "occupied",
+  "condition_notes": "YB2000; roof 2025; both sides leased through Apr 2027 ($2,000 + $1,900)",
+  "neighborhood_notes": "Glenn Heights, DFW Metroplex",
+  "notes": "Victor's CoC 3.80%. Low-maintenance long-term hold, cash flow day one.",
+  "listing_urls": [
+   "https://redf.in/rhAyR5"
+  ],
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 354,
+    "coc": 0.038,
+    "cap_rate": 0.0683,
+    "gross_annual_income": 46800
+   }
+  }
+ },
+ {
+  "source": "victor@steffenrealtycorp.com",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent_full_address",
+  "email_subject": "4 Turnkey Rentals From $299K With Cash Flow in Place",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f664850eeaf0fa",
+  "address": "10607 Crescent Peak Ct",
+  "city": "Rosharon",
+  "state": "TX",
+  "zip": "77583",
+  "property_type": "SFR",
+  "units": 1,
+  "price": 299000,
+  "tier": "ltr",
+  "claimed": {
+   "monthly_rent": 2905,
+   "interest_rate": 0.0675
+  },
+  "occupancy_status": "occupied",
+  "condition_notes": "YB2023; professionally managed; occupied through Dec 2026",
+  "notes": "$2,905/mo rent+amenity income; Victor est cash flow $524/mo. Built for out-of-state/overseas ownership; incentive package available. No full underwriting table in email.",
+  "victor": {
+   "grades": {
+    "asset_quality": "A",
+    "neighborhood": "A"
+   },
+   "underwriting": {
+    "cash_flow_monthly": 524
+   }
+  }
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 15: 12 Potential STRs",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f66c432ad17235",
+  "address": "231 Spring Lake Dr",
+  "city": "Mammoth Spring",
+  "state": "AR",
+  "zip": "72554",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 3,
+  "price": 229000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 210,
+   "occupancy": 0.72,
+   "annual_str_revenue": 55188
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Red cedar log cabin, direct river access, wraparound deck, half-acre",
+  "notes": "Newsletter CoC 46.1% (their expenses incl. mortgage).",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/231-spring-lake-dr-mammoth-spring-ar-72554"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 15: 12 Potential STRs",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f66c432ad17235",
+  "address": "265 Holly Hill Rd",
+  "city": "Suches",
+  "state": "GA",
+  "zip": "30572",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 235000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 277,
+   "occupancy": 0.55,
+   "annual_str_revenue": 55671
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Mountain retreat on 2.14 unrestricted acres bordering forestland; walk-out basement expansion",
+  "neighborhood_notes": "Suches GA, North Georgia mountains (near Blue Ridge)",
+  "notes": "Newsletter CoC 45.7%.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/265-holly-hill-rd-suches-ga-30572"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 14: 12 Potential STRs",
+  "email_date": "2026-07-14",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f61e813b5616a8",
+  "address": "1340 Skyland Drive",
+  "city": "Seven Devils",
+  "state": "NC",
+  "zip": "28604",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 4,
+  "baths": 3,
+  "price": 525000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 333,
+   "occupancy": 0.74,
+   "annual_str_revenue": 89940
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Updated chalet, 2 decks + 2 propane fire tables; offered below Oct-2025 appraisal",
+  "neighborhood_notes": "Seven Devils NC ski town (High Country, near Boone/Banner Elk)",
+  "notes": "Newsletter CoC 28.8%. Below-appraisal price.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/1340-skyland-drive-seven-devils-nc-28604"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Lost In The Woods: Forest Airbnb Investment Gems \u2014 #1062",
+  "email_date": "2026-07-14",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f627b8d430d79b",
+  "address": "32000 Forest Ln",
+  "city": "Fort Bragg",
+  "state": "CA",
+  "zip": "95437",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 1,
+  "sqft": 1196,
+  "price": 398000,
+  "tier": "str",
+  "claimed": {
+   "adr": 317,
+   "occupancy": 0.58,
+   "annual_str_revenue": 67109
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "1971 clear-heart redwood A-frame; 504sqft loft; guest room w/ private deck",
+  "neighborhood_notes": "Fort Bragg, Mendocino Coast CA (near MacKerricher SP)",
+  "notes": "Newsletter gross yield 16.9%.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/32000-Forest-Ln-Fort-Bragg-CA-95437/19211484_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Lost In The Woods: Forest Airbnb Investment Gems \u2014 #1062",
+  "email_date": "2026-07-14",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f627b8d430d79b",
+  "address": "2688 Masters Rd",
+  "city": "Sulphur",
+  "state": "OK",
+  "zip": "73086",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1554,
+  "price": 262000,
+  "tier": "str",
+  "claimed": {
+   "adr": 255,
+   "occupancy": 0.6,
+   "annual_str_revenue": 55845
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Fully remodeled 2024 lakeside A-frame; new roof/septic; loft workspace; 0.75 acre",
+  "neighborhood_notes": "Sulphur OK, Arbuckle Lake / Chickasaw NRA",
+  "notes": "Newsletter gross yield 21.3%.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/2688-Masters-Rd-Sulphur-OK-73086/107322995_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Lost In The Woods: Forest Airbnb Investment Gems \u2014 #1062",
+  "email_date": "2026-07-14",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f627b8d430d79b",
+  "address": "85 Gala Lane Ln",
+  "city": "Stanton",
+  "state": "KY",
+  "zip": "40380",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "sqft": 700,
+  "price": 430000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 345,
+   "occupancy": 0.65,
+   "annual_str_revenue": 81851
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Cliffside cabin 30ft above Red River Gorge; hot tub; operating STR, turnkey",
+  "neighborhood_notes": "Stanton KY, Red River Gorge (climbing/hiking destination)",
+  "notes": "Newsletter gross yield 19.1%.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/85-Gala-Lane-Ln-Stanton-KY-40380/463577110_zpid/"
+  ]
+ },
+ {
+  "source": "team@bnbflow.co",
+  "source_name": "BNB Flow",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Midwest Market Gems | July 15, 2026",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f67426550ac94a",
+  "address": "18862 Indigo Ln",
+  "city": "Rockbridge",
+  "state": "OH",
+  "zip": "43149",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 3,
+  "baths": 3,
+  "sqft": 1576,
+  "price": 459000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 255,
+   "occupancy": 0.74,
+   "annual_str_revenue": 69100
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Turnkey on 2.07 wooded acres; detached garage",
+  "neighborhood_notes": "Rockbridge OH, Hocking Hills (Old Man's Cave)",
+  "notes": "BnB gross yield 15.05%.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/18862-Indigo-Ln-Rockbridge-OH-43149/113313856_zpid/"
+  ]
+ },
+ {
+  "source": "team@bnbflow.co",
+  "source_name": "BNB Flow",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Midwest Market Gems | July 15, 2026",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f67426550ac94a",
+  "address": "6884 Stonewood Ct",
+  "city": "Eden Prairie",
+  "state": "MN",
+  "zip": "55346",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 3,
+  "baths": 3,
+  "sqft": 2590,
+  "price": 565000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 234,
+   "occupancy": 0.68,
+   "annual_str_revenue": 58300
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Remodeled, finished walkout basement, near Bryant Lake",
+  "neighborhood_notes": "Eden Prairie MN, suburban Minneapolis \u2014 destination status is a judgment call",
+  "notes": "BnB gross yield 10.32%. Suburban STR \u2014 verify local ordinance + genuine demand.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/6884-Stonewood-Ct-Eden-Prairie-MN-55346/1713701_zpid/"
+  ]
+ },
+ {
+  "source": "team@bnbflow.co",
+  "source_name": "BNB Flow",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Southeast Investment Spotlight | July 14, 2026",
+  "email_date": "2026-07-14",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f621c1be5d385f",
+  "address": "400 Old Highway 25",
+  "city": "Travelers Rest",
+  "state": "SC",
+  "zip": "29690",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "sqft": 725,
+  "price": 359900,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 176,
+   "occupancy": 0.63,
+   "annual_str_revenue": 40500
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Furnished A-frame on 1.7 unrestricted acres, no HOA",
+  "neighborhood_notes": "Travelers Rest SC, Blue Ridge foothills near Greenville (Caesars Head)",
+  "notes": "BnB gross yield 11.25%. Low ADR.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/400-Old-Highway-25-Travelers-Rest-SC-29690/11067853_zpid/"
+  ]
+ },
+ {
+  "source": "team@bnbflow.co",
+  "source_name": "BNB Flow",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Southeast Investment Spotlight | July 14, 2026",
+  "email_date": "2026-07-14",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f621c1be5d385f",
+  "address": "8821 Pickering Forrest Dr",
+  "city": "Ocean Springs",
+  "state": "MS",
+  "zip": "39564",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 4,
+  "baths": 2,
+  "sqft": 2433,
+  "price": 425000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 287,
+   "occupancy": 0.59,
+   "annual_str_revenue": 62000
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Turnkey waterfront, private boat dock, canal access",
+  "neighborhood_notes": "Ocean Springs MS, Gulf Coast (near Biloxi)",
+  "notes": "BnB gross yield 14.59%.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/8821-Pickering-Forrest-Dr-Ocean-Springs-MS-39564/206330240_zpid/"
+  ]
+ }
+]
