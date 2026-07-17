@@ -235,10 +235,19 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
     state = deal.get("state", "")
     flavor = deal["market_flavor"] = market_flavor(deal.get("city", ""), state)
     priority_note = None
+    str_box = profile["buy_boxes"]["str"]
+    info = priority_market_info(deal.get("city", ""), state)
+    # Structured for the dashboard, independent of disqualifiers — the MARKET
+    # is priority even when this particular deal fails.
+    priority_market = None
+    if info:
+        priority_market = {
+            "region": info["region"], "state": info["state"],
+            "drive_hours": info["drive_hours"], "metros": info["metros"],
+            "in_drive_range": info["drive_hours"] <= str_box.get("max_drive_hours", 14),
+        }
     if tier == "str" and not disqualifiers:
-        str_box = profile["buy_boxes"]["str"]
-        info = priority_market_info(deal.get("city", ""), state)
-        in_drive_range = info and info["drive_hours"] <= str_box.get("max_drive_hours", 14)
+        in_drive_range = priority_market and priority_market["in_drive_range"]
         if info and info["flavor"] == "mountain" and in_drive_range:
             bonus = str_box.get("priority_market_bonus", 0)
             if bonus:
@@ -265,6 +274,7 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
         "metric_composite": metric_composite,
         "pillars": pillars, "exception_factors": exceptions,
         "market_flavor": flavor, "priority_note": priority_note,
+        "priority_market": priority_market,
         "criteria": criteria, "hard_disqualifiers": disqualifiers,
         "tax_flags": _tax_flags(deal, uw, profile),
         "red_flags": red_flags,

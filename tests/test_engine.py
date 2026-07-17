@@ -264,6 +264,10 @@ def test_priority_region_note_names_region_and_drive(profile):
     poconos = score_deal(dict(broken_bow_str(), city="Pocono Summit", state="PA"), profile)
     note = poconos["priority_note"]
     assert note and "Poconos" in note and "2.5h" in note
+    # Structured field for the dashboard pill.
+    pm = poconos["priority_market"]
+    assert pm["region"] == "Poconos" and pm["in_drive_range"] is True
+    assert pm["drive_hours"] == 2.5 and "NYC" in pm["metros"]
 
 
 def test_drive_cap_demotes_branson_to_plain_mountain(profile):
@@ -275,6 +279,9 @@ def test_drive_cap_demotes_branson_to_plain_mountain(profile):
     assert branson["priority_note"] and "MOUNTAIN" in branson["priority_note"]
     assert "PRIORITY" not in branson["priority_note"]
     assert branson["score"] == pytest.approx(broken_bow["score"], abs=0.2)
+    # Structured field still exported, marked out of range; Broken Bow has none.
+    assert branson["priority_market"]["in_drive_range"] is False
+    assert broken_bow["priority_market"] is None
 
 
 def test_gmail_link_builder():
