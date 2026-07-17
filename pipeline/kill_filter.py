@@ -23,7 +23,7 @@ def run_kill_filter(deal: dict, profile: dict) -> tuple[bool, list[str], list[st
     if deal.get("property_category") in ("land", "commercial"):
         reasons.append(f"{deal['property_category']} listing — outside all buy boxes")
 
-    market_type = deal.get("market_type") or classify_market(deal.get("city", ""))
+    market_type = deal.get("market_type") or classify_market(deal.get("city", ""), deal.get("state"))
     deal["market_type"] = market_type
 
     if tier == "str":

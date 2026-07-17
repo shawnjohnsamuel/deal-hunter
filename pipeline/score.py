@@ -3,7 +3,7 @@ tax-flag triggers, composite 0-100 score, and the PASS/BORDERLINE/FAIL verdict.
 
 All thresholds come from the profile — nothing is hardcoded to generic benchmarks.
 """
-from .markets import classify_market, is_dfw, market_flavor
+from .markets import classify_market, is_dfw, is_priority_market, market_flavor
 from .pillars import check_divergence, grade_pillars, pillar_composite
 from .underwrite import underwrite
 
@@ -27,7 +27,7 @@ def classify_tier(deal: dict, profile: dict) -> str:
         return "house_hack"
     claimed = deal.get("claimed") or {}
     str_signals = (
-        classify_market(city) == "destination"
+        classify_market(city, deal.get("state")) == "destination"
         or claimed.get("adr") is not None
         or claimed.get("annual_str_revenue") is not None
         or deal.get("source_tier_hint") == "str"
@@ -176,7 +176,7 @@ def _red_flags(deal: dict, uw: dict, kill_flags: list[str]) -> list[str]:
 def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -> dict:
     """Full scoring pass. Returns the scored result (deal dict untouched)."""
     tier = deal["tier"] = classify_tier(deal, profile)
-    deal.setdefault("market_type", classify_market(deal.get("city", "")))
+    deal.setdefault("market_type", classify_market(deal.get("city", ""), deal.get("state")))
     uw = underwrite(deal, profile)
     box = profile["buy_boxes"][tier]
     criteria = _evaluate_criteria(tier, uw["metrics"], box,
@@ -227,15 +227,26 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
     if exceptions and not disqualifiers:
         composite = round(min(100.0, composite + profile["pillars"]["exception_factor_bonus"]), 1)
 
-    # Mountain STRs are the Tier 1 priority: a composite bump so they outrank
-    # equivalent beach/lake deals, plus an explicit priority note.
-    flavor = deal["market_flavor"] = market_flavor(deal.get("city", ""))
+    # Priority bumps so the right STR outranks equivalent deals. Two tiers:
+    # Shawn's Short Term Shop target markets (Avery Carl) win first; a generic
+    # mountain market wins next. Broken Bow is STS-covered but excluded from the
+    # priority set, so it only ever gets the smaller mountain bump.
+    state = deal.get("state", "")
+    flavor = deal["market_flavor"] = market_flavor(deal.get("city", ""), state)
     priority_note = None
-    if tier == "str" and flavor == "mountain" and not disqualifiers:
-        bonus = profile["buy_boxes"]["str"].get("mountain_priority_bonus", 0)
-        if bonus:
-            composite = round(min(100.0, composite + bonus), 1)
-            priority_note = f"MOUNTAIN market — Tier 1 priority (+{bonus:g} composite)"
+    if tier == "str" and not disqualifiers:
+        str_box = profile["buy_boxes"]["str"]
+        if is_priority_market(deal.get("city", ""), state):
+            bonus = str_box.get("priority_market_bonus", 0)
+            if bonus:
+                composite = round(min(100.0, composite + bonus), 1)
+                priority_note = (f"The Short Term Shop target market — Shawn's "
+                                 f"priority STR universe (+{bonus:g} composite)")
+        elif flavor == "mountain":
+            bonus = str_box.get("mountain_priority_bonus", 0)
+            if bonus:
+                composite = round(min(100.0, composite + bonus), 1)
+                priority_note = f"MOUNTAIN market — Tier 1 priority (+{bonus:g} composite)"
 
     red_flags = _red_flags(deal, uw, kill_flags or [])
     red_flags += check_divergence(deal, uw, profile)

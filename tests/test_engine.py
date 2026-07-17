@@ -224,6 +224,34 @@ def test_mountain_priority_bonus(profile):
     assert mountain["score"] == pytest.approx(beach["score"] + bonus, abs=0.2)
 
 
+def test_priority_market_is_state_qualified():
+    from pipeline.markets import is_priority_market, classify_market, market_flavor
+    # A Short Term Shop mountain town in the right state is priority + destination.
+    assert is_priority_market("Waynesville", "NC")
+    assert classify_market("Waynesville", "NC") == "destination"
+    assert market_flavor("Waynesville", "NC") == "mountain"
+    # Same name, wrong state (Nashville suburb) must NOT be a priority mountain STR.
+    assert not is_priority_market("Franklin", "TN")
+    # Texas Hill Country stays lake/river flavored but is still priority.
+    assert is_priority_market("Fredericksburg", "TX")
+    assert market_flavor("Fredericksburg", "TX") == "lake_river"
+    # Broken Bow is STS-covered but deliberately excluded from the priority set.
+    assert not is_priority_market("Broken Bow", "OK")
+
+
+def test_priority_market_outranks_plain_mountain(profile):
+    # Same deal economics; only the market differs. An Avery target market
+    # (Waynesville NC) must score above Broken Bow (plain mountain).
+    base = broken_bow_str()
+    broken_bow = score_deal(dict(base), profile)
+    waynesville = score_deal(dict(base, city="Waynesville", state="NC"), profile)
+    pri = profile["buy_boxes"]["str"]["priority_market_bonus"]
+    mtn = profile["buy_boxes"]["str"]["mountain_priority_bonus"]
+    assert waynesville["priority_note"] and "Short Term Shop" in waynesville["priority_note"]
+    assert broken_bow["priority_note"] and "MOUNTAIN" in broken_bow["priority_note"]
+    assert waynesville["score"] == pytest.approx(broken_bow["score"] + (pri - mtn), abs=0.2)
+
+
 def test_gmail_link_builder():
     from pipeline.ingest_gmail import gmail_link
     assert gmail_link("<abc@mail.beehiiv.com>", None) == \
