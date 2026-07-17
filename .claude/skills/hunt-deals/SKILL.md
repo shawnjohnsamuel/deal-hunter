@@ -74,11 +74,31 @@ never math you do in your head.
    python3 -c "from pipeline.processed import mark_processed; mark_processed('<MSG_ID>', note='<subject>')"
    ```
 
-7. **Publish.** Commit `data/deals.db`, `data/processed_emails.json`,
+7. **Label in Gmail** (interactive mode only — the read-only cron token can't
+   write labels; that would need a `gmail.modify` scope upgrade). Two-tier scheme,
+   label-only (never archive / never mark read):
+   - Load the connector label tools:
+     `ToolSearch "select:mcp__<gmail-uuid>__list_labels,mcp__<gmail-uuid>__create_label,mcp__<gmail-uuid>__label_thread"`.
+   - `list_labels`; if `Deal Hunter/Scored` or `Deal Hunter/Surfaced` are missing,
+     `create_label` them (the nested name auto-creates the `Deal Hunter` parent).
+     Cache both label IDs (the label tools take IDs, not display names).
+   - Apply **`Deal Hunter/Scored`** (`label_thread`, by ID) to **every thread
+     fetched this run** — deal and non-deal alike, mirroring the registry.
+   - Apply **`Deal Hunter/Surfaced`** additionally to the surfaced subset:
+     ```bash
+     python3 -c "from pipeline.processed import surfaced_message_ids; print(sorted(surfaced_message_ids()))"
+     ```
+     intersect that with this run's fetched IDs (it reads the whole db, so only
+     label the ones you fetched now). Labeling is idempotent — re-applying is a
+     no-op — and the registry already blocks re-processing, so no extra state.
+   - The first `create_label`/`label_thread` call may prompt for mailbox-write
+     permission; that's expected.
+
+8. **Publish.** Commit `data/deals.db`, `data/processed_emails.json`,
    `site/deals.json` and push — the dashboard redeploys automatically on push.
    Pull --rebase first; if `site/deals.json` conflicts, keep the newest export.
 
-8. **Report** in the framework's output contract: counts, then the summary
+9. **Report** in the framework's output contract: counts, then the summary
    lines ranked by score (the runner prints them), duplicates and kills noted,
    judgment calls surfaced explicitly. Full Deal Cards only on request.
 
