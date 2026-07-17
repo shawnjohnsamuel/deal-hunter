@@ -3,7 +3,7 @@ tax-flag triggers, composite 0-100 score, and the PASS/BORDERLINE/FAIL verdict.
 
 All thresholds come from the profile — nothing is hardcoded to generic benchmarks.
 """
-from .markets import classify_market, is_dfw, is_priority_market, market_flavor
+from .markets import classify_market, is_dfw, market_flavor, priority_market_info
 from .pillars import check_divergence, grade_pillars, pillar_composite
 from .underwrite import underwrite
 
@@ -228,20 +228,25 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
         composite = round(min(100.0, composite + profile["pillars"]["exception_factor_bonus"]), 1)
 
     # Priority bumps so the right STR outranks equivalent deals. Two tiers:
-    # Shawn's Short Term Shop target markets (Avery Carl) win first; a generic
-    # mountain market wins next. Broken Bow is STS-covered but excluded from the
-    # priority set, so it only ever gets the smaller mountain bump.
+    # a priority-region market (established mountain destination, metro-fed,
+    # STR friendly, within the drive-time cap of home) wins first; a generic
+    # mountain market wins next. Regions beyond the cap (Branson, TX Hill
+    # Country) and Broken Bow fall through to the smaller mountain bump.
     state = deal.get("state", "")
     flavor = deal["market_flavor"] = market_flavor(deal.get("city", ""), state)
     priority_note = None
     if tier == "str" and not disqualifiers:
         str_box = profile["buy_boxes"]["str"]
-        if is_priority_market(deal.get("city", ""), state):
+        info = priority_market_info(deal.get("city", ""), state)
+        in_drive_range = info and info["drive_hours"] <= str_box.get("max_drive_hours", 14)
+        if info and info["flavor"] == "mountain" and in_drive_range:
             bonus = str_box.get("priority_market_bonus", 0)
             if bonus:
                 composite = round(min(100.0, composite + bonus), 1)
-                priority_note = (f"The Short Term Shop target market — Shawn's "
-                                 f"priority STR universe (+{bonus:g} composite)")
+                priority_note = (
+                    f"PRIORITY market — {info['region']} ({info['state']}): established "
+                    f"mountain destination ~{info['drive_hours']:g}h from home, fed by "
+                    f"{info['metros']} (+{bonus:g} composite)")
         elif flavor == "mountain":
             bonus = str_box.get("mountain_priority_bonus", 0)
             if bonus:

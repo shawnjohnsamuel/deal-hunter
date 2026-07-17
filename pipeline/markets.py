@@ -7,10 +7,10 @@ flagged as a human judgment call — the pipeline never decides edge cases.
 Two layers:
   * The flavor sets below (MOUNTAIN/BEACH/LAKE_RIVER) are matched on city name
     ALONE — cheap and good enough for markets with distinctive names.
-  * PRIORITY_MARKETS (The Short Term Shop / Avery Carl coverage — Shawn's
-    preferred STR universe) is matched on (city, STATE) so common names like
-    Franklin TN, Madison WI, or Canton OH can't be mistaken for the mountain
-    town of the same name and handed a priority bonus they don't deserve.
+  * PRIORITY_REGIONS — Shawn's buy box (adapted from Avery Carl's): established
+    mountain destinations, fed by major metros, STR friendly, within a drive-
+    time cap of home base (NYC metro). Matched on (city, STATE); each region
+    carries an approximate drive time so the cap is data, not a hardcoded list.
 """
 
 # Destination markets by flavor. Mountain markets are the STR Tier 1 priority
@@ -47,44 +47,125 @@ LAKE_RIVER_MARKETS = {
 DESTINATION_MARKETS = MOUNTAIN_MARKETS | BEACH_MARKETS | LAKE_RIVER_MARKETS
 
 # ---------------------------------------------------------------------------
-# The Short Term Shop target markets (Avery Carl) — Shawn's priority STR
-# universe. State-qualified {(city, state): flavor} so same-named metros don't
-# collide (Franklin TN, Madison WI, Canton OH...). These outrank generic
-# mountain markets in scoring via the str priority_market_bonus.
+# Priority STR markets — Shawn's adaptation of Avery Carl's (The Short Term
+# Shop) buy box, re-centered on his home base (NYC metro). Criteria:
+#   1. established mountain vacation destination
+#   2. drivable from major metros (feeder metros noted per region)
+#   3. STR friendly (towns with hostile STR ordinances are excluded — e.g.
+#      Woodstock and Saugerties NY; Asheville proper)
+# plus a hard preference for the first buy: within ~14 hours' drive of home
+# (max_drive_hours in the profile's str buy box). Regions beyond the cap stay
+# listed for reference — they classify as destinations but earn no bonus.
 #
-# NOTE: Broken Bow, OK is STS-covered but DELIBERATELY excluded here — Shawn
-# does not want it prioritized. It stays a plain MOUNTAIN market (normal +5),
-# so Avery's other mountain destinations rank above it.
+# State-qualified {(city, state): region-record} because the list makes name
+# collisions routine: Franklin TN vs NC, Wilmington VT vs NY, Woodstock
+# NH/VT/NY, Stratton ME/VT, Jackson NH, Oakland MD, Madison NH/VA/WI...
+#
+# NOTE: Broken Bow, OK is STS-covered but DELIBERATELY excluded — Shawn does
+# not want it prioritized (and at ~22h it's far beyond the drive cap anyway).
+# It stays a plain MOUNTAIN market (normal +5).
 # ---------------------------------------------------------------------------
-def _priority_region(flavor: str, state: str, *cities: str) -> dict:
-    return {(c, state): flavor for c in cities}
+
+def _region(name: str, flavor: str, state: str, drive_hours: float,
+            metros: str, *cities: str) -> list[dict]:
+    return [{"region": name, "flavor": flavor, "state": state,
+             "drive_hours": drive_hours, "metros": metros, "city": c}
+            for c in cities]
 
 
-PRIORITY_MARKETS: dict[tuple[str, str], str] = {
-    # Blue Ridge, GA
-    **_priority_region("mountain", "GA", "blue ridge", "mccaysville", "morganton",
-                       "ellijay", "mineral bluff", "east ellijay", "cherry log"),
-    # Branson, MO (Ozarks / Table Rock Lake — kept mountain, matching Branson)
-    **_priority_region("mountain", "MO", "branson", "branson west", "hollister",
-                       "kimberling city", "lampe", "ridgedale", "shell knob"),
-    # High Country, NC
-    **_priority_region("mountain", "NC", "banner elk", "beech mountain", "blowing rock",
-                       "boone", "deep gap", "linville", "newland", "seven devils",
-                       "sugar grove", "sugar mountain", "todd", "west jefferson"),
-    # North Carolina Smoky Mountains
-    **_priority_region("mountain", "NC", "black mountain", "brevard", "bryson city",
-                       "candler", "canton", "cashiers", "clyde", "franklin",
-                       "hendersonville", "maggie valley", "waynesville", "weaverville",
-                       "whittier", "woodfin"),
-    # Shenandoah, VA
-    **_priority_region("mountain", "VA", "basye", "front royal", "luray", "madison",
-                       "mount jackson", "mcgaheysville", "shenandoah", "stanardsville",
-                       "stanley"),
-    # Smoky Mountains, TN
-    **_priority_region("mountain", "TN", "gatlinburg", "sevierville", "pigeon forge",
-                       "wears valley", "townsend", "pittman center", "cosby"),
-    # Texas Hill Country
-    **_priority_region("lake_river", "TX", "canyon lake", "fredericksburg", "wimberley"),
+PRIORITY_REGIONS: list[dict] = [
+    # --- Northeast: the close-in band (drive_hours ≈ from home base) ---
+    *_region("Poconos", "mountain", "PA", 2.5, "NYC/Philly",
+             "pocono summit", "pocono lake", "pocono pines", "mount pocono",
+             "tobyhanna", "tannersville", "scotrun", "swiftwater", "henryville",
+             "canadensis", "cresco", "mountainhome", "long pond", "blakeslee",
+             "albrightsville", "lake harmony", "white haven", "jim thorpe",
+             "east stroudsburg", "stroudsburg", "bushkill", "dingmans ferry",
+             "milford", "hawley", "lakeville", "tafton", "paupack", "greentown",
+             "newfoundland", "gouldsboro", "thornhurst", "lackawaxen", "freeland"),
+    *_region("Catskills", "mountain", "NY", 3, "NYC",
+             # Woodstock + Saugerties excluded: restrictive STR laws.
+             "windham", "hunter", "tannersville", "jewett", "lexington",
+             "prattsville", "east durham", "round top", "cairo", "palenville",
+             "catskill", "phoenicia", "shandaken", "big indian", "pine hill",
+             "fleischmanns", "margaretville", "roxbury", "andes",
+             "livingston manor", "roscoe", "callicoon", "narrowsburg",
+             "jeffersonville", "bethel", "white lake", "kerhonkson", "accord",
+             "greenville", "grahamsville"),
+    *_region("Adirondacks", "mountain", "NY", 5, "NYC/Boston/Montreal",
+             # Lake Placid / North Elba caps unhosted STR permits — check per deal.
+             "lake george", "bolton landing", "warrensburg", "chestertown",
+             "schroon lake", "north creek", "indian lake", "long lake", "inlet",
+             "old forge", "speculator", "lake placid", "saranac lake",
+             "tupper lake", "wilmington", "keene", "keene valley"),
+    *_region("Berkshires", "mountain", "MA", 3, "NYC/Boston",
+             "great barrington", "lenox", "stockbridge", "lee", "becket",
+             "otis", "adams", "north adams", "williamstown", "hancock"),
+    *_region("Southern Vermont", "mountain", "VT", 4.5, "NYC/Boston",
+             # Mount Snow / Stratton / Bromley / Okemo / Killington
+             "west dover", "dover", "wilmington", "jamaica", "stratton",
+             "winhall", "bondville", "londonderry", "peru", "manchester",
+             "ludlow", "proctorsville", "cavendish", "mount holly", "plymouth",
+             "bridgewater", "woodstock", "killington", "mendon", "chittenden",
+             "pittsfield"),
+    *_region("Northern Vermont", "mountain", "VT", 6.5, "NYC/Boston/Montreal",
+             # Stowe / Smugglers' Notch / Mad River Valley / Burke / Jay Peak
+             "stowe", "morrisville", "waterbury", "jeffersonville", "cambridge",
+             "waitsfield", "warren", "fayston", "east burke", "burke",
+             "lyndonville", "jay", "montgomery"),
+    *_region("White Mountains", "mountain", "NH", 6.5, "Boston/NYC",
+             "north conway", "conway", "bartlett", "glen", "jackson",
+             "intervale", "bretton woods", "carroll", "twin mountain",
+             "jefferson", "whitefield", "littleton", "bethlehem", "franconia",
+             "sugar hill", "lincoln", "north woodstock", "woodstock",
+             "thornton", "campton", "waterville valley", "gorham"),
+    *_region("Maine Mountains", "mountain", "ME", 7.5, "Boston/Portland",
+             # Sunday River / Sugarloaf / Rangeley
+             "bethel", "newry", "carrabassett valley", "kingfield", "stratton",
+             "eustis", "rangeley"),
+    *_region("Deep Creek Lake", "mountain", "MD", 6, "DC/Baltimore/Pittsburgh",
+             "mchenry", "oakland", "swanton", "friendsville", "accident"),
+    *_region("Laurel Highlands", "mountain", "PA", 6, "Pittsburgh/DC",
+             "seven springs", "champion", "hidden valley", "farmington",
+             "ohiopyle"),
+    *_region("Berkeley Springs / Lost River", "mountain", "WV", 5.5, "DC/Baltimore",
+             "berkeley springs", "great cacapon", "lost river", "wardensville",
+             "mathias"),
+    *_region("Canaan Valley / Snowshoe", "mountain", "WV", 8, "DC/Baltimore",
+             "davis", "thomas", "canaan valley", "cabins", "snowshoe",
+             "slatyfork"),
+    *_region("Shenandoah", "mountain", "VA", 6, "DC/Richmond",
+             "basye", "front royal", "luray", "madison", "mount jackson",
+             "mcgaheysville", "massanutten", "elkton", "shenandoah",
+             "stanardsville", "stanley"),
+    *_region("Wintergreen", "mountain", "VA", 7, "DC/Richmond",
+             "wintergreen", "nellysford", "afton", "roseland"),
+    # --- Avery Carl / STS southern mountain coverage, still in drive range ---
+    *_region("High Country", "mountain", "NC", 11, "Charlotte/Atlanta/DC",
+             "banner elk", "beech mountain", "blowing rock", "boone",
+             "deep gap", "linville", "newland", "seven devils", "sugar grove",
+             "sugar mountain", "todd", "west jefferson"),
+    *_region("NC Smokies", "mountain", "NC", 11.5, "Charlotte/Atlanta",
+             # Asheville proper excluded — city bans most new unhosted STRs.
+             "black mountain", "brevard", "bryson city", "candler", "canton",
+             "cashiers", "clyde", "franklin", "hendersonville", "maggie valley",
+             "waynesville", "weaverville", "whittier", "woodfin"),
+    *_region("Smoky Mountains", "mountain", "TN", 12, "Atlanta/Nashville/Charlotte",
+             "gatlinburg", "sevierville", "pigeon forge", "wears valley",
+             "townsend", "pittman center", "cosby"),
+    *_region("Blue Ridge", "mountain", "GA", 13.5, "Atlanta",
+             "blue ridge", "mccaysville", "morganton", "ellijay",
+             "mineral bluff", "east ellijay", "cherry log"),
+    # --- STS coverage beyond the drive cap: reference only, no bonus ---
+    *_region("Branson", "mountain", "MO", 18.5, "Kansas City/St. Louis/Dallas",
+             "branson", "branson west", "hollister", "kimberling city",
+             "lampe", "ridgedale", "shell knob"),
+    *_region("Texas Hill Country", "lake_river", "TX", 26, "Austin/San Antonio",
+             "canyon lake", "fredericksburg", "wimberley"),
+]
+
+PRIORITY_MARKETS: dict[tuple[str, str], dict] = {
+    (r["city"], r["state"]): r for r in PRIORITY_REGIONS
 }
 
 DFW_METRO = {
@@ -112,12 +193,17 @@ def _norm(s: str) -> str:
     return (s or "").strip().lower()
 
 
-def is_priority_market(city: str, state: str = None) -> bool:
-    """True when (city, state) is in Shawn's Short Term Shop target universe.
-    Requires state — the priority set is intentionally state-qualified."""
+def priority_market_info(city: str, state: str = None) -> dict | None:
+    """Region record (region, flavor, drive_hours, metros) for (city, state)
+    in the priority universe, else None. Requires state — the priority set is
+    intentionally state-qualified."""
     if not state:
-        return False
-    return (_norm(city), state.strip().upper()) in PRIORITY_MARKETS
+        return None
+    return PRIORITY_MARKETS.get((_norm(city), state.strip().upper()))
+
+
+def is_priority_market(city: str, state: str = None) -> bool:
+    return priority_market_info(city, state) is not None
 
 
 def classify_market(city: str, state: str = None) -> str:
@@ -134,8 +220,9 @@ def classify_market(city: str, state: str = None) -> str:
 
 def market_flavor(city: str, state: str = None) -> str | None:
     """'mountain' | 'beach' | 'lake_river' for known destination markets."""
-    if state and (flavor := PRIORITY_MARKETS.get((_norm(city), state.strip().upper()))):
-        return flavor
+    info = priority_market_info(city, state)
+    if info:
+        return info["flavor"]
     c = _norm(city)
     if c in MOUNTAIN_MARKETS:
         return "mountain"
