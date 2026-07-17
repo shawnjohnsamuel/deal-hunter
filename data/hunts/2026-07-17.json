@@ -1,0 +1,443 @@
+[
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83d\udcb0 <$199k: Fresh Airbnb Investment Finds Under $199k \u2014 #1062",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f67dc057f5e616",
+  "address": "610 S Shore Rd",
+  "city": "Speculator",
+  "state": "NY",
+  "zip": "12108",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1000,
+  "price": 199000,
+  "tier": "str",
+  "claimed": {
+   "adr": 191,
+   "occupancy": 0.55,
+   "annual_str_revenue": 38343
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Mid-renovation SFR with two-family building permit in motion; Adirondack lake country",
+  "neighborhood_notes": "Speculator NY, Adirondacks",
+  "notes": "Newsletter gross yield 19.3%; duplex-conversion upside.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/610-S-Shore-Rd-Speculator-NY-12108/98712390_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83d\udcb0 <$199k: Fresh Airbnb Investment Finds Under $199k \u2014 #1062",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f67dc057f5e616",
+  "address": "2425 Cora Ln",
+  "city": "Prescott",
+  "state": "MI",
+  "zip": "48756",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 1,
+  "baths": 1,
+  "sqft": 480,
+  "price": 74900,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 94,
+   "occupancy": 0.52,
+   "annual_str_revenue": 17841
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Furnished cabin on two lots, walk to Elbow Lake beach; fresh paint/vinyl",
+  "neighborhood_notes": "Prescott MI, Elbow Lake (fishing/snowmobiling)",
+  "notes": "Newsletter gross yield 23.8%; ultra-low entry.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/2425-Cora-Ln-Prescott-MI-48756/229425360_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83d\udcb0 <$199k: Fresh Airbnb Investment Finds Under $199k \u2014 #1062",
+  "email_date": "2026-07-15",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f67dc057f5e616",
+  "address": "801 Red Schoolhouse Rd",
+  "city": "Lyndonville",
+  "state": "VT",
+  "zip": "05851",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 1,
+  "baths": 1,
+  "sqft": 384,
+  "price": 175000,
+  "tier": "str",
+  "claimed": {
+   "adr": 167,
+   "occupancy": 0.5,
+   "annual_str_revenue": 30478
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Off-grid 2014 cabin on 47.79 acres; metal roof, wood stove, loft; direct VAST/VASA trail access",
+  "neighborhood_notes": "Lyndonville VT, Northeast Kingdom (hunting/snowmobiling)",
+  "notes": "Newsletter gross yield 17.4%; off-grid, 0 listed baths.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/801-Red-Schoolhouse-Rd-Lyndonville-VT-05851/463594383_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1063",
+  "email_date": "2026-07-16",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6d2b67a5535a4",
+  "address": "143 White Pine Dr",
+  "city": "Pocono Lake",
+  "state": "PA",
+  "zip": "18347",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 3,
+  "baths": 1,
+  "sqft": 1407,
+  "price": 279500,
+  "tier": "str",
+  "claimed": {
+   "adr": 247,
+   "occupancy": 0.71,
+   "annual_str_revenue": 64000
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Two combined lots in Locust Lake Village; live-edge island, 4-season hot tub room, Andersen windows",
+  "neighborhood_notes": "Pocono Lake PA, Locust Lake Village (3 lakes, ski hill, HOA amenities)",
+  "notes": "Newsletter gross yield 22.9%. NOTE: newsletter #1063 had garbled headers (labeled 'Big Bear City CA'); address taken from the Zillow link + description.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/143-White-Pine-Dr-Pocono-Lake-PA-18347/54767887_zpid/"
+  ]
+ },
+ {
+  "source": "here@mail.beehiiv.com",
+  "source_name": "Here (beehiiv)",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1063",
+  "email_date": "2026-07-16",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6d2b67a5535a4",
+  "address": "201 Meadow Ln",
+  "city": "Lost River",
+  "state": "WV",
+  "zip": "26810",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 4,
+  "baths": 3,
+  "sqft": 1900,
+  "price": 615000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 416,
+   "occupancy": 0.6,
+   "annual_str_revenue": 91020
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Turnkey, vaulted ceilings, stone fireplace, spa bath; near Lost River SP / Potomac Highlands",
+  "neighborhood_notes": "Lost River WV (2hr from DC)",
+  "notes": "Newsletter gross yield 14.8% \u2014 over the down-payment budget. (Header/link duplicated in a garbled #1063 issue.)",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/201-Meadow-Ln-Lost-River-WV-26810/22511975_zpid/"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 16: 15 Potential STRs",
+  "email_date": "2026-07-16",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6c43e8dc4aea7",
+  "address": "277 Nc #2401",
+  "city": "Jasper",
+  "state": "AR",
+  "zip": "72641",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 250000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 222,
+   "occupancy": 0.57,
+   "annual_str_revenue": 46206
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Furnished cabin on 6.29 secluded acres; established rental ops, mountain views",
+  "neighborhood_notes": "Jasper AR, Ozarks / Buffalo National River",
+  "notes": "Newsletter CoC 26.4%.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/277-nc-2401-jasper-ar-72641"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 16: 15 Potential STRs",
+  "email_date": "2026-07-16",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6c43e8dc4aea7",
+  "address": "2375 Lower Lake Rd",
+  "city": "Seneca Falls",
+  "state": "NY",
+  "zip": "13148",
+  "property_type": "SFR",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "price": 550000,
+  "tier": "str",
+  "claimed": {
+   "adr": 317,
+   "occupancy": 0.69,
+   "annual_str_revenue": 79836
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Renovated waterfront; two balconies, new dock, three-level egress; sleeps 6",
+  "neighborhood_notes": "Seneca Falls NY, Finger Lakes",
+  "notes": "Newsletter CoC 17.0%.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/2375-lower-lake-rd-seneca-falls-ny-13148"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 16: 15 Potential STRs",
+  "email_date": "2026-07-16",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6c43e8dc4aea7",
+  "address": "4620 Teague Branch Rd",
+  "city": "Hartford",
+  "state": "TN",
+  "zip": "37753",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 4,
+  "baths": 2,
+  "price": 525000,
+  "tier": "str",
+  "claimed": {
+   "adr": 241,
+   "occupancy": 0.69,
+   "annual_str_revenue": 60681
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Custom cabin on 18 private acres; secluded, mountain surroundings",
+  "neighborhood_notes": "Hartford TN, Smokies (rafting hub near Gatlinburg) \u2014 destination status a judgment call",
+  "notes": "Newsletter CoC 9.9%.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/4620-Teague-Branch-Rd-Hartford-TN-37753/40964250_zpid/"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "July 16: 15 Potential STRs",
+  "email_date": "2026-07-16",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6c43e8dc4aea7",
+  "address": "132 Bass Loop",
+  "city": "Broken Bow",
+  "state": "OK",
+  "zip": "74728",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 5,
+  "baths": 3,
+  "price": 789000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 398,
+   "occupancy": 0.66,
+   "annual_str_revenue": 95880
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "5BR large-group cabin; game room, hot tub, mini golf, playground; room for pool",
+  "notes": "Newsletter CoC 10.6% \u2014 over the down-payment budget (Broken Bow Tier-1 market).",
+  "listing_urls": [
+   "https://www.theoffersheet.app/properties/132-bass-loop-broken-bow-ok-74728"
+  ]
+ },
+ {
+  "source": "team@bnbflow.co",
+  "source_name": "BNB Flow",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Southwest STR Scoop | July 16, 2026",
+  "email_date": "2026-07-16",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6d672a111c7dc",
+  "address": "184 Mangrove Rd",
+  "city": "Broken Bow",
+  "state": "OK",
+  "zip": "74728",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1280,
+  "price": 450000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 254,
+   "occupancy": 0.53,
+   "annual_str_revenue": 49300
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Turnkey on 1.57 acres, no HOA, game room; established STR history",
+  "neighborhood_notes": "Broken Bow OK, Beavers Bend / Broken Bow Lake (Tier-1 mountain market)",
+  "notes": "BnB gross yield 10.96%.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/184-Mangrove-Rd-Broken-Bow-OK-74728/446775719_zpid/"
+  ]
+ },
+ {
+  "source": "team@bnbflow.co",
+  "source_name": "BNB Flow",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83c\udfd5\ufe0f Southwest STR Scoop | July 16, 2026",
+  "email_date": "2026-07-16",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6d672a111c7dc",
+  "address": "288 Split Shot Cir",
+  "city": "Broken Bow",
+  "state": "OK",
+  "zip": "74728",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 1,
+  "baths": 1,
+  "sqft": 600,
+  "price": 299500,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "adr": 231,
+   "occupancy": 0.6,
+   "annual_str_revenue": 50600
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Turnkey 1BR on 1 acre near Beaver's Bend; transferable bookings",
+  "neighborhood_notes": "Broken Bow OK (Tier-1 mountain market)",
+  "notes": "BnB gross yield 16.89% \u2014 cheap Broken Bow entry.",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/288-Split-Shot-Cir-Broken-Bow-OK-74728/308237014_zpid/"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83d\udcb0 Just $125K for a Turnkey Airbnb Generating Up to $2,500/Month",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6f99b2f34b58f",
+  "address": "2127 S Sneed Ave",
+  "city": "Tyler",
+  "state": "TX",
+  "zip": "75701",
+  "property_type": "cottage",
+  "units": 1,
+  "beds": 1,
+  "baths": 1,
+  "sqft": 637,
+  "price": 125000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "annual_str_revenue": 24600
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "Updated cottage, active Airbnb, detached shop, gas fireplace",
+  "neighborhood_notes": "Tyler TX, near medical district (traveling-nurse/business STR) \u2014 non-destination metro, judgment call",
+  "notes": "Spotlight: gross income $1,600-2,500/mo stated; used $2,050 midpoint ($24,600/yr). Ultra-low $125K entry.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/contact/2127-s-sneed-ave-tyler-tx-75701"
+  ]
+ },
+ {
+  "source": "theoffersheet@mail.beehiiv.com",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_paywall",
+  "email_subject": "\ud83d\udcb0 $120K+ Annual Revenue on a $535K Purchase Price? This Turnkey Pocono STR Delivers",
+  "email_date": "2026-07-16",
+  "email_link": "https://mail.google.com/mail/u/0/#all/19f6ceef7df81d48",
+  "address": "5145 Hummingbird Dr",
+  "city": "Pocono Summit",
+  "state": "PA",
+  "zip": "18346",
+  "property_type": "cabin",
+  "units": 1,
+  "beds": 4,
+  "baths": 2,
+  "sqft": 1859,
+  "price": 535000,
+  "furnished": true,
+  "tier": "str",
+  "claimed": {
+   "annual_str_revenue": 120000
+  },
+  "enriched": {
+   "interest_rate": 0.0735,
+   "data_notes": "live investment-property rate ~7.1-7.6% (Jul 2026); midpoint used"
+  },
+  "condition_notes": "3 finished levels, hot tub, seasonal lake views, custom game room; ACTUAL $120K+ first-year gross (not projected)",
+  "neighborhood_notes": "Pocono Summit PA, Poconos lake community",
+  "notes": "Spotlight: real (not projected) $120K+ first-year revenue at $535K = ~22% yield. Turnkey.",
+  "listing_urls": [
+   "https://www.theoffersheet.app/contact/5145-hummingbird-dr-pocono-summit-pa-18346-9797846"
+  ]
+ }
+]

@@ -21,6 +21,7 @@ MOUNTAIN_MARKETS = {
     "pagosa springs", "red river", "angel fire", "cloudcroft", "ruidoso",
     "cle elum", "wolf creek", "candler", "tijeras", "kila", "great cacapon",
     "suches", "seven devils", "stanton", "rockbridge", "travelers rest",
+    "speculator", "lyndonville", "pocono lake", "pocono summit", "lost river", "jasper",
 }
 
 BEACH_MARKETS = {
@@ -32,7 +33,7 @@ BEACH_MARKETS = {
 
 LAKE_RIVER_MARKETS = {
     "fredericksburg", "new braunfels", "canyon lake", "wimberley", "granbury",
-    "possum kingdom lake", "concan", "mammoth spring", "sulphur",
+    "possum kingdom lake", "concan", "mammoth spring", "sulphur", "seneca falls",
 }
 
 DESTINATION_MARKETS = MOUNTAIN_MARKETS | BEACH_MARKETS | LAKE_RIVER_MARKETS
