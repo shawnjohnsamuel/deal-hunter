@@ -131,6 +131,22 @@
   }
   .callout span { color: var(--ink-2); }
 
+  /* Verdict banner atop the expanded detail — Claude Design tweak
+     (deal-detail.html: verdictTreatment "banner"). Bleeds to the cell edges. */
+  .vbanner {
+    display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    margin: -18px -18px 16px; padding: 14px 18px; color: #1a1a10;
+  }
+  .vbanner .vword { font-weight: 800; font-size: 20px; letter-spacing: -0.01em; }
+  .vbanner .vaddr { font-weight: 700; font-size: 16px; }
+  .vbanner .vmeta { opacity: 0.72; }
+  .vbanner .vscore { margin-left: auto; font-weight: 800; font-size: 24px;
+    font-variant-numeric: tabular-nums; }
+  .vb-PASS       { background: color-mix(in srgb, var(--good) 88%, var(--surface)); }
+  .vb-BORDERLINE { background: color-mix(in srgb, var(--warning) 88%, var(--surface)); }
+  .vb-FAIL       { background: color-mix(in srgb, var(--serious) 88%, var(--surface)); }
+  .vb-KILLED     { background: color-mix(in srgb, var(--muted) 88%, var(--surface)); }
+
   /* Four-pillar grade chips (Victor methodology). Letter always shown —
      color never carries meaning alone. Dashed ring = estimated grade. */
   .pillars-cell { white-space: nowrap; }
@@ -287,6 +303,12 @@ function sourceCell(d) {
 
 function detailHTML(d) {
   let h = '<div class="detail">';
+  const v = d.verdict || "KILLED";
+  h += `<div class="vbanner vb-${v}"><span class="vword">${v}</span>
+    <span class="vaddr">${d.address || "(unidentified teaser)"}</span>
+    <span class="vmeta">${[[d.city, d.state].filter(Boolean).join(", "), TIER[d.tier] || d.tier]
+      .filter(Boolean).join(" · ")}</span>
+    <span class="vscore">${d.score == null ? "—" : Math.round(d.score)}</span></div>`;
   if (d.photo_url)
     h += `<img class="detail-photo" src="${d.photo_url}" alt="Listing photo of ${d.address || "property"}"
                loading="lazy" onerror="this.remove()">`;
