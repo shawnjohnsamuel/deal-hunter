@@ -1,0 +1,1402 @@
+[
+ {
+  "address": "509 Dukeway",
+  "city": "Universal City",
+  "state": "TX",
+  "zip": "78148",
+  "price": 450000,
+  "property_type": "fourplex",
+  "units": 4,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "7 High-Cash-Flow Deals $299K+",
+  "email_date": "2026-07-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8a0b21bfe196f",
+  "notes": "3 tenants in place, 1 vacant; sep meters; near Randolph AFB; 2005; comps support $4,400",
+  "claimed": {
+   "monthly_rent": 4290
+  }
+ },
+ {
+  "address": "1601 Meadowview Dr",
+  "city": "Port Lavaca",
+  "state": "TX",
+  "zip": "77979",
+  "price": 374900,
+  "property_type": "fourplex",
+  "units": 4,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "7 High-Cash-Flow Deals $299K+",
+  "email_date": "2026-07-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8a0b21bfe196f",
+  "notes": "fully occupied 4x2; $94K/door; 1981",
+  "claimed": {
+   "monthly_rent": 5000
+  }
+ },
+ {
+  "address": "409 S Bauer Dr",
+  "city": "Port Lavaca",
+  "state": "TX",
+  "zip": "77979",
+  "price": 374900,
+  "property_type": "fourplex",
+  "units": 4,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "7 High-Cash-Flow Deals $299K+",
+  "email_date": "2026-07-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8a0b21bfe196f",
+  "notes": "3 in place, 1 vacant; brick; 1981",
+  "claimed": {
+   "monthly_rent": 4200
+  }
+ },
+ {
+  "address": "7011 Donovan Way",
+  "city": "San Antonio",
+  "state": "TX",
+  "zip": "78244",
+  "price": 350000,
+  "property_type": "duplex",
+  "units": 2,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "7 High-Cash-Flow Deals $299K+",
+  "email_date": "2026-07-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8a0b21bfe196f",
+  "notes": "both 3BR occupied; market $3,300; near Randolph AFB/Ft Sam; 2017",
+  "claimed": {
+   "monthly_rent": 3050
+  }
+ },
+ {
+  "address": "1503 E Virginia Ave",
+  "city": "Victoria",
+  "state": "TX",
+  "zip": "77901",
+  "price": 319900,
+  "property_type": "fourplex",
+  "units": 4,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "7 High-Cash-Flow Deals $299K+",
+  "email_date": "2026-07-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8a0b21bfe196f",
+  "notes": "3 of 4 in place $840-1000; tenants pay utils; 1952",
+  "claimed": {
+   "monthly_rent": 4000
+  }
+ },
+ {
+  "address": "10607 Crescent Peak Ct",
+  "city": "Rosharon",
+  "state": "TX",
+  "zip": "77583",
+  "price": 299000,
+  "property_type": "SFR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "7 High-Cash-Flow Deals $299K+",
+  "email_date": "2026-07-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8a0b21bfe196f",
+  "notes": "tenant to Dec-2026; 24mo free PM; 2023; Victor proj CF $524/mo @25% down (LIKELY DUP of prior hunt)",
+  "claimed": {
+   "monthly_rent": 2905
+  }
+ },
+ {
+  "address": "2804 Arlington St",
+  "city": "Houston",
+  "state": "TX",
+  "zip": "77008",
+  "price": 425000,
+  "property_type": "two-unit",
+  "units": 2,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Top 3 Texas Rentals From $325K",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7f9bb48ac245c",
+  "notes": "Heights inside the Loop; main house + guest house both leased; 1965",
+  "claimed": {
+   "monthly_rent": 3900,
+   "annual_tax": 8500,
+   "annual_insurance": 3230,
+   "mgmt_annual": 3276
+  },
+  "victor": {
+   "underwriting": {
+    "cap_rate": 0.0661,
+    "coc": 0.0297,
+    "cash_flow_monthly": 273
+   }
+  }
+ },
+ {
+  "address": "424 Casie Ct",
+  "city": "Denton",
+  "state": "TX",
+  "zip": "76209",
+  "price": 375000,
+  "property_type": "duplex",
+  "units": 2,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Top 3 Texas Rentals From $325K",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7f9bb48ac245c",
+  "notes": "two 3/2 units; one leased; UNT/TWU; 1997",
+  "claimed": {
+   "monthly_rent": 3300,
+   "annual_tax": 7500,
+   "annual_insurance": 2850,
+   "mgmt_annual": 2772
+  },
+  "victor": {
+   "underwriting": {
+    "cap_rate": 0.0619,
+    "coc": 0.0135,
+    "cash_flow_monthly": 109
+   }
+  }
+ },
+ {
+  "address": "1620 White Oak Ct",
+  "city": "Denton",
+  "state": "TX",
+  "zip": "76209",
+  "price": 325000,
+  "property_type": "STR SFR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "email_subject": "Top 3 Texas Rentals From $325K",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7f9bb48ac245c",
+  "notes": "furnished STR; seller cohost preserves Superhost; $8,289 bookings convey; 4BR; near UNT; 1976",
+  "claimed": {
+   "adr": 244.6,
+   "occupancy": 0.65,
+   "annual_str_revenue": 58031,
+   "annual_tax": 6500,
+   "annual_insurance": 2470,
+   "cleaning_monthly": 650,
+   "lodging_tax_pct": 0.04
+  },
+  "victor": {
+   "underwriting": {
+    "cap_rate": 0.0763,
+    "coc": 0.0662,
+    "cash_flow_monthly": 485
+   }
+  }
+ },
+ {
+  "address": "414 W Harlan Ave",
+  "city": "San Antonio",
+  "state": "TX",
+  "zip": "78214",
+  "price": 925000,
+  "property_type": "sixplex",
+  "units": 6,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Top 5 Texas Multifamily $340K",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f711611c39e6bb",
+  "notes": "4 occupied,1 make-ready,1 ready; seller financing negotiable; 2002",
+  "claimed": {
+   "monthly_rent": 9000,
+   "annual_tax": 18500,
+   "annual_insurance": 7030,
+   "mgmt_annual": 7560
+  },
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cap_rate": 0.0707,
+    "coc": 0.0473,
+    "cash_flow_monthly": 948
+   }
+  }
+ },
+ {
+  "address": "2105 W Walnut St",
+  "city": "Garland",
+  "state": "TX",
+  "zip": "75042",
+  "price": 549900,
+  "property_type": "fourplex",
+  "units": 4,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Top 5 Texas Multifamily $340K",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f711611c39e6bb",
+  "notes": "fully occupied; $4,745 in place, $5,600 proj; 1984",
+  "claimed": {
+   "monthly_rent": 5600,
+   "annual_tax": 10998,
+   "annual_insurance": 4179,
+   "mgmt_annual": 4704
+  },
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cap_rate": 0.0746,
+    "coc": 0.0625,
+    "cash_flow_monthly": 745
+   }
+  }
+ },
+ {
+  "address": "5406 Pershing St",
+  "city": "Houston",
+  "state": "TX",
+  "zip": "77033",
+  "price": 525000,
+  "property_type": "duplex",
+  "units": 2,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Top 5 Texas Multifamily $340K",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f711611c39e6bb",
+  "notes": "new construction 2026; delivered leased; neighbor under contract $545K; tenants pay utils",
+  "claimed": {
+   "monthly_rent": 5200,
+   "annual_tax": 10500,
+   "annual_insurance": 3990,
+   "mgmt_annual": 4368
+  },
+  "victor": {
+   "grades": {
+    "asset_quality": "A",
+    "neighborhood": "B"
+   },
+   "underwriting": {
+    "cap_rate": 0.0717,
+    "coc": 0.0513,
+    "cash_flow_monthly": 584
+   }
+  }
+ },
+ {
+  "address": "5631 Golf Mist",
+  "city": "San Antonio",
+  "state": "TX",
+  "zip": "78244",
+  "price": 340000,
+  "property_type": "duplex",
+  "units": 2,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Top 5 Texas Multifamily $340K",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f711611c39e6bb",
+  "notes": "fully leased, PM'd; $3,300 upside; roof 2022, HVAC 2025; 2008; ask $350K land $340K",
+  "claimed": {
+   "monthly_rent": 3100
+  },
+  "victor": {
+   "grades": {
+    "asset_quality": "B",
+    "neighborhood": "B"
+   }
+  }
+ },
+ {
+  "address": "3150 Smoky Ridge Way",
+  "city": "Sevierville",
+  "state": "TN",
+  "zip": "37862",
+  "price": 469900,
+  "beds": 2,
+  "baths": 2,
+  "sqft": 1218,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$70K Smoky Mtn cabin",
+  "email_date": "2026-07-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8a8b24ed52f40",
+  "notes": "2025 actual $70K; arcade loft; resort amenities; mins from Pigeon Forge",
+  "claimed": {
+   "annual_str_revenue": 70000
+  }
+ },
+ {
+  "address": "21506 Dolphin Ave",
+  "city": "Panama City Beach",
+  "state": "FL",
+  "zip": "32413",
+  "price": 575000,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1528,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$72K beach house w/ pool",
+  "email_date": "2026-07-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f897482fe7fc29",
+  "notes": "2025 $72K; proj $80K 2026; private screened pool; new roof",
+  "claimed": {
+   "annual_str_revenue": 72000
+  }
+ },
+ {
+  "address": "3777 Hilltop Dr",
+  "city": "Twentynine Palms",
+  "state": "CA",
+  "zip": "92277",
+  "price": 340000,
+  "beds": 2,
+  "baths": 1,
+  "sqft": 834,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$52K desert retreat",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8694ffbf5f509",
+  "notes": "2025 $52K ($29K Jan-Jun); hot tub; near Joshua Tree NP",
+  "claimed": {
+   "annual_str_revenue": 52000
+  }
+ },
+ {
+  "address": "40 Long Leaf Cir",
+  "city": "Santa Rosa Beach",
+  "state": "FL",
+  "zip": "32459",
+  "price": 445000,
+  "beds": 2,
+  "baths": 1,
+  "sqft": 868,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$48K two cottages 30A",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8439436f9818c",
+  "notes": "two cottages $29K+$19K; no HOA; zoned STR; mins to 30A",
+  "claimed": {
+   "annual_str_revenue": 48000
+  }
+ },
+ {
+  "address": "511 Dune Crest Drive",
+  "city": "Westport",
+  "state": "WA",
+  "zip": "98595",
+  "price": 499900,
+  "beds": 4,
+  "baths": 3,
+  "sqft": 3374,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$75K Pacific oceanfront",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f817bbf56a5162",
+  "notes": "oceanfront; hot tub; 3374sqft; also in July20 daily",
+  "claimed": {
+   "annual_str_revenue": 75000,
+   "adr": 344,
+   "occupancy": 0.65
+  }
+ },
+ {
+  "address": "5352 Oakbourne Ave",
+  "city": "Davenport",
+  "state": "FL",
+  "zip": "33837",
+  "price": 565000,
+  "beds": 5,
+  "baths": 5,
+  "sqft": 2723,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$102-110K Solterra Disney",
+  "email_date": "2026-07-19",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7a4ddc35feeb7",
+  "notes": "4 straight yrs $102-110K; Solterra Resort; themed bedrooms; sleeps large groups",
+  "claimed": {
+   "annual_str_revenue": 106000
+  }
+ },
+ {
+  "address": "2850 Bookmark Dr",
+  "city": "Kissimmee",
+  "state": "FL",
+  "zip": "34746",
+  "price": 820000,
+  "beds": 6,
+  "baths": 6,
+  "sqft": null,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$100K Disney-area",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7f158e95680f1",
+  "notes": "Storey Lake Resort; 6BR/6BA; game room; over budget",
+  "claimed": {
+   "annual_str_revenue": 100000
+  }
+ },
+ {
+  "address": "6051 Tennyson St",
+  "city": "Arvada",
+  "state": "CO",
+  "zip": "80003",
+  "price": 700000,
+  "beds": 4,
+  "baths": null,
+  "sqft": null,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "Denver pickleball STR",
+  "email_date": "2026-07-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f777726828ca5f",
+  "notes": "off-market; sleeps 13; indoor hot tub; pickleball court; $110K potential; over budget",
+  "claimed": {
+   "annual_str_revenue": 110000
+  }
+ },
+ {
+  "address": "1023 11th Avenue South",
+  "city": "Nashville",
+  "state": "TN",
+  "zip": "37203",
+  "price": 1199000,
+  "beds": 4,
+  "baths": 4,
+  "sqft": null,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "Nashville $175K rooftop",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f70a8a0204a945",
+  "notes": "$175K rolling 12mo; skyline rooftop; $150K design; The Gulch; over budget",
+  "claimed": {
+   "annual_str_revenue": 175000
+  }
+ },
+ {
+  "city": "San Diego",
+  "state": "CA",
+  "price": 3525000,
+  "property_type": "STR townhomes",
+  "units": 2,
+  "teaser": true,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "San Diego 10BR STR buyout",
+  "email_date": "2026-07-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f74da80a1e0d0b",
+  "notes": "two adjacent new-construction coastal townhomes; 10BR total; $278K trailing rev; way over budget",
+  "claimed": {
+   "annual_str_revenue": 278000
+  }
+ },
+ {
+  "address": "313 Monarch Way",
+  "city": "Pocono Lake",
+  "state": "PA",
+  "zip": "18347",
+  "price": 425000,
+  "beds": 3,
+  "baths": 1.5,
+  "sqft": 1351,
+  "property_type": "STR chalet",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$68K/Year Two Years Running Pocono STR",
+  "email_date": "2026-07-19",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7c0b97cef977b",
+  "notes": "Monarch Cottage; permitted STR; Locust Lake Village; 4.97star/147 reviews; Airbnb Top 5%; $68K 2yrs",
+  "claimed": {
+   "annual_str_revenue": 68000
+  }
+ },
+ {
+  "address": "497 Bear Ridge Rd",
+  "city": "Franklin",
+  "state": "NC",
+  "zip": "28734",
+  "price": 259000,
+  "beds": 2,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 21: 11 Potential STRs",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f85f3f3c081336",
+  "claimed": {
+   "adr": 254,
+   "occupancy": 0.6,
+   "monthly_gross_income": 4636
+  },
+  "notes": "OfferSheet projected CF $2,088/mo; projected CoC 38.7%"
+ },
+ {
+  "address": "355 Horizon Hill Rd",
+  "city": "Yachats",
+  "state": "OR",
+  "zip": "97498",
+  "price": 849000,
+  "beds": 4,
+  "baths": 4.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 21: 11 Potential STRs",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f85f3f3c081336",
+  "claimed": {
+   "adr": 444,
+   "occupancy": 0.58,
+   "monthly_gross_income": 7833
+  },
+  "notes": "OfferSheet projected CF $1,318/mo; projected CoC 7.5%"
+ },
+ {
+  "address": "459 Pioneer Rd",
+  "city": "Lake Arrowhead",
+  "state": "CA",
+  "zip": "92352",
+  "price": 789000,
+  "beds": 4,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 21: 11 Potential STRs",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f85f3f3c081336",
+  "claimed": {
+   "adr": 437,
+   "occupancy": 0.66,
+   "monthly_gross_income": 8773
+  },
+  "notes": "OfferSheet projected CF $2,584/mo; projected CoC 15.7%"
+ },
+ {
+  "address": "4523 Forest Vista Way",
+  "city": "Pigeon Forge",
+  "state": "TN",
+  "zip": "37863",
+  "price": 764900,
+  "beds": 4,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 21: 11 Potential STRs",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f85f3f3c081336",
+  "claimed": {
+   "adr": 440,
+   "occupancy": 0.7,
+   "monthly_gross_income": 9368
+  },
+  "notes": "OfferSheet projected CF $3,504/mo; projected CoC 22.0%"
+ },
+ {
+  "address": "11830 Us Highway 41",
+  "city": "Monteagle",
+  "state": "TN",
+  "zip": "37356",
+  "price": 600000,
+  "beds": 5,
+  "baths": 7.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 20: 12 Potential STRs",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f80df490f11657",
+  "claimed": {
+   "adr": 555,
+   "occupancy": 0.65,
+   "monthly_gross_income": 10973
+  },
+  "notes": "OfferSheet projected CF $5,818/mo; projected CoC 46.5%"
+ },
+ {
+  "address": "151 Hatchet Trl",
+  "city": "Cherry Log",
+  "state": "GA",
+  "zip": "30522",
+  "price": 345900,
+  "beds": 2,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 20: 12 Potential STRs",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f80df490f11657",
+  "claimed": {
+   "adr": 316,
+   "occupancy": 0.6,
+   "monthly_gross_income": 5767
+  },
+  "notes": "OfferSheet projected CF $2,620/mo; projected CoC 36.4%"
+ },
+ {
+  "address": "673 Elijah Dr",
+  "city": "Libby",
+  "state": "MT",
+  "zip": "59923",
+  "price": 629000,
+  "beds": 5,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 20: 12 Potential STRs",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f80df490f11657",
+  "claimed": {
+   "adr": 397,
+   "occupancy": 0.68,
+   "monthly_gross_income": 8211
+  },
+  "notes": "OfferSheet projected CF $3,278/mo; projected CoC 25.0%"
+ },
+ {
+  "address": "12806 Hereford Rd",
+  "city": "Donnelly",
+  "state": "ID",
+  "zip": "83615",
+  "price": 499000,
+  "beds": 2,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 18: 12 Potential STRs",
+  "email_date": "2026-07-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7662d6e775d6b",
+  "claimed": {
+   "adr": 288,
+   "occupancy": 0.57,
+   "monthly_gross_income": 4993
+  },
+  "notes": "OfferSheet projected CF $1,174/mo; projected CoC 11.3%"
+ },
+ {
+  "address": "171 Jade Dr",
+  "city": "Clyde",
+  "state": "NC",
+  "zip": "28721",
+  "price": 525000,
+  "beds": 2,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 18: 12 Potential STRs",
+  "email_date": "2026-07-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7662d6e775d6b",
+  "claimed": {
+   "adr": 284,
+   "occupancy": 0.65,
+   "monthly_gross_income": 5615
+  },
+  "notes": "OfferSheet projected CF $1,562/mo; projected CoC 14.3%"
+ },
+ {
+  "address": "1682 Clark Road",
+  "city": "Bailey",
+  "state": "CO",
+  "zip": "80421",
+  "price": 515000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 18: 12 Potential STRs",
+  "email_date": "2026-07-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7662d6e775d6b",
+  "claimed": {
+   "adr": 362,
+   "occupancy": 0.67,
+   "monthly_gross_income": 7377
+  },
+  "notes": "OfferSheet projected CF $3,078/mo; projected CoC 28.7%"
+ },
+ {
+  "address": "5431 Storm Mountain Dr",
+  "city": "Drake",
+  "state": "CO",
+  "zip": "80515",
+  "price": 559000,
+  "beds": 2,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 18: 12 Potential STRs",
+  "email_date": "2026-07-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7662d6e775d6b",
+  "claimed": {
+   "adr": 296,
+   "occupancy": 0.57,
+   "monthly_gross_income": 5132
+  },
+  "notes": "OfferSheet projected CF $1,081/mo; projected CoC 9.3%"
+ },
+ {
+  "address": "18910 Ellis Ln",
+  "city": "Hillman",
+  "state": "MI",
+  "zip": "49746",
+  "price": 799000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 17: 14 Potential STRs",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f71cf3fde2b46d",
+  "claimed": {
+   "adr": 290,
+   "occupancy": 0.75,
+   "monthly_gross_income": 6616
+  },
+  "notes": "OfferSheet projected CF $857/mo; projected CoC 5.1%"
+ },
+ {
+  "address": "382 Sundown Trl",
+  "city": "Great Cacapon",
+  "state": "WV",
+  "zip": "25422",
+  "price": 365000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 17: 14 Potential STRs",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f71cf3fde2b46d",
+  "claimed": {
+   "adr": 342,
+   "occupancy": 0.55,
+   "monthly_gross_income": 5721
+  },
+  "notes": "OfferSheet projected CF $2,441/mo; projected CoC 32.1%"
+ },
+ {
+  "address": "325 Edith Ln",
+  "city": "Bryson City",
+  "state": "NC",
+  "zip": "28713",
+  "price": 639000,
+  "beds": 3,
+  "baths": 4.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 17: 14 Potential STRs",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f71cf3fde2b46d",
+  "claimed": {
+   "adr": 298,
+   "occupancy": 0.6,
+   "monthly_gross_income": 5439
+  },
+  "notes": "OfferSheet projected CF $804/mo; projected CoC 6.0%"
+ },
+ {
+  "address": "48308 River Park Drive",
+  "city": "Index",
+  "state": "WA",
+  "zip": "98256",
+  "price": 779000,
+  "beds": 1,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "July 17: 14 Potential STRs",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f71cf3fde2b46d",
+  "claimed": {
+   "adr": 346,
+   "occupancy": 0.7,
+   "monthly_gross_income": 7367
+  },
+  "notes": "OfferSheet projected CF $1,659/mo; projected CoC 10.2%"
+ },
+ {
+  "address": "13475 Chumstick Hwy",
+  "city": "Leavenworth",
+  "state": "WA",
+  "zip": "98826",
+  "price": 408800,
+  "beds": 2,
+  "baths": 1.0,
+  "sqft": 864,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1068 Forest gems",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f84ca66d535183",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/1-Morton-Hill-Rd-Stafford-OH-43786/463732772_zpid/"
+  ],
+  "claimed": {
+   "adr": 331,
+   "occupancy": 0.62
+  }
+ },
+ {
+  "address": "1 Morton Hill Rd",
+  "city": "Stafford",
+  "state": "OH",
+  "zip": "43786",
+  "price": 499900,
+  "beds": 3,
+  "baths": 1.0,
+  "sqft": 1350,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1068 Forest gems",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f84ca66d535183",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/26-Fern-Way-Orinda-CA-94563/18479716_zpid/"
+  ],
+  "claimed": {
+   "adr": 380,
+   "occupancy": 0.53
+  }
+ },
+ {
+  "address": "26 Fern Way",
+  "city": "Orinda",
+  "state": "CA",
+  "zip": "94563",
+  "price": 1395000,
+  "beds": 4,
+  "baths": 2.0,
+  "sqft": 1844,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1068 Forest gems",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f84ca66d535183",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 707,
+   "occupancy": 0.67
+  }
+ },
+ {
+  "address": "23171 Corbina Dr W Lot 34",
+  "city": "Rodanthe",
+  "state": "NC",
+  "zip": "27968",
+  "price": 529000,
+  "beds": 3,
+  "baths": 2.0,
+  "sqft": 1116,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1067 coastal",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8161f0ad702df",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/22-Ocean-Marsh-Ln-Saint-Helena-Island-SC-29920/68774627_zpid/"
+  ],
+  "claimed": {
+   "adr": 392,
+   "occupancy": 0.58
+  }
+ },
+ {
+  "address": "22 Ocean Marsh Ln",
+  "city": "Saint Helena Island",
+  "state": "SC",
+  "zip": "29920",
+  "price": 599000,
+  "beds": 3,
+  "baths": 3.0,
+  "sqft": 1337,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1067 coastal",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8161f0ad702df",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/2601-SW-Anemone-Ave-Lincoln-City-OR-97367/251136833_zpid/"
+  ],
+  "claimed": {
+   "adr": 374,
+   "occupancy": 0.65
+  }
+ },
+ {
+  "address": "2601 SW Anemone Ave",
+  "city": "Lincoln City",
+  "state": "OR",
+  "zip": "97367",
+  "price": 729000,
+  "beds": 3,
+  "baths": 3.0,
+  "sqft": 1874,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1067 coastal",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8161f0ad702df",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 424,
+   "occupancy": 0.64
+  }
+ },
+ {
+  "address": "50510 Calle Cebrino",
+  "city": "Coachella",
+  "state": "CA",
+  "zip": "92236",
+  "price": 1099000,
+  "beds": 7,
+  "baths": 4.0,
+  "sqft": 2824,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1066 desert",
+  "email_date": "2026-07-19",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7c718e45caad4",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/1036-Red-Oaks-Loop-NE-Albuquerque-NM-87122/6814470_zpid/"
+  ],
+  "claimed": {
+   "adr": 706,
+   "occupancy": 0.67
+  }
+ },
+ {
+  "address": "1036 Red Oaks Loop NE",
+  "city": "Albuquerque",
+  "state": "NM",
+  "zip": "87122",
+  "price": 775000,
+  "beds": 4,
+  "baths": 3.0,
+  "sqft": 2916,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1066 desert",
+  "email_date": "2026-07-19",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7c718e45caad4",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/4223-Camelback-Rd-NW-Albuquerque-NM-87114/54578749_zpid/"
+  ],
+  "claimed": {
+   "adr": 486,
+   "occupancy": 0.62
+  }
+ },
+ {
+  "address": "4223 Camelback Rd NW",
+  "city": "Albuquerque",
+  "state": "NM",
+  "zip": "87114",
+  "price": 449000,
+  "beds": 4,
+  "baths": 3.0,
+  "sqft": 2392,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1066 desert",
+  "email_date": "2026-07-19",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7c718e45caad4",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 338,
+   "occupancy": 0.63
+  }
+ },
+ {
+  "address": "1833 Marais St",
+  "city": "New Orleans",
+  "state": "LA",
+  "zip": "70116",
+  "price": 500000,
+  "beds": 6,
+  "baths": 4.0,
+  "sqft": 2600,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1064 city",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7225db2e22f7e",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/2834-Bedford-Ave-Pittsburgh-PA-15219/11260475_zpid/"
+  ],
+  "claimed": {
+   "adr": 322,
+   "occupancy": 0.72
+  }
+ },
+ {
+  "address": "2834 Bedford Ave",
+  "city": "Pittsburgh",
+  "state": "PA",
+  "zip": "15219",
+  "price": 375000,
+  "beds": 6,
+  "baths": 4.0,
+  "sqft": 2603,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1064 city",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7225db2e22f7e",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/674-Jett-St-NW-Atlanta-GA-30318/35833240_zpid/"
+  ],
+  "claimed": {
+   "adr": 270,
+   "occupancy": 0.65
+  }
+ },
+ {
+  "address": "674 Jett St NW",
+  "city": "Atlanta",
+  "state": "GA",
+  "zip": "30318",
+  "price": 360000,
+  "beds": 3,
+  "baths": 2.0,
+  "sqft": 1256,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "#1064 city",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f7225db2e22f7e",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 259,
+   "occupancy": 0.7
+  }
+ },
+ {
+  "address": "952 Iron Mountain Rd",
+  "city": "Pigeon Forge",
+  "state": "TN",
+  "zip": "37863",
+  "price": 669900,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "BnB Southeast TN/FL",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8628a0ebed29d",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/952-Iron-Mountain-Rd-Pigeon-Forge-TN-37863/81461657_zpid/?"
+  ],
+  "claimed": {
+   "adr": 312,
+   "occupancy": 0.76,
+   "annual_str_revenue": 86700
+  }
+ },
+ {
+  "address": "903 Heiden Ct",
+  "city": "Gatlinburg",
+  "state": "TN",
+  "zip": "37738",
+  "price": 407500,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "BnB Southeast TN/FL",
+  "email_date": "2026-07-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f8628a0ebed29d",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/903-Heiden-Ct-Gatlinburg-TN-37738/42513911_zpid/"
+  ],
+  "claimed": {
+   "adr": 267,
+   "occupancy": 0.61,
+   "annual_str_revenue": 59500
+  }
+ },
+ {
+  "address": "167 Valley View Dr",
+  "city": "Albrightsville",
+  "state": "PA",
+  "zip": "18210",
+  "price": 499900,
+  "beds": 4,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "BnB Northeast PA",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f81022cb768ded",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/167-Valley-View-Dr-Albrightsville-PA-18210/9844476_zpid/?"
+  ],
+  "claimed": {
+   "adr": 438,
+   "occupancy": 0.52,
+   "annual_str_revenue": 83200
+  }
+ },
+ {
+  "address": "9129 Brandywine Dr",
+  "city": "Tobyhanna",
+  "state": "PA",
+  "zip": "18466",
+  "price": 450000,
+  "beds": 5,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "BnB Northeast PA",
+  "email_date": "2026-07-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f81022cb768ded",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/9129-Brandywine-Dr-Tobyhanna-PA-18466/9802479_zpid/?"
+  ],
+  "claimed": {
+   "adr": 316,
+   "occupancy": 0.47,
+   "annual_str_revenue": 54400
+  }
+ },
+ {
+  "address": "3166 Muriettas Roost",
+  "city": "Dorrington",
+  "state": "CA",
+  "zip": "95223",
+  "price": 390000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "BnB West Coast",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f71a9a3f0382d1",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/3166-Muriettas-Roost-Dorrington-CA-95223/52443993_zpid/"
+  ],
+  "claimed": {
+   "adr": 252,
+   "occupancy": 0.54,
+   "annual_str_revenue": 49900
+  }
+ },
+ {
+  "address": "192 Maricopa Trail",
+  "city": "Hartsel",
+  "state": "CO",
+  "zip": "80449",
+  "price": 372000,
+  "beds": 2,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "BnB West Coast",
+  "email_date": "2026-07-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19f71a9a3f0382d1",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/192-Maricopa-Trl-Hartsel-CO-80449/13987652_zpid/?"
+  ],
+  "claimed": {
+   "adr": 206,
+   "occupancy": 0.52,
+   "annual_str_revenue": 39100
+  }
+ }
+]
