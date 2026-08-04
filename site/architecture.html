@@ -48,6 +48,16 @@
   ul { color: var(--ink-2); padding-left: 22px; }
   li { margin: 5px 0; }
   .callout { border-left: 3px solid var(--accent); padding: 4px 0 4px 14px; margin: 14px 0; }
+  .note {
+    background: color-mix(in srgb, var(--accent) 7%, transparent);
+    border-left: 3px solid var(--accent); border-radius: 8px;
+    padding: 12px 16px; margin: 16px 0; font-size: 14.5px;
+  }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em;
+    background: color-mix(in srgb, var(--ink) 7%, transparent);
+    padding: 1px 5px; border-radius: 5px;
+  }
 </style>
 </head>
 <body>
@@ -56,15 +66,26 @@
   <p><a href="index.html">← back to the dashboard</a> ·
      <a href="https://github.com/shawnjohnsamuel/deal-hunter">source on GitHub ↗</a></p>
 
-  <p>Every morning a GitHub Action reads the day's deal-flow emails, extracts candidate
-  properties, enriches the survivors with public data, underwrites them against a
-  personalized buy box, and publishes the verdicts here. No servers, no paid data —
-  the whole system is a cron job, a Python package, and a static page.</p>
+  <p>A hunt reads the deal-flow inbox, extracts candidate properties, enriches the
+  survivors with public data, underwrites them against a personalized buy box, and
+  publishes the verdicts here. No servers, no paid data — the whole system is a Python
+  package, a committed SQLite file, and a static page.</p>
+
+  <p class="note"><b>How it runs today:</b> hunts are driven interactively from a Claude
+  Code session using the Gmail connector — no API key, no stored mail credentials. The
+  same <code>pipeline/</code> code does every deterministic step. A GitHub Actions
+  workflow is committed and runs the test suite plus the dashboard redeploy on every
+  push; its daily <code>schedule:</code> trigger is deliberately commented out until the
+  API-key and OAuth secrets are provisioned, so the automated path is one uncommented
+  block away rather than a claim this page can't back up.</p>
 
   <h2>The pipeline</h2>
   <div class="stage"><span class="n">1</span><div><b>Ingest</b>
-    <p>Gmail API with a read-only OAuth scope pulls the last 48 hours from five deal-flow
-    senders (an agent covering all deal types + four STR-focused newsletters).</p></div></div>
+    <p>A dedicated inbox receives only deal flow from five senders (an agent covering all
+    deal types + four STR-focused newsletters), read through the Gmail connector
+    interactively or a read-only OAuth scope under cron. A processed-email registry keyed
+    by message ID makes ingestion idempotent, so re-running a hunt never double-counts a
+    property.</p></div></div>
   <div class="arrow">↓</div>
   <div class="stage"><span class="n">2</span><div><b>Extract</b>
     <p>Claude parses messy newsletter HTML into structured candidates: address, price,
@@ -81,18 +102,38 @@
     own optimistic math. Most emailed deals die here, for free.</p></div></div>
   <div class="arrow">↓ survivors only</div>
   <div class="stage"><span class="n">5</span><div><b>Enrich</b>
-    <p>RentCast free tier (tax records, rent estimates, valuations), STR revenue estimates
-    via web search, county appraisal-district tax records, live investment mortgage rates,
-    and a short-term-rental ordinance check that is <i>never</i> auto-cleared.</p></div></div>
+    <p>Redfin (via OpenWebNinja) is the primary structured source — real tax bills, HOA,
+    listing status, Redfin estimate, and the listing photo shown on each card — plus
+    RentCast for rent estimates and valuations, STR revenue estimates via web search,
+    county appraisal-district records, live investment mortgage rates, and a
+    short-term-rental ordinance check that is <i>never</i> auto-cleared. Enrichment runs
+    on kill-filter survivors only, so a 100-call/month free tier covers a whole month of
+    deal flow.</p></div></div>
+  <div class="arrow">↓ paywalled teasers only</div>
+  <div class="stage"><span class="n">5b</span><div><b>Identify</b>
+    <p>Three of the newsletters tease their headline deal without an address. A
+    deterministic Redfin search matches the stated market on price (±1.5%) and exact
+    beds/baths — one survivor means high confidence, two means ambiguous and is recorded
+    as such. Every derived address carries its evidence and is marked research-derived
+    until a human verifies it.</p></div></div>
   <div class="arrow">↓</div>
   <div class="stage"><span class="n">6</span><div><b>Score</b>
     <p>Pure, unit-tested Python: cap rate, cash-on-cash, DSCR, GRM, break-even occupancy →
-    three tier-specific buy boxes → hard disqualifiers → tax-strategy triggers →
-    PASS / BORDERLINE / FAIL plus a 0–100 composite score.</p></div></div>
+    three tier-specific buy boxes → four-pillar grading → hard disqualifiers →
+    tax-strategy triggers → PASS / BORDERLINE / FAIL plus a 0–100 composite score.</p>
+    <p>Geography is part of the underwriting, not a filter bolted on after. Priority
+    markets — established mountain destinations that are metro-fed, short-term-rental
+    friendly, and inside a drive-time cap of home — carry a composite bonus, so an equally
+    profitable deal in a reachable market outranks one that isn't. Each region stores its
+    own drive time, which makes the cap a number in a config file rather than a hand-kept
+    list of towns.</p></div></div>
   <div class="arrow">↓</div>
   <div class="stage"><span class="n">7</span><div><b>Publish</b>
-    <p>A ranked digest lands as a GitHub issue (full deal cards for the top 3), the
-    database is committed, and this dashboard redeploys.</p></div></div>
+    <p>Processed mail is labelled in Gmail — <code>Deal Hunter/Scored</code> on everything
+    triaged, <code>Deal Hunter/Surfaced</code> on the emails that actually produced a
+    PASS or BORDERLINE — so the inbox mirrors the database. Nothing is archived or marked
+    read. The database is committed (git history <i>is</i> the audit trail), a ranked
+    digest can post as a GitHub issue, and this dashboard redeploys.</p></div></div>
 
   <h2>Design decisions</h2>
   <ul>
@@ -122,14 +163,18 @@
   <div class="tablewrap"><table>
     <thead><tr><th>Layer</th><th>Choice</th><th>Why</th></tr></thead>
     <tbody>
-      <tr><td>Orchestration</td><td>GitHub Actions cron</td>
-          <td>Free, runs without any laptop, and the automation is itself public and reviewable</td></tr>
-      <tr><td>Email</td><td>Gmail API, read-only OAuth</td>
-          <td>The token can read mail, never send or delete</td></tr>
-      <tr><td>Parsing &amp; research</td><td>Claude API + web search</td>
-          <td>Structured extraction from messy HTML; live data where no API exists</td></tr>
-      <tr><td>Property data</td><td>RentCast + Rabbu free tiers, county CAD</td>
-          <td>$0/month v1, with a documented upgrade path (AirDNA, paid tiers)</td></tr>
+      <tr><td>Orchestration</td><td>Claude Code session today; GitHub Actions committed</td>
+          <td>Interactive mode needs no API key or stored mail credentials; the workflow
+              runs tests + redeploy on push, with the daily cron one uncomment away</td></tr>
+      <tr><td>Email</td><td>Gmail connector (interactive) / read-only OAuth (cron)</td>
+          <td>Read and label only — never send, archive, or delete</td></tr>
+      <tr><td>Parsing &amp; research</td><td>Claude + web search, with deterministic parsers
+          for the recurring newsletter formats</td>
+          <td>Once a source's layout is known, a tested regex parser is cheaper and more
+              reproducible than an LLM call; the model handles the messy long tail</td></tr>
+      <tr><td>Property data</td><td>Redfin via OpenWebNinja, RentCast, county CAD</td>
+          <td>$0/month on free tiers, spent only on kill-filter survivors; documented
+              upgrade path (AirDNA, paid tiers)</td></tr>
       <tr><td>Storage</td><td>SQLite committed to the repo</td>
           <td>Zero infrastructure; the database has a git history</td></tr>
       <tr><td>Frontend</td><td>This page — vanilla HTML/JS on GitHub Pages</td>
