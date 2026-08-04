@@ -1,10 +1,37 @@
 """End-to-end engine tests: kill filter, tier classification, scoring, verdicts."""
+import json
+import math
+from pathlib import Path
+
 import pytest
 
 from pipeline.dedupe import deal_key, normalize_address
 from pipeline.kill_filter import run_kill_filter
 from pipeline.profile import load_profile
 from pipeline.score import classify_tier, score_deal
+
+
+def _reject_nonfinite(tok):
+    raise ValueError(f"non-finite JSON constant: {tok}")
+
+
+def test_finite_sanitizes_non_finite_floats():
+    from pipeline.db import _finite
+    out = _finite({"a": float("inf"), "b": [float("-inf"), float("nan"), 3.0],
+                   "c": {"d": 1}, "e": "x"})
+    assert out == {"a": None, "b": [None, None, 3.0], "c": {"d": 1}, "e": "x"}
+
+
+def test_exported_deals_json_is_strict_json():
+    # Browsers' JSON.parse rejects Infinity/NaN; Python's json.load silently
+    # accepts them, so guard the committed export with a strict parse. A raw
+    # `float('inf')` in deals.json blanks the entire dashboard.
+    path = Path(__file__).resolve().parent.parent / "site" / "deals.json"
+    if not path.exists():
+        pytest.skip("no exported deals.json")
+    text = path.read_text()
+    assert "Infinity" not in text and "NaN" not in text
+    json.loads(text, parse_constant=_reject_nonfinite)  # raises if non-finite
 
 
 @pytest.fixture

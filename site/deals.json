@@ -5,7 +5,7 @@
   "pass": 15,
   "borderline": 6,
   "fail": 165,
-  "generated": "2026-08-04T02:11:26+00:00"
+  "generated": "2026-08-04T13:43:11+00:00"
  },
  "deals": [
   {
@@ -12737,7 +12737,7 @@
     "dscr": -0.8241523650218774,
     "annual_cash_flow": -41251.643683862705,
     "occupancy": 0.65,
-    "break_even_occupancy": Infinity,
+    "break_even_occupancy": null,
     "ltv": 0.85
    },
    "assumptions": {
@@ -13094,7 +13094,7 @@
     "dscr": -0.7645460750679787,
     "annual_cash_flow": -44814.92290649196,
     "occupancy": 0.65,
-    "break_even_occupancy": Infinity,
+    "break_even_occupancy": null,
     "ltv": 0.85
    },
    "assumptions": {
@@ -13790,7 +13790,7 @@
     "dscr": -0.6208420860413583,
     "annual_cash_flow": -58533.54791361459,
     "occupancy": 0.65,
-    "break_even_occupancy": Infinity,
+    "break_even_occupancy": null,
     "ltv": 0.85
    },
    "assumptions": {

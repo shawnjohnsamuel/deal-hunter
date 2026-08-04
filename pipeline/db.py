@@ -48,6 +48,22 @@ def _json_default(o):
     return str(o)
 
 
+def _finite(o):
+    """Recursively replace non-finite floats (inf/-inf/NaN) with None so the
+    export is strict JSON. Python's json writes inf as the literal `Infinity`,
+    which is valid Python but breaks the browser's JSON.parse — the dashboard
+    then fails silently and renders nothing. Underwriting can legitimately
+    yield inf (e.g. break-even occupancy when a deal has no STR revenue)."""
+    import math
+    if isinstance(o, float):
+        return o if math.isfinite(o) else None
+    if isinstance(o, dict):
+        return {k: _finite(v) for k, v in o.items()}
+    if isinstance(o, list):
+        return [_finite(v) for v in o]
+    return o
+
+
 def upsert(conn: sqlite3.Connection, key: str, deal: dict, *, status: str,
            verdict: str | None = None, score: float | None = None,
            kill_reasons: list | None = None, result: dict | None = None,
@@ -122,5 +138,8 @@ def export_site_json(conn: sqlite3.Connection, out_path: Path = SITE_JSON):
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
-        json.dump({"stats": stats, "deals": deals}, f, indent=1)
+        # allow_nan=False makes any surviving non-finite float a hard error
+        # rather than emitting browser-invalid `Infinity`/`NaN`.
+        json.dump(_finite({"stats": stats, "deals": deals}), f, indent=1,
+                  allow_nan=False)
     return stats
