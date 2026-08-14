@@ -1,0 +1,668 @@
+[
+ {
+  "address": "5406 Pershing St",
+  "city": "Houston",
+  "state": "TX",
+  "zip": "77033",
+  "price": 499000,
+  "property_type": "multifamily",
+  "units": 2,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Top 8 Discounted",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffb48cd543149f",
+  "notes": "RE-LISTED at $499K (was $525K); leased thru Jul/Aug 2027; neighbor sold $545K = $45K walk-in equity",
+  "claimed": {
+   "monthly_rent": 5200
+  }
+ },
+ {
+  "address": "101 S Bernice Dr",
+  "city": "Garland",
+  "state": "TX",
+  "zip": "75042",
+  "price": 389000,
+  "property_type": "PadSplit SFR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Top 8 Discounted",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffb48cd543149f",
+  "notes": "7-BR PadSplit; $4,500-5,000/mo historical; 6 of 7 rooms rented; well above 1% rule",
+  "claimed": {
+   "monthly_rent": 4750
+  }
+ },
+ {
+  "address": "1501 Benttree Dr",
+  "city": "Killeen",
+  "state": "TX",
+  "zip": "76543",
+  "price": 340000,
+  "property_type": "multifamily",
+  "units": 4,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Top 8 Discounted",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffb48cd543149f",
+  "notes": "fourplex at 1% rule; $85K/door; 2 of 4 vacant \u2014 FHA/VA house-hack angle; no HOA",
+  "claimed": {
+   "monthly_rent": 3500
+  }
+ },
+ {
+  "address": "208 Dakota Ridge Dr",
+  "city": "Fort Worth",
+  "state": "TX",
+  "zip": "76134",
+  "price": 289500,
+  "property_type": "SFR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Top 8 Discounted",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffb48cd543149f",
+  "notes": "5BR/4BA 3,209sqft; leased thru Aug 2027; near 1% rule; seller may take $280K",
+  "claimed": {
+   "monthly_rent": 2850
+  }
+ },
+ {
+  "address": "Sierra Vista portfolio",
+  "city": "Rosharon",
+  "state": "TX",
+  "zip": "77583",
+  "price": 1850000,
+  "property_type": "multifamily",
+  "units": 6,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "5 TX Rentals 1% Rule",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff673e12abfbcf",
+  "notes": "6 newer A-grade SFRs sold together; fully occupied; 24mo free PM; Brazoria +12.6% since 2020",
+  "claimed": {
+   "monthly_rent": 17490
+  }
+ },
+ {
+  "address": "620 Race St",
+  "city": "Crowley",
+  "state": "TX",
+  "zip": "76036",
+  "price": 425000,
+  "property_type": "multifamily",
+  "units": 4,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "5 TX Rentals 1% Rule",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff673e12abfbcf",
+  "notes": "3 of 4 occupied below market ($1,200-1,400 mkt); roof/windows/HVAC done; Crowley +16% since 2020",
+  "claimed": {
+   "monthly_rent": 3185
+  }
+ },
+ {
+  "address": "855 Sullivant Ave",
+  "city": "Columbus",
+  "state": "OH",
+  "zip": "43223",
+  "price": 379900,
+  "beds": 4,
+  "baths": 3,
+  "sqft": 1914,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$77.7K run-rate on $379,900",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffadd1351efefe",
+  "notes": "licensed Airbnb; $77,700 ANNUALIZED RUN-RATE from trailing 30 days at 58% occ (not a full year); renovated; $26.5K furnishings incl",
+  "claimed": {
+   "annual_str_revenue": 77700,
+   "occupancy": 0.58
+  }
+ },
+ {
+  "address": "8829 N Lagoon Dr",
+  "city": "Panama City Beach",
+  "state": "FL",
+  "zip": "32408",
+  "price": 1120000,
+  "beds": 4,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$170K 2025 waterfront",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff8cb351166f28",
+  "notes": "'Poseidon's Palace'; $152K 2024 + $170K 2025 = $322K over 2 yrs; private dock; heated pool; over budget",
+  "claimed": {
+   "annual_str_revenue": 170000
+  }
+ },
+ {
+  "address": "423 Old Trail Dr",
+  "city": "Houghton Lake",
+  "state": "MI",
+  "zip": "48629",
+  "price": 569000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 13: 12 Potential STRs",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffbf6867217ebe",
+  "notes": "",
+  "claimed": {
+   "adr": 335,
+   "occupancy": 0.59
+  }
+ },
+ {
+  "address": "350 Quail Ridge Dr",
+  "city": "Maggie Valley",
+  "state": "NC",
+  "zip": "28751",
+  "price": 595000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 13: 12 Potential STRs",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffbf6867217ebe",
+  "notes": "",
+  "claimed": {
+   "adr": 295,
+   "occupancy": 0.59
+  }
+ },
+ {
+  "address": "6014 S Black Oak Lake Rd",
+  "city": "Land O Lakes",
+  "state": "WI",
+  "zip": "54540",
+  "price": 625000,
+  "beds": 2,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 13: 12 Potential STRs",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffbf6867217ebe",
+  "notes": "",
+  "claimed": {
+   "adr": 287,
+   "occupancy": 0.65
+  }
+ },
+ {
+  "address": "414 Goodwin Road",
+  "city": "Eliot",
+  "state": "ME",
+  "zip": "03903",
+  "price": 695000,
+  "beds": 6,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 13: 12 Potential STRs",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffbf6867217ebe",
+  "notes": "",
+  "claimed": {
+   "adr": 471,
+   "occupancy": 0.67
+  }
+ },
+ {
+  "address": "193 Riverview Road",
+  "city": "Boone",
+  "state": "NC",
+  "zip": "28607",
+  "price": 750000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 12: 12 Potential STRs",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff72f19bcaee99",
+  "notes": "",
+  "claimed": {
+   "adr": 349,
+   "occupancy": 0.63
+  }
+ },
+ {
+  "address": "8 Day Lily Lane",
+  "city": "Bar Harbor",
+  "state": "ME",
+  "zip": "04609",
+  "price": 449000,
+  "beds": 2,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 12: 12 Potential STRs",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff72f19bcaee99",
+  "notes": "",
+  "claimed": {
+   "adr": 342,
+   "occupancy": 0.72
+  }
+ },
+ {
+  "address": "291 Edgewater Forest Rd",
+  "city": "Corbin",
+  "state": "KY",
+  "zip": "40701",
+  "price": 280000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 12: 12 Potential STRs",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff72f19bcaee99",
+  "notes": "",
+  "claimed": {
+   "adr": 263,
+   "occupancy": 0.72
+  }
+ },
+ {
+  "address": "2560 May",
+  "city": "Galway",
+  "state": "NY",
+  "zip": "12086",
+  "price": 799000,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 12: 12 Potential STRs",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff72f19bcaee99",
+  "notes": "",
+  "claimed": {
+   "adr": 426,
+   "occupancy": 0.73
+  }
+ },
+ {
+  "address": "75742 NE 123rd St",
+  "city": "Skykomish",
+  "state": "WA",
+  "zip": "98288",
+  "price": 749950,
+  "beds": 4,
+  "baths": 2.5,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1091",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd406c632fa49",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/214-Paradise-Dr-Ashford-WA-98304/61021069_zpid/"
+  ],
+  "claimed": {
+   "adr": 385,
+   "occupancy": 0.66
+  }
+ },
+ {
+  "address": "214 Paradise Dr",
+  "city": "Ashford",
+  "state": "WA",
+  "zip": "98304",
+  "price": 449000,
+  "beds": 2,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1091",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd406c632fa49",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/44-Debbie-Ct-Coldspring-TX-77331/87530953_zpid/"
+  ],
+  "claimed": {
+   "adr": 255,
+   "occupancy": 0.61
+  }
+ },
+ {
+  "address": "44 Debbie Ct",
+  "city": "Coldspring",
+  "state": "TX",
+  "zip": "77331",
+  "price": 249900,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1091",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd406c632fa49",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 195,
+   "occupancy": 0.55
+  }
+ },
+ {
+  "address": "33790 Annapolis Rd",
+  "city": "Annapolis",
+  "state": "CA",
+  "zip": "95412",
+  "price": 425000,
+  "beds": 1,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1098",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd3227c422b32",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/7055-County-Road-105-Hesperus-CO-81326/2067876641_zpid/"
+  ],
+  "claimed": {
+   "adr": 225,
+   "occupancy": 0.64
+  }
+ },
+ {
+  "address": "7055 County Road 105",
+  "city": "Hesperus",
+  "state": "CO",
+  "zip": "81326",
+  "price": 599000,
+  "beds": 2,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1098",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd3227c422b32",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/24735-SE-Summit-Landsburg-Rd-Ravensdale-WA-98051/48816896_zpid/"
+  ],
+  "claimed": {
+   "adr": 280,
+   "occupancy": 0.72
+  }
+ },
+ {
+  "address": "24735 SE Summit Landsburg Rd",
+  "city": "Ravensdale",
+  "state": "WA",
+  "zip": "98051",
+  "price": 899000,
+  "beds": 4,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1098",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd3227c422b32",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 450,
+   "occupancy": 0.72
+  }
+ },
+ {
+  "address": "4351 Meriwether Rd",
+  "city": "Twentynine Palms",
+  "state": "CA",
+  "zip": "92277",
+  "price": 199000,
+  "beds": 2,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83d\udcb0 <$199k: Fresh Airbnb Investment Finds Under $199k \u2014 #1090",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff7ebea6bc1601",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/171-Schimke-Rd-Bear-Valley-CA-95223/18210899_zpid/"
+  ],
+  "claimed": {
+   "adr": 175,
+   "occupancy": 0.58
+  }
+ },
+ {
+  "address": "171 Schimke Rd",
+  "city": "Bear Valley",
+  "state": "CA",
+  "zip": "95223",
+  "price": 155000,
+  "beds": 4,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83d\udcb0 <$199k: Fresh Airbnb Investment Finds Under $199k \u2014 #1090",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff7ebea6bc1601",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/300-Huff-Afton-OK-74331/299727013_zpid/"
+  ],
+  "claimed": {
+   "adr": 175,
+   "occupancy": 0.52
+  }
+ },
+ {
+  "address": "300 Huff",
+  "city": "Afton",
+  "state": "OK",
+  "zip": "74331",
+  "price": 85000,
+  "beds": 1,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83d\udcb0 <$199k: Fresh Airbnb Investment Finds Under $199k \u2014 #1090",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff7ebea6bc1601",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 90,
+   "occupancy": 0.5
+  }
+ },
+ {
+  "address": "15231 N 20TH Place",
+  "city": "Phoenix",
+  "state": "AZ",
+  "zip": "85022",
+  "price": 589000,
+  "beds": 4,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Southwest STR Scoop: Thursday\u2019s Top Investment Picks | August 13, 2026",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffcf20ef9d8c30",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/15231-N-20th-Pl-Phoenix-AZ-85022/8010778_zpid/?"
+  ],
+  "claimed": {
+   "adr": 282,
+   "occupancy": 0.68,
+   "annual_str_revenue": 70200
+  }
+ },
+ {
+  "address": "3615 McBroom St",
+  "city": "Dallas",
+  "state": "TX",
+  "zip": "75212",
+  "price": 469990,
+  "beds": 5,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Southwest STR Scoop: Thursday\u2019s Top Investment Picks | August 13, 2026",
+  "email_date": "2026-08-13",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffcf20ef9d8c30",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/3615-McBroom-St-Dallas-TX-75212/26835057_zpid/?"
+  ],
+  "claimed": {
+   "adr": 412,
+   "occupancy": 0.61,
+   "annual_str_revenue": 91900
+  }
+ },
+ {
+  "address": "5142 Waterbury Rd",
+  "city": "Mound",
+  "state": "MN",
+  "zip": "55364",
+  "price": 469888,
+  "beds": 5,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Midwest Market Gems: Midweek STR Opportunities | August 12, 2026",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff7624b84c415a",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/5142-Waterbury-Rd-Mound-MN-55364/1932184_zpid/"
+  ],
+  "claimed": {
+   "adr": 294,
+   "occupancy": 0.56,
+   "annual_str_revenue": 60300
+  }
+ },
+ {
+  "address": "163 N Scott Dr",
+  "city": "Farwell",
+  "state": "MI",
+  "zip": "48622",
+  "price": 429900,
+  "beds": 5,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Midwest Market Gems: Midweek STR Opportunities | August 12, 2026",
+  "email_date": "2026-08-12",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff7624b84c415a",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/163-N-Scott-Dr-Farwell-MI-48622/225506853_zpid/"
+  ],
+  "claimed": {
+   "adr": 254,
+   "occupancy": 0.54,
+   "annual_str_revenue": 50300
+  }
+ }
+]

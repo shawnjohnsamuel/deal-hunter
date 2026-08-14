@@ -1,13 +1,91 @@
 {
  "stats": {
-  "total": 364,
-  "killed": 120,
-  "pass": 23,
+  "total": 392,
+  "killed": 127,
+  "pass": 26,
   "borderline": 7,
-  "fail": 214,
-  "generated": "2026-08-12T18:46:02+00:00"
+  "fail": 232,
+  "generated": "2026-08-14T02:30:11+00:00"
  },
  "deals": [
+  {
+   "key": "06ed41322c887660",
+   "address": "101 S Bernice Dr",
+   "city": "Garland",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "non_destination",
+   "price": 389000.0,
+   "source": "victor",
+   "status": "scored",
+   "verdict": "PASS",
+   "score": 100.0,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 6.824561403508772,
+    "cap_rate": 0.09875835475578407,
+    "coc": 0.14464970378430353,
+    "one_pct_rule": 0.012210796915167094,
+    "gross_yield": 0.14652956298200515,
+    "dscr": 1.508016171354832,
+    "annual_cash_flow": 12941.808997581637,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "assumed: 4668 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.50% of value/yr",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$97,250-$116,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 101 S Bernice Dr\nMarket / City:    Garland, TX  (market type: non_destination)\nProperty Type:    PadSplit SFR   Units: 1\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     \u2014  [no data]  no vacancy data\n  Cash-Flow Margin A  [computed]  CoC 14.5% at/above target with DSCR 1.51\n\nPURCHASE\n  List Price: $389,000   Down: 20.0% ($77,800)\n  Loan: $311,200 @ 7.2% / 30yr   LTV: 80.0%\n  Closing (est): $11,670   Total Cash Needed: $89,470\n\nINCOME\n  Gross Monthly Rent: $4,750 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $14,023\n  NOI: $38,417   Debt Service: $25,475\n  Cash Flow: $1,078/mo ($12,942/yr)\n\nKEY METRICS\n  GRM: 6.8\n  Cap Rate: 9.9%\n  Cash-on-Cash: 14.5%\n  1% Rule: 1.2%\n  Gross Yield: 14.7%\n  DSCR: 1.51\n  Annual Cash Flow: $12,942\n  LTV: 80.0%\n\nVERDICT: PASS  (composite score 100/100)\n  \u2713 target  GRM: 6.8 (min 12.0, target 10.0)\n  \u2713 target  Cap Rate: 9.9% (min 6.0%, target 8.0%)\n  \u2713 target  Cash-on-Cash: 14.5% (min 6.0%, target 10.0%)\n  \u2713 target  1% Rule: 1.2% (min 0.8%, target 1.0%)\n  \u2713 target  Annual Cash Flow: $12,942 (min $3,600, target $6,000)\n  \u2713 target  DSCR: 1.51 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: assumed: 4668 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.50% of value/yr; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- cost seg candidate: ~$97,250-$116,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent",
+   "email_subject": "Top 8 Discounted",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffb48cd543149f",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no vacancy data"
+    },
+    "cash_flow": {
+     "grade": "A",
+     "provenance": "computed",
+     "note": "CoC 14.5% at/above target with DSCR 1.51"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
   {
    "key": "d32c4f86993b3ad1",
    "address": "2819 Berry St",
@@ -1141,6 +1219,166 @@
      "grade": "B",
      "provenance": "computed",
      "note": "CoC 6.7% at/above buy-box min"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "d85b84cb427131ee",
+   "address": "291 Edgewater Forest Rd",
+   "city": "Corbin",
+   "state": "KY",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 280000.0,
+   "source": "the_offer_sheet",
+   "status": "scored",
+   "verdict": "PASS",
+   "score": 82.3,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.24684428571428568,
+    "cap_rate": 0.09208332857142855,
+    "coc": 0.09859745605000318,
+    "dscr": 1.3233789527511508,
+    "annual_cash_flow": 6300.377441595203,
+    "occupancy": 0.72,
+    "break_even_occupancy": 0.6543676499651522,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $263 x 365 x 72% occupancy",
+    "property_tax_annual": "assumed: 3360 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)"
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 291 Edgewater Forest Rd\nMarket / City:    Corbin, KY  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     B  [ESTIMATED]  market occupancy 72%\n  Cash-Flow Margin B  [computed]  CoC 9.9% at/above buy-box min\n\nPURCHASE\n  List Price: $280,000   Down: 15.0% ($42,000)\n  Loan: $238,000 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $8,400   Total Cash Needed: $63,900\n\nINCOME\n  Gross Annual STR Revenue: $69,116 (derived)\n  ADR: $263   Occupancy: 72.0%\n\nCASH FLOW\n  Operating Expenses (annual): $43,333\n  NOI: $25,783   Debt Service: $19,483\n  Cash Flow: $525/mo ($6,300/yr)\n\nKEY METRICS\n  Gross Yield: 24.7%\n  Cap Rate: 9.2%\n  Cash-on-Cash: 9.9%\n  DSCR: 1.32\n  Annual Cash Flow: $6,300\n  Occupancy: 72.0%\n  Break-Even Occupancy: 65.4%\n  LTV: 85.0%\n\nVERDICT: PASS  (composite score 82/100)\n  \u2713 target  Gross Yield: 24.7% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 72.0% (min 65.0%, target 75.0%)\n  \u2713 target  Cap Rate: 9.2% (min 6.0%, target 8.0%)\n  ~ min     Cash-on-Cash: 9.9% (min 8.0%, target 12.0%)\n  ~ min     Annual Cash Flow: $6,300 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 65.4% (min 50.0%, target 40.0%)\n  \u2713 target  DSCR: 1.32 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $263 x 365 x 72% occupancy; property_tax_annual: assumed: 3360 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "The Offer Sheet",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "August 12: 12 Potential STRs",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff72f19bcaee99",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "B",
+     "provenance": "estimated",
+     "note": "market occupancy 72%"
+    },
+    "cash_flow": {
+     "grade": "B",
+     "provenance": "computed",
+     "note": "CoC 9.9% at/above buy-box min"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "7d30a92f73c47754",
+   "address": "1501 Benttree Dr",
+   "city": "Killeen",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "unknown",
+   "price": 340000.0,
+   "source": "victor",
+   "status": "scored",
+   "verdict": "PASS",
+   "score": 81.9,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 8.095238095238095,
+    "cap_rate": 0.08058823529411764,
+    "coc": 0.06564918438575393,
+    "one_pct_rule": 0.010294117647058823,
+    "gross_yield": 0.12352941176470589,
+    "dscr": 1.2305628454929276,
+    "annual_cash_flow": 5133.766218965957,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "assumed: 4080 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.50% of value/yr",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$85,000-$102,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 1501 Benttree Dr\nMarket / City:    Killeen, TX  (market type: unknown)\nProperty Type:    multifamily   Units: 4\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     \u2014  [no data]  no vacancy data\n  Cash-Flow Margin B  [computed]  CoC 6.6% at/above buy-box min\n\nPURCHASE\n  List Price: $340,000   Down: 20.0% ($68,000)\n  Loan: $272,000 @ 7.2% / 30yr   LTV: 80.0%\n  Closing (est): $10,200   Total Cash Needed: $78,200\n\nINCOME\n  Gross Monthly Rent: $3,500 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $11,240\n  NOI: $27,400   Debt Service: $22,266\n  Cash Flow: $428/mo ($5,134/yr)\n\nKEY METRICS\n  GRM: 8.1\n  Cap Rate: 8.1%\n  Cash-on-Cash: 6.6%\n  1% Rule: 1.0%\n  Gross Yield: 12.4%\n  DSCR: 1.23\n  Annual Cash Flow: $5,134\n  LTV: 80.0%\n\nVERDICT: PASS  (composite score 82/100)\n  \u2713 target  GRM: 8.1 (min 12.0, target 10.0)\n  \u2713 target  Cap Rate: 8.1% (min 6.0%, target 8.0%)\n  ~ min     Cash-on-Cash: 6.6% (min 6.0%, target 10.0%)\n  \u2713 target  1% Rule: 1.0% (min 0.8%, target 1.0%)\n  ~ min     Annual Cash Flow: $5,134 (min $3,600, target $6,000)\n  ~ min     DSCR: 1.23 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: assumed: 4080 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.50% of value/yr; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- cost seg candidate: ~$85,000-$102,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent",
+   "email_subject": "Top 8 Discounted",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffb48cd543149f",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no vacancy data"
+    },
+    "cash_flow": {
+     "grade": "B",
+     "provenance": "computed",
+     "note": "CoC 6.6% at/above buy-box min"
     }
    },
    "exception_factors": [],
@@ -3273,6 +3511,167 @@
    "victor": null
   },
   {
+   "key": "bac437ee11efa62c",
+   "address": "8 Day Lily Lane",
+   "city": "Bar Harbor",
+   "state": "ME",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 449000.0,
+   "source": "the_offer_sheet",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 68.0,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.20017282850779508,
+    "cap_rate": 0.07921467260579063,
+    "coc": 0.04585537241291982,
+    "dscr": 1.1384365889234729,
+    "annual_cash_flow": 4325.078725986597,
+    "occupancy": 0.72,
+    "break_even_occupancy": 0.6853522492510886,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $342 x 365 x 72% occupancy",
+    "property_tax_annual": "assumed: 5388 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$112,250-$134,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 8 Day Lily Lane\nMarket / City:    Bar Harbor, ME  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     B  [ESTIMATED]  market occupancy 72%\n  Cash-Flow Margin D  [computed]  CoC 4.6%, DSCR 1.14, cash flow $4,325/yr \u2014 below the 6% STR posting floor\n\nPURCHASE\n  List Price: $449,000   Down: 15.0% ($67,350)\n  Loan: $381,650 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $13,470   Total Cash Needed: $94,320\n\nINCOME\n  Gross Annual STR Revenue: $89,878 (derived)\n  ADR: $342   Occupancy: 72.0%\n\nCASH FLOW\n  Operating Expenses (annual): $54,310\n  NOI: $35,567   Debt Service: $31,242\n  Cash Flow: $360/mo ($4,325/yr)\n\nKEY METRICS\n  Gross Yield: 20.0%\n  Cap Rate: 7.9%\n  Cash-on-Cash: 4.6%\n  DSCR: 1.14\n  Annual Cash Flow: $4,325\n  Occupancy: 72.0%\n  Break-Even Occupancy: 68.5%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 68/100)\n  \u2713 target  Gross Yield: 20.0% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 72.0% (min 65.0%, target 75.0%)\n  ~ min     Cap Rate: 7.9% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 4.6% (min 8.0%, target 12.0%)\n  ~ min     Annual Cash Flow: $4,325 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 68.5% (min 50.0%, target 40.0%)\n  ~ min     DSCR: 1.14 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $342 x 365 x 72% occupancy; property_tax_annual: assumed: 5388 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$112,250-$134,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "The Offer Sheet",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "August 12: 12 Potential STRs",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff72f19bcaee99",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "B",
+     "provenance": "estimated",
+     "note": "market occupancy 72%"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC 4.6%, DSCR 1.14, cash flow $4,325/yr \u2014 below the 6% STR posting floor"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "38e74a6edccdee3c",
+   "address": "Sierra Vista portfolio",
+   "city": "Rosharon",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "unknown",
+   "price": 1850000.0,
+   "source": "victor",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 67.1,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 8.814560701353154,
+    "cap_rate": 0.07262443243243244,
+    "coc": 0.031023954552339954,
+    "one_pct_rule": 0.009454054054054055,
+    "gross_yield": 0.11344864864864865,
+    "dscr": 1.10895750353881,
+    "annual_cash_flow": 13200.69266202065,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "assumed: 22200 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.50% of value/yr",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$462,500-$555,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: Sierra Vista portfolio\nMarket / City:    Rosharon, TX  (market type: unknown)\nProperty Type:    multifamily   Units: 6\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     \u2014  [no data]  no vacancy data\n  Cash-Flow Margin C  [computed]  CoC 3.1% below buy-box min, above the floor\n\nPURCHASE\n  List Price: $1,850,000   Down: 20.0% ($370,000)\n  Loan: $1,480,000 @ 7.2% / 30yr   LTV: 80.0%\n  Closing (est): $55,500   Total Cash Needed: $425,500\n\nINCOME\n  Gross Monthly Rent: $17,490 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $58,734\n  NOI: $134,355   Debt Service: $121,155\n  Cash Flow: $1,100/mo ($13,201/yr)\n\nKEY METRICS\n  GRM: 8.8\n  Cap Rate: 7.3%\n  Cash-on-Cash: 3.1%\n  1% Rule: 0.9%\n  Gross Yield: 11.3%\n  DSCR: 1.11\n  Annual Cash Flow: $13,201\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 67/100)\n  \u2713 target  GRM: 8.8 (min 12.0, target 10.0)\n  ~ min     Cap Rate: 7.3% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 3.1% (min 6.0%, target 10.0%)\n  ~ min     1% Rule: 0.9% (min 0.8%, target 1.0%)\n  \u2713 target  Annual Cash Flow: $13,201 (min $3,600, target $6,000)\n  ~ min     DSCR: 1.11 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: assumed: 22200 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.50% of value/yr; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- cost seg candidate: ~$462,500-$555,000 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent",
+   "email_subject": "5 TX Rentals 1% Rule",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff673e12abfbcf",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no vacancy data"
+    },
+    "cash_flow": {
+     "grade": "C",
+     "provenance": "computed",
+     "note": "CoC 3.1% below buy-box min, above the floor"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
    "key": "7b7d47fdcc765976",
    "address": "2633 Ventura Ct",
    "city": "Glenn Heights",
@@ -3366,6 +3765,83 @@
      "gross_annual_income": 46800
     }
    }
+  },
+  {
+   "key": "2d8b6b1380037cb8",
+   "address": "208 Dakota Ridge Dr",
+   "city": "Fort Worth",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "non_destination",
+   "price": 289500.0,
+   "source": "victor",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 66.8,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 8.464912280701755,
+    "cap_rate": 0.07632642487046633,
+    "coc": 0.04711957384813948,
+    "one_pct_rule": 0.009844559585492229,
+    "gross_yield": 0.11813471502590674,
+    "dscr": 1.1654860319513536,
+    "annual_cash_flow": 3137.4568246783674,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "assumed: 3474 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.50% of value/yr",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 208 Dakota Ridge Dr\nMarket / City:    Fort Worth, TX  (market type: non_destination)\nProperty Type:    SFR   Units: 1\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     \u2014  [no data]  no vacancy data\n  Cash-Flow Margin C  [computed]  CoC 4.7% below buy-box min, above the floor\n\nPURCHASE\n  List Price: $289,500   Down: 20.0% ($57,900)\n  Loan: $231,600 @ 7.2% / 30yr   LTV: 80.0%\n  Closing (est): $8,685   Total Cash Needed: $66,585\n\nINCOME\n  Gross Monthly Rent: $2,850 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $9,368\n  NOI: $22,096   Debt Service: $18,959\n  Cash Flow: $261/mo ($3,137/yr)\n\nKEY METRICS\n  GRM: 8.5\n  Cap Rate: 7.6%\n  Cash-on-Cash: 4.7%\n  1% Rule: 1.0%\n  Gross Yield: 11.8%\n  DSCR: 1.17\n  Annual Cash Flow: $3,137\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 67/100)\n  \u2713 target  GRM: 8.5 (min 12.0, target 10.0)\n  ~ min     Cap Rate: 7.6% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 4.7% (min 6.0%, target 10.0%)\n  ~ min     1% Rule: 1.0% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $3,137 (min $3,600, target $6,000)\n  ~ min     DSCR: 1.17 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: assumed: 3474 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.50% of value/yr; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent",
+   "email_subject": "Top 8 Discounted",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffb48cd543149f",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no vacancy data"
+    },
+    "cash_flow": {
+     "grade": "C",
+     "provenance": "computed",
+     "note": "CoC 4.7% below buy-box min, above the floor"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
   },
   {
    "key": "t52cb643108949e0",
@@ -5129,6 +5605,178 @@
    "victor": null
   },
   {
+   "key": "cdc3dcafa549d302",
+   "address": "3615 McBroom St",
+   "city": "Dallas",
+   "state": "TX",
+   "tier": "str",
+   "market_type": "non_destination",
+   "price": 469990.0,
+   "source": "bnb_flow",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 47.3,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.19553607523564331,
+    "cap_rate": 0.07751670248303155,
+    "coc": 0.03801537595910934,
+    "dscr": 1.1140341486802683,
+    "annual_cash_flow": 3729.2399539118996,
+    "occupancy": 0.61,
+    "break_even_occupancy": 0.5863197236739467,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "seller-claimed (recompute before trusting)",
+    "property_tax_annual": "assumed: 5640 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$117,498-$140,997 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "non-destination market \u2014 not a Tier-1 STR candidate; verdict capped at BORDERLINE"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 3615 McBroom St\nMarket / City:    Dallas, TX  (market type: non_destination)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 61% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC 3.8%, DSCR 1.11, cash flow $3,729/yr \u2014 below the 6% STR posting floor\n\nPURCHASE\n  List Price: $469,990   Down: 15.0% ($70,498)\n  Loan: $399,492 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $14,100   Total Cash Needed: $98,098\n\nINCOME\n  Gross Annual STR Revenue: $91,900 (claimed)\n  ADR: $412   Occupancy: 61.0%\n\nCASH FLOW\n  Operating Expenses (annual): $55,468\n  NOI: $36,432   Debt Service: $32,703\n  Cash Flow: $311/mo ($3,729/yr)\n\nKEY METRICS\n  Gross Yield: 19.6%\n  Cap Rate: 7.8%\n  Cash-on-Cash: 3.8%\n  DSCR: 1.11\n  Annual Cash Flow: $3,729\n  Occupancy: 61.0%\n  Break-Even Occupancy: 58.6%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 47/100)\n  ~ min     Gross Yield: 19.6% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 61.0% (min 65.0%, target 75.0%)\n  ~ min     Cap Rate: 7.8% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 3.8% (min 8.0%, target 12.0%)\n  ~ min     Annual Cash Flow: $3,729 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 58.6% (min 50.0%, target 40.0%)\n  ~ min     DSCR: 1.11 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: seller-claimed (recompute before trusting); property_tax_annual: assumed: 5640 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$117,498-$140,997 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- non-destination market \u2014 not a Tier-1 STR candidate; verdict capped at BORDERLINE",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "BnB Flow",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83c\udfd5\ufe0f Southwest STR Scoop: Thursday\u2019s Top Investment Picks | August 13, 2026",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffcf20ef9d8c30",
+   "listing_urls": [
+    "https://www.zillow.com/homedetails/3615-McBroom-St-Dallas-TX-75212/26835057_zpid/?"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 61% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC 3.8%, DSCR 1.11, cash flow $3,729/yr \u2014 below the 6% STR posting floor"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "2d31462a6cdb2bf7",
+   "address": "855 Sullivant Ave",
+   "city": "Columbus",
+   "state": "OH",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 379900.0,
+   "source": "the_offer_sheet",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 46.4,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.20452750723874705,
+    "cap_rate": 0.07697486180573836,
+    "coc": 0.03430003643143361,
+    "dscr": 1.1062470654025607,
+    "annual_cash_flow": 2808.555583078647,
+    "occupancy": 0.58,
+    "break_even_occupancy": 0.559035235029786,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "seller-claimed (recompute before trusting)",
+    "adr": "derived from revenue: $367",
+    "property_tax_annual": "assumed: 4559 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$94,975-$113,970 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "no ADR data \u2014 framework says flag and ask, do not assume",
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "thin margins: barely cash-flows; one surprise CapEx wipes the year"
+   ],
+   "hard_disqualifiers": [],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 855 Sullivant Ave\nMarket / City:    Columbus, OH  (market type: unknown)\nProperty Type:    STR   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 58% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC 3.4%, DSCR 1.11, cash flow $2,809/yr \u2014 below the 6% STR posting floor\n\nPURCHASE\n  List Price: $379,900   Down: 15.0% ($56,985)\n  Loan: $322,915 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $11,397   Total Cash Needed: $81,882\n\nINCOME\n  Gross Annual STR Revenue: $77,700 (claimed)\n  ADR: $367   Occupancy: 58.0%\n\nCASH FLOW\n  Operating Expenses (annual): $48,457\n  NOI: $29,243   Debt Service: $26,434\n  Cash Flow: $234/mo ($2,809/yr)\n\nKEY METRICS\n  Gross Yield: 20.5%\n  Cap Rate: 7.7%\n  Cash-on-Cash: 3.4%\n  DSCR: 1.11\n  Annual Cash Flow: $2,809\n  Occupancy: 58.0%\n  Break-Even Occupancy: 55.9%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 46/100)\n  \u2713 target  Gross Yield: 20.5% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 58.0% (min 65.0%, target 75.0%)\n  ~ min     Cap Rate: 7.7% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: 3.4% (min 8.0%, target 12.0%)\n  ~ min     Annual Cash Flow: $2,809 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 55.9% (min 50.0%, target 40.0%)\n  ~ min     DSCR: 1.11 (min 1.00, target 1.25)\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: seller-claimed (recompute before trusting); adr: derived from revenue: $367; property_tax_annual: assumed: 4559 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$94,975-$113,970 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- no ADR data \u2014 framework says flag and ask, do not assume\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- thin margins: barely cash-flows; one surprise CapEx wipes the year",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "The Offer Sheet",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "$77.7K run-rate on $379,900",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffadd1351efefe",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 58% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC 3.4%, DSCR 1.11, cash flow $2,809/yr \u2014 below the 6% STR posting floor"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
    "key": "5f7e7b3be34eaace",
    "address": "151 Hatchet Trl",
    "city": "Cherry Log",
@@ -5538,6 +6186,437 @@
      "grade": "D",
      "provenance": "computed",
      "note": "CoC 0.9%, DSCR 1.03, cash flow $925/yr \u2014 below the 6% STR posting floor"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "3f5513272db9b1bb",
+   "address": "620 Race St",
+   "city": "Crowley",
+   "state": "TX",
+   "tier": "ltr",
+   "market_type": "unknown",
+   "price": 425000.0,
+   "source": "victor",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "grm": 11.119832548403977,
+    "cap_rate": 0.05404423529411766,
+    "coc": -0.04975951126641999,
+    "one_pct_rule": 0.007494117647058824,
+    "gross_yield": 0.08992941176470588,
+    "dscr": 0.8252423908192104,
+    "annual_cash_flow": -4863.992226292554,
+    "ltv": 0.8
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "monthly_rent": "seller-claimed (recompute before trusting)",
+    "vacancy": "assumed: 8%",
+    "property_tax_annual": "assumed: 5100 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.50% of value/yr",
+    "hoa_monthly": "assumed: 0"
+   },
+   "tax_flags": [
+    "cost seg candidate: ~$106,250-$127,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.",
+    "passive-loss note: REP status not yet active \u2014 large paper losses may be suspended"
+   ],
+   "red_flags": [
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.83 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 620 Race St\nMarket / City:    Crowley, TX  (market type: unknown)\nProperty Type:    multifamily   Units: 4\nStrategy Fit:     LTR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     \u2014  [no data]  no vacancy data\n  Cash-Flow Margin D  [computed]  CoC -5.0%, DSCR 0.83, cash flow $-4,864/yr\n\nPURCHASE\n  List Price: $425,000   Down: 20.0% ($85,000)\n  Loan: $340,000 @ 7.2% / 30yr   LTV: 80.0%\n  Closing (est): $12,750   Total Cash Needed: $97,750\n\nINCOME\n  Gross Monthly Rent: $3,185 (claimed)\n\nCASH FLOW\n  Operating Expenses (annual): $12,194\n  NOI: $22,969   Debt Service: $27,833\n  Cash Flow: $-405/mo ($-4,864/yr)\n\nKEY METRICS\n  GRM: 11.1\n  Cap Rate: 5.4%\n  Cash-on-Cash: -5.0%\n  1% Rule: 0.7%\n  Gross Yield: 9.0%\n  DSCR: 0.83\n  Annual Cash Flow: $-4,864\n  LTV: 80.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  ~ min     GRM: 11.1 (min 12.0, target 10.0)\n  \u2717 FAIL    Cap Rate: 5.4% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -5.0% (min 6.0%, target 10.0%)\n  \u2717 FAIL    1% Rule: 0.7% (min 0.8%, target 1.0%)\n  \u2717 FAIL    Annual Cash Flow: $-4,864 (min $3,600, target $6,000)\n  \u2717 FAIL    DSCR: 0.83 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.83 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); monthly_rent: seller-claimed (recompute before trusting); vacancy: assumed: 8%; property_tax_annual: assumed: 5100 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.50% of value/yr; hoa_monthly: assumed: 0\n\n**Tax angle:**\n- cost seg candidate: ~$106,250-$127,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n- passive-loss note: REP status not yet active \u2014 large paper losses may be suspended\n\n**Red flags:**\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Victor Steffen (Steffen Realty)",
+   "source_kind": "agent",
+   "email_subject": "5 TX Rentals 1% Rule",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff673e12abfbcf",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no vacancy data"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -5.0%, DSCR 0.83, cash flow $-4,864/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "0bf3b4355c47a83c",
+   "address": "7055 County Road 105",
+   "city": "Hesperus",
+   "state": "CO",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 599000.0,
+   "source": "here",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.12284474123539232,
+    "cap_rate": 0.037357963272120195,
+    "coc": -0.1591014371816115,
+    "dscr": 0.5368913469893197,
+    "annual_cash_flow": -19302.186358873107,
+    "occupancy": 0.72,
+    "break_even_occupancy": 0.9088667941181322,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $280 x 365 x 72% occupancy",
+    "property_tax_annual": "assumed: 7188 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$149,750-$179,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "break-even occupancy 91% EXCEEDS expected occupancy 72% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.54 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 7055 County Road 105\nMarket / City:    Hesperus, CO  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     B  [ESTIMATED]  market occupancy 72%\n  Cash-Flow Margin D  [computed]  CoC -15.9%, DSCR 0.54, cash flow $-19,302/yr\n\nPURCHASE\n  List Price: $599,000   Down: 15.0% ($89,850)\n  Loan: $509,150 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $17,970   Total Cash Needed: $121,320\n\nINCOME\n  Gross Annual STR Revenue: $73,584 (derived)\n  ADR: $280   Occupancy: 72.0%\n\nCASH FLOW\n  Operating Expenses (annual): $51,207\n  NOI: $22,377   Debt Service: $41,680\n  Cash Flow: $-1,609/mo ($-19,302/yr)\n\nKEY METRICS\n  Gross Yield: 12.3%\n  Cap Rate: 3.7%\n  Cash-on-Cash: -15.9%\n  DSCR: 0.54\n  Annual Cash Flow: $-19,302\n  Occupancy: 72.0%\n  Break-Even Occupancy: 90.9%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  \u2717 FAIL    Gross Yield: 12.3% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 72.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 3.7% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -15.9% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-19,302 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 90.9% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.54 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.54 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $280 x 365 x 72% occupancy; property_tax_annual: assumed: 7188 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$149,750-$179,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- break-even occupancy 91% EXCEEDS expected occupancy 72% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Here",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1098",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd3227c422b32",
+   "listing_urls": [
+    "https://www.zillow.com/homedetails/24735-SE-Summit-Landsburg-Rd-Ravensdale-WA-98051/48816896_zpid/"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "B",
+     "provenance": "estimated",
+     "note": "market occupancy 72%"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -15.9%, DSCR 0.54, cash flow $-19,302/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "0d1bd2e366ca6b73",
+   "address": "4351 Meriwether Rd",
+   "city": "Twentynine Palms",
+   "state": "CA",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 199000.0,
+   "source": "here",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.1861683417085427,
+    "cap_rate": 0.03597701005025125,
+    "coc": -0.13559183156083837,
+    "dscr": 0.5170449268293702,
+    "annual_cash_flow": -6687.389132580549,
+    "occupancy": 0.58,
+    "break_even_occupancy": 0.6846949374963686,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $175 x 365 x 58% occupancy",
+    "property_tax_annual": "assumed: 2388 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)"
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "break-even occupancy 68% EXCEEDS expected occupancy 58% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.52 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 4351 Meriwether Rd\nMarket / City:    Twentynine Palms, CA  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 58% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC -13.6%, DSCR 0.52, cash flow $-6,687/yr\n\nPURCHASE\n  List Price: $199,000   Down: 15.0% ($29,850)\n  Loan: $169,150 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $5,970   Total Cash Needed: $49,320\n\nINCOME\n  Gross Annual STR Revenue: $37,048 (derived)\n  ADR: $175   Occupancy: 58.0%\n\nCASH FLOW\n  Operating Expenses (annual): $29,888\n  NOI: $7,159   Debt Service: $13,847\n  Cash Flow: $-557/mo ($-6,687/yr)\n\nKEY METRICS\n  Gross Yield: 18.6%\n  Cap Rate: 3.6%\n  Cash-on-Cash: -13.6%\n  DSCR: 0.52\n  Annual Cash Flow: $-6,687\n  Occupancy: 58.0%\n  Break-Even Occupancy: 68.5%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  ~ min     Gross Yield: 18.6% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 58.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 3.6% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -13.6% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-6,687 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 68.5% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.52 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.52 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $175 x 365 x 58% occupancy; property_tax_annual: assumed: 2388 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- break-even occupancy 68% EXCEEDS expected occupancy 58% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Here",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83d\udcb0 <$199k: Fresh Airbnb Investment Finds Under $199k \u2014 #1090",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff7ebea6bc1601",
+   "listing_urls": [
+    "https://www.zillow.com/homedetails/171-Schimke-Rd-Bear-Valley-CA-95223/18210899_zpid/"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 58% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -13.6%, DSCR 0.52, cash flow $-6,687/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "ac88e811bc1223e9",
+   "address": "171 Schimke Rd",
+   "city": "Bear Valley",
+   "state": "CA",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 155000.0,
+   "source": "here",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.21429032258064515,
+    "cap_rate": 0.036148064516129036,
+    "coc": -0.12517528955769,
+    "dscr": 0.5195032423945071,
+    "annual_cash_flow": -5182.256987688366,
+    "occupancy": 0.52,
+    "break_even_occupancy": 0.6011312248561779,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $175 x 365 x 52% occupancy",
+    "property_tax_annual": "assumed: 1860 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)"
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "break-even occupancy 60% EXCEEDS expected occupancy 52% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.52 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 171 Schimke Rd\nMarket / City:    Bear Valley, CA  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 52% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC -12.5%, DSCR 0.52, cash flow $-5,182/yr\n\nPURCHASE\n  List Price: $155,000   Down: 15.0% ($23,250)\n  Loan: $131,750 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $4,650   Total Cash Needed: $41,400\n\nINCOME\n  Gross Annual STR Revenue: $33,215 (derived)\n  ADR: $175   Occupancy: 52.0%\n\nCASH FLOW\n  Operating Expenses (annual): $27,612\n  NOI: $5,603   Debt Service: $10,785\n  Cash Flow: $-432/mo ($-5,182/yr)\n\nKEY METRICS\n  Gross Yield: 21.4%\n  Cap Rate: 3.6%\n  Cash-on-Cash: -12.5%\n  DSCR: 0.52\n  Annual Cash Flow: $-5,182\n  Occupancy: 52.0%\n  Break-Even Occupancy: 60.1%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  \u2713 target  Gross Yield: 21.4% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 52.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 3.6% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -12.5% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-5,182 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 60.1% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.52 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.52 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $175 x 365 x 52% occupancy; property_tax_annual: assumed: 1860 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- break-even occupancy 60% EXCEEDS expected occupancy 52% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Here",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83d\udcb0 <$199k: Fresh Airbnb Investment Finds Under $199k \u2014 #1090",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff7ebea6bc1601",
+   "listing_urls": [
+    "https://www.zillow.com/homedetails/300-Huff-Afton-OK-74331/299727013_zpid/"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 52% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -12.5%, DSCR 0.52, cash flow $-5,182/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "3e8d9fd105a081e2",
+   "address": "15231 N 20TH Place",
+   "city": "Phoenix",
+   "state": "AZ",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 589000.0,
+   "source": "bnb_flow",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 25.0,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.11918505942275043,
+    "cap_rate": 0.034703735144312395,
+    "coc": -0.17188158093386705,
+    "dscr": 0.49874600955816606,
+    "annual_cash_flow": -20543.28655321579,
+    "occupancy": 0.68,
+    "break_even_occupancy": 0.8816019290121032,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "seller-claimed (recompute before trusting)",
+    "property_tax_annual": "assumed: 7068 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$147,250-$176,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "break-even occupancy 88% EXCEEDS expected occupancy 68% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.50 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 15231 N 20TH Place\nMarket / City:    Phoenix, AZ  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     B  [ESTIMATED]  market occupancy 68%\n  Cash-Flow Margin D  [computed]  CoC -17.2%, DSCR 0.50, cash flow $-20,543/yr\n\nPURCHASE\n  List Price: $589,000   Down: 15.0% ($88,350)\n  Loan: $500,650 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $17,670   Total Cash Needed: $119,520\n\nINCOME\n  Gross Annual STR Revenue: $70,200 (claimed)\n  ADR: $282   Occupancy: 68.0%\n\nCASH FLOW\n  Operating Expenses (annual): $49,760\n  NOI: $20,440   Debt Service: $40,984\n  Cash Flow: $-1,712/mo ($-20,543/yr)\n\nKEY METRICS\n  Gross Yield: 11.9%\n  Cap Rate: 3.5%\n  Cash-on-Cash: -17.2%\n  DSCR: 0.50\n  Annual Cash Flow: $-20,543\n  Occupancy: 68.0%\n  Break-Even Occupancy: 88.2%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 25/100)\n  \u2717 FAIL    Gross Yield: 11.9% (min 15.0%, target 20.0%)\n  ~ min     Occupancy: 68.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 3.5% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -17.2% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-20,543 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 88.2% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.50 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.50 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: seller-claimed (recompute before trusting); property_tax_annual: assumed: 7068 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$147,250-$176,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- break-even occupancy 88% EXCEEDS expected occupancy 68% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "BnB Flow",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83c\udfd5\ufe0f Southwest STR Scoop: Thursday\u2019s Top Investment Picks | August 13, 2026",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffcf20ef9d8c30",
+   "listing_urls": [
+    "https://www.zillow.com/homedetails/15231-N-20th-Pl-Phoenix-AZ-85022/8010778_zpid/?"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "B",
+     "provenance": "estimated",
+     "note": "market occupancy 68%"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -17.2%, DSCR 0.50, cash flow $-20,543/yr"
     }
    },
    "exception_factors": [],
@@ -18297,6 +19376,91 @@
    "victor": null
   },
   {
+   "key": "f4c345f718fab4f4",
+   "address": "44 Debbie Ct",
+   "city": "Coldspring",
+   "state": "TX",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 249900.0,
+   "source": "here",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 22.2,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.15664765906362546,
+    "cap_rate": 0.029967537014805926,
+    "coc": -0.16927686199815797,
+    "dscr": 0.43067956346107106,
+    "annual_cash_flow": -9899.649443376275,
+    "occupancy": 0.55,
+    "break_even_occupancy": 0.6890888576519322,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $195 x 365 x 55% occupancy",
+    "property_tax_annual": "assumed: 2999 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)"
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "break-even occupancy 69% EXCEEDS expected occupancy 55% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.43 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 44 Debbie Ct\nMarket / City:    Coldspring, TX  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 55% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC -16.9%, DSCR 0.43, cash flow $-9,900/yr\n\nPURCHASE\n  List Price: $249,900   Down: 15.0% ($37,485)\n  Loan: $212,415 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $7,497   Total Cash Needed: $58,482\n\nINCOME\n  Gross Annual STR Revenue: $39,146 (derived)\n  ADR: $195   Occupancy: 55.0%\n\nCASH FLOW\n  Operating Expenses (annual): $31,657\n  NOI: $7,489   Debt Service: $17,389\n  Cash Flow: $-825/mo ($-9,900/yr)\n\nKEY METRICS\n  Gross Yield: 15.7%\n  Cap Rate: 3.0%\n  Cash-on-Cash: -16.9%\n  DSCR: 0.43\n  Annual Cash Flow: $-9,900\n  Occupancy: 55.0%\n  Break-Even Occupancy: 68.9%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 22/100)\n  ~ min     Gross Yield: 15.7% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 55.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 3.0% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -16.9% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-9,900 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 68.9% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.43 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.43 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $195 x 365 x 55% occupancy; property_tax_annual: assumed: 2999 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- break-even occupancy 69% EXCEEDS expected occupancy 55% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Here",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1091",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd406c632fa49",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 55% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -16.9%, DSCR 0.43, cash flow $-9,900/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
    "key": "93441bcf0b6f34d7",
    "address": "117 Quail Dr",
    "city": "Rockport",
@@ -18476,6 +19640,91 @@
    "victor": null
   },
   {
+   "key": "1ad408fffb6d31d7",
+   "address": "300 Huff",
+   "city": "Afton",
+   "state": "OK",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 85000.0,
+   "source": "here",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 21.7,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.19323529411764706,
+    "cap_rate": -0.04246764705882353,
+    "coc": -0.3307020259752489,
+    "dscr": -0.6103253559835939,
+    "annual_cash_flow": -9524.218348087168,
+    "occupancy": 0.5,
+    "break_even_occupancy": 0.7899305433207662,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $90 x 365 x 50% occupancy",
+    "property_tax_annual": "assumed: 1020 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)"
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "break-even occupancy 79% EXCEEDS expected occupancy 50% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR -0.61 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 300 Huff\nMarket / City:    Afton, OK  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 50% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC -33.1%, DSCR -0.61, cash flow $-9,524/yr\n\nPURCHASE\n  List Price: $85,000   Down: 15.0% ($12,750)\n  Loan: $72,250 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $2,550   Total Cash Needed: $28,800\n\nINCOME\n  Gross Annual STR Revenue: $16,425 (derived)\n  ADR: $90   Occupancy: 50.0%\n\nCASH FLOW\n  Operating Expenses (annual): $20,035\n  NOI: $-3,610   Debt Service: $5,914\n  Cash Flow: $-794/mo ($-9,524/yr)\n\nKEY METRICS\n  Gross Yield: 19.3%\n  Cap Rate: -4.2%\n  Cash-on-Cash: -33.1%\n  DSCR: -0.61\n  Annual Cash Flow: $-9,524\n  Occupancy: 50.0%\n  Break-Even Occupancy: 79.0%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 22/100)\n  ~ min     Gross Yield: 19.3% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 50.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: -4.2% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -33.1% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-9,524 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 79.0% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: -0.61 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR -0.61 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $90 x 365 x 50% occupancy; property_tax_annual: assumed: 1020 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- break-even occupancy 79% EXCEEDS expected occupancy 50% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Here",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83d\udcb0 <$199k: Fresh Airbnb Investment Finds Under $199k \u2014 #1090",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff7ebea6bc1601",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 50% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -33.1%, DSCR -0.61, cash flow $-9,524/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
    "key": "527a122e7e1ba4d2",
    "address": "5462 Spearsville Rd",
    "city": "Morgantown",
@@ -18643,6 +19892,92 @@
      "grade": "D",
      "provenance": "computed",
      "note": "CoC -15.2%, DSCR 0.55, cash flow $-17,072/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "7dede5f82d0bb8b6",
+   "address": "423 Old Trail Dr",
+   "city": "Houghton Lake",
+   "state": "MI",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 569000.0,
+   "source": "the_offer_sheet",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 21.3,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.1267877855887522,
+    "cap_rate": 0.03875943321616872,
+    "coc": -0.15129424984386786,
+    "dscr": 0.557032623978764,
+    "annual_cash_flow": -17538.029441901162,
+    "occupancy": 0.59,
+    "break_even_occupancy": 0.7334310320335404,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $335 x 365 x 59% occupancy",
+    "property_tax_annual": "assumed: 6828 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$142,250-$170,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "break-even occupancy 73% EXCEEDS expected occupancy 59% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.56 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 423 Old Trail Dr\nMarket / City:    Houghton Lake, MI  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 59% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC -15.1%, DSCR 0.56, cash flow $-17,538/yr\n\nPURCHASE\n  List Price: $569,000   Down: 15.0% ($85,350)\n  Loan: $483,650 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $17,070   Total Cash Needed: $115,920\n\nINCOME\n  Gross Annual STR Revenue: $72,142 (derived)\n  ADR: $335   Occupancy: 59.0%\n\nCASH FLOW\n  Operating Expenses (annual): $50,088\n  NOI: $22,054   Debt Service: $39,592\n  Cash Flow: $-1,462/mo ($-17,538/yr)\n\nKEY METRICS\n  Gross Yield: 12.7%\n  Cap Rate: 3.9%\n  Cash-on-Cash: -15.1%\n  DSCR: 0.56\n  Annual Cash Flow: $-17,538\n  Occupancy: 59.0%\n  Break-Even Occupancy: 73.3%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 21/100)\n  \u2717 FAIL    Gross Yield: 12.7% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 59.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 3.9% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -15.1% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-17,538 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 73.3% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.56 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.56 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $335 x 365 x 59% occupancy; property_tax_annual: assumed: 6828 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$142,250-$170,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- break-even occupancy 73% EXCEEDS expected occupancy 59% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "The Offer Sheet",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "August 13: 12 Potential STRs",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffbf6867217ebe",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 59% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -15.1%, DSCR 0.56, cash flow $-17,538/yr"
     }
    },
    "exception_factors": [],
@@ -18915,6 +20250,183 @@
    "victor": null
   },
   {
+   "key": "f6d3cc3d8a9ba53e",
+   "address": "5142 Waterbury Rd",
+   "city": "Mound",
+   "state": "MN",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 469888.0,
+   "source": "bnb_flow",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 20.8,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.12832845273767365,
+    "cap_rate": 0.0351697425769545,
+    "coc": -0.16486464174564713,
+    "dscr": 0.5054432525635142,
+    "annual_cash_flow": -16169.89768407039,
+    "occupancy": 0.56,
+    "break_even_occupancy": 0.7126073775423576,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "seller-claimed (recompute before trusting)",
+    "property_tax_annual": "assumed: 5639 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$117,472-$140,966 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "break-even occupancy 71% EXCEEDS expected occupancy 56% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.51 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 5142 Waterbury Rd\nMarket / City:    Mound, MN  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 56% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC -16.5%, DSCR 0.51, cash flow $-16,170/yr\n\nPURCHASE\n  List Price: $469,888   Down: 15.0% ($70,483)\n  Loan: $399,405 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $14,097   Total Cash Needed: $98,080\n\nINCOME\n  Gross Annual STR Revenue: $60,300 (claimed)\n  ADR: $294   Occupancy: 56.0%\n\nCASH FLOW\n  Operating Expenses (annual): $43,774\n  NOI: $16,526   Debt Service: $32,696\n  Cash Flow: $-1,347/mo ($-16,170/yr)\n\nKEY METRICS\n  Gross Yield: 12.8%\n  Cap Rate: 3.5%\n  Cash-on-Cash: -16.5%\n  DSCR: 0.51\n  Annual Cash Flow: $-16,170\n  Occupancy: 56.0%\n  Break-Even Occupancy: 71.3%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 21/100)\n  \u2717 FAIL    Gross Yield: 12.8% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 56.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 3.5% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -16.5% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-16,170 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 71.3% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.51 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.51 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: seller-claimed (recompute before trusting); property_tax_annual: assumed: 5639 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$117,472-$140,966 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- break-even occupancy 71% EXCEEDS expected occupancy 56% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "BnB Flow",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83c\udfd5\ufe0f Midwest Market Gems: Midweek STR Opportunities | August 12, 2026",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff7624b84c415a",
+   "listing_urls": [
+    "https://www.zillow.com/homedetails/5142-Waterbury-Rd-Mound-MN-55364/1932184_zpid/"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 56% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -16.5%, DSCR 0.51, cash flow $-16,170/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "a533f90aa3b47544",
+   "address": "214 Paradise Dr",
+   "city": "Ashford",
+   "state": "WA",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 449000.0,
+   "source": "here",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 20.6,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.12644933184855234,
+    "cap_rate": 0.03276886971046771,
+    "coc": -0.17524477071685104,
+    "dscr": 0.47093901961460033,
+    "annual_cash_flow": -16529.08677401339,
+    "occupancy": 0.61,
+    "break_even_occupancy": 0.7875888989955776,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $255 x 365 x 61% occupancy",
+    "property_tax_annual": "assumed: 5388 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$112,250-$134,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "break-even occupancy 79% EXCEEDS expected occupancy 61% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.47 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 214 Paradise Dr\nMarket / City:    Ashford, WA  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 61% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC -17.5%, DSCR 0.47, cash flow $-16,529/yr\n\nPURCHASE\n  List Price: $449,000   Down: 15.0% ($67,350)\n  Loan: $381,650 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $13,470   Total Cash Needed: $94,320\n\nINCOME\n  Gross Annual STR Revenue: $56,776 (derived)\n  ADR: $255   Occupancy: 61.0%\n\nCASH FLOW\n  Operating Expenses (annual): $42,063\n  NOI: $14,713   Debt Service: $31,242\n  Cash Flow: $-1,377/mo ($-16,529/yr)\n\nKEY METRICS\n  Gross Yield: 12.6%\n  Cap Rate: 3.3%\n  Cash-on-Cash: -17.5%\n  DSCR: 0.47\n  Annual Cash Flow: $-16,529\n  Occupancy: 61.0%\n  Break-Even Occupancy: 78.8%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 21/100)\n  \u2717 FAIL    Gross Yield: 12.6% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 61.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 3.3% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -17.5% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-16,529 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 78.8% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.47 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.47 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $255 x 365 x 61% occupancy; property_tax_annual: assumed: 5388 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$112,250-$134,700 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- break-even occupancy 79% EXCEEDS expected occupancy 61% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Here",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1091",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd406c632fa49",
+   "listing_urls": [
+    "https://www.zillow.com/homedetails/44-Debbie-Ct-Coldspring-TX-77331/87530953_zpid/"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 61% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -17.5%, DSCR 0.47, cash flow $-16,529/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
    "key": "065c364b177dbe11",
    "address": "580 E Emerald Lake Drive E",
    "city": "Grapeview",
@@ -18997,6 +20509,94 @@
      "grade": "D",
      "provenance": "computed",
      "note": "CoC -18.2%, DSCR 0.40, cash flow $-11,472/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "69f4247cf96831c3",
+   "address": "33790 Annapolis Rd",
+   "city": "Annapolis",
+   "state": "CA",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 425000.0,
+   "source": "here",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 20.2,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.12367058823529412,
+    "cap_rate": 0.029471294117647064,
+    "coc": -0.18941157489373153,
+    "dscr": 0.4235477903622861,
+    "annual_cash_flow": -17047.041740435838,
+    "occupancy": 0.64,
+    "break_even_occupancy": 0.8475743286506647,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $225 x 365 x 64% occupancy",
+    "property_tax_annual": "assumed: 5100 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$106,250-$127,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "break-even occupancy 85% EXCEEDS expected occupancy 64% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.42 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 33790 Annapolis Rd\nMarket / City:    Annapolis, CA  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 64% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC -18.9%, DSCR 0.42, cash flow $-17,047/yr\n\nPURCHASE\n  List Price: $425,000   Down: 15.0% ($63,750)\n  Loan: $361,250 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $12,750   Total Cash Needed: $90,000\n\nINCOME\n  Gross Annual STR Revenue: $52,560 (derived)\n  ADR: $225   Occupancy: 64.0%\n\nCASH FLOW\n  Operating Expenses (annual): $40,035\n  NOI: $12,525   Debt Service: $29,572\n  Cash Flow: $-1,421/mo ($-17,047/yr)\n\nKEY METRICS\n  Gross Yield: 12.4%\n  Cap Rate: 2.9%\n  Cash-on-Cash: -18.9%\n  DSCR: 0.42\n  Annual Cash Flow: $-17,047\n  Occupancy: 64.0%\n  Break-Even Occupancy: 84.8%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 20/100)\n  \u2717 FAIL    Gross Yield: 12.4% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 64.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 2.9% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -18.9% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-17,047 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 84.8% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.42 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.42 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $225 x 365 x 64% occupancy; property_tax_annual: assumed: 5100 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$106,250-$127,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- break-even occupancy 85% EXCEEDS expected occupancy 64% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Here",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1098",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd3227c422b32",
+   "listing_urls": [
+    "https://www.zillow.com/homedetails/7055-County-Road-105-Hesperus-CO-81326/2067876641_zpid/"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 64% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -18.9%, DSCR 0.42, cash flow $-17,047/yr"
     }
    },
    "exception_factors": [],
@@ -19977,6 +21577,95 @@
    "victor": null
   },
   {
+   "key": "1586dc44a20ddf66",
+   "address": "163 N Scott Dr",
+   "city": "Farwell",
+   "state": "MI",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 429900.0,
+   "source": "bnb_flow",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 18.5,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.11700395440800186,
+    "cap_rate": 0.02560072109792975,
+    "coc": -0.20804497529992655,
+    "dscr": 0.36792170745622493,
+    "annual_cash_flow": -18907.543445207924,
+    "occupancy": 0.54,
+    "break_even_occupancy": 0.7464949136577276,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "seller-claimed (recompute before trusting)",
+    "property_tax_annual": "assumed: 5159 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$107,475-$128,970 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "destination-market status UNKNOWN \u2014 judgment call for the human",
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently",
+    "break-even occupancy 75% EXCEEDS expected occupancy 54% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.37 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 163 N Scott Dr\nMarket / City:    Farwell, MI  (market type: unknown)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 54% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC -20.8%, DSCR 0.37, cash flow $-18,908/yr\n\nPURCHASE\n  List Price: $429,900   Down: 15.0% ($64,485)\n  Loan: $365,415 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $12,897   Total Cash Needed: $90,882\n\nINCOME\n  Gross Annual STR Revenue: $50,300 (claimed)\n  ADR: $254   Occupancy: 54.0%\n\nCASH FLOW\n  Operating Expenses (annual): $39,294\n  NOI: $11,006   Debt Service: $29,913\n  Cash Flow: $-1,576/mo ($-18,908/yr)\n\nKEY METRICS\n  Gross Yield: 11.7%\n  Cap Rate: 2.6%\n  Cash-on-Cash: -20.8%\n  DSCR: 0.37\n  Annual Cash Flow: $-18,908\n  Occupancy: 54.0%\n  Break-Even Occupancy: 74.6%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 18/100)\n  \u2717 FAIL    Gross Yield: 11.7% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 54.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 2.6% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -20.8% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-18,908 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 74.6% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.37 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.37 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: seller-claimed (recompute before trusting); property_tax_annual: assumed: 5159 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$107,475-$128,970 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- destination-market status UNKNOWN \u2014 judgment call for the human\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- income is SELLER-CLAIMED and was recomputed with our assumptions \u2014 verify independently\n- break-even occupancy 75% EXCEEDS expected occupancy 54% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "BnB Flow",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83c\udfd5\ufe0f Midwest Market Gems: Midweek STR Opportunities | August 12, 2026",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff7624b84c415a",
+   "listing_urls": [
+    "https://www.zillow.com/homedetails/163-N-Scott-Dr-Farwell-MI-48622/225506853_zpid/"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 54% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -20.8%, DSCR 0.37, cash flow $-18,908/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
    "key": "c4a67ac765fdd728",
    "address": "23898 Springwater Rd",
    "city": "Crestline",
@@ -20411,6 +22100,97 @@
      "grade": "D",
      "provenance": "computed",
      "note": "CoC -24.1%, DSCR 0.13, cash flow $-11,511/yr"
+    }
+   },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "0d1db98b69228e55",
+   "address": "350 Quail Ridge Dr",
+   "city": "Maggie Valley",
+   "state": "NC",
+   "tier": "str",
+   "market_type": "destination",
+   "price": 595000.0,
+   "source": "the_offer_sheet",
+   "status": "scored",
+   "verdict": "FAIL",
+   "score": 17.9,
+   "kill_reasons": [],
+   "metrics": {
+    "gross_yield": 0.10677016806722689,
+    "cap_rate": 0.027092936974789917,
+    "coc": -0.20962670760041605,
+    "dscr": 0.38936714296593317,
+    "annual_cash_flow": -25280.980936610176,
+    "occupancy": 0.59,
+    "break_even_occupancy": 0.8247896998988639,
+    "ltv": 0.85
+   },
+   "assumptions": {
+    "interest_rate": "assumed: 0.0725 (search live rate)",
+    "adr": "seller-claimed (recompute before trusting)",
+    "occupancy": "seller-claimed (recompute before trusting)",
+    "annual_str_revenue": "derived: ADR $295 x 365 x 59% occupancy",
+    "property_tax_annual": "assumed: 7140 (1.2% of price fallback \u2014 pull CAD record)",
+    "insurance": "assumed 0.75% of value/yr (STR policy)",
+    "hoa_monthly": "assumed: 0",
+    "lodging_tax": "assumed 7% of revenue (state/local HOT)",
+    "cleaning": "assumed owner-paid $725/mo",
+    "furnishing": "assumed unfurnished: $13,500 capex added to cash needed"
+   },
+   "tax_flags": [
+    "STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)",
+    "cost seg candidate: ~$148,750-$178,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist."
+   ],
+   "red_flags": [
+    "STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer",
+    "break-even occupancy 82% EXCEEDS expected occupancy 59% \u2014 betting on outperforming the market"
+   ],
+   "hard_disqualifiers": [
+    "DSCR 0.39 < 1.0 \u2014 negative coverage"
+   ],
+   "deal_card_md": "```\nDEAL CARD\n\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nProperty Address: 350 Quail Ridge Dr\nMarket / City:    Maggie Valley, NC  (market type: destination)\nProperty Type:    STR cabin   Units: 1\nStrategy Fit:     STR\n\nPILLARS (Victor Steffen methodology)\n  Asset Quality    \u2014  [no data]  no data\n  Neighborhood     \u2014  [no data]  no data\n  Vacancy Risk     D  [ESTIMATED]  market occupancy 59% below the 65% minimum\n  Cash-Flow Margin D  [computed]  CoC -21.0%, DSCR 0.39, cash flow $-25,281/yr\n\nPURCHASE\n  List Price: $595,000   Down: 15.0% ($89,250)\n  Loan: $505,750 @ 7.2% / 30yr   LTV: 85.0%\n  Closing (est): $17,850   Total Cash Needed: $120,600\n\nINCOME\n  Gross Annual STR Revenue: $63,528 (derived)\n  ADR: $295   Occupancy: 59.0%\n\nCASH FLOW\n  Operating Expenses (annual): $47,408\n  NOI: $16,120   Debt Service: $41,401\n  Cash Flow: $-2,107/mo ($-25,281/yr)\n\nKEY METRICS\n  Gross Yield: 10.7%\n  Cap Rate: 2.7%\n  Cash-on-Cash: -21.0%\n  DSCR: 0.39\n  Annual Cash Flow: $-25,281\n  Occupancy: 59.0%\n  Break-Even Occupancy: 82.5%\n  LTV: 85.0%\n\nVERDICT: FAIL  (composite score 18/100)\n  \u2717 FAIL    Gross Yield: 10.7% (min 15.0%, target 20.0%)\n  \u2717 FAIL    Occupancy: 59.0% (min 65.0%, target 75.0%)\n  \u2717 FAIL    Cap Rate: 2.7% (min 6.0%, target 8.0%)\n  \u2717 FAIL    Cash-on-Cash: -21.0% (min 8.0%, target 12.0%)\n  \u2717 FAIL    Annual Cash Flow: $-25,281 (min $0, target $15,000)\n  ! advisory Break-Even Occupancy: 82.5% (min 50.0%, target 40.0%)\n  \u2717 FAIL    DSCR: 0.39 (min 1.00, target 1.25)\n  HARD DISQUALIFIERS:\n    \u2717 DSCR 0.39 < 1.0 \u2014 negative coverage\n```\n\n**Assumptions:** interest_rate: assumed: 0.0725 (search live rate); adr: seller-claimed (recompute before trusting); occupancy: seller-claimed (recompute before trusting); annual_str_revenue: derived: ADR $295 x 365 x 59% occupancy; property_tax_annual: assumed: 7140 (1.2% of price fallback \u2014 pull CAD record); insurance: assumed 0.75% of value/yr (STR policy); hoa_monthly: assumed: 0; lodging_tax: assumed 7% of revenue (state/local HOT); cleaning: assumed owner-paid $725/mo; furnishing: assumed unfurnished: $13,500 capex added to cash needed\n\n**Tax angle:**\n- STR loophole: avg stay <7 days makes losses active vs W2 (needs material participation: 100+ hrs AND more than anyone else)\n- cost seg candidate: ~$148,750-$178,500 Year 1 accelerated deductions at 100% bonus depreciation (OBBBA, permanent); cash value = deduction x your marginal rate. Planning estimate \u2014 confirm with CPA + cost seg specialist.\n\n**Red flags:**\n- STR legality: UNVERIFIED \u2014 human-verify HOA + city ordinance before any offer\n- break-even occupancy 82% EXCEEDS expected occupancy 59% \u2014 betting on outperforming the market",
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "The Offer Sheet",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "August 13: 12 Potential STRs",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffbf6867217ebe",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": "mountain",
+   "priority_note": null,
+   "priority_market": {
+    "region": "NC Smokies",
+    "state": "NC",
+    "drive_hours": 11.5,
+    "metros": "Charlotte/Atlanta",
+    "in_drive_range": true
+   },
+   "photo_url": null,
+   "pillars": {
+    "asset_quality": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "neighborhood": {
+     "grade": null,
+     "provenance": "ungraded",
+     "note": "no data"
+    },
+    "vacancy": {
+     "grade": "D",
+     "provenance": "estimated",
+     "note": "market occupancy 59% below the 65% minimum"
+    },
+    "cash_flow": {
+     "grade": "D",
+     "provenance": "computed",
+     "note": "CoC -21.0%, DSCR 0.39, cash flow $-25,281/yr"
     }
    },
    "exception_factors": [],
@@ -21383,6 +23163,274 @@
      "note": "CoC -37.0%, DSCR 0.05, cash flow $-24,559/yr"
     }
    },
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "d0a42495e01bfce5",
+   "address": "8829 N Lagoon Dr",
+   "city": "Panama City Beach",
+   "state": "FL",
+   "tier": "str",
+   "market_type": "destination",
+   "price": 1120000.0,
+   "source": "the_offer_sheet",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "price $1,120,000 needs $168,000 down at 15% \u2014 beyond the ~$90,000 down-payment budget ($600,000 ceiling at 15% down)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "The Offer Sheet",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "$170K 2025 waterfront",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff8cb351166f28",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": null,
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "74ebf6e13ca0a962",
+   "address": "6014 S Black Oak Lake Rd",
+   "city": "Land O Lakes",
+   "state": "WI",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 625000.0,
+   "source": "the_offer_sheet",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "price $625,000 needs $93,750 down at 15% \u2014 beyond the ~$90,000 down-payment budget ($600,000 ceiling at 15% down)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "The Offer Sheet",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "August 13: 12 Potential STRs",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffbf6867217ebe",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": null,
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "79145b5ebb23cd29",
+   "address": "414 Goodwin Road",
+   "city": "Eliot",
+   "state": "ME",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 695000.0,
+   "source": "the_offer_sheet",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "price $695,000 needs $104,250 down at 15% \u2014 beyond the ~$90,000 down-payment budget ($600,000 ceiling at 15% down)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "The Offer Sheet",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "August 13: 12 Potential STRs",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffbf6867217ebe",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": null,
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "fbeedc8798926d87",
+   "address": "193 Riverview Road",
+   "city": "Boone",
+   "state": "NC",
+   "tier": "str",
+   "market_type": "destination",
+   "price": 750000.0,
+   "source": "the_offer_sheet",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "price $750,000 needs $112,500 down at 15% \u2014 beyond the ~$90,000 down-payment budget ($600,000 ceiling at 15% down)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "The Offer Sheet",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "August 12: 12 Potential STRs",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff72f19bcaee99",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": null,
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "758bc4a785d71093",
+   "address": "2560 May",
+   "city": "Galway",
+   "state": "NY",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 799000.0,
+   "source": "the_offer_sheet",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "price $799,000 needs $119,850 down at 15% \u2014 beyond the ~$90,000 down-payment budget ($600,000 ceiling at 15% down)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "The Offer Sheet",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "August 12: 12 Potential STRs",
+   "email_date": "2026-08-12",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ff72f19bcaee99",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": null,
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "85929b6290c4a58d",
+   "address": "75742 NE 123rd St",
+   "city": "Skykomish",
+   "state": "WA",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 749950.0,
+   "source": "here",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "price $749,950 needs $112,492 down at 15% \u2014 beyond the ~$90,000 down-payment budget ($600,000 ceiling at 15% down)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Here",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1091",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd406c632fa49",
+   "listing_urls": [
+    "https://www.zillow.com/homedetails/214-Paradise-Dr-Ashford-WA-98304/61021069_zpid/"
+   ],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": null,
+   "exception_factors": [],
+   "victor": null
+  },
+  {
+   "key": "c4c03ed5e1f7aea1",
+   "address": "24735 SE Summit Landsburg Rd",
+   "city": "Ravensdale",
+   "state": "WA",
+   "tier": "str",
+   "market_type": "unknown",
+   "price": 899000.0,
+   "source": "here",
+   "status": "killed",
+   "verdict": "KILLED",
+   "score": null,
+   "kill_reasons": [
+    "price $899,000 needs $134,850 down at 15% \u2014 beyond the ~$90,000 down-payment budget ($600,000 ceiling at 15% down)"
+   ],
+   "metrics": {},
+   "assumptions": {},
+   "tax_flags": [],
+   "red_flags": [],
+   "hard_disqualifiers": [],
+   "deal_card_md": null,
+   "first_seen": "2026-08-14T02:30:11+00:00",
+   "last_updated": "2026-08-14T02:30:11+00:00",
+   "source_name": "Here",
+   "source_kind": "teaser_newsletter",
+   "email_subject": "\ud83c\udfd4\ufe0f Peaks to Profits: The Top Mountain Airbnb Investment Picks \u2014 #1098",
+   "email_date": "2026-08-13",
+   "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19ffd3227c422b32",
+   "listing_urls": [],
+   "identification": null,
+   "market_flavor": null,
+   "priority_note": null,
+   "priority_market": null,
+   "photo_url": null,
+   "pillars": null,
    "exception_factors": [],
    "victor": null
   },
