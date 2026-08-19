@@ -132,6 +132,22 @@ def test_no_price_passes_with_flag(profile):
     assert not killed and any("no price" in f for f in flags)
 
 
+def test_no_price_deal_is_unscorable_not_a_crash(tmp_path):
+    # A price-less deal survives the kill filter, so it reaches underwriting —
+    # where every metric divides from price. It must be recorded as unscorable
+    # instead of raising and taking the whole batch down with it.
+    from pipeline import db as dbmod
+    from pipeline.run import process_deal
+    conn = dbmod.connect(tmp_path / "t.db")
+    deal = {"address": "3219 Old Mountain Rd", "city": "Sevierville", "state": "TN",
+            "tier": "str", "claimed": {"annual_str_revenue": 144000}}  # no price
+    out = process_deal(deal, load_profile(), conn, enrich_enabled=False)
+    assert out["outcome"] == "unscorable"
+    assert any("no price" in r for r in out["reasons"])
+    row = conn.execute("SELECT status, verdict FROM deals").fetchone()
+    assert row[0] == "extracted" and row[1] is None
+
+
 # --- Tier classification ------------------------------------------------
 
 def test_classify_dfw_duplex_as_house_hack(profile):

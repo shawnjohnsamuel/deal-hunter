@@ -1,0 +1,1126 @@
+[
+ {
+  "address": "2013 Ellis School Rd",
+  "city": "Baytown",
+  "state": "TX",
+  "zip": "77521",
+  "price": 1350000,
+  "property_type": "multifamily",
+  "units": 8,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Commercial Airbnb + Mansfield Quad",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0153cddc50f1ae",
+  "notes": "8-unit projecting $13,200/mo",
+  "claimed": {
+   "monthly_rent": 13200
+  }
+ },
+ {
+  "address": "320 Queens Court N",
+  "city": "Mansfield",
+  "state": "TX",
+  "zip": "76063",
+  "price": 540000,
+  "property_type": "multifamily",
+  "units": 4,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Commercial Airbnb + Mansfield Quad",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0153cddc50f1ae",
+  "notes": "fully leased quad",
+  "claimed": {
+   "monthly_rent": 4690
+  }
+ },
+ {
+  "address": "6305 Sandra St",
+  "city": "Houston",
+  "state": "TX",
+  "zip": "77028",
+  "price": 353000,
+  "property_type": "multifamily",
+  "units": 2,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Commercial Airbnb + Mansfield Quad",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0153cddc50f1ae",
+  "notes": "2024-built duplex",
+  "claimed": {
+   "monthly_rent": 3550
+  }
+ },
+ {
+  "address": "3807 Alsbury St",
+  "city": "Dallas",
+  "state": "TX",
+  "zip": "75216",
+  "price": 230000,
+  "property_type": "SFR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "email_subject": "Best of Week33",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a00093989e864f3",
+  "notes": "RE-PRICED $265K->$235K->$230K; 2020 build; ~1% rule; ~$40K walk-in equity; Victor claims 11.61% CoC",
+  "claimed": {
+   "monthly_rent": 2325
+  }
+ },
+ {
+  "address": "210 Savannah Ln",
+  "city": "Stanley",
+  "state": "VA",
+  "zip": "22851",
+  "price": 496000,
+  "beds": 3,
+  "baths": 2,
+  "sqft": 1512,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$96K+ VERIFIED annual gross revenue (19.4% rev-to-price); 1.",
+  "email_date": "2026-08-15",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a005078f3fa58e7",
+  "notes": "$96K+ VERIFIED annual gross revenue (19.4% rev-to-price); 1.2 acres; 360 mtn views; hot tub; mins from Shenandoah NP",
+  "claimed": {
+   "annual_str_revenue": 96000
+  }
+ },
+ {
+  "address": "67 Citrine Ct",
+  "city": "Ellijay",
+  "state": "GA",
+  "zip": "30540",
+  "price": 639900,
+  "beds": null,
+  "baths": null,
+  "sqft": 2013,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "~$60K income (9.4% rev/price); built 2022; furnished; sleeps",
+  "email_date": "2026-08-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a011f79e2cfe072",
+  "notes": "~$60K income (9.4% rev/price); built 2022; furnished; sleeps 7; Coosawattee River Resort; over budget",
+  "claimed": {
+   "annual_str_revenue": 60000
+  }
+ },
+ {
+  "address": "22447 S 214th St",
+  "city": "Queen Creek",
+  "state": "AZ",
+  "zip": "85142",
+  "price": 465000,
+  "beds": 4,
+  "baths": null,
+  "sqft": 1695,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$63,885 2025 across only 23 reservations; $455.92 ADR; putti",
+  "email_date": "2026-08-16",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a00a25f749f2d5d",
+  "notes": "$63,885 2025 across only 23 reservations; $455.92 ADR; putting green; golf community",
+  "claimed": {
+   "annual_str_revenue": 63885,
+   "adr": 455.92
+  }
+ },
+ {
+  "address": "16263 County Road 89",
+  "city": "Mentone",
+  "state": "AL",
+  "zip": "35984",
+  "price": 775000,
+  "beds": 6,
+  "baths": 5,
+  "sqft": 3500,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$70K-$100K range (midpoint used); main house + carriage hous",
+  "email_date": "2026-08-16",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a00b33bf3c99715",
+  "notes": "$70K-$100K range (midpoint used); main house + carriage house; mtn views; over budget",
+  "claimed": {
+   "annual_str_revenue": 85000
+  }
+ },
+ {
+  "address": "213 Matterhorn Dr",
+  "city": "Gatlinburg",
+  "state": "TN",
+  "zip": "37738",
+  "price": 2425000,
+  "beds": 8,
+  "baths": 8.5,
+  "sqft": 6462,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$210K+ PROJECTED (not actual); 8BR lodge sleeps 30; 2.04 acr",
+  "email_date": "2026-08-16",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a00c8b8bbbef871",
+  "notes": "$210K+ PROJECTED (not actual); 8BR lodge sleeps 30; 2.04 acres; way over budget",
+  "claimed": {
+   "annual_str_revenue": 210000
+  }
+ },
+ {
+  "address": "219 Penicillin Point",
+  "city": "Troutman",
+  "state": "NC",
+  "zip": "28166",
+  "price": 1935000,
+  "beds": 4,
+  "baths": 4,
+  "sqft": 4154,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "$180K+ annual; Lake Norman waterfront; new dock; over budget",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:19fffe54b9e60ecd",
+  "notes": "$180K+ annual; Lake Norman waterfront; new dock; over budget",
+  "claimed": {
+   "annual_str_revenue": 180000
+  }
+ },
+ {
+  "address": "3219 Old Mountain Rd",
+  "city": "Sevierville",
+  "state": "TN",
+  "zip": "37876",
+  "price": null,
+  "beds": null,
+  "baths": null,
+  "sqft": null,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "STS featured: avg $12K/mo (~$144K/yr); sleeps 12; indoor poo",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a00012e424e79d5",
+  "notes": "STS featured: avg $12K/mo (~$144K/yr); sleeps 12; indoor pool/sauna/putt-putt; mins to Gatlinburg+Pigeon Forge; NO PRICE STATED",
+  "claimed": {
+   "annual_str_revenue": 144000
+  }
+ },
+ {
+  "city": "Fairplay",
+  "state": "CO",
+  "price": 600000,
+  "teaser": true,
+  "property_type": "STR mountain",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "Off-market CO $600K/$120K",
+  "email_date": "2026-08-15",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0060ff1aa445b5",
+  "notes": "$120,309 gross over ~14.5 months (Jun2025-Aug2026) => ~$99.6K/yr annualized, NOT $120K/yr; 4.97 stars/77 reviews; 4.5 acres; seller claims 8.3% cap",
+  "claimed": {
+   "annual_str_revenue": 99600
+  }
+ },
+ {
+  "city": "South Haven",
+  "state": "MI",
+  "price": 929000,
+  "beds": 4,
+  "baths": 3,
+  "sqft": 2656,
+  "teaser": true,
+  "property_type": "STR",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "South Haven $929K",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a000e2f9074fdad",
+  "notes": "$121K 2022-23, $132K 2023-24; 2.24 acres; inground pool; over budget",
+  "claimed": {
+   "annual_str_revenue": 126000
+  }
+ },
+ {
+  "address": "152 Springwater Ct",
+  "city": "Ellijay",
+  "state": "GA",
+  "zip": "30540",
+  "price": 535000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 18: 11 Potential STRs",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a016dea0246e8b2",
+  "notes": "",
+  "claimed": {
+   "adr": 289,
+   "occupancy": 0.7
+  }
+ },
+ {
+  "address": "288 River Road",
+  "city": "Ryegate",
+  "state": "VT",
+  "zip": "05042",
+  "price": 249000,
+  "beds": 1,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 18: 11 Potential STRs",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a016dea0246e8b2",
+  "notes": "",
+  "claimed": {
+   "adr": 199,
+   "occupancy": 0.68
+  }
+ },
+ {
+  "address": "28355 State Highway 88",
+  "city": "Pioneer",
+  "state": "CA",
+  "zip": "95666",
+  "price": 1000000,
+  "beds": 4,
+  "baths": 4.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 18: 11 Potential STRs",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a016dea0246e8b2",
+  "notes": "",
+  "claimed": {
+   "adr": 430,
+   "occupancy": 0.63
+  }
+ },
+ {
+  "address": "145 Lake Ridge Dr",
+  "city": "Blue Ridge",
+  "state": "GA",
+  "zip": "30513",
+  "price": 535000,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 18: 11 Potential STRs",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a016dea0246e8b2",
+  "notes": "",
+  "claimed": {
+   "adr": 295,
+   "occupancy": 0.71
+  }
+ },
+ {
+  "address": "36 N COUNTY ROAD 2147",
+  "city": "Alpine",
+  "state": "AZ",
+  "zip": "85920",
+  "price": 1060000,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 17: 11 Potential STRs",
+  "email_date": "2026-08-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01147812e13bb5",
+  "notes": "",
+  "claimed": {
+   "adr": 454,
+   "occupancy": 0.66
+  }
+ },
+ {
+  "address": "44505 San Carlos Ave",
+  "city": "Palm Desert",
+  "state": "CA",
+  "zip": "92260",
+  "price": 689000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 17: 11 Potential STRs",
+  "email_date": "2026-08-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01147812e13bb5",
+  "notes": "",
+  "claimed": {
+   "adr": 350,
+   "occupancy": 0.63
+  }
+ },
+ {
+  "address": "15026 Pine Lake Drive",
+  "city": "Woodland Park",
+  "state": "CO",
+  "zip": "80863",
+  "price": 599000,
+  "beds": 2,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 17: 11 Potential STRs",
+  "email_date": "2026-08-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01147812e13bb5",
+  "notes": "",
+  "claimed": {
+   "adr": 341,
+   "occupancy": 0.56
+  }
+ },
+ {
+  "address": "179 Sarvis Ln",
+  "city": "Mars Hill",
+  "state": "NC",
+  "zip": "28754",
+  "price": 699000,
+  "beds": 3,
+  "baths": 4.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 17: 11 Potential STRs",
+  "email_date": "2026-08-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01147812e13bb5",
+  "notes": "",
+  "claimed": {
+   "adr": 351,
+   "occupancy": 0.59
+  }
+ },
+ {
+  "address": "4256 N Spider Lake Rd",
+  "city": "Traverse City",
+  "state": "MI",
+  "zip": "49696",
+  "price": 720000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 15: 15 Potential STRs",
+  "email_date": "2026-08-15",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0081907fbe10eb",
+  "notes": "",
+  "claimed": {
+   "adr": 400,
+   "occupancy": 0.55
+  }
+ },
+ {
+  "address": "629 N North Shore Road",
+  "city": "Hadley",
+  "state": "NY",
+  "zip": "12835",
+  "price": 539000,
+  "beds": 3,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 15: 15 Potential STRs",
+  "email_date": "2026-08-15",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0081907fbe10eb",
+  "notes": "",
+  "claimed": {
+   "adr": 339,
+   "occupancy": 0.56
+  }
+ },
+ {
+  "address": "32 Little Amy Creek Trl",
+  "city": "Ellijay",
+  "state": "GA",
+  "zip": "30540",
+  "price": 599000,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 15: 15 Potential STRs",
+  "email_date": "2026-08-15",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0081907fbe10eb",
+  "notes": "",
+  "claimed": {
+   "adr": 389,
+   "occupancy": 0.58
+  }
+ },
+ {
+  "address": "14740 Jesse Ln",
+  "city": "Rogers",
+  "state": "AR",
+  "zip": "72758",
+  "price": 500000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 15: 15 Potential STRs",
+  "email_date": "2026-08-15",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0081907fbe10eb",
+  "notes": "",
+  "claimed": {
+   "adr": 355,
+   "occupancy": 0.55
+  }
+ },
+ {
+  "address": "39456 Lake Dr",
+  "city": "Big Bear Lake",
+  "state": "CA",
+  "zip": "92315",
+  "price": 599000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 14: 12 Potential STRs",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0020d0586106c4",
+  "notes": "",
+  "claimed": {
+   "adr": 366,
+   "occupancy": 0.56
+  }
+ },
+ {
+  "address": "63613 NE 194th Place",
+  "city": "Baring",
+  "state": "WA",
+  "zip": "98224",
+  "price": 475000,
+  "beds": 1,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 14: 12 Potential STRs",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0020d0586106c4",
+  "notes": "",
+  "claimed": {
+   "adr": 261,
+   "occupancy": 0.76
+  }
+ },
+ {
+  "address": "34 Red Cedar Court",
+  "city": "Sapphire",
+  "state": "NC",
+  "zip": "28774",
+  "price": 929000,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "August 14: 12 Potential STRs",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0020d0586106c4",
+  "notes": "",
+  "claimed": {
+   "adr": 377,
+   "occupancy": 0.65
+  }
+ },
+ {
+  "address": "180 N Fairway Dr",
+  "city": "Lake Ariel",
+  "state": "PA",
+  "zip": "18436",
+  "price": 539000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Lost In The Woods: Forest Airbnb Investment Gems \u2014 #1096",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a016f3ed6bf3586",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/190-Egremont-Plain-Rd-South-Egremont-MA-01258/464310137_zpid/"
+  ],
+  "claimed": {
+   "adr": 295,
+   "occupancy": 0.72
+  }
+ },
+ {
+  "address": "190 Egremont Plain Rd",
+  "city": "South Egremont",
+  "state": "MA",
+  "zip": "01258",
+  "price": 885000,
+  "beds": 1,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Lost In The Woods: Forest Airbnb Investment Gems \u2014 #1096",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a016f3ed6bf3586",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/12-Durr-Rd-Jeffersonville-NY-12748/464323640_zpid/"
+  ],
+  "claimed": {
+   "adr": 415,
+   "occupancy": 0.72
+  }
+ },
+ {
+  "address": "12 Durr Rd",
+  "city": "Jeffersonville",
+  "state": "NY",
+  "zip": "12748",
+  "price": 649000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Lost In The Woods: Forest Airbnb Investment Gems \u2014 #1096",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a016f3ed6bf3586",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 335,
+   "occupancy": 0.73
+  }
+ },
+ {
+  "address": "25263 Sea Isle Hills Dr LOT 1",
+  "city": "Waves",
+  "state": "NC",
+  "zip": "27982",
+  "price": 1349500,
+  "beds": 5,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udf0a Investing in Waves: The Top Coastal Airbnb Opportunities Revealed \u2014 #1095",
+  "email_date": "2026-08-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a011cc4b7851131",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/400-E-Lloyd-St-Pensacola-FL-32503/464297108_zpid/"
+  ],
+  "claimed": {
+   "adr": 760,
+   "occupancy": 0.74
+  }
+ },
+ {
+  "address": "400 E Lloyd St",
+  "city": "Pensacola",
+  "state": "FL",
+  "zip": "32503",
+  "price": 289000,
+  "beds": 2,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udf0a Investing in Waves: The Top Coastal Airbnb Opportunities Revealed \u2014 #1095",
+  "email_date": "2026-08-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a011cc4b7851131",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/1516-Adele-Pl-Largo-FL-33770/47256695_zpid/"
+  ],
+  "claimed": {
+   "adr": 190,
+   "occupancy": 0.64
+  }
+ },
+ {
+  "address": "1516 Adele Pl",
+  "city": "Largo",
+  "state": "FL",
+  "zip": "33770",
+  "price": 447500,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udf0a Investing in Waves: The Top Coastal Airbnb Opportunities Revealed \u2014 #1095",
+  "email_date": "2026-08-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a011cc4b7851131",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 265,
+   "occupancy": 0.64
+  }
+ },
+ {
+  "address": "3654 E Sierra Way",
+  "city": "Cave Creek",
+  "state": "AZ",
+  "zip": "85331",
+  "price": 1595000,
+  "beds": 4,
+  "baths": 4.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udf35 Desert Gold: The Top Airbnb Investment Properties Revealed \u2014 #1094",
+  "email_date": "2026-08-16",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a00ca57616b51ef",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/8403-Haines-Ave-NE-Albuquerque-NM-87112/6761800_zpid/"
+  ],
+  "claimed": {
+   "adr": 695,
+   "occupancy": 0.78
+  }
+ },
+ {
+  "address": "8403 Haines Ave NE",
+  "city": "Albuquerque",
+  "state": "NM",
+  "zip": "87112",
+  "price": 335000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udf35 Desert Gold: The Top Airbnb Investment Properties Revealed \u2014 #1094",
+  "email_date": "2026-08-16",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a00ca57616b51ef",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/401-N-Corbett-Ave-Mountainair-NM-87036/445849832_zpid/"
+  ],
+  "claimed": {
+   "adr": 195,
+   "occupancy": 0.77
+  }
+ },
+ {
+  "address": "401 N Corbett Ave",
+  "city": "Mountainair",
+  "state": "NM",
+  "zip": "87036",
+  "price": 159000,
+  "beds": 2,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udf35 Desert Gold: The Top Airbnb Investment Properties Revealed \u2014 #1094",
+  "email_date": "2026-08-16",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a00ca57616b51ef",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 135,
+   "occupancy": 0.68
+  }
+ },
+ {
+  "address": "3129 Penrose Pl",
+  "city": "Cincinnati",
+  "state": "OH",
+  "zip": "45211",
+  "price": 339000,
+  "beds": 5,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83d\uddfd Downtown Dividends: The Top City Airbnb Investment Picks \u2014 #1092",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0025c052ee8cf5",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/3623-Chartres-St-New-Orleans-LA-70117/124053164_zpid/"
+  ],
+  "claimed": {
+   "adr": 291,
+   "occupancy": 0.62
+  }
+ },
+ {
+  "address": "3623 Chartres St",
+  "city": "New Orleans",
+  "state": "LA",
+  "zip": "70117",
+  "price": 1330000,
+  "beds": 3,
+  "baths": 3.5,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83d\uddfd Downtown Dividends: The Top City Airbnb Investment Picks \u2014 #1092",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0025c052ee8cf5",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/1034-S-Shelby-St-Louisville-KY-40203/73667073_zpid/"
+  ],
+  "claimed": {
+   "adr": 675,
+   "occupancy": 0.68
+  }
+ },
+ {
+  "address": "1034 S Shelby St",
+  "city": "Louisville",
+  "state": "KY",
+  "zip": "40203",
+  "price": 279000,
+  "beds": 2,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83d\uddfd Downtown Dividends: The Top City Airbnb Investment Picks \u2014 #1092",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0025c052ee8cf5",
+  "listing_urls": [],
+  "claimed": {
+   "adr": 222,
+   "occupancy": 0.64
+  }
+ },
+ {
+  "address": "7351 Homestead Rd",
+  "city": "Morgantown",
+  "state": "IN",
+  "zip": "46160",
+  "price": 525000,
+  "beds": 4,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Midwest Market Gems: Midweek STR Opportunities | August 19, 2026",
+  "email_date": "2026-08-19",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01b4a6797b252a",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/7351-Homestead-Rd-Morgantown-IN-46160/102842700_zpid/?"
+  ],
+  "claimed": {
+   "adr": 304,
+   "occupancy": 0.59,
+   "annual_str_revenue": 65700
+  }
+ },
+ {
+  "address": "26298 State Highway Yy",
+  "city": "Shell Knob",
+  "state": "MO",
+  "zip": "65747",
+  "price": 365000,
+  "beds": 5,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Midwest Market Gems: Midweek STR Opportunities | August 19, 2026",
+  "email_date": "2026-08-19",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01b4a6797b252a",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/26298-State-Highway-Yy-Shell-Knob-MO-65747/454266775_zpid/?"
+  ],
+  "claimed": {
+   "adr": 221,
+   "occupancy": 0.52,
+   "annual_str_revenue": 42000
+  }
+ },
+ {
+  "address": "1415 Brookcrest St",
+  "city": "Lawrenceville",
+  "state": "GA",
+  "zip": "30044",
+  "price": 525000,
+  "beds": 5,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Southeast Investment Spotlight: Uncover the Best STRs | August 18, 2026",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a016b3ab806250a",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/1415-Brookcrest-St-Lawrenceville-GA-30044/14772743_zpid/?"
+  ],
+  "claimed": {
+   "adr": 355,
+   "occupancy": 0.56,
+   "annual_str_revenue": 72800
+  }
+ },
+ {
+  "address": "3385 Holly Springs Dr",
+  "city": "Hernando Beach",
+  "state": "FL",
+  "zip": "34607",
+  "price": 379900,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Southeast Investment Spotlight: Uncover the Best STRs | August 18, 2026",
+  "email_date": "2026-08-18",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a016b3ab806250a",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/3385-Holly-Springs-Dr-Hernando-Beach-FL-34607/44796525_zpid/?"
+  ],
+  "claimed": {
+   "adr": 223,
+   "occupancy": 0.6,
+   "annual_str_revenue": 48800
+  }
+ },
+ {
+  "address": "378 Miller Dr",
+  "city": "Pocono Pines",
+  "state": "PA",
+  "zip": "18350",
+  "price": 625000,
+  "beds": 4,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Northeast STR Gold: Top Deals to Kickstart Your Week | August 17, 2026",
+  "email_date": "2026-08-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0114af8c02c3fe",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/378-Miller-Dr-Pocono-Pines-PA-18350/9841596_zpid/?"
+  ],
+  "claimed": {
+   "adr": 338,
+   "occupancy": 0.53,
+   "annual_str_revenue": 65600
+  }
+ },
+ {
+  "address": "3220 Stagecoach Road",
+  "city": "Morrisville",
+  "state": "VT",
+  "zip": "05661",
+  "price": 549000,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f Northeast STR Gold: Top Deals to Kickstart Your Week | August 17, 2026",
+  "email_date": "2026-08-17",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0114af8c02c3fe",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/3220-Stagecoach-Rd-Morrisville-VT-05661/75439025_zpid/?"
+  ],
+  "claimed": {
+   "adr": 358,
+   "occupancy": 0.53,
+   "annual_str_revenue": 69500
+  }
+ },
+ {
+  "address": "61538 El Reposo St",
+  "city": "Joshua Tree",
+  "state": "CA",
+  "zip": "92252",
+  "price": 549000,
+  "beds": 4,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f West Coast Wealth: End Your Week with Prime STR Deals | August 14, 2026",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a001d593d208cd1",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/61538-El-Reposo-St-Joshua-Tree-CA-92252/17500022_zpid/?"
+  ],
+  "claimed": {
+   "adr": 287,
+   "occupancy": 0.63,
+   "annual_str_revenue": 66000
+  }
+ },
+ {
+  "address": "34788 Forest Estates Road",
+  "city": "Evergreen",
+  "state": "CO",
+  "zip": "80439",
+  "price": 587000,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "source_tier_hint": "str",
+  "email_subject": "\ud83c\udfd5\ufe0f West Coast Wealth: End Your Week with Prime STR Deals | August 14, 2026",
+  "email_date": "2026-08-14",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a001d593d208cd1",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/34788-Forest-Estates-Rd-Evergreen-CO-80439/13806596_zpid/"
+  ],
+  "claimed": {
+   "adr": 303,
+   "occupancy": 0.66,
+   "annual_str_revenue": 73000
+  }
+ }
+]

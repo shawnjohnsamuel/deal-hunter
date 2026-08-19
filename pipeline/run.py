@@ -55,6 +55,15 @@ def process_deal(deal: dict, profile: dict, conn, *, enrich_enabled: bool = True
         except Exception as e:  # enrichment failure flags the deal, never sinks the run
             flags.append(f"enrichment error: {e}")
 
+    # Every metric is derived from price, so a deal that still has none after
+    # enrichment cannot be underwritten. Record it as unscorable rather than
+    # inventing a number — and never let it take the rest of the batch down.
+    if deal.get("price") is None:
+        reasons = flags + ["no price stated — cannot underwrite; find the list "
+                           "price (or identify the listing) and re-run"]
+        dbmod.upsert(conn, key, deal, status="extracted", kill_reasons=reasons)
+        return {"key": key, "outcome": "unscorable", "deal": deal, "reasons": reasons}
+
     result = score_deal(deal, profile, kill_flags=flags)
     card = render_deal_card(deal, result)
     dbmod.upsert(conn, key, deal, status="scored", verdict=result["verdict"],
@@ -84,6 +93,9 @@ def print_outcomes(outcomes: list[dict], full_cards: bool = False):
         elif o["outcome"] == "killed":
             print(f"**KILLED** — {o['deal'].get('address')}, {o['deal'].get('city')}: "
                   + "; ".join(o["kill_reasons"]))
+        elif o["outcome"] == "unscorable":
+            print(f"**UNSCORABLE** — {o['deal'].get('address')}, {o['deal'].get('city')}: "
+                  + "; ".join(o["reasons"]))
         else:
             print(summary_line(o["deal"], o["result"]))
             if full_cards:
