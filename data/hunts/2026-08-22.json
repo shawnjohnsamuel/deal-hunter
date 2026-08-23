@@ -1,0 +1,1150 @@
+[
+ {
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "\ud83d\udcb0 $96K in STR Income on This $399,900 Poconos Airbnb",
+  "email_date": "2026-08-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a02217d1250e3ba",
+  "address": "1403 Waterfront Dr",
+  "city": "Tobyhanna",
+  "state": "PA",
+  "zip": "18466",
+  "price": 399900,
+  "beds": 4,
+  "baths": null,
+  "sqft": 2028,
+  "property_type": "STR",
+  "units": 1,
+  "source_tier_hint": "str",
+  "notes": "",
+  "claimed": {
+   "annual_str_revenue": 96000
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "\ud83c\udfd5\ufe0f West Coast Wealth: End Your Week with Prime STR Deals | August 21, 2026",
+  "email_date": "2026-08-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a02596bccc362dc",
+  "address": "97 Bannock St",
+  "city": "Woodland Park",
+  "state": "CO",
+  "zip": "80863",
+  "price": 619900,
+  "beds": 4,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/97-Bannock-St-Woodland-Park-CO-80863/62721762_zpid/?"
+  ],
+  "claimed": {
+   "adr": 371,
+   "occupancy": 0.66,
+   "annual_str_revenue": 89400
+  },
+  "notes": "BnB Flow revenue is an ESTIMATE, not seller-reported",
+  "parse_confidence": "high"
+ },
+ {
+  "source": "bnb_flow",
+  "source_name": "BnB Flow",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "\ud83c\udfd5\ufe0f West Coast Wealth: End Your Week with Prime STR Deals | August 21, 2026",
+  "email_date": "2026-08-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a02596bccc362dc",
+  "address": "1592 Plumas Cir",
+  "city": "South Lake Tahoe",
+  "state": "CA",
+  "zip": "96150",
+  "price": 788700,
+  "beds": 4,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/1592-Plumas-Cir-South-Lake-Tahoe-CA-96150/18583438_zpid/?"
+  ],
+  "claimed": {
+   "adr": 394,
+   "occupancy": 0.65,
+   "annual_str_revenue": 93800
+  },
+  "notes": "BnB Flow revenue is an ESTIMATE, not seller-reported",
+  "parse_confidence": "high"
+ },
+ {
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "August 21: 13 Potential STRs",
+  "email_date": "2026-08-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a025c35abb64145",
+  "address": "3800 Old Glasgow Rd",
+  "city": "Scottsville",
+  "state": "KY",
+  "zip": "42164",
+  "price": 369900,
+  "beds": 3,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "notes": "OfferSheet projected CoC 16.2%",
+  "claimed": {
+   "adr": 241,
+   "occupancy": 0.58
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "August 21: 13 Potential STRs",
+  "email_date": "2026-08-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a025c35abb64145",
+  "address": "441 Edwards Pkwy",
+  "city": "Cleveland",
+  "state": "GA",
+  "zip": "30528",
+  "price": 279000,
+  "beds": 2,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "notes": "OfferSheet projected CoC 25.0%",
+  "claimed": {
+   "adr": 222,
+   "occupancy": 0.58
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "August 21: 13 Potential STRs",
+  "email_date": "2026-08-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a025c35abb64145",
+  "address": "127 White Pine Dr",
+  "city": "Lake Lure",
+  "state": "NC",
+  "zip": "28746",
+  "price": 649900,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "notes": "OfferSheet projected CoC 6.1%",
+  "claimed": {
+   "adr": 333,
+   "occupancy": 0.56
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "August 21: 13 Potential STRs",
+  "email_date": "2026-08-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a025c35abb64145",
+  "address": "95 Splendor Rdg",
+  "city": "Waynesville",
+  "state": "NC",
+  "zip": "28785",
+  "price": 1250000,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "notes": "OfferSheet projected CoC 8.4%",
+  "claimed": {
+   "adr": 498,
+   "occupancy": 0.71
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "\ud83d\uddfd Downtown Dividends: The Top City Airbnb Investment Picks \u2014 #1099",
+  "email_date": "2026-08-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0263f07ed3b4dd",
+  "address": "1606 10th Ave N",
+  "city": "Nashville",
+  "state": "TN",
+  "zip": "37208",
+  "price": 1349900,
+  "beds": 5,
+  "baths": 4.0,
+  "sqft": 4298,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/1606-10th-Ave-N-Nashville-TN-37208/41098378_zpid/"
+  ],
+  "claimed": {
+   "adr": 676,
+   "occupancy": 0.7
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "\ud83d\uddfd Downtown Dividends: The Top City Airbnb Investment Picks \u2014 #1099",
+  "email_date": "2026-08-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0263f07ed3b4dd",
+  "address": "1024 N 25th St",
+  "city": "Kansas City",
+  "state": "KS",
+  "zip": "66102",
+  "price": 219900,
+  "beds": 3,
+  "baths": 1.0,
+  "sqft": 1454,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/1024-N-25th-St-Kansas-City-KS-66102/75723158_zpid/"
+  ],
+  "claimed": {
+   "adr": 170,
+   "occupancy": 0.66
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "here",
+  "source_name": "Here",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "\ud83d\uddfd Downtown Dividends: The Top City Airbnb Investment Picks \u2014 #1099",
+  "email_date": "2026-08-21",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a0263f07ed3b4dd",
+  "address": "4419 Field St",
+  "city": "Detroit",
+  "state": "MI",
+  "zip": "48214",
+  "price": 400000,
+  "beds": 4,
+  "baths": 4.0,
+  "sqft": 2272,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "listing_urls": [
+   "https://www.zillow.com/homedetails/4419-Field-St-Detroit-MI-48214/88236009_zpid/"
+  ],
+  "claimed": {
+   "adr": 281,
+   "occupancy": 0.64
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "\ud83c\udf0a Multiple Six Figures in Revenue from This 10-Bedroom Oceanfront STR",
+  "email_date": "2026-08-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a02992c6142c822",
+  "address": null,
+  "city": null,
+  "state": null,
+  "zip": null,
+  "price": 4685000,
+  "beds": 10,
+  "baths": null,
+  "sqft": 5390,
+  "property_type": "STR",
+  "units": 1,
+  "source_tier_hint": "str",
+  "notes": "",
+  "claimed": {},
+  "parse_confidence": "review",
+  "teaser": true
+ },
+ {
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "August 22: 14 Potential STRs",
+  "email_date": "2026-08-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a02adcd748d5d14",
+  "address": "1694 Stag Run",
+  "city": "Pocono Lake",
+  "state": "PA",
+  "zip": "18347",
+  "price": 309000,
+  "beds": 4,
+  "baths": 2.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "notes": "OfferSheet projected CoC 26.2%",
+  "claimed": {
+   "adr": 256,
+   "occupancy": 0.6
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "August 22: 14 Potential STRs",
+  "email_date": "2026-08-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a02adcd748d5d14",
+  "address": "149 Mahoosec Trl",
+  "city": "Mineral Bluff",
+  "state": "GA",
+  "zip": "30559",
+  "price": 829000,
+  "beds": 3,
+  "baths": 3.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "notes": "OfferSheet projected CoC 9.7%",
+  "claimed": {
+   "adr": 393,
+   "occupancy": 0.64
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "August 22: 14 Potential STRs",
+  "email_date": "2026-08-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a02adcd748d5d14",
+  "address": "17800 N Shore Dr.",
+  "city": "Leavenworth",
+  "state": "WA",
+  "zip": "98826",
+  "price": 515000,
+  "beds": 1,
+  "baths": 1.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "notes": "OfferSheet projected CoC 13.5%",
+  "claimed": {
+   "adr": 239,
+   "occupancy": 0.76
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "source": "the_offer_sheet",
+  "source_name": "The Offer Sheet",
+  "source_kind": "teaser_newsletter",
+  "email_subject": "August 22: 14 Potential STRs",
+  "email_date": "2026-08-22",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a02adcd748d5d14",
+  "address": "287 Scouts Overlook",
+  "city": "Morganton",
+  "state": "GA",
+  "zip": "30560",
+  "price": 1250000,
+  "beds": 4,
+  "baths": 4.0,
+  "property_type": "STR cabin",
+  "units": 1,
+  "source_tier_hint": "str",
+  "notes": "OfferSheet projected CoC 5.0%",
+  "claimed": {
+   "adr": 511,
+   "occupancy": 0.63
+  },
+  "parse_confidence": "high"
+ },
+ {
+  "address": "2013 Ellis School Rd",
+  "city": "Baytown",
+  "state": "TX",
+  "zip": "77521",
+  "price": 1350000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating A+; T-12: Proven T-12; Victor also projects $280,000 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 241000
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/27509429?check_in=2026-08-20&check_out=2026-08-25&guests=1&adults=1&s=67&unique_share_id=42971b2b-d16b-4029-81db-a5ecce35b182"
+  ]
+ },
+ {
+  "address": "3410 Plantation Rd",
+  "city": "Austin",
+  "state": "TX",
+  "zip": "78745",
+  "price": 510000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating A+; T-12: Partial: 10 month; annualized from 10 months of actuals ($90,980)",
+  "claimed": {
+   "annual_str_revenue": 109176
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1348715495533562859?check_in=2026-08-23&check_out=2026-08-28&guests=1&adults=1&s=67&unique_share_id=3fa9d30f-e72c-42fb-b8a3-44d25c0dab47"
+  ]
+ },
+ {
+  "address": "915 Thompson St",
+  "city": "Houston",
+  "state": "TX",
+  "zip": "77007",
+  "price": 860000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating A+; T-12: Owner-reported annual",
+  "claimed": {
+   "annual_str_revenue": 161975
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1288835037380820134?check_in=2026-08-23&check_out=2026-08-28&guests=1&adults=1&s=67&unique_share_id=0170d4ed-18df-4498-9d88-092168d21d0c"
+  ]
+ },
+ {
+  "address": "5222 Bradford Dr",
+  "city": "Dallas",
+  "state": "TX",
+  "zip": "75235",
+  "price": 729000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating A+; T-12: Partial actual: guest house only; proven covers only PART of the property \u2014 understates ; Victor projects $150,000; Victor also projects $150,000 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 30000
+  },
+  "parse_confidence": "review",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/626945469709191705?check_in=2027-03-26&check_out=2027-03-31&guests=1&adults=1&s=67&unique_share_id=07cf5a28-9eae-455b-9b05-08a3d6b0a9c2"
+  ]
+ },
+ {
+  "address": "3615 McBroom St",
+  "city": "Dallas",
+  "state": "TX",
+  "zip": "75212",
+  "price": 469990,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating A+; T-12: Partial actual: 6.5 months; annualized from 6.5 months of actuals ($77,389)",
+  "claimed": {
+   "annual_str_revenue": 142872
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/633503935728054373?check_in=2026-08-30&check_out=2026-09-04&guests=1&adults=1&s=67&unique_share_id=0df0ae2d-7f04-4469-b65a-2e4fd5180a27"
+  ]
+ },
+ {
+  "address": "105 Sultana Ct",
+  "city": "Round Rock",
+  "state": "TX",
+  "zip": null,
+  "price": 1200000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating A; T-12: Proven T-12; Victor also projects $275,000 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 225000
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1626418127860710009?check_in=2026-06-18&check_out=2026-06-23&guests=1&adults=1&s=67&unique_share_id=9767d045-5046-4826-91c8-fd938e651c2a"
+  ]
+ },
+ {
+  "address": "11904 Sunhillow Bnd",
+  "city": "Austin",
+  "state": "TX",
+  "zip": "78758",
+  "price": 549900,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating A; T-12: Partial: one unit; proven covers only PART of the property \u2014 understates ; Victor projects $91,000; Victor also projects $91,000 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 45495
+  },
+  "parse_confidence": "review"
+ },
+ {
+  "address": "913 Thompson St",
+  "city": "Houston",
+  "state": "TX",
+  "zip": "77007",
+  "price": 830000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating A; T-12: Owner-reported annual",
+  "claimed": {
+   "annual_str_revenue": 136546
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1361968971165344412?check_in=2026-08-24&check_out=2026-08-29&guests=1&adults=1&s=67&unique_share_id=517e4d51-264e-4af0-baa6-9665c04e6df6"
+  ]
+ },
+ {
+  "address": "15106 Circle Oak St",
+  "city": "San Antonio",
+  "state": "TX",
+  "zip": "78232",
+  "price": 379000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B+; T-12: Owner-reported annual",
+  "claimed": {
+   "annual_str_revenue": 59700
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/52443570?check_in=2026-11-01&check_out=2026-11-06&guests=1&adults=1&s=67&unique_share_id=f4ed45f9-2918-4905-9821-1946af18dc23"
+  ]
+ },
+ {
+  "address": "3206 Heather Glen Drive",
+  "city": "Mesquite 75150",
+  "state": "TX",
+  "zip": null,
+  "price": 380000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B+; T-12: Proven T-12; Victor also projects $117,858 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 102485
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://rabbu.com/airbnbs-for-sale/mesquite-tx-75150/3206-heather-glen-dr-mesquite-tx-75150-xrw?utm_source=txdeallist&_bhlid=09b5d4875c07c41c9075d1a261787b9b48b22f91"
+  ]
+ },
+ {
+  "address": "5832 Clear Creek Dr",
+  "city": "Haltom City 76137",
+  "state": "TX",
+  "zip": null,
+  "price": 580000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B+; T-12: Proven T-12; Victor also projects $131,620 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 114452
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/650488873298683132?guests=1&adults=1&s=67&unique_share_id=cf516df0-64ea-4410-b56a-1f8519ceed9d"
+  ]
+ },
+ {
+  "address": "530 East Tyler Street",
+  "city": "Richardson 75081",
+  "state": "TX",
+  "zip": null,
+  "price": 420000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B+; T-12: Proven T-12; Victor also projects $83,181 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 72331
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/25009459?guests=1&adults=1&s=67&unique_share_id=4abe6983-1e45-4f69-ba6c-63d99f11aeae&source_impression_id=p3_1778005449_P3JfecmpsWtGaLFc"
+  ]
+ },
+ {
+  "address": "211 Goodson Way",
+  "city": "Denton 76207",
+  "state": "TX",
+  "zip": null,
+  "price": 679000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B+; T-12: Proven T-12; Victor also projects $130,587 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 113554
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1081807349189131713?guests=1&adults=1&s=67&unique_share_id=39d9bb90-63e3-4c32-b5c8-4d52b43882ce"
+  ]
+ },
+ {
+  "address": "15314 Philippine St",
+  "city": "Jersey Village 77040",
+  "state": "TX",
+  "zip": null,
+  "price": 585000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: Proven T-12; Victor also projects $136,927 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 119067
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.ca/rooms/888975960220422352?guests=1&adults=1&s=67&unique_share_id=3688ec50-c9b5-4e89-8efb-1fcd91787388"
+  ]
+ },
+ {
+  "address": "260 McGraw St",
+  "city": "Sherman 75090",
+  "state": "TX",
+  "zip": null,
+  "price": 649000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: Proven T-12; Victor also projects $141,979 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 123459
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1291398587062458463?check_in=2026-06-07&check_out=2026-06-12&guests=1&adults=1&s=67&unique_share_id=29c79648-83e5-4daf-b964-5d7e50b1e5b3"
+  ]
+ },
+ {
+  "address": "5407 Ariel St",
+  "city": "Houston 77096",
+  "state": "TX",
+  "zip": null,
+  "price": 549000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: Proven T-12; Victor also projects $116,762 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 101532
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1310182591604954768?source_impression_id=p3_1736792586_P3dfcpS_YTJF9lZ3"
+  ]
+ },
+ {
+  "address": "5717 Windmere Ln",
+  "city": "Haltom City 76137",
+  "state": "TX",
+  "zip": null,
+  "price": 745000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: Proven T-12; Victor also projects $153,825 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 133760
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/778250328668037384?guests=1&adults=1&s=67&unique_share_id=6dd2c39d-8330-4982-89b2-165ddbda7f06&source_impression_id=p3_1777998279_P3AeHSK7N_Yz31eS"
+  ]
+ },
+ {
+  "address": "904 Tiffany Lane",
+  "city": "Mesquite 75149",
+  "state": "TX",
+  "zip": null,
+  "price": 665000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: Proven T-12; Victor also projects $136,832 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 118984
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1242052626047268583?guests=1&adults=1&s=67&unique_share_id=f13bed4c-964c-4232-950b-aaa1cac51eb8&source_impression_id=p3_1777972801_P3Yq4f7lXbHJemGG"
+  ]
+ },
+ {
+  "address": "313 Melorine Drive",
+  "city": "Grand Prairie 75051",
+  "state": "TX",
+  "zip": null,
+  "price": 625000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: Proven T-12; Victor also projects $123,337 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 107249
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/45202992?guests=1&adults=1&s=67&unique_share_id=c16d7114-b92b-4480-851d-8a96c4751632&source_impression_id=p3_1778005251_P3KYqF_HfaseI9Ju"
+  ]
+ },
+ {
+  "address": "6117 Richardson Lane",
+  "city": "Austin 78741",
+  "state": "TX",
+  "zip": null,
+  "price": 1150000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: No proven T-12; NO proven T-12 \u2014 projected only",
+  "claimed": {
+   "annual_str_revenue": 220000
+  },
+  "parse_confidence": "review",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1594631645771609777?check_in=2026-07-05&check_out=2026-07-10&guests=1&adults=1&s=67&unique_share_id=4fe8564b-d829-4418-9d8d-ff531c2ac568"
+  ]
+ },
+ {
+  "address": "1613 East Spring Valley Road",
+  "city": "Richardson 75081",
+  "state": "TX",
+  "zip": null,
+  "price": 495000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: Proven T-12; Victor also projects $92,857 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 80745
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/48695504?guests=1&adults=1&s=67&unique_share_id=6345bf0b-81fa-400a-98a6-97535c9c133e&source_impression_id=p3_1777972436_P3bNK50yZ8OGS2WS"
+  ]
+ },
+ {
+  "address": "1116 Terjo West Austin",
+  "city": "",
+  "state": "TX",
+  "zip": null,
+  "price": 2250000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: Proven T-12; Victor also projects $320,000 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 280000
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1641187096630382418?check_in=2026-07-02&check_out=2026-07-07&guests=1&adults=1&s=67&unique_share_id=50378a3e-b3b6-4e4e-a178-e764e3d0aa04"
+  ]
+ },
+ {
+  "address": "7000 McGregor Ln",
+  "city": "Dripping Springs",
+  "state": "TX",
+  "zip": "78620",
+  "price": 3150000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: 2025 actual (full year)",
+  "claimed": {
+   "annual_str_revenue": 770000
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/676668468382840935?check_in=2026-08-23&check_out=2026-08-28&guests=1&adults=1&s=67&unique_share_id=85ee1ecf-4116-4997-a394-e7a100556056"
+  ]
+ },
+ {
+  "address": "819 Binbrook Dr",
+  "city": "Mesquite",
+  "state": "TX",
+  "zip": "75149",
+  "price": 289500,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating B; T-12: Partial actual / owner-occupied months; proven covers only PART of the property \u2014 understates ; Victor projects $66,000; Victor also projects $66,000 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 55200
+  },
+  "parse_confidence": "review",
+  "listing_urls": [
+   "https://www.airbnb.com/l/y9OBLGpO"
+  ]
+ },
+ {
+  "address": "1809 Salem Street",
+  "city": "Irving 75061",
+  "state": "TX",
+  "zip": null,
+  "price": 509000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating C+; T-12: Proven T-12; Victor also projects $109,302 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 95045
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/27854618?guests=1&adults=1&s=67&unique_share_id=37d118ad-6e4a-4c25-977d-c13935f0bf74&source_impression_id=p3_1777973462_P3ixHBW8WBhjk2DX"
+  ]
+ },
+ {
+  "address": "1109 Warbler West Austin",
+  "city": "",
+  "state": "TX",
+  "zip": null,
+  "price": 2500000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating C+; T-12: No proven T-12; NO proven T-12 \u2014 projected only",
+  "claimed": {
+   "annual_str_revenue": 450000
+  },
+  "parse_confidence": "review",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1679203233318711782?check_in=2026-06-27&check_out=2026-07-02&guests=1&adults=1&s=67&unique_share_id=edd3e78c-1464-4564-aa82-0c113952ab8f"
+  ]
+ },
+ {
+  "address": "7132 Hunt Ln",
+  "city": "Rockwall 75087",
+  "state": "TX",
+  "zip": null,
+  "price": 700000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating C+; T-12: Proven T-12; Victor also projects $123,033 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 106985
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.ca/rooms/1081808516118710847?guests=1&adults=1&s=67&unique_share_id=e2be1865-94e3-4d7b-8770-4ec5e410ab19"
+  ]
+ },
+ {
+  "address": "403 Geyser Pflugerville",
+  "city": "",
+  "state": "TX",
+  "zip": null,
+  "price": 800000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating C+; T-12: Proven T-12; Victor also projects $140,000 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 118000
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1626397748526268700?check_in=2026-06-19&check_out=2026-06-24&guests=1&adults=1&s=67&unique_share_id=64cc4166-f8f4-4636-b594-b5c2ec9d27a9"
+  ]
+ },
+ {
+  "address": "101 Sultana Ct",
+  "city": "Round Rock",
+  "state": "TX",
+  "zip": null,
+  "price": 1000000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating C; T-12: Proven T-12; Victor also projects $175,000 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 137859
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1626418127860710009?check_in=2026-06-18&check_out=2026-06-23&guests=1&adults=1&s=67&unique_share_id=cab0fec4-4554-4bc2-847e-14b4639e1827"
+  ]
+ },
+ {
+  "address": "2523 County Road 3303",
+  "city": "Greenville 75402",
+  "state": "TX",
+  "zip": null,
+  "price": 645000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating C; T-12: Proven T-12; Victor also projects $87,637 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 76206
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1102833709466565368?source_impression_id=p3_1773157308_P3L6xSdQfRF3cJev"
+  ]
+ },
+ {
+  "address": "2209 Forest Bend",
+  "city": "Austin 78704",
+  "state": "TX",
+  "zip": null,
+  "price": 1900000,
+  "property_type": "STR",
+  "units": 1,
+  "source": "victor",
+  "source_name": "Victor Steffen (Steffen Realty)",
+  "source_kind": "agent",
+  "source_tier_hint": "str",
+  "tier": "str",
+  "email_subject": "If You Need an STR Before Year-End (30 curated TX STRs)",
+  "email_date": "2026-08-20",
+  "email_link": "https://mail.google.com/mail/u/0/#search/rfc822msgid:1a01feea59cc32fb",
+  "notes": "Victor rating C; T-12: Proven T-12; Victor also projects $220,000 (upside, not used)",
+  "claimed": {
+   "annual_str_revenue": 170000
+  },
+  "parse_confidence": "high",
+  "listing_urls": [
+   "https://www.airbnb.com/rooms/1364527195727204351?check_in=2026-06-21&check_out=2026-06-26&guests=1&adults=1&s=67&unique_share_id=81b7e497-c4d9-4a00-bc46-5712086d8bf4"
+  ]
+ }
+]

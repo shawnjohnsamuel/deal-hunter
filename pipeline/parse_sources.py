@@ -36,6 +36,25 @@ MONEY = r"[\U0001F4B0\U0001F4B5]"
 STATE = r"[A-Z]{2}"
 
 
+def _money_k(s: str | None) -> int | None:
+    """Handles the '$96K' / '$1.2M' shorthand the newsletters mix with commas."""
+    if not s:
+        return None
+    m = re.search(r"([\d,.]+)\s*([KM])?", s.strip(), re.I)
+    if not m:
+        return None
+    try:
+        n = float(m.group(1).replace(",", ""))
+    except ValueError:
+        return None
+    unit = (m.group(2) or "").upper()
+    if unit == "K":
+        n *= 1_000
+    elif unit == "M":
+        n *= 1_000_000
+    return int(round(n))
+
+
 def _money(s: str | None) -> int | None:
     if not s:
         return None
@@ -197,6 +216,9 @@ _REV_PATTERNS = [
     (r"\$([\d,]+)\s*(?:\+)?\s*(?:in\s+)?[Vv]erified\s+[Aa]nnual", "verified"),
     (r"(?:approximately|about|roughly)\s+\$([\d,]+)\s+in\s+annual\s+gross", "actual"),
     (r"\$([\d,]+)\s*(?:\+)?\s*(?:in\s+)?[Aa]nnual\s+(?:gross\s+)?(?:rental\s+)?(?:revenue|income)", "actual"),
+    (r"\$([\d,.]+K?)\s*(?:\+)?\s*(?:in\s+)?(?:verifiable|verified|proven)\s+"
+     r"(?:annual\s+)?(?:STR\s+)?(?:rental\s+)?(?:income|revenue)", "verified"),
+    (r"\$([\d,.]+K?)\s+STR\s+Income\b", "actual"),
     (r"[Pp]rojected\s+[Gg]ross\s+[Rr]evenue:?\s*\$([\d,]+)", "projected"),
     (r"\$([\d,]+)\s*(?:\+)?\s*[Pp]rojected", "projected"),
 ]
@@ -208,8 +230,11 @@ def parse_offersheet_spotlight(text, mid, subject, date) -> list[dict] | list:
 
     price = None
     for pat in (rf"###\s*{MONEY}\s*Offered at:\s*\*?\*?\$([\d,]+)",
-                r"Offered at\s*\*\*\$([\d,]+)\*\*",
-                r"Offered at:?\s*\$([\d,]+)"):
+                r"Offered at(?:\s+\w+){0,2}?\s*\*\*\$([\d,]+)\*\*",
+                r"Offered at:?(?:\s+just|\s+only)?\s*\$([\d,]+)",
+                # 'ЁЯТ░ **Price: $399,900**' — the spec-list variant
+                rf"{MONEY}?\s*\*\*Price:\s*\$([\d,]+)\*\*",
+                r"\bPrice:\s*\$([\d,]+)"):
         m = re.search(pat, text)
         if m:
             price = _money(m.group(1))
@@ -225,7 +250,7 @@ def parse_offersheet_spotlight(text, mid, subject, date) -> list[dict] | list:
     for pat, kind in _REV_PATTERNS:
         m = re.search(pat, text)
         if m:
-            revenue, rev_kind = _money(m.group(1)), kind
+            revenue, rev_kind = _money_k(m.group(1)), kind
             break
 
     conf = "high"

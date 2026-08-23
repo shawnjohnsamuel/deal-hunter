@@ -155,3 +155,36 @@ def test_parse_message_dispatches_on_sender():
     d = parse_message(msg)
     assert len(d) == 1 and d[0]["source"] == "bnb_flow"
     assert d[0]["email_link"].endswith("abc")
+
+
+PRICE_VARIANTS = """
+[x](https://www.theoffersheet.app/contact/1403-waterfront-dr-tobyhanna-pa-18466)
+Offered at just **$399,900**, this established Poconos STR has generated:
+\U0001F4B0 **Price: $399,900**
+* 4 Bedrooms
+**$96,000 in Verified Annual Gross Revenue**
+"""
+
+
+def test_spotlight_price_variants():
+    """'Offered at just **$X**' and '**Price: $X**' are both used in the wild;
+    missing them silently produced a price-less (unscorable) deal."""
+    d = parse_offersheet_spotlight(PRICE_VARIANTS, "m", "s", "2026-08-21")[0]
+    assert d["price"] == 399900
+    assert d["city"] == "Tobyhanna" and d["state"] == "PA"
+    assert d["claimed"]["annual_str_revenue"] == 96000
+
+
+def test_spotlight_revenue_shorthand_and_phrasings():
+    """'$96K' shorthand and 'verifiable STR rental income' both appear; missing
+    them left a priced deal with zero revenue, which scores as a disaster."""
+    from pipeline.parse_sources import _money_k
+    assert _money_k("96K") == 96000 and _money_k("1.2M") == 1200000
+    assert _money_k("96,000") == 96000
+    txt = ("[x](https://www.theoffersheet.app/contact/1403-waterfront-dr-tobyhanna-pa-18466)\n"
+           "Offered at just **$399,900**\n"
+           "* 4 Bedrooms\n"
+           "$96,000 in verifiable STR rental income\n")
+    d = parse_offersheet_spotlight(txt, "m", "s", "2026-08-21")[0]
+    assert d["price"] == 399900
+    assert d["claimed"]["annual_str_revenue"] == 96000
