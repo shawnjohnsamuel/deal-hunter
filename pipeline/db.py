@@ -102,7 +102,11 @@ def export_site_json(conn: sqlite3.Connection, out_path: Path = SITE_JSON):
         deals.append({
             "key": r[0], "address": r[1], "city": r[2], "state": r[3],
             "tier": r[4], "market_type": r[5], "price": r[6], "source": r[7],
-            "status": r[8], "verdict": r[9] or ("KILLED" if r[8] == "killed" else None),
+            "status": r[8],
+            # a scored-but-unscorable deal is not a verdict-less blank: it is a
+            # watchlist entry that needs one more number before it can be judged
+            "verdict": r[9] or ("KILLED" if r[8] == "killed" else
+                                "NEEDS_DATA" if r[8] == "extracted" else None),
             "score": r[10], "kill_reasons": json.loads(r[11] or "[]"),
             "metrics": uw.get("metrics") or {},
             # down payment + closing (+ furnishing for STR) — the cheque size,
@@ -142,6 +146,7 @@ def export_site_json(conn: sqlite3.Connection, out_path: Path = SITE_JSON):
         "borderline": sum(1 for d in deals if d["verdict"] == "BORDERLINE"),
         "fail": sum(1 for d in deals if d["verdict"] == "FAIL"),
         "capital_gap": sum(1 for d in deals if d["verdict"] == "CAPITAL_GAP"),
+        "needs_data": sum(1 for d in deals if d["verdict"] == "NEEDS_DATA"),
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)

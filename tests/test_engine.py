@@ -608,3 +608,20 @@ def test_turnkey_claim_does_not_bleed_across_a_digest():
     a, b = parse_offersheet_daily(text, "m", "s", "2026-09-11")
     assert a["turnkey_claimed"] is True
     assert b["turnkey_claimed"] is False
+
+
+def test_priced_str_without_any_revenue_signal_is_unscorable(tmp_path):
+    """A Short Term Shop listing arrives as an address and a Zillow link. Once
+    enrichment supplies a price, underwriting it at zero income produced a
+    ~-55% cash-on-cash FAIL — which reads as a verdict on the property rather
+    than on our missing data."""
+    from pipeline import db as dbmod
+    from pipeline.profile import load_profile
+    from pipeline.run import process_deal
+    conn = dbmod.connect(tmp_path / "t.db")
+    deal = {"address": "1723 Walker Trl", "city": "Sevierville", "state": "TN",
+            "price": 425000, "property_type": "STR", "units": 1,
+            "source_tier_hint": "str", "claimed": {}}
+    out = process_deal(deal, load_profile(), conn, enrich_enabled=False)
+    assert out["outcome"] == "unscorable"
+    assert any("revenue" in r for r in out["reasons"])

@@ -22,14 +22,69 @@ MODEL = os.environ.get("DEAL_HUNTER_MODEL", "claude-sonnet-5")
 _rate_cache: dict = {}
 
 
+def worth_paid_lookup(deal: dict, profile: dict) -> bool:
+    """Whether this deal earns one of the month's paid listing calls.
+
+    The free tier is 100 requests a month. That used to be self-rationing
+    because the kill filter removed most deals before enrichment, but deals
+    that are merely beyond the cash budget are now underwritten rather than
+    killed, so nearly everything reaches this point. Spend the quota where a
+    purchase could actually happen: short-term rentals in a priority mountain
+    market inside the drive-time cap. Everything else falls back to the free
+    path or simply stays un-enriched.
+    """
+    if deal.get("tier") != "str":
+        return False
+    from .markets import priority_market_info
+    info = priority_market_info(deal.get("city", ""), deal.get("state", ""))
+    if not info:
+        return False
+    cap = profile["buy_boxes"]["str"].get("max_drive_hours", 14)
+    return info["drive_hours"] <= cap
+
+
+def _zillow_fallback(deal: dict, enriched: dict):
+    """Free path: read the listing page for a price we don't otherwise have.
+
+    Only runs when the deal still has no price AND the source handed us the
+    listing URL, so it never guesses at which property is meant.
+    """
+    from . import zillow
+    for url in deal.get("listing_urls") or []:
+        data = zillow.lookup(url)
+        if not data:
+            continue
+        if deal.get("price") is None and data.get("price"):
+            deal["price"] = data["price"]
+            deal["price_source"] = "zillow_page"
+        for field in ("beds", "baths", "sqft"):
+            if deal.get(field) is None and data.get(field) is not None:
+                deal[field] = data[field]
+        enriched["zillow_page"] = data
+        enriched["data_notes"] = "; ".join(filter(None, [
+            enriched.get("data_notes"),
+            f"price ${data['price']:,} read from the public Zillow listing page "
+            f"(unofficial source — confirm against the MLS before an offer)"]))
+        return
+    return
+
+
 def enrich_deal(deal: dict, profile: dict) -> dict:
     enriched = deal.setdefault("enriched", {})
     from . import redfin
-    if redfin.available() and deal.get("address"):
+    if redfin.available() and deal.get("address") and worth_paid_lookup(deal, profile):
         try:
             _redfin(deal, enriched)
         except Exception as e:
             print(f"WARNING: Redfin enrichment failed for {deal.get('address')}: {e}",
+                  file=sys.stderr)
+    # Free fallback, after the paid path has had its chance: a deal with a
+    # known listing URL and still no price cannot be underwritten at all.
+    if deal.get("price") is None and deal.get("listing_urls"):
+        try:
+            _zillow_fallback(deal, enriched)
+        except Exception as e:
+            print(f"WARNING: Zillow page lookup failed for {deal.get('address')}: {e}",
                   file=sys.stderr)
     if os.environ.get("RENTCAST_API_KEY"):
         try:

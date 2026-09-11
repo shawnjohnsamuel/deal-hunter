@@ -51,6 +51,7 @@
   .tile[data-verdict="BORDERLINE"] { background: var(--warning); }
   .tile[data-verdict="FAIL"]       { background: var(--serious); }
   .tile[data-verdict="CAPITAL_GAP"] { background: var(--accent); }
+  .tile[data-verdict="NEEDS_DATA"]  { background: var(--baseline); }
   .tile[data-verdict="KILLED"]     { background: var(--muted); }
 
   .filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 14px; }
@@ -101,6 +102,8 @@
   .b-FAIL .dot  { background: var(--serious); }
   .b-CAPITAL_GAP      { background: color-mix(in srgb, var(--accent) 13%, transparent); }
   .b-CAPITAL_GAP .dot { background: var(--accent); }
+  .b-NEEDS_DATA       { background: color-mix(in srgb, var(--baseline) 22%, transparent); }
+  .b-NEEDS_DATA .dot  { background: var(--baseline); }
   .b-KILLED     { background: color-mix(in srgb, var(--muted) 14%, transparent); color: var(--ink-2); }
   .b-KILLED .dot{ background: var(--muted); }
 
@@ -149,6 +152,7 @@
   .vb-BORDERLINE { background: color-mix(in srgb, var(--warning) 88%, var(--surface)); }
   .vb-FAIL       { background: color-mix(in srgb, var(--serious) 88%, var(--surface)); }
   .vb-CAPITAL_GAP { background: color-mix(in srgb, var(--accent) 88%, var(--surface)); color: #fff; }
+  .vb-NEEDS_DATA  { background: color-mix(in srgb, var(--baseline) 70%, var(--surface)); }
   .vb-KILLED     { background: color-mix(in srgb, var(--muted) 88%, var(--surface)); }
 
   /* Four-pillar grade chips (Victor methodology). Letter always shown —
@@ -256,7 +260,7 @@ const isPriority = d => !!(d.priority_market?.in_drive_range && d.market_flavor 
 
 // CAPITAL_GAP is the verdict value used for filtering and CSS; show it with a
 // space so the table reads like prose.
-const VERDICT_LABEL = { CAPITAL_GAP: "CAPITAL GAP" };
+const VERDICT_LABEL = { CAPITAL_GAP: "CAPITAL GAP", NEEDS_DATA: "NEEDS DATA" };
 
 function badge(v) {
   const key = v || "—";
@@ -476,6 +480,7 @@ function tiles(stats) {
     ["PASS", "Passed", stats.pass, "worth underwriting"],
     ["BORDERLINE", "Borderline", stats.borderline, "judgment calls"],
     ["CAPITAL_GAP", "Capital gap", stats.capital_gap, "passes \u2014 cash short"],
+    ["NEEDS_DATA", "Needs data", stats.needs_data, "watchlist \u2014 no revenue yet"],
     ["FAIL", "Failed", stats.fail, "ran the numbers, said no"],
     ["KILLED", "Killed early", stats.killed, "zero research spent"],
   ];

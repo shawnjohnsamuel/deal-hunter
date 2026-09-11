@@ -65,6 +65,18 @@ def process_deal(deal: dict, profile: dict, conn, *, enrich_enabled: bool = True
         return {"key": key, "outcome": "unscorable", "deal": deal, "reasons": reasons}
 
     result = score_deal(deal, profile, kill_flags=flags)
+
+    # An STR priced but with no revenue, ADR or occupancy anywhere underwrites
+    # at zero income, which reads as a catastrophic failure (~-55% CoC) when the
+    # truth is that nothing is known yet. Record it as unscorable — a watchlist
+    # entry awaiting a revenue estimate — rather than libelling the property.
+    uw = result.get("underwriting") or {}
+    if deal.get("tier") == "str" and not uw.get("gross_annual_income"):
+        reasons = flags + ["no revenue, ADR or occupancy figure — an STR cannot be "
+                           "underwritten from price alone; needs a revenue estimate"]
+        dbmod.upsert(conn, key, deal, status="extracted", kill_reasons=reasons)
+        return {"key": key, "outcome": "unscorable", "deal": deal, "reasons": reasons}
+
     card = render_deal_card(deal, result)
     dbmod.upsert(conn, key, deal, status="scored", verdict=result["verdict"],
                  score=result["score"], result=result, deal_card_md=card)

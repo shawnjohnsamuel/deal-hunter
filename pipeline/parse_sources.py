@@ -26,6 +26,7 @@ where each message file is the plain-text dump written by the hunt workflow:
 from __future__ import annotations
 
 import json
+import base64
 import re
 from pathlib import Path
 
@@ -591,6 +592,78 @@ def parse_victor(text, mid, subject, date) -> list[dict]:
 # --------------------------------------------------------------------------
 # Dispatch
 # --------------------------------------------------------------------------
+# --------------------------------------------------------------------------
+# The Short Term Shop (Avery Carl) — weekly featured listings
+# --------------------------------------------------------------------------
+# The source the priority-market list itself came from, and the most
+# mountain-dense feed in the inbox. Each listing is an underlined heading
+# ("228 Mountain View Dr, Pocono Lake, PA") followed by a click-tracked link
+# whose last path segment is the base64 of the real Zillow URL. There is no
+# price and no revenue in the email — only the section header states a band
+# ("Listings UNDER $600K"), so every deal here is a teaser that needs
+# enrichment before it can be underwritten.
+_STS_HDR = re.compile(
+    r"^(?P<addr>\d+[^\n,]{2,60},\s*[A-Za-z .'-]{2,40},\s*[A-Z]{2})\s*\n-{5,}\s*$", re.M)
+_STS_BAND = re.compile(r"(?:listings?|deals?|priced)\s+under\s+\$?([\d.]+)\s*([KM])?", re.I)
+
+
+def _decode_tracked(url: str) -> str | None:
+    """Recover the destination from a kit-mail click-tracking URL.
+
+    The final path segment is base64 of the real target; anything that does not
+    decode to an http(s) URL is left alone rather than guessed at.
+    """
+    seg = url.rstrip("/").rsplit("/", 1)[-1]
+    try:
+        raw = base64.b64decode(seg + "=" * (-len(seg) % 4)).decode("utf8", "strict")
+    except Exception:
+        return None
+    return raw if raw.startswith(("http://", "https://")) else None
+
+
+def parse_shorttermshop(text, mid, subject, date) -> list[dict]:
+    deals = []
+    heads = list(_STS_HDR.finditer(text))
+    for i, mo in enumerate(heads):
+        parts = _split_address(mo.group("addr"))
+        if not parts:
+            continue
+        block = text[mo.end(): heads[i + 1].start() if i + 1 < len(heads) else len(text)]
+        urls = []
+        # the plain-text part writes these as "( https://... )", spaces included
+        for m in re.finditer(r"\(\s*(https?://[^\s)]+)\s*\)", block):
+            u = m.group(1)
+            dest = _decode_tracked(u) if "click." in u else u
+            if dest and "zillow.com/homedetails" in dest and dest not in urls:
+                urls.append(dest)
+
+        # the nearest "UNDER $X" header above this listing is its price band
+        band = None
+        for bm in _STS_BAND.finditer(text[:mo.start()]):
+            band = bm
+        price_ceiling = None
+        if band:
+            price_ceiling = _money_k(band.group(1) + (band.group(2) or ""))
+
+        deals.append({
+            **_base(mid, subject, date, "short_term_shop", "The Short Term Shop", block),
+            "address": parts[0], "city": parts[1], "state": parts[2], "zip": parts[3],
+            # No price is stated anywhere in the email; enrichment fills it and
+            # the band is only a bound, never a number to underwrite on.
+            "price": None,
+            "price_ceiling_hint": price_ceiling,
+            "property_type": "STR", "units": 1, "source_tier_hint": "str",
+            "teaser": True,
+            "listing_urls": urls,
+            "notes": (f"Short Term Shop featured listing; email states only "
+                      f"'under ${price_ceiling:,}'" if price_ceiling else
+                      "Short Term Shop featured listing; no price in email"),
+            "claimed": {},
+            "parse_confidence": "review",
+        })
+    return deals
+
+
 def parse_message(text: str) -> list[dict]:
     head = text[:400]
     mid = (re.search(r"^MSGID: (.+)$", head, re.M) or [None, ""])[1] if \
@@ -608,6 +681,8 @@ def parse_message(text: str) -> list[dict]:
         return parse_victor(text, mid, subject, date)
     if "here@" in sender:
         return parse_here(text, mid, subject, date)
+    if "theshorttermshop" in sender:
+        return parse_shorttermshop(text, mid, subject, date)
     if "bnbflow" in sender:
         return parse_bnbflow(text, mid, subject, date)
     if "theoffersheet" in sender:

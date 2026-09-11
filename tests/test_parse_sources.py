@@ -368,3 +368,54 @@ def test_turnkey_ignores_the_newsletters_own_advertising():
             "Have a strong-performing Airbnb, unique vacation rental, or turnkey STR "
             "you may consider selling? Send it our way.\n")
     assert _turnkey_claim(real) is True
+
+
+STS = """
+Then check out this week's featured budget-friendly listings → all priced UNDER $500K \U0001F447
+
+✨NEW Featured Deals✨
+
+228 Mountain View Dr, Pocono Lake, PA
+-------------------------------------
+
+( https://e473a3f7.click.kit-mail3.com/abc/def/aHR0cHM6Ly93d3cuemlsbG93LmNvbS9ob21lZGV0YWlscy8yMjgtTW91bnRhaW4tVmlldy1Eci1Qb2Nvbm8tTGFrZS1QQS0xODM0Ny85ODM4ODU0X3pwaWQv )
+
+1723 Walker Trl, Sevierville, TN
+--------------------------------
+
+( https://e473a3f7.click.kit-mail3.com/abc/ghi/aHR0cHM6Ly93d3cuemlsbG93LmNvbS9ob21lZGV0YWlscy8xNzIzLVdhbGtlci1UcmwtU2V2aWVydmlsbGUtVE4tMzc4NzYvNDI1MDA4NjhfenBpZC8= )
+
+Listings UNDER $800K
+
+1146 Pine Mountain Rd, Sevierville, TN
+--------------------------------------
+
+( https://e473a3f7.click.kit-mail3.com/abc/jkl/aHR0cHM6Ly93d3cuemlsbG93LmNvbS9ob21lZGV0YWlscy8xMTQ2LVBpbmUtTW91bnRhaW4tUmQtU2V2aWVydmlsbGUtVE4tMzc4NjIvNDI1MDI4MDFfenBpZC8= )
+"""
+
+
+def test_shorttermshop_listings_and_tracked_zillow_links():
+    """The Short Term Shop gives an address, a click-tracked link and a price
+    band — no price and no revenue — so every listing is a teaser."""
+    from pipeline.parse_sources import parse_shorttermshop
+    ds = parse_shorttermshop(STS, "m", "s", "2026-08-28")
+    assert len(ds) == 3
+    a, b, c = ds
+    assert (a["address"], a["city"], a["state"]) == ("228 Mountain View Dr", "Pocono Lake", "PA")
+    # the tracking URL's last segment is base64 of the real Zillow link
+    assert a["listing_urls"] == [
+        "https://www.zillow.com/homedetails/228-Mountain-View-Dr-Pocono-Lake-PA-18347/9838854_zpid/"]
+    assert a["price"] is None and a["teaser"] is True
+    assert a["price_ceiling_hint"] == 500000 and b["price_ceiling_hint"] == 500000
+    # the band comes from the nearest header above the listing
+    assert c["price_ceiling_hint"] == 800000
+    assert c["address"] == "1146 Pine Mountain Rd"
+
+
+def test_shorttermshop_dispatches_and_ignores_undecodable_links():
+    from pipeline.parse_sources import parse_message, _decode_tracked
+    assert _decode_tracked("https://x.click.kit-mail3.com/a/b/not-base64!!") is None
+    msg = ("SUBJECT: [NEW] STRs\nSENDER: info@theshorttermshop.com\n"
+           "DATE: 2026-08-28T00:00:00Z\nMSGID: sts1\n" + "=" * 60 + "\n" + STS)
+    ds = parse_message(msg)
+    assert len(ds) == 3 and ds[0]["source"] == "short_term_shop"
