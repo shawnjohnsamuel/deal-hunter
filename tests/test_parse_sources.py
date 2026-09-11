@@ -350,3 +350,21 @@ def test_price_change_note_shows_both_prices():
     m = merge_duplicates([a, b])[0]
     assert m["price"] == 1450000
     assert "$1,500,000" in m["notes"] and "$1,450,000" in m["notes"]
+
+
+def test_turnkey_ignores_the_newsletters_own_advertising():
+    """The Offer Sheet's standing footer mentions 'turnkey STR' in a pitch to
+    sellers. Matching it gave three properties a furnishing allowance they
+    never claimed — including a $1M estate."""
+    from pipeline.parse_sources import _turnkey_claim
+    footer = ("# 200K Revenue on a 1M Hudson Valley Estate\n\n"
+              "A nearly 7,000 sq ft historic estate with 6 bedrooms.\n\n"
+              "Have a strong-performing Airbnb, unique vacation rental, or turnkey STR "
+              "you may consider selling? Send it our way.\n")
+    assert _turnkey_claim(footer) is False
+
+    real = ("### Turnkey Operation\n\n"
+            "Furnishings are included, with the existing cleaner available to continue.\n\n"
+            "Have a strong-performing Airbnb, unique vacation rental, or turnkey STR "
+            "you may consider selling? Send it our way.\n")
+    assert _turnkey_claim(real) is True

@@ -74,10 +74,15 @@ def dallas_house_hack():
 
 # --- Kill filter --------------------------------------------------------
 
-def test_kill_str_over_price_ceiling(profile):
+def test_str_over_price_ceiling_is_a_capital_gap_not_a_kill(profile):
+    """Being out of cash reach is no longer fatal: the deal is underwritten and
+    labelled CAPITAL_GAP with its shortfall, because killing it here hid the
+    numbers on deals that were excellent apart from the price."""
     deal = broken_bow_str() | {"price": 650000}
-    killed, reasons, _ = run_kill_filter(deal, profile)
-    assert killed and "ceiling" in reasons[0]
+    killed, reasons, flags = run_kill_filter(deal, profile)
+    assert not killed
+    assert deal["capital_gap"]["shortfall"] == 650000 * 0.15 - 90000
+    assert any("CAPITAL GAP" in f for f in flags)
 
 
 def test_kill_str_non_destination_teaser_only(profile):
@@ -477,14 +482,19 @@ def test_load_eml(tmp_path):
     assert len(emails2) == 1
 
 
-def test_kill_ceiling_respects_seller_financing(profile):
-    # $800k at default 15% down -> dead; at stated 10% seller financing -> survives with flag
+def test_ceiling_respects_seller_financing(profile):
+    """$800k at the default 15% down is beyond the cash budget; at a stated 10%
+    seller-financed down payment it is reachable, so no gap is recorded."""
     deal = broken_bow_str() | {"price": 800000}
-    killed, reasons, _ = run_kill_filter(deal, profile)
-    assert killed and "down-payment budget" in reasons[0]
+    killed, _, flags = run_kill_filter(deal, profile)
+    assert not killed
+    assert deal["capital_gap"]["cash_needed"] == 120000
+    assert any("CAPITAL GAP" in f for f in flags)
+
     financed = broken_bow_str() | {"price": 800000, "down_payment_pct": 0.10}
     killed2, _, flags2 = run_kill_filter(financed, profile)
     assert not killed2
+    assert "capital_gap" not in financed
     assert any("financing" in f for f in flags2)
 
 
@@ -508,3 +518,93 @@ def test_str_stated_lodging_tax_wins(profile):
     default = score_deal(broken_bow_str(), profile)
     # stated $5,000 HOT (< 7% default ≈ $7,601) and $600 cleaning (< $725) -> higher CF
     assert result["underwriting"]["annual_cash_flow"] > default["underwriting"]["annual_cash_flow"]
+
+
+# ---------------------------------------------------------------------------
+# Turnkey down-payment allowance + the CAPITAL_GAP verdict
+# ---------------------------------------------------------------------------
+
+def _str_deal(**over):
+    d = {"address": "1 Test Rd", "city": "Tobyhanna", "state": "PA", "tier": "str",
+         "price": 400000, "beds": 3, "baths": 2, "property_type": "STR cabin",
+         "units": 1, "claimed": {"annual_str_revenue": 80000}}
+    d.update(over)
+    return d
+
+
+def test_turnkey_claim_raises_the_down_payment_budget():
+    """A turnkey property needs no furnishing reserve, so that money is
+    available for the down payment — but only for turnkey listings."""
+    from pipeline.kill_filter import run_kill_filter
+    from pipeline.profile import load_profile
+    prof = load_profile()
+    box = prof["buy_boxes"]["str"]
+    bonus = box["turnkey_down_payment_bonus"]
+    down = prof["assumptions"]["financing"]["down_payment_pct_str"]
+    budget = box["price_kill_ceiling"] * down
+    # a price whose down payment lands inside the turnkey allowance only
+    price = int((budget + bonus * 0.5) / down)
+
+    plain = _str_deal(price=price)
+    run_kill_filter(plain, prof)
+    assert plain.get("capital_gap"), "should be short of cash without the allowance"
+
+    turnkey = _str_deal(price=price, turnkey_claimed=True)
+    run_kill_filter(turnkey, prof)
+    assert not turnkey.get("capital_gap"), "turnkey allowance should cover it"
+
+
+def test_over_budget_deal_is_underwritten_not_killed():
+    """The old behaviour killed these before underwriting, so a 20%-yield
+    Poconos STR scoring 92.6 showed up as a one-line budget kill."""
+    from pipeline.kill_filter import run_kill_filter
+    from pipeline.profile import load_profile
+    prof = load_profile()
+    deal = _str_deal(price=750000, city="East Stroudsburg",
+                     claimed={"annual_str_revenue": 150000})
+    killed, reasons, flags = run_kill_filter(deal, prof)
+    assert not killed
+    assert deal["capital_gap"]["shortfall"] > 0
+    assert any("CAPITAL GAP" in f for f in flags)
+
+
+def test_capital_gap_verdict_only_when_it_passes_on_merits():
+    from pipeline.kill_filter import run_kill_filter
+    from pipeline.profile import load_profile
+    from pipeline.score import score_deal
+    prof = load_profile()
+
+    good = _str_deal(price=750000, city="East Stroudsburg",
+                     claimed={"annual_str_revenue": 150000, "occupancy": 0.68})
+    run_kill_filter(good, prof)
+    r = score_deal(good, prof)
+    assert r["verdict"] == "CAPITAL_GAP"
+    assert r["merits_verdict"] in ("PASS", "BORDERLINE")
+    assert r["capital_gap"]["shortfall"] == 22500
+    # it still gets real numbers, which was the whole point
+    assert r["underwriting"]["metrics"]["dscr"] > 1
+
+    # over budget AND bad on its merits stays a plain FAIL — the shortfall is
+    # not what is wrong with it
+    weak = _str_deal(price=900000, city="Gatlinburg",
+                     claimed={"annual_str_revenue": 60000})
+    run_kill_filter(weak, prof)
+    assert score_deal(weak, prof)["verdict"] == "FAIL"
+
+
+def test_turnkey_claim_does_not_bleed_across_a_digest():
+    """One furnished cabin in a 14-property daily must not hand every other
+    listing in that email a higher price ceiling."""
+    from pipeline.parse_sources import parse_offersheet_daily
+    text = (
+        "# [1 Furnished Way, Tobyhanna, PA 18466](https://www.theoffersheet.app/properties/a)\n"
+        "\U0001F4B0 $350,000\n"
+        "\U0001F6CF️ 3 Bedrooms, 2 Bathrooms\n"
+        "Sold fully furnished and turnkey.\n\n"
+        "# [2 Bare Rd, Tobyhanna, PA 18466](https://www.theoffersheet.app/properties/b)\n"
+        "\U0001F4B0 $360,000\n"
+        "\U0001F6CF️ 3 Bedrooms, 2 Bathrooms\n"
+        "Needs updating throughout.\n")
+    a, b = parse_offersheet_daily(text, "m", "s", "2026-09-11")
+    assert a["turnkey_claimed"] is True
+    assert b["turnkey_claimed"] is False

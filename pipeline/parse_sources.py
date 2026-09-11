@@ -153,12 +153,55 @@ def _slug_to_address(slug: str) -> tuple[str, str, str, str | None] | None:
     return street, " ".join(city_tokens).title(), state, zipc
 
 
-def _base(mid: str, subject: str, date: str, source: str, name: str) -> dict:
+# A turnkey property needs no furnishing budget, which frees that reserve
+# toward the down payment — so this claim moves the buy box's price ceiling
+# (see buy_boxes.str.turnkey_down_payment_bonus). It is a SELLER CLAIM and is
+# recorded as one: the deal card asks a human to confirm it before an offer.
+_TURNKEY = re.compile(
+    r"fully\s+(?:furnished|turnkey|equipped)|turn[\s-]?key|"
+    r"furnish(?:ings|ed)\s+(?:are\s+)?included|sold\s+(?:fully\s+)?furnished|"
+    r"comes\s+(?:fully\s+)?furnished|furniture\s+included", re.I)
+
+
+# The newsletters carry standing promo copy that says "turnkey" without
+# describing the property at all — e.g. "Have a strong-performing Airbnb,
+# unique vacation rental, or turnkey STR you may consider selling?". Matching
+# it handed three properties a furnishing allowance they never claimed.
+_BOILERPLATE = re.compile(
+    r"consider selling|send it (?:it )?our way|helped investors acquire|"
+    r"get matched with|see available str investment opportunities|"
+    r"explore str financing|typically require having around|"
+    r"put your property directly in front|reading a plain text version", re.I)
+
+
+def _turnkey_claim(block: str | None) -> bool:
+    """True when THIS listing is described as furnished/turnkey.
+
+    Checked per paragraph so the newsletter's own advertising cannot supply the
+    claim, while a genuine one further down the page ("Turnkey Operation —
+    furnishings are included") still counts.
+    """
+    if not block:
+        return False
+    for para in re.split(r"\n\s*\n", block):
+        if _BOILERPLATE.search(para):
+            continue
+        if _TURNKEY.search(para):
+            return True
+    return False
+
+
+def _base(mid: str, subject: str, date: str, source: str, name: str,
+          block: str | None = None) -> dict:
     return {
         "source": source, "source_name": name, "source_kind":
             "agent" if source == "victor" else "teaser_newsletter",
         "email_subject": subject, "email_date": date,
         "email_link": f"https://mail.google.com/mail/u/0/#search/rfc822msgid:{mid}",
+        # scoped to THIS listing's block, never the whole email — one furnished
+        # cabin in a 14-property digest must not hand every other deal a higher
+        # price ceiling
+        "turnkey_claimed": _turnkey_claim(block),
     }
 
 
@@ -193,7 +236,7 @@ def parse_offersheet_daily(text, mid, subject, date) -> list[dict]:
         if occ:
             claimed["occupancy"] = float(occ.group(1)) / 100
         deals.append({
-            **_base(mid, subject, date, "the_offer_sheet", "The Offer Sheet"),
+            **_base(mid, subject, date, "the_offer_sheet", "The Offer Sheet", block),
             "address": parts[0], "city": parts[1], "state": parts[2], "zip": parts[3],
             "price": price, "beds": int(bb.group(1)) if bb else None,
             "baths": float(bb.group(2)) if bb else None,
@@ -298,7 +341,7 @@ def parse_offersheet_spotlight(text, mid, subject, date) -> list[dict] | list:
             notes.append("revenue window is NOT 12 months — annualize before trusting")
 
     d = {
-        **_base(mid, subject, date, "the_offer_sheet", "The Offer Sheet"),
+        **_base(mid, subject, date, "the_offer_sheet", "The Offer Sheet", text),
         "address": parts[0] if parts else None,
         "city": parts[1] if parts else None,
         "state": parts[2] if parts else None,
@@ -342,7 +385,7 @@ def parse_here(text, mid, subject, date) -> list[dict]:
         if occ:
             claimed["occupancy"] = float(occ.group(1)) / 100
         deals.append({
-            **_base(mid, subject, date, "here", "Here"),
+            **_base(mid, subject, date, "here", "Here", block),
             "address": parts[0], "city": parts[1], "state": parts[2], "zip": parts[3],
             "price": _money(price.group(1)) if price else None,
             "beds": int(bb.group(1)) if bb else None,
@@ -382,7 +425,7 @@ def parse_bnbflow(text, mid, subject, date) -> list[dict]:
         if rev:
             claimed["annual_str_revenue"] = _money(rev.group(1))
         deals.append({
-            **_base(mid, subject, date, "bnb_flow", "BnB Flow"),
+            **_base(mid, subject, date, "bnb_flow", "BnB Flow", block),
             "address": parts[0], "city": parts[1], "state": parts[2], "zip": parts[3],
             "price": _money(price.group(1)) if price else None,
             "beds": int(bb.group(1)) if bb else None,
@@ -518,7 +561,7 @@ def parse_victor(text, mid, subject, date) -> list[dict]:
             units = 2
         is_str = bool(re.search(r"\bSTR\b|Airbnb|short[- ]term", before, re.I))
         d = {
-            **_base(mid, subject, date, "victor", "Victor Steffen (Steffen Realty)"),
+            **_base(mid, subject, date, "victor", "Victor Steffen (Steffen Realty)", before),
             "address": parts[0], "city": parts[1], "state": parts[2], "zip": parts[3],
             "price": price, "units": units,
             "property_type": "STR" if is_str else ("multifamily" if units > 1 else "SFR"),

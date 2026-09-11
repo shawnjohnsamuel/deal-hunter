@@ -216,6 +216,16 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
     if nondest_cap and verdict == "PASS":
         verdict = "BORDERLINE"
 
+    # A deal that clears the buy box but not the cash on hand is neither a PASS
+    # (it cannot be bought today) nor a FAIL (nothing is wrong with it). It gets
+    # its own verdict so it ranks separately and states the exact shortfall.
+    # A deal that would have failed anyway stays a FAIL — the shortfall is not
+    # what is wrong with it.
+    capital_gap = deal.get("capital_gap")
+    merits_verdict = verdict
+    if capital_gap and verdict in ("PASS", "BORDERLINE"):
+        verdict = "CAPITAL_GAP"
+
     # Exception factors (Victor's overrides: financing incentive, walk-in
     # equity, unicorn location) raise ranking and are always surfaced —
     # they never flip a FAIL.
@@ -264,6 +274,13 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
 
     red_flags = _red_flags(deal, uw, kill_flags or [])
     red_flags += check_divergence(deal, uw, profile)
+    # The turnkey claim buys this deal a higher price ceiling, so it has to be
+    # confirmed rather than assumed — "fully furnished" in marketing copy can
+    # still mean a partial inventory, excluded items or a separate bill of sale.
+    if deal.get("turnkey_claimed"):
+        red_flags.append(
+            "TURNKEY is a SELLER CLAIM and it raised the price ceiling here — "
+            "get the furnishings inventory and bill of sale in writing before an offer")
     if nondest_cap:
         # Card-detail note only (last in the list, never the digest's top flag).
         red_flags.append("non-destination market — not a Tier-1 STR candidate; "
@@ -275,6 +292,9 @@ def score_deal(deal: dict, profile: dict, kill_flags: list[str] | None = None) -
         "pillars": pillars, "exception_factors": exceptions,
         "market_flavor": flavor, "priority_note": priority_note,
         "priority_market": priority_market,
+        "capital_gap": capital_gap,
+        "merits_verdict": merits_verdict,
+        "turnkey_claimed": bool(deal.get("turnkey_claimed")),
         "criteria": criteria, "hard_disqualifiers": disqualifiers,
         "tax_flags": _tax_flags(deal, uw, profile),
         "red_flags": red_flags,

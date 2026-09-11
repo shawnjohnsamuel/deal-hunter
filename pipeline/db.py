@@ -105,6 +105,9 @@ def export_site_json(conn: sqlite3.Connection, out_path: Path = SITE_JSON):
             "status": r[8], "verdict": r[9] or ("KILLED" if r[8] == "killed" else None),
             "score": r[10], "kill_reasons": json.loads(r[11] or "[]"),
             "metrics": uw.get("metrics") or {},
+            # down payment + closing (+ furnishing for STR) — the cheque size,
+            # which is larger than the down-payment budget the box screens on
+            "total_cash_invested": uw.get("total_cash_invested"),
             "assumptions": uw.get("assumptions") or {},
             "tax_flags": result.get("tax_flags") or [],
             "red_flags": result.get("red_flags") or [],
@@ -122,6 +125,10 @@ def export_site_json(conn: sqlite3.Connection, out_path: Path = SITE_JSON):
             "market_flavor": deal.get("market_flavor") or result.get("market_flavor"),
             "priority_note": result.get("priority_note"),
             "priority_market": result.get("priority_market"),
+            # passes the buy box but not the cash on hand — carries the shortfall
+            "capital_gap": result.get("capital_gap"),
+            "merits_verdict": result.get("merits_verdict"),
+            "turnkey_claimed": result.get("turnkey_claimed") or deal.get("turnkey_claimed"),
             "photo_url": (deal.get("enriched") or {}).get("photo_url"),
             # v3: four pillars + Victor comparison
             "pillars": result.get("pillars"),
@@ -134,6 +141,7 @@ def export_site_json(conn: sqlite3.Connection, out_path: Path = SITE_JSON):
         "pass": sum(1 for d in deals if d["verdict"] == "PASS"),
         "borderline": sum(1 for d in deals if d["verdict"] == "BORDERLINE"),
         "fail": sum(1 for d in deals if d["verdict"] == "FAIL"),
+        "capital_gap": sum(1 for d in deals if d["verdict"] == "CAPITAL_GAP"),
         "generated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
     }
     out_path.parent.mkdir(parents=True, exist_ok=True)

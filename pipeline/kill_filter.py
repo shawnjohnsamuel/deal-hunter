@@ -33,11 +33,31 @@ def run_kill_filter(deal: dict, profile: dict) -> tuple[bool, list[str], list[st
         down_pct = deal.get("down_payment_pct") or default_down
         ceiling = boxes["str"]["price_kill_ceiling"]
         down_budget = ceiling * default_down
-        if price * down_pct > down_budget:
-            reasons.append(
-                f"price ${price:,.0f} needs ${price * down_pct:,.0f} down at {down_pct:.0%} — "
-                f"beyond the ~${down_budget:,.0f} down-payment budget "
-                f"(${ceiling:,.0f} ceiling at {default_down:.0%} down)")
+        # A turnkey property needs no furnishing budget, so that reserve is
+        # available for the down payment instead. The claim is the seller's —
+        # score.py carries it to the deal card for human confirmation.
+        turnkey_bonus = 0
+        if deal.get("turnkey_claimed"):
+            turnkey_bonus = boxes["str"].get("turnkey_down_payment_bonus", 0)
+            down_budget += turnkey_bonus
+        cash_needed = price * down_pct
+        if cash_needed > down_budget:
+            # NOT a kill. A deal can be excellent on its merits and merely out
+            # of cash reach, and killing it here hid the numbers entirely — a
+            # 20%-yield Poconos STR scoring 92.6 read as a one-line budget kill.
+            # Underwrite it anyway; score.py labels it CAPITAL_GAP if it would
+            # otherwise have passed, and FAIL if it would have failed regardless.
+            deal["capital_gap"] = {
+                "cash_needed": round(cash_needed),
+                "down_payment_budget": round(down_budget),
+                "shortfall": round(cash_needed - down_budget),
+                "down_payment_pct": down_pct,
+                "turnkey_bonus_applied": turnkey_bonus,
+            }
+            flags.append(
+                f"CAPITAL GAP: needs ${cash_needed:,.0f} down at {down_pct:.0%}, "
+                f"${cash_needed - down_budget:,.0f} beyond the ~${down_budget:,.0f} budget"
+                + (f" (incl. ${turnkey_bonus:,.0f} turnkey allowance)" if turnkey_bonus else ""))
         elif down_pct < default_down:
             flags.append(
                 f"price ${price:,.0f} reachable only via the stated {down_pct:.0%}-down financing — "

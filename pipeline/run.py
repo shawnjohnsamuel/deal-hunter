@@ -81,8 +81,8 @@ def run_batch(deals: list[dict], *, enrich_enabled: bool = True, rescore: bool =
                 for d in deals]
     stats = dbmod.export_site_json(conn)
     print(f"db: {stats['total']} deals total ({stats['pass']} PASS / "
-          f"{stats['borderline']} BORDERLINE / {stats['fail']} FAIL / {stats['killed']} killed)",
-          file=sys.stderr)
+          f"{stats['borderline']} BORDERLINE / {stats.get('capital_gap', 0)} CAPITAL GAP / "
+          f"{stats['fail']} FAIL / {stats['killed']} killed)", file=sys.stderr)
     return outcomes
 
 
