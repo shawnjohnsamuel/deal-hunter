@@ -137,7 +137,11 @@ PRIORITY_REGIONS: list[dict] = [
     *_region("Shenandoah", "mountain", "VA", 6, "DC/Richmond",
              "basye", "front royal", "luray", "madison", "mount jackson",
              "mcgaheysville", "massanutten", "elkton", "shenandoah",
-             "stanardsville", "stanley"),
+             "stanardsville", "stanley",
+             # Shenandoah NP / Luray Caverns / Massanutten gateway towns on the
+             # valley floor — same cabin market, ~2h from DC
+             "new market", "edinburg", "quicksburg", "strasburg", "woodstock",
+             "fort valley", "rileyville", "bentonville", "browntown", "grottoes"),
     *_region("Wintergreen", "mountain", "VA", 7, "DC/Richmond",
              "wintergreen", "nellysford", "afton", "roseland"),
     # --- Avery Carl / STS southern mountain coverage, still in drive range ---

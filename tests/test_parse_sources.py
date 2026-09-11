@@ -188,3 +188,165 @@ def test_spotlight_revenue_shorthand_and_phrasings():
     d = parse_offersheet_spotlight(txt, "m", "s", "2026-08-21")[0]
     assert d["price"] == 399900
     assert d["claimed"]["annual_str_revenue"] == 96000
+
+
+# Every phrasing below shipped in a real spotlight and produced a
+# revenue-less deal, which then underwrote at a catastrophic negative CoC.
+# The common cause was case: the patterns were lowercase, the emails are
+# headline Title Case.
+REV_PHRASINGS = [
+    ("$120,000 in Revenue in 2025", 120000, "actual"),
+    ("**$130,839 in Rental Revenue in 2025**", 130839, "actual"),
+    ("💵 **2025 Revenue: $120,000**", 120000, "actual"),
+    ("💵 **2025 Gross Bookings: Nearly $60K**", 60000, "actual"),
+    ("**$200,000+ in Revenue Last Year on a $999,999 Asking Price**", 200000, "actual"),
+    ("**$132,000 in Gross Rental Revenue**", 132000, "actual"),
+    ("generated **$45,000 in gross rental revenue in one year**", 45000, "actual"),
+    ("💵 **Proven Gross Revenue: $45,000**", 45000, "verified"),
+    ("nearly $60,000 in documented gross bookings across Airbnb and Vrbo", 60000, "verified"),
+    ("**$96,000 in Verified Annual Gross Revenue**", 96000, "verified"),
+    ("**Projected Gross Revenue: $210,000 Annually**", 210000, "projected"),
+]
+
+
+def test_revenue_phrasings_and_kinds():
+    from pipeline.parse_sources import _revenue
+    for text, amount, kind in REV_PHRASINGS:
+        got, got_kind = _revenue(text)
+        assert got == amount, f"{text!r} -> {got}"
+        assert got_kind == kind, f"{text!r} -> {got_kind}"
+
+
+def test_projected_never_reads_as_actual():
+    """A projected figure sitting next to an actual-shaped phrase must stay
+    projected — otherwise a seller's forecast underwrites as proven income."""
+    from pipeline.parse_sources import _revenue
+    amount, kind = _revenue("**Projected Gross Revenue: $210,000 Annually**")
+    assert (amount, kind) == (210000, "projected")
+    amount, kind = _revenue("~$157.5K projected 2027 revenue")
+    assert kind == "projected"
+
+
+VICTOR_SLASH_MO = """
+----------
+**SUMMARY:** Three deals jump out today: a San Antonio triplex, an off-market
+quad with built-in equity, and a turnkey Allen STR averaging about $90K a year.
+
+----------**San Antonio New Triplex $6,050/mo $625K**
+$6,050/month is the projected rent across three brand-new four-bedroom units.
+[726 Arthur St San Antonio TX 78202](https://redf.in/AQX09i)
+
+Sale Price
+$ 625,000
+Monthly Annual
+Income
+$ 6,050
+$ 72,600
+"""
+
+
+def test_victor_slash_mo_rent_and_no_summary_bleed():
+    """Rent is written '/mo' as often as 'per month'. And the opening summary
+    names the *other* deals — an unbounded lookback made this triplex a quad."""
+    d = parse_victor(VICTOR_SLASH_MO, "m", "s", "2026-08-24")[0]
+    assert d["price"] == 625000
+    assert d["claimed"]["monthly_rent"] == 6050
+    assert d["units"] == 3
+    assert "PROJECTED" in d["notes"]
+
+
+VICTOR_TABLE_ONLY = """
+----------**Fully Leased Garland Quad $550K**
+Four occupied doors, leases in place through next summer.
+[2105 W Walnut St Garland TX 75042](https://redf.in/xx1)
+
+Sale Price
+$ 550,000
+Monthly Annual
+Income
+$ 4,600
+$ 55,200
+"""
+
+
+def test_victor_falls_back_to_proforma_income_row():
+    """When the prose never states a monthly rent, Victor's pasted pro-forma
+    table still does — and a rent-less deal underwrites at zero income."""
+    d = parse_victor(VICTOR_TABLE_ONLY, "m", "s", "2026-09-03")[0]
+    assert d["claimed"]["monthly_rent"] == 4600
+    assert d["units"] == 4
+
+
+VICTOR_PRICE_TRAPS = """
+----------**Arlington Legal 8-Unit STR Averaging $228K/yr $1.495M**
+$228K average annual gross revenue across five full years from an established
+legal STR operation. Eight furnished units are already operating.
+[1006 Thannisch Dr Arlington TX 76011](https://redf.in/ebYVlT)
+
+Sale Price
+$ 1,450,000
+
+----------**San Antonio Fourplex $5,490/mo Target $675K**
+$5,290/month is already coming in across four occupied 3/2.5 units, and I
+believe every lease has room for at least a $50/month bump.
+[10514 Spring Creek Rd San Antonio TX 78230](https://redf.in/xx2)
+"""
+
+
+def test_victor_price_is_the_headline_ask_not_a_revenue_figure():
+    """'$228K/yr' revenue and '$5,490/mo' rent both sit where the old scan
+    looked for a price, which turned an $1.5M 8-unit into a $228K bargain and
+    scored it at 190% cash-on-cash."""
+    deals = parse_victor(VICTOR_PRICE_TRAPS, "m", "s", "2026-09-10")
+    by_addr = {d["address"]: d for d in deals}
+    eight = by_addr["1006 Thannisch Dr"]
+    assert eight["price"] == 1495000
+    assert eight["units"] == 8
+    assert eight["source_tier_hint"] == "str"
+    quad = by_addr["10514 Spring Creek Rd"]
+    assert quad["price"] == 675000
+    assert quad["claimed"]["monthly_rent"] == 5290
+
+
+def test_merge_duplicates_prefers_stated_revenue_over_derived_adr():
+    """A daily teaser lists the cabin with an estimated ADR; the spotlight days
+    later quotes its actual revenue. Keeping the first-seen record underwrote
+    the property on the weaker number."""
+    from pipeline.parse_sources import merge_duplicates
+    daily = {"address": "89 Rocky Mountain Ln", "city": "New Market", "state": "VA",
+             "price": 375000, "beds": 2, "email_date": "2026-09-04",
+             "source_name": "The Offer Sheet", "claimed": {"adr": 215, "occupancy": 0.67}}
+    spot = {"address": "89 Rocky Mountain Ln", "city": "New Market", "state": "VA",
+            "price": 375000, "sqft": 992, "email_date": "2026-09-10",
+            "source_name": "The Offer Sheet", "claimed": {"annual_str_revenue": 70000}}
+    merged = merge_duplicates([daily, spot])
+    assert len(merged) == 1
+    m = merged[0]
+    assert m["claimed"]["annual_str_revenue"] == 70000
+    # the weaker record's extra detail is still absorbed
+    assert m["claimed"]["occupancy"] == 0.67
+    assert m["beds"] == 2 and m["sqft"] == 992
+
+
+def test_merge_duplicates_records_a_price_change():
+    from pipeline.parse_sources import merge_duplicates
+    first = {"address": "1 A St", "state": "PA", "price": 499000,
+             "email_date": "2026-08-24", "source_name": "X", "claimed": {"adr": 100}}
+    later = {"address": "1 A St", "state": "PA", "price": 459000,
+             "email_date": "2026-09-07", "source_name": "X", "claimed": {"adr": 100}}
+    m = merge_duplicates([first, later])[0]
+    assert m["price"] == 459000
+    assert "price changed" in m["notes"]
+
+
+def test_price_change_note_shows_both_prices():
+    """`keep` is one of the two records being merged, so assigning the new
+    price before formatting the note made it read '$X -> $X'."""
+    from pipeline.parse_sources import merge_duplicates
+    a = {"address": "9 B St", "state": "TX", "price": 1500000,
+         "email_date": "2026-08-25", "source_name": "V", "claimed": {"monthly_rent": 19675}}
+    b = {"address": "9 B St", "state": "TX", "price": 1450000,
+         "email_date": "2026-09-03", "source_name": "V", "claimed": {"monthly_rent": 19675}}
+    m = merge_duplicates([a, b])[0]
+    assert m["price"] == 1450000
+    assert "$1,500,000" in m["notes"] and "$1,450,000" in m["notes"]

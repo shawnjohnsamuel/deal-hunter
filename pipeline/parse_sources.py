@@ -209,19 +209,49 @@ def parse_offersheet_daily(text, mid, subject, date) -> list[dict]:
 # The Offer Sheet — single-property spotlight
 # --------------------------------------------------------------------------
 _REV_PATTERNS = [
-    # most specific first — actual/verified beats projected
-    (r"\$([\d,]+(?:\.\d+)?)\s*(?:in\s+)?(?:gross\s+)?(?:rental\s+)?revenue\s+in\s+20\d\d", "actual"),
-    (r"20\d\d\s+Gross\s+Rental\s+Revenue:\s*\$([\d,]+)", "actual"),
-    (r"20\d\d\s+(?:STR|Gross|Rental)\s+Revenue:?\s*~?\$([\d,]+)", "actual"),
-    (r"\$([\d,]+)\s*(?:\+)?\s*(?:in\s+)?[Vv]erified\s+[Aa]nnual", "verified"),
-    (r"(?:approximately|about|roughly)\s+\$([\d,]+)\s+in\s+annual\s+gross", "actual"),
-    (r"\$([\d,]+)\s*(?:\+)?\s*(?:in\s+)?[Aa]nnual\s+(?:gross\s+)?(?:rental\s+)?(?:revenue|income)", "actual"),
-    (r"\$([\d,.]+K?)\s*(?:\+)?\s*(?:in\s+)?(?:verifiable|verified|proven)\s+"
-     r"(?:annual\s+)?(?:STR\s+)?(?:rental\s+)?(?:income|revenue)", "verified"),
-    (r"\$([\d,.]+K?)\s+STR\s+Income\b", "actual"),
-    (r"[Pp]rojected\s+[Gg]ross\s+[Rr]evenue:?\s*\$([\d,]+)", "projected"),
-    (r"\$([\d,]+)\s*(?:\+)?\s*[Pp]rojected", "projected"),
+    # Most specific first, and actual/verified beats projected. Matching is
+    # case-insensitive: these lines arrive as headline Title Case as often as
+    # prose, and a lowercase-only pattern silently drops the revenue — which
+    # then underwrites the deal at zero income.
+    (r"\$([\d,.]+K?)\s*\+?\s*(?:in\s+)?(?:documented|verifiable|verified|proven)\s+"
+     r"(?:annual\s+|gross\s+|str\s+|rental\s+){0,3}(?:income|revenue|bookings)", "verified"),
+    (r"(?:proven|documented|verified)\s+(?:annual\s+|gross\s+|str\s+|rental\s+){0,3}"
+     r"(?:revenue|bookings|income):?\s*(?:nearly\s+|about\s+|~)?\$([\d,.]+K?)", "verified"),
+    (r"\$([\d,.]+K?)\s*\+?\s*(?:in\s+)?verified\s+annual", "verified"),
+    # '$120,000 in Revenue in 2025', '$130,839 in Rental Revenue in 2025'
+    (r"\$([\d,.]+K?)\s*\+?\s*(?:in\s+)?(?:gross\s+|rental\s+|str\s+){0,3}"
+     r"(?:revenue|bookings|income)\s+(?:in|for)\s+20\d\d", "actual"),
+    # '$200,000+ in Revenue Last Year'
+    (r"\$([\d,.]+K?)\s*\+?\s*(?:in\s+)?(?:gross\s+|rental\s+|str\s+){0,3}"
+     r"(?:revenue|bookings|income)\s+(?:last\s+year|in\s+one\s+year|annually)", "actual"),
+    # '2025 Revenue: $120,000', '2025 Gross Bookings: Nearly $60K'
+    (r"20\d\d\s+(?:str\s+|gross\s+|rental\s+){0,2}(?:revenue|bookings|income):?\s*"
+     r"(?:nearly\s+|about\s+|~)?\$([\d,.]+K?)", "actual"),
+    (r"(?:approximately|about|roughly)\s+\$([\d,.]+K?)\s+in\s+annual\s+gross", "actual"),
+    (r"\$([\d,.]+K?)\s*\+?\s*(?:in\s+)?annual\s+(?:gross\s+)?(?:rental\s+)?"
+     r"(?:revenue|income|bookings)", "actual"),
+    # '$132,000 in Gross Rental Revenue' — no year, no 'annual'
+    (r"\$([\d,.]+K?)\s*\+?\s*in\s+(?:gross\s+|rental\s+|str\s+){1,3}"
+     r"(?:revenue|bookings|income)", "actual"),
+    (r"\$([\d,.]+K?)\s+str\s+income\b", "actual"),
+    (r"projected\s+gross\s+revenue:?\s*\$([\d,.]+K?)", "projected"),
+    (r"\$([\d,.]+K?)\s*\+?\s*projected", "projected"),
 ]
+
+# 'Projected Gross Revenue: $210,000' must never satisfy an actual/verified
+# pattern that happens to match its tail.
+_PROJECTED_NEAR = re.compile(r"projected|potential|pro\s?forma|estimated", re.I)
+
+
+def _revenue(text: str):
+    """(amount, kind) for the strongest revenue claim in the text, or (None, None)."""
+    for pat, kind in _REV_PATTERNS:
+        for m in re.finditer(pat, text, re.I):
+            if kind != "projected" and _PROJECTED_NEAR.search(text[max(0, m.start() - 18):m.start()]):
+                continue
+            return _money_k(m.group(1)), kind
+    return None, None
+
 
 
 def parse_offersheet_spotlight(text, mid, subject, date) -> list[dict] | list:
@@ -240,18 +270,17 @@ def parse_offersheet_spotlight(text, mid, subject, date) -> list[dict] | list:
             price = _money(m.group(1))
             break
 
+    # three layouts for the same spec row: a bullet list, a '•'-joined summary
+    # line, and an emoji + bold row ('ЁЯЫП **2 Bedrooms**')
     beds = re.search(r"^\*\s*(\d+)\s*Bedrooms?\b", text, re.M) or \
-        re.search(r"(\d+)\s*Bedrooms?\s*[•·]", text)
+        re.search(r"(\d+)\s*Bedrooms?\s*[•·]", text) or \
+        re.search(r"\*\*(\d+)\s*Bedrooms?\b", text)
     baths = re.search(r"^\*\s*([\d.]+)\s*Bathrooms?\b", text, re.M) or \
-        re.search(r"([\d.]+)\s*Bathrooms?\s*[•·]", text)
+        re.search(r"([\d.]+)\s*Bathrooms?\s*[•·]", text) or \
+        re.search(r"\*\*([\d.]+)\s*Bathrooms?\b", text)
     sqft = re.search(r"([\d,]+)\s*(?:Heated\s+)?Sq\.?\s*Ft", text, re.I)
 
-    revenue, rev_kind = None, None
-    for pat, kind in _REV_PATTERNS:
-        m = re.search(pat, text)
-        if m:
-            revenue, rev_kind = _money_k(m.group(1)), kind
-            break
+    revenue, rev_kind = _revenue(text)
 
     conf = "high"
     notes = []
@@ -373,37 +402,110 @@ _VIC_LINK = re.compile(
     rf"\[_?([^\]]*?,?\s*[A-Za-z .'/-]+\s+{STATE}(?:\s+\d{{5}})?)_?\]\((https?://[^)]+)\)")
 
 
+# A rate ('$5,490/mo', '$228K/yr') is never the asking price.
+_RATE_SUFFIX = re.compile(r"\s*(?:/\s*(?:mo|month|yr|year)\b|per\s+(?:month|year)|a\s+(?:month|year))", re.I)
+
+
+def _vic_money(text: str) -> list[int]:
+    """Plausible purchase prices in `text`, in order, skipping rate figures."""
+    out = []
+    for pm in re.finditer(r"\$\s?([\d.,]+)\s*([KM])?", text):
+        val, unit = pm.group(1), pm.group(2)
+        try:
+            n = float(val.rstrip(".,").replace(",", ""))
+        except ValueError:
+            continue
+        if unit == "M":
+            n *= 1_000_000
+        elif unit == "K":
+            n *= 1_000
+        if _RATE_SUFFIX.match(text[pm.end():]):
+            continue
+        if 80_000 <= n <= 20_000_000:
+            out.append(int(n))
+    return out
+
+
+_RENT_PAT = re.compile(r"\$\s?([\d,]+)\s*(?:to\s*\$[\d,]+\s*)?"
+                       r"(?:per\s+month|a\s+month|/\s*mo(?:nth)?\b|\s*monthly\b)", re.I)
+
+
+def _vic_rent(text: str) -> int | None:
+    """First stated monthly rent large enough to be one, or None."""
+    for m in _RENT_PAT.finditer(text):
+        val = _money(m.group(1))
+        if val and val >= 400:
+            return val
+    return None
+
+
+def _vic_price(before: str, after: str) -> int | None:
+    """Victor's asking price, most trustworthy source first.
+
+    The bolded headline states the ask ('**Arlington Legal 8-Unit STR
+    Averaging $228K/yr $1.495M**'), and his pasted pro-forma repeats it as a
+    'Sale Price' row. Scanning the whole block instead lets prose further down
+    ('$228K average annual gross revenue') stand in as the price, which then
+    underwrites an eight-unit building as if it cost $228,000.
+    """
+    head = re.search(r"\*\*(.+?)\*\*", before, re.S)
+    if head:
+        cand = _vic_money(head.group(1))
+        if cand:
+            return cand[-1]
+    sale = re.search(r"Sale\s+Price\s*\$\s?([\d,]+)", after)
+    if sale:
+        cand = _vic_money("$" + sale.group(1))
+        if cand:
+            return cand[0]
+    cand = _vic_money(before)
+    return cand[-1] if cand else None
+
+
 def parse_victor(text, mid, subject, date) -> list[dict]:
     """Victor's lists pair a bolded headline (carrying the asking price) with a
     Redfin/HAR link whose anchor text is the address. Rent is '$N,NNN per month'
     in the paragraph above the link."""
     deals = []
-    for mo in _VIC_LINK.finditer(text):
+    links = list(_VIC_LINK.finditer(text))
+    for i, mo in enumerate(links):
         raw = mo.group(1).strip()
         raw = re.sub(r"^Link»\s*", "", raw)
         parts = _split_address(raw) or _split_loose_address(raw)
         if not parts:
             continue
-        before = text[max(0, mo.start() - 1600): mo.start()]
-        price = None
-        for pm in re.finditer(r"\$\s?([\d.,]+)\s*([KM])?\b", before):
-            val, unit = pm.group(1), pm.group(2)
-            try:
-                n = float(val.replace(",", ""))
-            except ValueError:
-                continue
-            if unit == "M":
-                n *= 1_000_000
-            elif unit == "K":
-                n *= 1_000
-            if 80_000 <= n <= 20_000_000:
-                price = int(n)
-        rent = None
-        rm = None
-        for rm_ in re.finditer(r"\$([\d,]+)\s*(?:to\s*\$[\d,]+\s*)?per month", before):
-            rm = rm_
-        if rm:
-            rent = _money(rm.group(1))
+        # Stop the lookback at the previous listing's link. One email describes
+        # several deals, and an unbounded window lets the summary paragraph or
+        # the deal above donate its unit count, price or 'STR' hint to this one.
+        floor = links[i - 1].end() if i else 0
+        # Victor separates each listing with a dashed rule; start the window at
+        # the last one so the email's opening summary — which name-drops the
+        # other deals — cannot donate a unit count or an STR hint to this deal.
+        rule = list(re.finditer(r"-{5,}", text[floor: mo.start()]))
+        if rule:
+            floor += rule[-1].end()
+        before = text[max(floor, mo.start() - 1600): mo.start()]
+        after = text[mo.end(): mo.end() + 2500]
+        nxt_link = _VIC_LINK.search(after)
+        if nxt_link:
+            after = after[:nxt_link.start()]
+        price = _vic_price(before, after)
+        # Rent appears as '$5,000 per month', '$6,050/mo' or '$6,050/month',
+        # and again in the pro-forma table Victor pastes under each link as an
+        # 'Income' row carrying the monthly and annual figures.
+        # Take the FIRST plausible monthly figure in the prose, not the last:
+        # the paragraph ends with sweeteners like 'room for a $50/month bump',
+        # and the bolded headline quotes a post-bump target rather than the rent
+        # actually in place.
+        prose = re.sub(r"^\s*\*\*.+?\*\*", "", before, count=1, flags=re.S)
+        rent = _vic_rent(prose) or _vic_rent(before)
+        if rent is None:
+            tm = re.search(r"\bIncome\b\s*\$\s?([\d,]+)\s*\$\s?([\d,]+)", after, re.S)
+            if tm:
+                monthly, annual = _money(tm.group(1)), _money(tm.group(2))
+                # the row is monthly then annual; trust it only if consistent
+                if monthly and annual and abs(annual - monthly * 12) <= monthly:
+                    rent = monthly
         units = 1
         u = re.search(r"\b(\d{1,2})[- ](?:unit|plex)\b", before, re.I)
         if u:
@@ -427,6 +529,10 @@ def parse_victor(text, mid, subject, date) -> list[dict]:
             d["source_tier_hint"] = "str"
         if rent:
             d["claimed"]["monthly_rent"] = rent
+            if re.search(r"projected\s+rent|underwritten at|pro\s?forma", before, re.I):
+                d["notes"] = ("; ".join(filter(None, [d["notes"],
+                              "rent is PROJECTED / underwritten, not all leased"])))
+                d["parse_confidence"] = "review"
         deals.append(d)
     # de-dup within one email (Victor repeats a deal in summary + detail)
     seen, out = set(), []
@@ -480,6 +586,62 @@ def parse_dir(d: str | Path) -> list[dict]:
     return out
 
 
+def _evidence_rank(d: dict) -> int:
+    """How good this record's income evidence is. A stated annual revenue beats
+    a derived ADR x occupancy estimate, which beats nothing."""
+    c = d.get("claimed") or {}
+    if c.get("annual_str_revenue"):
+        return 2
+    if c.get("adr") or c.get("occupancy") or c.get("monthly_rent"):
+        return 1
+    return 0
+
+
+def merge_duplicates(deals: list[dict]) -> list[dict]:
+    """Collapse repeat listings of one property into the best-evidenced record.
+
+    The same house routinely appears in a daily teaser list with an estimated
+    ADR and again, days later, in a spotlight quoting its actual revenue.
+    Keeping whichever arrived first underwrites the property on the weaker
+    number — for one Shenandoah cabin that was $52.6K derived instead of the
+    $70K it actually grossed, which moved it from 18.7% gross yield to 14.0%.
+    """
+    order: list[tuple] = []
+    best: dict[tuple, dict] = {}
+    for d in deals:
+        k = ((d.get("address") or d.get("city") or "").lower(), d.get("state"))
+        if k not in best:
+            best[k] = d
+            order.append(k)
+            continue
+        a = best[k]
+        keep, drop = (a, d) if _evidence_rank(a) >= _evidence_rank(d) else (d, a)
+        for field, val in drop.items():
+            if keep.get(field) in (None, "", [], {}) and val not in (None, "", [], {}):
+                keep[field] = val
+        claimed = dict(drop.get("claimed") or {})
+        claimed.update({k2: v for k2, v in (keep.get("claimed") or {}).items() if v})
+        if claimed:
+            keep["claimed"] = claimed
+        # A price that moved between listings is signal, not noise.
+        newer = max((a, d), key=lambda x: x.get("email_date") or "")
+        older = a if newer is d else d
+        # Read both prices before assigning: `keep` is one of these two dicts,
+        # so writing the new price first would rewrite the "from" value too.
+        old_price, new_price = older.get("price"), newer.get("price")
+        if old_price and new_price and old_price != new_price:
+            note = (f"price changed ${old_price:,} ({older.get('email_date')}) -> "
+                    f"${new_price:,} ({newer.get('email_date')})")
+            keep["price"] = new_price
+            keep["notes"] = "; ".join(filter(None, [keep.get("notes"), note]))
+        seen_in = keep.setdefault("also_listed", [])
+        tag = f"{drop.get('source_name')} {drop.get('email_date')}"
+        if tag not in seen_in:
+            seen_in.append(tag)
+        best[k] = keep
+    return [best[k] for k in order]
+
+
 def _cli():
     import argparse
     ap = argparse.ArgumentParser(description=__doc__)
@@ -495,13 +657,7 @@ def _cli():
         keep = set(a.only.split(","))
         deals = [d for d in deals if any(k in d.get("email_link", "") for k in keep)]
 
-    seen, uniq = set(), []
-    for d in deals:
-        k = ((d.get("address") or d.get("city") or "").lower(), d.get("state"))
-        if k in seen:
-            continue
-        seen.add(k)
-        uniq.append(d)
+    uniq = merge_duplicates(deals)
 
     if a.out:
         Path(a.out).parent.mkdir(parents=True, exist_ok=True)
