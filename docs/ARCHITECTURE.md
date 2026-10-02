@@ -42,7 +42,7 @@ Gmail (5 deal-flow senders) ──► GitHub Action (daily cron, ~7am CT)
 ## Design decisions
 
 **LLM only where language is messy; code everywhere math must be right.**
-Claude (claude-sonnet-5) does exactly two jobs: parsing unstructured newsletter emails into structured candidates, and synthesizing web-search enrichment. Every metric (cap rate, cash-on-cash, DSCR, GRM, break-even occupancy), every buy-box comparison, every hard disqualifier, and every tax-flag trigger is deterministic, unit-tested Python. A scoring engine you can't reproduce is a vibe, not an underwriting tool.
+Claude (claude-sonnet-5-5) does exactly two jobs: parsing unstructured newsletter emails into structured candidates, and synthesizing web-search enrichment. Every metric (cap rate, cash-on-cash, DSCR, GRM, break-even occupancy), every buy-box comparison, every hard disqualifier, and every tax-flag trigger is deterministic, unit-tested Python. A scoring engine you can't reproduce is a vibe, not an underwriting tool.
 
 **The kill filter runs before any money or tokens are spent.**
 Most emailed deals die on arithmetic the seller's own numbers already fail. The first-pass filter kills those with zero API calls, so the free-tier enrichment budget (RentCast: 50 calls/month) is rationed to deals that might actually survive — STR candidates first, per the Tier 1 priority.
@@ -77,7 +77,7 @@ v2 = ChatGPT's completeness + Claude's currency + the audit's pipeline formaliza
 |---|---|---|
 | Orchestration | GitHub Actions (cron + workflow_dispatch) | Free, runs regardless of any laptop, and the automation is itself public/reviewable |
 | Email | Gmail API, `gmail.readonly` OAuth scope | Read-only blast radius; refresh token as a repo secret |
-| Extraction / enrichment | Claude API (claude-sonnet-5) with web search | Structured-output parsing of messy HTML; live data where no API exists |
+| Extraction / enrichment | Claude API (claude-sonnet-5-5) with web search | Structured-output parsing of messy HTML; live data where no API exists |
 | Property data | RentCast + Rabbu free tiers, county CAD records | $0/month v1; upgrade path to paid tiers and AirDNA documented in README |
 | Storage | SQLite committed to the repo + sanitized JSON export | Zero infra; the database has a git history |
 | Frontend | Vanilla HTML/CSS/JS on GitHub Pages | No build step, free hosting, redeploys on every data commit |

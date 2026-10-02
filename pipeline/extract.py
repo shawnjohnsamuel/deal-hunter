@@ -7,7 +7,9 @@ import json
 import os
 import re
 
-MODEL = os.environ.get("DEAL_HUNTER_MODEL", "claude-sonnet-5")
+# Sonnet is deliberate: these are bulk extractors, not reasoning tasks, and it
+# is $2/$10 per MTok against Opus's $4/$20. Override with DEAL_HUNTER_MODEL.
+MODEL = os.environ.get("DEAL_HUNTER_MODEL", "claude-sonnet-5-5")
 
 # Sender → tier hint (framework: victor sends all types; the rest are STR-focused)
 SENDER_TIER_HINTS = {

@@ -625,3 +625,14 @@ def test_priced_str_without_any_revenue_signal_is_unscorable(tmp_path):
     out = process_deal(deal, load_profile(), conn, enrich_enabled=False)
     assert out["outcome"] == "unscorable"
     assert any("revenue" in r for r in out["reasons"])
+
+
+def test_llm_modules_use_current_model_and_web_search_tool():
+    """These strings are easy to leave behind: the code kept working on the
+    pre-2026 web-search tool and a previous-generation model long after both
+    had been superseded, with nothing failing to say so."""
+    import pathlib
+    for name in ("enrich.py", "identify.py", "extract.py"):
+        src = (pathlib.Path(__file__).parent.parent / "pipeline" / name).read_text()
+        assert '"claude-sonnet-5"' not in src, f"{name}: previous-generation model id"
+        assert "web_search_20250305" not in src, f"{name}: superseded web-search tool"

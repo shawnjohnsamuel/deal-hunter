@@ -17,7 +17,9 @@ import os
 import re
 import sys
 
-MODEL = os.environ.get("DEAL_HUNTER_MODEL", "claude-sonnet-5")
+# Sonnet is deliberate: these are bulk extractors, not reasoning tasks, and it
+# is $2/$10 per MTok against Opus's $4/$20. Override with DEAL_HUNTER_MODEL.
+MODEL = os.environ.get("DEAL_HUNTER_MODEL", "claude-sonnet-5-5")
 
 _rate_cache: dict = {}
 
@@ -256,7 +258,8 @@ def _web_search(deal: dict, enriched: dict):
 
     resp = anthropic.Anthropic().messages.create(
         model=MODEL, max_tokens=4000,
-        tools=[{"type": "web_search_20250305", "name": "web_search", "max_uses": 6}],
+        # $10 per 1,000 searches, so max_uses is the main cost dial here.
+        tools=[{"type": "web_search_20260209", "name": "web_search", "max_uses": 6}],
         messages=[{"role": "user", "content": prompt}])
     text = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
     m = re.search(r"\{.*\}", text, re.DOTALL)
